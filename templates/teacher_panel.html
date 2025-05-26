@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teacher Panel</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        li {
+            padding: 5px 0;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            margin-top: 30px;
+        }
+
+        .section h3 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            color: #444;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .buttons form {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Welcome, {{ session['teacher'] }}</h2>
+
+    <form method="POST">
+        <label><strong>Add Question:</strong></label><br>
+        <textarea name="question" rows="3" required></textarea><br>
+        <input type="submit" name="add_question" value="Add Question">
+    </form>
+
+    <div class="section">
+        <h3>Existing Questions:</h3>
+        <ul>
+            {% for q in questions %}
+                <li>{{ q }}</li>
+            {% else %}
+                <li>No questions yet</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="buttons">
+        <form method="POST" onsubmit="return confirm('Are you sure you want to delete all questions?');">
+            <input type="submit" name="clear_questions" value="Delete All Questions">
+        </form>
+
+        <form method="POST" onsubmit="return confirm('Are you sure you want to delete all student accounts?');">
+            <input type="submit" name="clear_students" value="Delete All Students">
+        </form>
+    </div>
+
+    <div class="section">
+        <h3>Student Answers:</h3>
+        <ul>
+            {% for student, ans in answers.items() %}
+                <li><b>{{ student }}</b>: {{ ans }}</li>
+            {% else %}
+                <li>No answers submitted yet</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <a href="{{ url_for('teacher_logout') }}">Logout</a>
+</div>
+</body>
+</html>
