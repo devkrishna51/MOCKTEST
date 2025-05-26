@@ -15,7 +15,7 @@ def read_accounts(filename):
     try:
         with open(filename, 'r') as f:
             for line in f:
-                username, password = line.strip().split()
+                username, password = line.strip().split(maxsplit=1)
                 accounts[username] = password
     except FileNotFoundError:
         pass
