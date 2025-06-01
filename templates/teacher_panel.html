@@ -90,6 +90,24 @@
         .buttons form {
             margin: 0;
         }
+
+        .score-form {
+            display: inline;
+            margin-left: 10px;
+        }
+
+        .score-form input[type="number"] {
+            width: 60px;
+            padding: 4px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        .score-form input[type="submit"] {
+            padding: 5px 10px;
+            font-size: 14px;
+            margin-left: 5px;
+        }
     </style>
 </head>
 <body>
@@ -124,15 +142,29 @@
     </div>
 
     <div class="section">
-        <h3>Student Answers:</h3>
-        <ul>
-            {% for student, ans in answers.items() %}
-                <li><b>{{ student }}</b>: {{ ans }}</li>
-            {% else %}
-                <li>No answers submitted yet</li>
-            {% endfor %}
-        </ul>
-    </div>
+    <h3>Student Answers:</h3>
+    <ol>
+        {% for student, ans_list in answers.items() %}
+            <li><b>{{ student }}</b>:
+                <ol>
+                    {% for ans in ans_list %}
+                        <li>
+                            {{ ans[0] }} - Score: {{ ans[1] }}
+                            <form method="POST" class="score-form">
+                                <input type="hidden" name="student_name" value="{{ student }}">
+                                <input type="hidden" name="answer_index" value="{{ loop.index0 }}">
+                                <input type="number" name="score" min="0" max="10" placeholder="Score">
+                                <input type="submit" name="submit_score" value="Give Score">
+                            </form>
+                        </li>
+                    {% endfor %}
+                </ol>
+            </li>
+        {% else %}
+            <li>No answers submitted yet</li>
+        {% endfor %}
+    </ol>
+</div>
 
     <a href="{{ url_for('teacher_logout') }}">Logout</a>
 </div>

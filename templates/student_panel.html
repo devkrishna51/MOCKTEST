@@ -31,11 +31,6 @@
             font-size: 28px;
         }
 
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-
         .question-block {
             margin-bottom: 25px;
             background: #f1faff;
@@ -86,6 +81,17 @@
             text-decoration: underline;
         }
 
+        .score-block {
+            text-align: center;
+            font-size: 22px;
+            color: #27ae60;
+            background: #eafaf1;
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px dashed #2ecc71;
+            margin-top: 15px;
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -101,15 +107,45 @@
 <body>
     <div class="container">
         <h2>Welcome, {{ session['student'] }}</h2>
-        <form method="POST">
-            {% for q in questions %}
-            <div class="question-block">
-                <b>Q{{ loop.index }}:</b> {{ q }}<br>
-                <input type="text" name="answer_{{ loop.index0 }}" placeholder="Type your answer..." required>
-            </div>
-            {% endfor %}
-            <input type="submit" value="Submit Answers">
-        </form>
+
+        {% if questions|length == 0 %}
+            <p>No questions available at the moment.</p>
+        {% else %}
+        {% if score is not none %}
+    <div class="score-block">
+        <p><strong>Your Total Score:</strong> {{ score }}</p>
+    </div>
+{% else %}
+    <!-- show questions form -->
+{% endif %}
+
+            <form method="POST">
+                {% for q in questions %}
+                <div class="question-block">
+                    <b>Q{{ loop.index }}:</b> {{ q }}<br>
+                    <input 
+                        type="text" 
+                        name="answer_{{ loop.index0 }}" 
+                        placeholder="Type your answer..." 
+                        required
+                        value="{% if answers and answers[loop.index0] is defined %}{{ answers[loop.index0] }}{% endif %}">
+                    
+                    {% if scores and scores[loop.index0] is defined %}
+                        <div class="score-block" style="margin-top:8px; font-size:18px;">
+                            Score for this answer: <strong>{{ scores[loop.index0] }}</strong>
+                        </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+                
+                {% if score is none %}
+                    <input type="submit" value="Submit Answers">
+                {% else %}
+                    <p><em>You have already submitted your answers.</em></p>
+                {% endif %}
+            </form>
+        {% endif %}
+
         <a href="{{ url_for('student_logout') }}">← Logout</a>
     </div>
 </body>
