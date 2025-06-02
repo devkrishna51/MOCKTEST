@@ -105,21 +105,22 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="main-container">
         <h2>Welcome, {{ session['student'] }}</h2>
+
+        <div id="cheating-warning" style="display:none; color: red; font-weight: bold; text-align: center; font-size: 20px; margin-bottom: 20px;">
+            You have been blocked for suspicious activity (tab switch or right-click).
+        </div>
 
         {% if questions|length == 0 %}
             <p>No questions available at the moment.</p>
         {% else %}
         {% if score is not none %}
-    <div class="score-block">
-        <p><strong>Your Total Score:</strong> {{ score }}</p>
-    </div>
-{% else %}
-    <!-- show questions form -->
-{% endif %}
-
-            <form method="POST">
+            <div class="score-block">
+                <p><strong>Your Total Score:</strong> {{ score }}</p>
+            </div>
+        {% else %}
+            <form method="POST" id="answer-form">
                 {% for q in questions %}
                 <div class="question-block">
                     <b>Q{{ loop.index }}:</b> {{ q }}<br>
@@ -129,7 +130,7 @@
                         placeholder="Type your answer..." 
                         required
                         value="{% if answers and answers[loop.index0] is defined %}{{ answers[loop.index0] }}{% endif %}">
-                    
+
                     {% if scores and scores[loop.index0] is defined %}
                         <div class="score-block" style="margin-top:8px; font-size:18px;">
                             Score for this answer: <strong>{{ scores[loop.index0] }}</strong>
@@ -137,16 +138,88 @@
                     {% endif %}
                 </div>
                 {% endfor %}
-                
-                {% if score is none %}
-                    <input type="submit" value="Submit Answers">
-                {% else %}
-                    <p><em>You have already submitted your answers.</em></p>
-                {% endif %}
+                <input type="submit" value="Submit Answers">
             </form>
         {% endif %}
+        {% endif %}
 
-        <a href="{{ url_for('student_logout') }}">← Logout</a>
+        <a href="{{ url_for('student_logout') }}" id="logout-link">← Logout</a>
     </div>
+
+    <script>
+        let cheatingDetected = false;
+        let allowCheatingDetection = true;  // Flag to allow or block cheating detection
+
+        function handleCheating(reason) {
+            if (!cheatingDetected && allowCheatingDetection) {
+                cheatingDetected = true;
+
+                // Show blocking message
+                document.getElementById("cheating-warning").style.display = "block";
+
+                // Disable form inputs
+                const form = document.getElementById("answer-form");
+                if (form) {
+                    const inputs = form.querySelectorAll("input, textarea, button");
+                    inputs.forEach(input => input.disabled = true);
+                }
+
+                alert("You have been blocked for suspicious activity!");
+
+                // Send cheating report to backend
+                fetch("/report_cheating", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ reason: reason })
+                });
+            }
+        }
+
+        // Disable cheating detection on logout click
+        document.getElementById("logout-link").addEventListener('click', function() {
+            allowCheatingDetection = false;
+        });
+
+        // Disable right-click
+        document.addEventListener('contextmenu', event => {
+            event.preventDefault();
+            handleCheating("Right-click is not allowed.");
+        });
+
+        // Disable keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            const key = e.key.toLowerCase();
+            if ((e.ctrlKey && ['c', 'v', 'u', 's'].includes(key)) || key === "f12") {
+                e.preventDefault();
+                handleCheating("Prohibited keyboard shortcut used.");
+            }
+        });
+
+        // Disable copy/paste using mouse
+        document.addEventListener('copy', function(e) {
+            e.preventDefault();
+            handleCheating("Copy operation detected.");
+        });
+
+        document.addEventListener('paste', function(e) {
+            e.preventDefault();
+            handleCheating("Paste operation detected.");
+        });
+
+        // Disable cut operation
+        document.addEventListener('cut', function(e) {
+            e.preventDefault();
+            handleCheating("Cut operation detected.");
+        });
+
+        // Detect tab switch or minimize
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                handleCheating("You switched tab or minimized the browser.");
+            }
+        });
+    </script>
 </body>
 </html>
