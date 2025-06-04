@@ -20,7 +20,6 @@ def read_accounts(filename):
                 line = line.strip()
                 if not line:
                     continue
-                # split by first space only
                 parts = line.split(maxsplit=1)
                 if len(parts) == 2:
                     username, password = parts
@@ -69,14 +68,14 @@ def read_answers():
                             answer_text, score = pair.split('|', 1)
                             ans_list.append( (answer_text.strip(), score.strip()) )
                         else:
-                            ans_list.append( (pair.strip(), '0') )  # default score 0
+                            ans_list.append( (pair.strip(), '0') )
                     answers[student.strip()] = ans_list
     except FileNotFoundError:
         print(f"Answers file {ANSWERS_FILE} not found.")
     return answers
+
 def add_answer(student, ans_list):
     os.makedirs(os.path.dirname(ANSWERS_FILE), exist_ok=True)
-    # Store answers with score 0 initially
     with open(ANSWERS_FILE, 'a') as f:
         f.write(f"{student}: " + ', '.join([f"{a}|0" for a in ans_list]) + "\n")
 
@@ -85,6 +84,10 @@ def add_answer(student, ans_list):
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/projects')
+def projects():
+    return render_template('main_2.html')
 
 @app.route('/developer', methods=['GET', 'POST'])
 def developer_panel():
@@ -137,11 +140,9 @@ def teacher_panel():
             answers = read_answers()
             if student_name in answers:
                 ans_score_list = answers[student_name]
-                # Update score for the specific answer index
                 answer_text, _ = ans_score_list[answer_index]
                 ans_score_list[answer_index] = (answer_text, score)
 
-                # Save updated answers back to file
                 with open(ANSWERS_FILE, 'w') as f:
                     for student, ans_list in answers.items():
                         line_parts = [f"{a}|{s}" for a, s in ans_list]
@@ -152,11 +153,15 @@ def teacher_panel():
     answers = read_answers()
     return render_template('teacher_panel.html', questions=questions, answers=answers, enumerate=enumerate)
 
-
 @app.route('/teacher/logout')
 def teacher_logout():
     session.pop('teacher', None)
-    return redirect(url_for('index'))
+    return redirect(url_for('projects'))  # Redirect to main_2.html
+
+@app.route('/logout')
+def logout():
+    session.clear()
+    return redirect(url_for('projects'))  # Redirect to main_2.html
 
 @app.route('/student/register', methods=['GET', 'POST'])
 def student_register():
@@ -191,10 +196,9 @@ def student_panel():
     answers = read_answers()
 
     student_name = session['student']
-    student_answers = answers.get(student_name)  # This is list of (answer, score) or None
+    student_answers = answers.get(student_name)
 
     if request.method == 'POST':
-        # If student already submitted, no resubmission allowed
         if student_answers is not None:
             return "You have already submitted your answers. <a href='/student/logout'>Logout</a>"
 
@@ -206,17 +210,15 @@ def student_panel():
         return "Answers submitted! <a href='/student/logout'>Logout</a>"
 
     if student_answers is not None:
-        # Calculate total score by summing all scores (convert to int)
         total_score = sum(int(score) for _, score in student_answers)
         return render_template('student_panel.html', score=total_score, questions=questions, student_answers=student_answers)
     else:
         return render_template('student_panel.html', score=None, questions=questions, student_answers=None)
 
-
 @app.route('/student/logout')
 def student_logout():
     session.pop('student', None)
-    return redirect(url_for('index'))
+    return redirect(url_for('projects'))  # Redirect to main_2.html
 
 if __name__ == '__main__':
     app.run(debug=True)

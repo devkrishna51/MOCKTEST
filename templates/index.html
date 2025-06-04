@@ -1,86 +1,232 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Mock Test - Choose Role</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: url('https://cdn.pixabay.com/photo/2016/06/02/02/33/triangles-1430105_1280.png') no-repeat center center fixed;
-            background-size: cover;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Krishna Seth | Professional Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/indexstyle.css') }}">
 
-.highlighted-heading {
-    color: white;
-    text-align: center;
-    font-size: 2.8rem;
-    font-weight: 900;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-bottom: 40px;
-}
-
-        .container {
-            width: 300px;
-            padding: 30px;
-            border-radius: 15px;
-            background: rgba(255, 255, 255, 0.1);
-            -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 5px 5px 35px 35px rgba(31, 38, 135, 0.37);
-            color: white;
-            text-align: center;
-            position: relative;
-        }
-
-        h2 {
-            margin-bottom: 30px;
-            color: #fff;
-        }
-
-        ul.ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .ul li {
-            margin: 15px 0;
-        }
-
-        .ul li a {
-            text-decoration: none;
-            color: white;
-            background-color: #007bff;
-            padding: 12px 24px;
-            border-radius: 8px;
-            transition: 0.3s;
-            display: inline-block;
-        }
-
-        .ul li a:hover {
-            background-color: #0056b3;
-            transition-duration: 1s;
-        }
-    </style>
 </head>
-
 <body>
-    <h1 class="highlighted-heading">Crafted by (DEV) KRISHNA SETH — Where learning meets innovation.</h1>
-
-    <div class="container">
-        <h2>Choose Role:</h2>
-        <ul class="ul">
-            <li><a href="/developer">Developer Panel</a></li>
-            <li><a href="/teacher/login">Teacher Login</a></li>
-            <li><a href="/student/register">Student Register</a></li>
-            <li><a href="/student/login">Student Login</a></li>
-        </ul>
+  <nav role="navigation" aria-label="Primary Navigation" id="navbar">
+    <a href="#" class="logo" aria-label="KrishnaDev Home"> MOCKTEST</a>
+    <ul id="nav-links">
+      <li><a href="#hero" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div id="hamburger" aria-label="Menu" role="button" tabindex="0" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
+  </nav>
+
+  <header id="hero" class="hero" aria-label="Introduction">
+    <h1>Krishna Seth</h1>
+    <h2>Instant mock tests with smart results & securities <br> Click Below The button.</h2>
+    <a href="{{ url_for('projects') }}" class="btn-primary" aria-label="View Projects"><i class="fas fa-rocket"></i> START TEST</a>
+
+    <div class="hero-image-container" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1470&q=80" alt="Developer at work computer" class="active" />
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1470&q=80" alt="Coding on laptop close up" />
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1474&q=80" alt="Developer workspace with multiple screens" />
+      <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=1470&q=80" alt="Hands coding on a laptop" />
+    </div>
+    <div class="slider-controls" aria-label="Hero image controls">
+      <button class="slider-btn active" aria-label="Show image 1" aria-pressed="true"></button>
+      <button class="slider-btn" aria-label="Show image 2" aria-pressed="false"></button>
+      <button class="slider-btn" aria-label="Show image 3" aria-pressed="false"></button>
+      <button class="slider-btn" aria-label="Show image 4" aria-pressed="false"></button>
+    </div>
+  </header>
+
+  <section id="about" aria-labelledby="about-title">
+    <h2 id="about-title">About Me</h2>
+    <div class="content-wrapper">
+      <div class="profile-pic" aria-hidden="true">
+       <img src="{{ url_for('static', filename='photos/myprofile.jpg') }}" alt="Sample" loading="lazy" />
+      </div>
+      <div class="about-text">
+        <p>
+          I’m Krishna Seth, a seasoned full stack developer with experience in C programming, artificial intelligence, and building scalable, secure applications.
+          Passionate about creating educational platforms, AI assistants, and robust file management systems with an emphasis on security and user experience.
+          I believe in clean, efficient code and beautiful, intuitive interfaces.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" aria-labelledby="skills-title">
+    <h2 id="skills-title">Skills</h2>
+    <div class="skills-grid" role="list">
+      <div class="skill-card" role="listitem" tabindex="0" aria-label="C Programming Skill">
+        <i class="fab fa-cuttlefish"></i>
+        <span>C Programming</span>
+      </div>
+      <div class="skill-card" role="listitem" tabindex="0" aria-label="JavaScript Skill">
+        <i class="fab fa-js-square"></i>
+        <span>JavaScript</span>
+      </div>
+      <div class="skill-card" role="listitem" tabindex="0" aria-label="Python Skill">
+        <i class="fab fa-python"></i>
+        <span>Python</span>
+      </div>
+      <div class="skill-card" role="listitem" tabindex="0" aria-label="React Skill">
+        <i class="fab fa-react"></i>
+        <span>React</span>
+      </div>
+      <div class="skill-card" role="listitem" tabindex="0" aria-label="AI & Machine Learning Skill">
+        <i class="fas fa-robot"></i>
+        <span>AI &amp; ML</span>
+      </div>
+      <div class="skill-card" role="listitem" tabindex="0" aria-label="Database Management Skill">
+        <i class="fas fa-database"></i>
+        <span>DB Management</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" aria-labelledby="projects-title">
+    <h2 id="projects-title">Projects</h2>
+    <div class="project-grid">
+      <a href="https://krishna-web.onrender.com/" class="project-card" target="_blank" rel="noopener noreferrer" aria-label="Educational Platform Project" >
+       <img src="{{ url_for('static', filename='photos/EDUCATION.png') }}" alt="Educational Platform screenshot" />
+        <div class="project-info">
+          <h3>Educational Platform</h3>
+          <p>Practice smarter with real-time mock exams, instant results, and performance tracking — all in one secure, user-friendly space. </p>
+          <a href="#">View Details <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </a>  
+      <a href="photos/CAINA.png" class="project-card" target="_blank" rel="noopener noreferrer" aria-label="AI Assistant Project">
+      <img src="{{ url_for('static', filename='photos/CAINA.png') }}" alt="AI Assistant screenshot" />
+        <div class="project-info">
+          <h3>CAINA'S AI Assistant</h3>
+          <p>Built entirely in C language, this AI provides real-time weather updates, sends automated emails on user signup, and logs all user queries for developer access and analysis.</p>
+          <a href="#">View Details <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </a>
+      <a href="photos/student.png" class="project-card" target="_blank" rel="noopener noreferrer" aria-label="Secure File Handling System Project">
+        <img src="{{ url_for('static', filename='photos/student.png') }}" alt="Secure File Handling screenshot" />
+        <div class="project-info">
+          <h3>Student Record Software</h3>
+          <p>A secure, C-based platform with encrypted backups and role-based access for reliable student data management.</p>
+          <a href="#">View Details <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title">Contact Me</h2>
+    <h3> Email - krishnsethm762@gmail.com <br> Add - CAINA's HEAD QUATERS , Varanasi ,<br> U.P. INDIA - 221001 </h3>
+    <div class="contact-links" role="list">
+      <a href="#" class="contact-link" role="listitem" aria-label="Email Krishna Seth"><i class="fas fa-envelope"></i></a>
+      <a href="#" target="_blank" rel="noopener noreferrer" class="contact-link" role="listitem" aria-label="LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" target="_blank" rel="noopener noreferrer" class="contact-link" role="listitem" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+      <a href="#" target="_blank" rel="noopener noreferrer" class="contact-link" role="listitem" aria-label="Twitter Profile"><i class="fab fa-twitter"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2023 Krishna Seth. All Rights Reserved.
+  </footer>
+
+  <script>
+    // Hamburger Toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('nav ul');
+    const navbar = document.getElementById('navbar');
+
+    hamburger.addEventListener('click', () => {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+      hamburger.setAttribute('aria-expanded', !expanded);
+      navLinks.classList.toggle('active');
+    });
+    hamburger.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        hamburger.click();
+      }
+    });
+
+    // Scroll spy for active nav link
+    const sections = document.querySelectorAll('section[id], header#hero');
+    const navItems = document.querySelectorAll('nav ul li a');
+
+    window.addEventListener('scroll', () => {
+      // Toggle navbar background based on scroll
+      if(window.scrollY > 20){
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+
+      let current = '';
+      const scrollPos = window.pageYOffset + 80;
+      sections.forEach(section => {
+        const top = section.offsetTop;
+        if(scrollPos >= top) {
+          current = section.getAttribute('id') || "hero";
+        }
+      });
+      navItems.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Hero image slider logic
+    const images = document.querySelectorAll('.hero-image-container img');
+    const buttons = document.querySelectorAll('.slider-btn');
+    let currentIndex = 0;
+    let slideInterval;
+
+    function showSlide(index) {
+      images.forEach((img, i) => {
+        img.classList.toggle('active', i === index);
+        buttons[i].classList.toggle('active', i === index);
+        buttons[i].setAttribute('aria-pressed', i === index ? 'true' : 'false');
+      });
+      currentIndex = index;
+    }
+
+    function nextSlide() {
+      let nextIndex = (currentIndex + 1) % images.length;
+      showSlide(nextIndex);
+    }
+
+    function startSlideShow() {
+      slideInterval = setInterval(nextSlide, 5000);
+    }
+
+    function stopSlideShow() {
+      clearInterval(slideInterval);
+    }
+
+    buttons.forEach((btn, idx) => {
+      btn.addEventListener('click', () => {
+        stopSlideShow();
+        showSlide(idx);
+        startSlideShow();
+      });
+      btn.addEventListener('keydown', e => {
+        if(e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          btn.click();
+        }
+      });
+    });
+
+    startSlideShow();
+
+  </script>
 </body>
 </html>
+
