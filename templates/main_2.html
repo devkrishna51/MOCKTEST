@@ -1,91 +1,349 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Mock Test - Choose Role</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: url('https://cdn.pixabay.com/photo/2016/06/02/02/33/triangles-1430105_1280.png') no-repeat center center fixed;
-            background-size: cover;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LOGIN PANEL</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  * {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Orbitron', sans-serif;
+    background: radial-gradient(circle at 30% 30%, #0f0c29, #302b63, #24243e);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    overflow-x: hidden;
+    perspective: 1000px;
+    position: relative;
+    padding: 20px;
+  }
 
-.highlighted-heading {
-    color: white;
+  /* Cosmic particles */
+  .cosmic-particle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+    animation: float 15s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-20px) translateX(10px); }
+  }
+
+  /* Main heading */
+  h1 {
+    margin-bottom: 2rem;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    background: linear-gradient(90deg, #00dbde, #fc00ff, #00dbde);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
     text-align: center;
-    font-size: 2.8rem;
-    font-weight: 900;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-bottom: 40px;
-}
+    padding: 0 15px;
+  }
 
-        .container {
-            width: 300px;
-            padding: 30px;
-            border-radius: 15px;
-            background: rgba(255, 255, 255, 0.1);
-            -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 5px 5px 35px 35px rgba(31, 38, 135, 0.37);
-            color: white;
-            text-align: center;
-            position: relative;
-        }
+  @keyframes shine {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+  }
 
-        h2 {
-            margin-bottom: 30px;
-            color: #fff;
-        }
+  /* Main container */
+  .container {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+    margin: 0 auto;
+  }
 
-        ul.ul {
-            list-style-type: none;
-            padding: 0;
-        }
+  .container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      to bottom right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.1) 20%,
+      rgba(255, 255, 255, 0) 40%
+    );
+    transform: rotate(30deg);
+    animation: shine-overlay 6s infinite linear;
+    pointer-events: none;
+  }
 
-        .ul li {
-            margin: 15px 0;
-        }
+  @keyframes shine-overlay {
+    0% { transform: translateX(-100%) rotate(30deg); }
+    100% { transform: translateX(100%) rotate(30deg); }
+  }
 
-       .ul li a {
-        font-weight:700;
-    font-family: 'Cascadia Mono SemiBold', sans-serif;
+  /* Button list */
+  ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+  }
+
+  li {
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+
+  /* Buttons */
+  a.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    font-weight: 700;
     text-decoration: none;
-    color: white;
-    background-color: #007bff;
-    padding: 12px 24px;
-    border-radius: 8px;
-    transition: 0.3s;
-    display: block;       /* changed from inline-block to block */
-    width: 100%;          /* poori width le li container ki */
-    box-sizing: border-box; /* padding include rahe width me */
-    text-align: center;    /* text center align rahe */
-}
+    color: #fff;
+    background: linear-gradient(135deg, #00f260, #0575e6);
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #00f260aa, 0 0 25px #0575e6cc;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    z-index: 1;
+    width: 100%;
+  }
 
-        .ul li a:hover {
-            background-color: #0056b3;
-            transition-duration: 1s;
-        }
-    </style>
+  a.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+    z-index: -1;
+  }
+
+  a.button:hover::before {
+    transform: translateX(100%);
+  }
+
+  .icon {
+    margin-right: 10px;
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+  }
+
+  /* Signature */
+  .signature {
+    margin-top: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+  }
+
+  .signature strong {
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .heart {
+    color: #ff4757;
+    margin: 0 3px;
+  }
+
+  /* Floating animation for container */
+  @keyframes gentle-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .container {
+    animation: gentle-float 6s ease-in-out infinite;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 480px) {
+    .container {
+      padding: 1.5rem;
+    }
+    
+    li {
+      margin-bottom: 1.2rem;
+    }
+    
+    a.button {
+      padding: 12px 20px;
+    }
+  }
+</style>
 </head>
-
 <body>
-    <h1 class="highlighted-heading">Crafted by (DEV) KRISHNA SETH — Where learning meets innovation.</h1>
 
-    <div class="container">
-        <h2>Choose Role:</h2>
-        <ul class="ul">
-            <li><a href="/developer">Developer Panel</a></li>
-            <li><a href="/teacher/login">Teacher Login</a></li>
-            <li><a href="/student/register">Student Register</a></li>
-            <li><a href="/student/login">Student Login</a></li>
-        </ul>
-    </div>
+<!-- Cosmic particles will be added by JavaScript -->
+
+<h1>Portal by Krishna. Powered by Possibility.</h1>
+
+<div class="container">
+  <ul>
+    <li>
+      <a href="/developer" class="button">
+        <i class="fas fa-code icon"></i>Developer Panel
+      </a>
+    </li>
+    <li>
+      <a href="/teacher/login" class="button">
+        <i class="fas fa-chalkboard-teacher icon"></i>Teacher Login
+      </a>
+    </li>
+    <li>
+      <a href="/student/register" class="button">
+        <i class="fas fa-user-plus icon"></i>Student Register
+      </a>
+    </li>
+    <li>
+      <a href="/student/login" class="button">
+        <i class="fas fa-sign-in-alt icon"></i>Student Login
+      </a>
+    </li>
+  </ul>
+  
+  <div class="signature">
+    Crafted with by <strong>DEV KRISHNA SETH</strong>
+  </div>
+</div>
+
+<script>
+  // Create cosmic particles
+  function createParticles() {
+    const particleCount = window.innerWidth < 768 ? 30 : 50;
+    
+    for (let i = 0; i < particleCount; i++) {
+      const particle = document.createElement('div');
+      particle.classList.add('cosmic-particle');
+      
+      // Random properties
+      const size = Math.random() * 3 + 1;
+      const posX = Math.random() * window.innerWidth;
+      const posY = Math.random() * window.innerHeight;
+      const opacity = Math.random() * 0.5 + 0.1;
+      const duration = Math.random() * 20 + 10;
+      const delay = Math.random() * 5;
+      
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+      particle.style.left = `${posX}px`;
+      particle.style.top = `${posY}px`;
+      particle.style.opacity = opacity;
+      particle.style.animationDuration = `${duration}s`;
+      particle.style.animationDelay = `${delay}s`;
+      
+      document.body.appendChild(particle);
+    }
+  }
+
+  // Enhanced button interaction
+  function setupButtonInteractions() {
+    const buttons = document.querySelectorAll('a.button');
+
+    buttons.forEach(button => {
+      button.addEventListener('mousemove', e => {
+        const rect = button.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        // Calculate glow intensity
+        const glowIntensity = Math.min(1, (Math.abs(x - centerX) + Math.abs(y - centerY)) / (centerX + centerY) * 2);
+        
+        // Color shift based on position
+        const hue = ((x / rect.width) * 120 + 180) % 360;
+        const hue2 = ((y / rect.height) * 120 + 240) % 360;
+        
+        button.style.boxShadow = `
+          0 0 ${10 + glowIntensity * 10}px hsla(${hue}, 100%, 70%, 0.7),
+          0 0 ${20 + glowIntensity * 20}px hsla(${hue2}, 100%, 70%, 0.5)
+        `;
+        
+        button.style.background = `linear-gradient(135deg, hsl(${hue}, 100%, 60%), hsl(${hue2}, 100%, 60%))`;
+        
+        // Icon animation
+        const icon = button.querySelector('.icon');
+        if (icon) {
+          icon.style.transform = `scale(1.1)`;
+        }
+      });
+
+      button.addEventListener('mouseleave', () => {
+        button.style.boxShadow = '0 0 15px #00f260aa, 0 0 25px #0575e6cc';
+        button.style.background = 'linear-gradient(135deg, #00f260, #0575e6)';
+        
+        const icon = button.querySelector('.icon');
+        if (icon) {
+          icon.style.transform = 'scale(1)';
+        }
+      });
+      
+      // Click effect
+      button.addEventListener('mousedown', () => {
+        button.style.transform = 'scale(0.97)';
+      });
+      
+      button.addEventListener('mouseup', () => {
+        button.style.transform = 'scale(1)';
+      });
+    });
+  }
+
+  // Initialize when DOM is loaded
+  document.addEventListener('DOMContentLoaded', () => {
+    createParticles();
+    setupButtonInteractions();
+    
+    // Handle window resize
+    window.addEventListener('resize', () => {
+      document.querySelectorAll('.cosmic-particle').forEach(p => p.remove());
+      createParticles();
+    });
+  });
+</script>
+
 </body>
 </html>

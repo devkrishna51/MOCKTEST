@@ -153,6 +153,11 @@ def teacher_panel():
     answers = read_answers()
     return render_template('teacher_panel.html', questions=questions, answers=answers, enumerate=enumerate)
 
+@app.before_request
+def log_ip_address():
+    ip = request.remote_addr
+    print(f"[{request.method}] {request.path} - IP: {ip}")
+    
 @app.route('/teacher/logout')
 def teacher_logout():
     session.pop('teacher', None)
