@@ -1,98 +1,286 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Student Register</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT REGISTER</title>
     <style>
-        body {
+        :root {
+            --neon-blue: #0ff0fc;
+            --neon-pink: #ff2a6d;
+            --dark-bg: #0d0221;
+            --darker-bg: #05010d;
+            --text-glow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
+        }
+
+        * {
             margin: 0;
             padding: 0;
-            background: url('https://t3.ftcdn.net/jpg/08/44/71/28/360_F_844712853_ZsKKbJfSGUoxa0tIUtFX2C0VG5BS9cM1.jpg') no-repeat center center fixed;
-            background-size: cover;
-            font-family: 'Segoe UI', sans-serif;
-            height: 100vh;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Rajdhani', 'Orbitron', sans-serif;
+            min-height: 100vh;
             display: flex;
-            align-items: center;
             justify-content: center;
-        }
-
-        .register-box {
-             width: 300px;
-      padding: 30px;
-      border-radius: 15px 15px 15px 15px;
-      background: rgba(255, 255, 255, 0);
-      -webkit-backdrop-filter: blur(20px);
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      box-shadow: 5px 5px 35px 35px rgba(31, 38, 135, 0.37);
-      color: white;
-      text-align: center;
-      align-items:center;
-      position : absolute;
-     box-shadow : 0px 0px 50px 20px white;
-        }
-
-        h2 {
-            margin-bottom: 25px;
-            color: #333;
-            font-weight: bold;
-        }
-
-        input[type="text"],
-        input[type="password"] {
-            width: 90%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 16px;
-        }
-
-        input[type="submit"] {
-            background: #007bff;
+            align-items: center;
+            background: var(--dark-bg);
             color: white;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Grid overlay */
+        .grid-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(rgba(13, 2, 33, 0.9), rgba(13, 2, 33, 0.9)),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="%231d1a71" stroke-width="0.5"/></svg>');
+            background-size: 50px 50px;
+            z-index: -2;
+            animation: gridMove 100s linear infinite;
+        }
+
+        @keyframes gridMove {
+            0% { background-position: 0 0; }
+            100% { background-position: 1000px 1000px; }
+        }
+
+        /* Scanlines effect */
+        .scanlines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                to bottom,
+                rgba(0, 255, 252, 0) 0%,
+                rgba(0, 255, 252, 0) 98%,
+                rgba(0, 255, 252, 0.03) 99%,
+                rgba(0, 255, 252, 0) 100%
+            );
+            background-size: 100% 5px;
+            pointer-events: none;
+            z-index: -1;
+            animation: scan 8s linear infinite;
+        }
+
+        @keyframes scan {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+
+        /* Main login container */
+        .login-container {
+            width: 380px;
+            padding: 40px 30px;
+            background: rgba(5, 1, 13, 0.7);
+            border-radius: 5px;
+            box-shadow: 0 0 30px rgba(0, 255, 252, 0.2);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(0, 255, 252, 0.1);
+            position: relative;
+            overflow: hidden;
+            animation: flicker 8s infinite alternate;
+        }
+
+        @keyframes flicker {
+            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+                box-shadow: 0 0 30px rgba(0, 255, 252, 0.2);
+            }
+            20%, 24%, 55% {
+                box-shadow: 0 0 30px rgba(255, 42, 109, 0.3);
+            }
+        }
+
+        .login-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
+            box-shadow: var(--text-glow);
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .login-header h2 {
+            color: var(--neon-blue);
+            font-size: 28px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-shadow: var(--text-glow);
+            margin-bottom: 10px;
+        }
+
+        .login-header p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--neon-blue);
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-shadow: 0 0 5px var(--neon-blue);
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(0, 255, 252, 0.3);
+            border-radius: 3px;
+            color: white;
+            font-family: 'Rajdhani', sans-serif;
             font-size: 16px;
-            cursor: pointer;
-            transition: background 0.3s;
+            letter-spacing: 1px;
+            transition: all 0.3s;
         }
 
-        input[type="submit"]:hover {
-            background: #0056b3;
+        .input-group input:focus {
+            outline: none;
+            border-color: var(--neon-blue);
+            box-shadow: 0 0 10px rgba(0, 255, 252, 0.5);
         }
 
-        a {
-            display: inline-block;
-            margin-top: 20px;
-            text-decoration: none;
-            color: #007bff;
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
+            border: none;
+            border-radius: 3px;
+            color: var(--dark-bg);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 16px;
             font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .login-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 255, 252, 0.4);
         }
 
-        .fade-in {
-            animation: fadeIn 1.2s ease-in-out;
+        .login-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, var(--neon-pink), var(--neon-blue));
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: -1;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .login-btn:hover::before {
+            opacity: 1;
+        }
+
+        .status-line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--neon-blue), transparent);
+            animation: status-line 3s infinite linear;
+        }
+
+        @keyframes status-line {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* Glitch effect */
+        .glitch {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="%231d1a71" stroke-width="0.5"/></svg>');
+            background-size: 50px 50px;
+            opacity: 0.1;
+            mix-blend-mode: screen;
+            animation: glitch-effect 5s infinite linear;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        @keyframes glitch-effect {
+            0% { transform: translate(0); opacity: 0.1; }
+            20% { transform: translate(-5px, 5px); opacity: 0.2; }
+            40% { transform: translate(-5px, -5px); opacity: 0.05; }
+            60% { transform: translate(5px, 5px); opacity: 0.2; }
+            80% { transform: translate(5px, -5px); opacity: 0.05; }
+            100% { transform: translate(0); opacity: 0.1; }
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .login-container {
+                width: 90%;
+                padding: 30px 20px;
+            }
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="register-box fade-in">
-        <h2>Student Register</h2>
+    <div class="grid-overlay"></div>
+    <div class="scanlines"></div>
+    <div class="glitch"></div>
+
+    <div class="login-container">
+        <div class="login-header">
+            <h2>STUDENT LOGIN</h2>
+            
+        </div>
+
         <form method="POST">
-            <input type="text" name="username" placeholder="Enter username" required><br>
-            <input type="password" name="password" placeholder="Enter password" required><br>
-            <input type="submit" value="Register">
+            <div class="input-group">
+                <label for="username">USER ID</label>
+                <input type="text" id="username" name="username" placeholder="ENTER USER ID " required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">PASSWORD</label>
+                <input type="password" id="password" name="password" placeholder="ENTER YOUR PASSWORD" required>
+            </div>
+
+            <button type="submit" class="login-btn">AUTHENTICATE</button>
         </form>
-        <a href="/">← Back to Home</a>
+
+        <div class="status-line"></div>
     </div>
 </body>
 </html>

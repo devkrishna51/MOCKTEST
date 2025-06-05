@@ -152,7 +152,13 @@ def teacher_panel():
     questions = read_questions()
     answers = read_answers()
     return render_template('teacher_panel.html', questions=questions, answers=answers, enumerate=enumerate)
-
+@app.before_request
+def log_ip_address():
+    if "X-Forwarded-For" in request.headers:
+        ip = request.headers.getlist("X-Forwarded-For")[0].split(',')[0].strip()
+    else:
+        ip = request.remote_addr
+    print(f"[{request.method}] {request.path} - IP: {ip}")
 @app.before_request
 def log_ip_address():
     ip = request.remote_addr

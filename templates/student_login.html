@@ -1,89 +1,366 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Login</title>
     <style>
-        body {
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+        
+        * {
             margin: 0;
             padding: 0;
-            background: url('https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
-            background-size: cover;
-            font-family: 'Segoe UI', sans-serif;
+            box-sizing: border-box;
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        body {
             height: 100vh;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
+            background: #0a0a1a;
+            overflow: hidden;
+            perspective: 1000px;
         }
-
-        .login-box {
-            background: rgba(255, 255, 255, 0.92);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        
+        /* ===== CYBERPUNK NEON BACKGROUND ===== */
+        .neon-bg {
+            position: absolute;
             width: 100%;
-            max-width: 400px;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(138, 43, 226, 0.15) 0%, transparent 30%),
+                radial-gradient(circle at 80% 70%, rgba(0, 255, 255, 0.15) 0%, transparent 30%),
+                linear-gradient(135deg, #0a0a1a 0%, #1a1a3a 100%);
+            z-index: -2;
+            overflow: hidden;
+        }
+        
+        .neon-grid {
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background-image: 
+                linear-gradient(rgba(0, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridMove 50s linear infinite;
+            transform: rotateX(60deg);
+            opacity: 0.5;
+        }
+        
+        @keyframes gridMove {
+            0% { transform: rotateX(60deg) translateY(0); }
+            100% { transform: rotateX(60deg) translateY(-50px); }
+        }
+        
+        .neon-light {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.3;
+            animation: pulse 8s infinite alternate;
+        }
+        
+        .light-1 {
+            background: #00ffff;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        
+        .light-2 {
+            background: #ff00ff;
+            bottom: 15%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.2); opacity: 0.5; }
+            100% { transform: scale(1); opacity: 0.3; }
+        }
+        
+        /* ===== 3D NEON LOGIN BOX ===== */
+        .login-box {
+            width: 420px;
+            background: rgba(10, 10, 30, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 
+                0 0 15px rgba(0, 255, 255, 0.3),
+                0 0 30px rgba(138, 43, 226, 0.2),
+                inset 0 0 10px rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            transform-style: preserve-3d;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .login-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent 0%,
+                rgba(0, 255, 255, 0.1) 50%,
+                transparent 100%
+            );
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+        
+        @keyframes shine {
+            0% { transform: rotate(45deg) translate(-30%, -30%); }
+            100% { transform: rotate(45deg) translate(30%, 30%); }
+        }
+        
+        .login-box:hover {
+            transform: rotateY(5deg) rotateX(3deg) translateY(-5px);
+            box-shadow: 
+                0 0 25px rgba(0, 255, 255, 0.5),
+                0 0 40px rgba(138, 43, 226, 0.3),
+                inset 0 0 15px rgba(255, 255, 255, 0.2);
+        }
+        
+        .login-box h2 {
+            color: #00ffff;
+            font-size: 2.2rem;
             text-align: center;
-            animation: fadeIn 1.2s ease-in-out;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+            letter-spacing: 2px;
+            transform: translateZ(40px);
         }
-
-        h2 {
+        
+        /* ===== NEON INPUT FIELDS ===== */
+        .input-group {
             margin-bottom: 25px;
-            color: #333;
-            font-weight: bold;
+            position: relative;
+            transform-style: preserve-3d;
         }
-
-        input[type="text"],
-        input[type="password"] {
-            width: 90%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
+        
+        .input-group input {
+            width: 100%;
+            padding: 15px 20px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(0, 255, 255, 0.3);
             border-radius: 8px;
+            outline: none;
+            color: #00ffff;
             font-size: 16px;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+            transition: all 0.3s;
+            transform: translateZ(30px);
         }
-
-        input[type="submit"] {
-            background: #28a745;
-            color: white;
-            padding: 12px 30px;
+        
+        .input-group input:focus {
+            border-color: #ff00ff;
+            box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+            background: rgba(0, 0, 0, 0.6);
+        }
+        
+        .input-group label {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            color: rgba(0, 255, 255, 0.7);
+            pointer-events: none;
+            transition: all 0.3s;
+            transform: translateZ(35px);
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+        }
+        
+        .input-group input:focus + label,
+        .input-group input:valid + label {
+            top: -10px;
+            left: 15px;
+            font-size: 12px;
+            color: #ff00ff;
+            text-shadow: 0 0 8px rgba(255, 0, 255, 0.8);
+            background: rgba(10, 10, 30, 0.9);
+            padding: 0 5px;
+            transform: translateZ(45px);
+        }
+        
+        /* ===== 3D NEON BUTTON ===== */
+        .btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(45deg, #00ffff, #ff00ff);
             border: none;
             border-radius: 8px;
+            color: #111;
             font-size: 16px;
+            font-weight: 600;
             cursor: pointer;
-            transition: background 0.3s;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+            transform: translateZ(35px);
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+            letter-spacing: 1px;
         }
-
-        input[type="submit"]:hover {
-            background: #1e7e34;
+        
+        .btn:hover {
+            transform: translateY(-3px) translateZ(45px);
+            box-shadow: 0 0 25px rgba(255, 0, 255, 0.7);
+            animation: btnGlow 1.5s infinite alternate;
         }
-
-        a {
-            display: inline-block;
+        
+        .btn:active {
+            transform: translateY(1px) translateZ(35px);
+        }
+        
+        @keyframes btnGlow {
+            0% { box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); }
+            50% { box-shadow: 0 0 25px rgba(255, 0, 255, 0.7); }
+            100% { box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); }
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: 0.5s;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        /* ===== NEON LINK EFFECTS ===== */
+        .link {
+            display: block;
+            text-align: center;
             margin-top: 20px;
+            color: rgba(0, 255, 255, 0.7);
             text-decoration: none;
-            color: #28a745;
-            font-weight: bold;
+            transition: all 0.3s;
+            transform: translateZ(30px);
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
         }
-
-        a:hover {
-            text-decoration: underline;
+        
+        .link:hover {
+            color: #ff00ff;
+            text-shadow: 0 0 15px rgba(255, 0, 255, 0.8);
+            transform: translateX(5px) translateZ(40px);
         }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        
+        /* ===== FLOATING NEON PARTICLES ===== */
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: #00ffff;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: -1;
+            box-shadow: 0 0 5px 1px #00ffff;
+            opacity: 0.7;
         }
     </style>
 </head>
 <body>
-    <div class="login-box">
-        <h2>Student Login</h2>
-        <form method="POST">
-            <input type="text" name="username" placeholder="Enter username" required><br>
-            <input type="password" name="password" placeholder="Enter password" required><br>
-            <input type="submit" value="Login">
-        </form>
-        <a href="/">← Back to Home</a>
+    <!-- Cyberpunk Neon Background -->
+    <div class="neon-bg">
+        <div class="neon-grid"></div>
+        <div class="neon-light light-1"></div>
+        <div class="neon-light light-2"></div>
     </div>
+    
+    <!-- 3D Neon Login Box -->
+    <div class="login-box">
+        <h2>STUDENT LOGIN</h2>
+        <form method="POST">
+            <div class="input-group">
+                <input name="username" type="text" id="username" required>
+                <label for="username">USERNAME</label>
+            </div>
+            <div class="input-group">
+                <input type="password" name="password" id="password" required>
+                <label for="password">PASSWORD</label>
+            </div>
+            <input  type="submit" value="Login" class="btn">
+      
+            <a href="/" class="link">← RETURN TO HOME</a>
+        </form>
+    </div>
+      <!-- <input type="text" name="username" placeholder="Enter username" required><br>
+            <input type="password" name="password" placeholder="Enter password" required><br>
+            <input type="submit" value="Login"> -->
+    <script>
+        // Floating Neon Particles
+        document.addEventListener('mousemove', (e) => {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            document.body.appendChild(particle);
+            
+            // Random neon color
+            const colors = ['#00ffff', '#ff00ff', '#ffff00'];
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            particle.style.background = color;
+            particle.style.boxShadow = `0 0 5px 1px ${color}`;
+            
+            // Random size & position
+            const size = Math.random() * 4 + 2;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            
+            // Position at mouse
+            particle.style.left = `${e.clientX}px`;
+            particle.style.top = `${e.clientY}px`;
+            
+            // Random animation
+            const animDuration = Math.random() * 3 + 2;
+            particle.style.animation = `float ${animDuration}s linear forwards`;
+            
+            // Remove after animation
+            setTimeout(() => {
+                particle.remove();
+            }, animDuration * 1000);
+        });
+        
+        // Add floating animation
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes float {
+                0% {
+                    transform: translate(0, 0) scale(1);
+                    opacity: 0.7;
+                }
+                100% {
+                    transform: translate(${Math.random() * 200 - 100}px, ${Math.random() * 200 - 100}px) scale(0);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Pulsing effect for login box
+        const loginBox = document.querySelector('.login-box');
+        setInterval(() => {
+            loginBox.style.boxShadow = `
+                0 0 ${15 + Math.random() * 10}px rgba(0, 255, 255, ${0.3 + Math.random() * 0.2}),
+                0 0 ${30 + Math.random() * 15}px rgba(138, 43, 226, ${0.2 + Math.random() * 0.1}),
+                inset 0 0 ${10 + Math.random() * 5}px rgba(255, 255, 255, ${0.1 + Math.random() * 0.05})
+            `;
+        }, 2000);
+    </script>
 </body>
 </html>
