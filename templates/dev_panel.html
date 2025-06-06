@@ -1,129 +1,191 @@
 <!DOCTYPE html>
 <html>
-<head><title>Developer Panel</title>
-
-<style>
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+<head>
+    <title>Developer Panel</title>
+    
+ <script>
+// Prompt Authentication
+const userId = prompt("Enter Developer ID:");
+const userPass = prompt("Enter Password:");
+if (userId !== "krishnaseth" || userPass !== "Seth@1234") {
+    alert("Access Denied!");
+    window.location.href = document.referrer || "/";
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-image: url('https://t3.ftcdn.net/jpg/02/14/53/92/360_F_214539232_YnUrtuwUEt84gHuU0qG8l7OwZvH4rnPG.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    color: white;
-}
-.container {
-      width: 300px;
-      padding: 30px;
-      border-radius: 15px 15px 15px 15px;
-      background: rgba(255, 255, 255, 0);
-      -webkit-backdrop-filter: blur(20px);
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      box-shadow: 5px 5px 35px 35px rgba(31, 38, 135, 0.37);
-      color: white;
-      text-align: center;
-      align-items:center;
-      position : absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-}
-h1 {
-    text-align: center;
-    color: white; 
-}
+// Disable Right Click
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
 
-.form-group {
-    margin-bottom: 15px;
-}
+// Disable F12, Ctrl+Shift+I, Ctrl+U, Ctrl+S, Ctrl+P, etc.
+document.addEventListener('keydown', function(e) {
+    if (
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) ||
+        (e.ctrlKey && (e.key === "U" || e.key === "S" || e.key === "P" || e.key === "C"))
+    ) {
+        e.preventDefault();
+        alert("This action is disabled!");
+    }
+});
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: white; 
-}
+// Disable drag + select
+document.addEventListener('dragstart', e => e.preventDefault());
+document.addEventListener('selectstart', e => e.preventDefault());
 
-input[type="text"],
-input[type="password"] {
-    width: 80%;
-    padding: 12px 15px;
-    border: 2px solid #00e751;
-    border-radius: 25px;
-    background-color: #222;
-    color: white;
-    font-size: 16px;
-    font-weight: 500;
-    box-shadow: inset 0 0 5px #00e751;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
+// Prevent PrintScreen (trick via clipboard overwrite)
+setInterval(() => {
+    navigator.clipboard.writeText("Copying is disabled by developer!");
+}, 1000);
+</script>
 
-input[type="text"]:focus,
-input[type="password"]:focus {
-    border-color: #0073e6;
-    box-shadow: 0 0 8px #0073e6;
-    outline: none;
-    background-color: #111;
-}
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
 
-input[type="submit"] {
-    width: 100%;
-    padding: 12px 0;
-    background: linear-gradient(135deg, #00e751, #0073e6);
-    border: none;
-    border-radius: 25px;
-    color: white;
-    font-weight: 600;
-    font-size: 16px;
-    cursor: pointer;
-    box-shadow: 0 8px 15px rgba(0, 115, 230, 0.3);
-    transition: all 0.3s ease;
-    letter-spacing: 1px;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://t3.ftcdn.net/jpg/02/14/53/92/360_F_214539232_YnUrtuwUEt84gHuU0qG8l7OwZvH4rnPG.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            color: white;
+        }
+        .container {
+            width: 300px;
+            padding: 30px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 5px 5px 35px 35px rgba(31, 38, 135, 0.37);
+            color: white;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        h1, h2 {
+            text-align: center;
+            color: white; 
+        }
 
-input[type="submit"]:hover {
-    background: linear-gradient(135deg, #0073e6, #00e751);
-    box-shadow: 0 12px 20px rgba(0, 115, 230, 0.5);
-    transform: translateY(-3px);
-}
+        .form-group {
+            margin-bottom: 15px;
+        }
 
-/* Stylish Back to Home Link */
-a {
-    display: inline-block;
-    margin-top: 20px;
-    font-weight: 600;
-    color: #00e751;
-    text-decoration: none;
-    border: 2px solid #00e751;
-    padding: 8px 20px;
-    border-radius: 25px;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 231, 81, 0.3);
-}
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: white; 
+        }
 
-a:hover {
-    color: white;
-    background-color: #00e751;
-    box-shadow: 0 8px 25px rgba(0, 231, 81, 0.7);
-    transform: translateY(-2px);
-}
+        input[type="text"],
+        input[type="password"] {
+            width: 80%;
+            padding: 12px 15px;
+            border: 2px solid #00e751;
+            border-radius: 25px;
+            background-color: #222;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            box-shadow: inset 0 0 5px #00e751;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
 
-</style>
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #0073e6;
+            box-shadow: 0 0 8px #0073e6;
+            outline: none;
+            background-color: #111;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px 0;
+            background: linear-gradient(135deg, #00e751, #0073e6);
+            border: none;
+            border-radius: 25px;
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 8px 15px rgba(0, 115, 230, 0.3);
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+        }
+
+        input[type="submit"]:hover {
+            background: linear-gradient(135deg, #0073e6, #00e751);
+            box-shadow: 0 12px 20px rgba(0, 115, 230, 0.5);
+            transform: translateY(-3px);
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            font-weight: 600;
+            color: #00e751;
+            text-decoration: none;
+            border: 2px solid #00e751;
+            padding: 8px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 231, 81, 0.3);
+        }
+
+        a:hover {
+            color: white;
+            background-color: #00e751;
+            box-shadow: 0 8px 25px rgba(0, 231, 81, 0.7);
+            transform: translateY(-2px);
+        }
+    </style>
 </head>
 <body>
+    <script>
+    // Disable right-click
+    document.addEventListener('contextmenu', event => {
+        event.preventDefault();
+        alert("Right-click is disabled.");
+    });
+
+    // Block shortcut keys like Ctrl+U, F12, Ctrl+S, Ctrl+C, Ctrl+V
+    document.addEventListener('keydown', function(e) {
+        const key = e.key.toLowerCase();
+        if ((e.ctrlKey && ['u', 's', 'c', 'v'].includes(key)) || key === "f12") {
+            e.preventDefault();
+            alert("This action is disabled.");
+        }
+    });
+
+    // Disable copy, paste, cut via mouse
+    document.addEventListener('copy', e => { e.preventDefault(); });
+    document.addEventListener('paste', e => { e.preventDefault(); });
+    document.addEventListener('cut', e => { e.preventDefault(); });
+
+    // Prevent page source visibility when prompted
+    window.onkeydown = function(e) {
+        if (e.keyCode == 123) { // F12
+            return false;
+        }
+    };
+</script>
     <div class="container">
-<h2>Create Teacher Account</h2>
-<form method="POST">
-    Username: <input type="text" name="username" required><br><br>
-    Password: <input type="password" name="password" required><br><br>
-    <input type="submit" value="Create Teacher Account">
-</form>
-<a href="/">Back to Home</a>
-</div>
+        <h2>Create Teacher Account</h2>
+        <form method="POST">
+            Username: <input type="text" name="username" required><br><br>
+            Password: <input type="password" name="password" required><br><br>
+            <input type="submit" value="Create Teacher Account">
+        </form>
+        <a href="/">Back to Home</a>
+    </div>
 </body>
 </html>
