@@ -277,30 +277,228 @@
             pointer-events: none;
             z-index: -1;
         }
+            .question-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+     .question-list {
+        list-style: none;
+        padding-left: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .question-list li {
+        padding: 8px 10px;
+        border-bottom: 1px solid #ccc;
+        font-size: 15px;
+        color: #333;
+    }
+
+    .q-number {
+        font-weight: bold;
+        color: #4e8cff;
+        margin-right: 5px;
+    }
+
+    .q-text {
+        font-weight: 500;
+    }
+
+    .q-options {
+        margin-left: 10px;
+        color: #555;
+    }
+
+    .q-correct {
+        margin-left: 10px;
+        color: #28a745;
+        font-weight: bold;
+    }
+     .student-answer-list {
+        list-style: none;
+        padding-left: 0;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .student-answer-list li {
+        padding: 12px 15px;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 15px;
+        background: #f9f9f9;
+        border-radius: 10px;
+    }
+
+    .student-name {
+        font-weight: bold;
+        color: #4e8cff;
+        font-size: 16px;
+        margin-bottom: 8px;
+        display: inline-block;
+    }
+
+    .student-answer-line {
+        margin: 5px 0;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+        background: #fff;
+        padding: 6px 12px;
+        border-radius: 6px;
+        border: 1px solid #eee;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .q-text {
+        color: #333;
+    }
+
+    .score-tag {
+        font-weight: bold;
+        color: #28a745;
+    }
+
+    .score-form-inline {
+        display: none; /* keep the form hidden for now */
+    }
+.logout-button {
+    display: inline-block;
+    padding: 14px 30px;
+    margin-top: 40px;
+    background: linear-gradient(135deg, #8e2de2, #4a00e0);
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    border: none;
+    border-radius: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(72, 0, 145, 0.3);
+    transition: all 0.35s ease;
+    text-align: center;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.logout-button:hover {
+    background: linear-gradient(135deg, #4a00e0, #8e2de2);
+    box-shadow: 0 10px 22px rgba(72, 0, 145, 0.5);
+    transform: translateY(-3px);
+}
+
+.logout-button:active {
+    transform: scale(0.97);
+    box-shadow: 0 4px 10px rgba(72, 0, 145, 0.3);
+}
+
+
+
+.text-center {
+    text-align: center;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    cursor: pointer;
+    position: relative;
+    color: #fff;
+}
+
+.checkbox-label input[type="checkbox"] {
+    display: none;
+}
+
+.custom-checkbox {
+    width: 20px;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 5px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .custom-checkbox {
+    background-color: #ff4d4d;
+    box-shadow: 0 0 5px rgba(255, 77, 77, 0.7);
+}
+
+.custom-checkbox::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 6px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .custom-checkbox::after {
+    opacity: 1;
+}
+
     </style>
 </head>
 <body>
     <div class="container">
+
         <h2>Welcome, {{ session['teacher'] }}</h2>
+        
 
         <div class="section">
             <form method="POST">
                 <h3>Add New Question</h3>
                 <textarea name="question" rows="3" required placeholder="Enter your question here..."></textarea>
+                <input type="text" name="option_a" required placeholder="Option A">
+                <input type="text" name="option_b" required placeholder="Option B">
+                <input type="text" name="option_c" required placeholder="Option C">
+                <input type="text" name="option_d" required placeholder="Option D">
+
+                <label for="correct_option" style="color:white;">Correct Answer:</label>
+                <select name="correct_option" required style="margin-top:10px; margin-bottom:15px; padding:10px; border-radius:10px;">
+                    <option value="">--Select--</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                </select>
+
                 <input type="submit" name="add_question" value="Add Question">
             </form>
         </div>
 
-        <div class="section">
-            <h3>Existing Questions</h3>
-            <ul>
-                {% for q in questions %}
-                    <li>{{ q }}</li>
-                {% else %}
-                    <li>No questions yet</li>
-                {% endfor %}
-            </ul>
-        </div>
+       <div class="section">
+<div class="section">
+    <h3>Existing Questions</h3>
+    <form method="POST">
+        <ul class="question-list">
+            {% for q in questions %}
+                <li>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="delete_questions" value="{{ loop.index0 }}">
+                        <span class="custom-checkbox"></span>
+                        <span class="q-number">Q{{ loop.index }}.</span>
+                        <span class="q-text">{{ q.q }}</span>
+                        <span class="q-options">[ A: {{ q.options[0] }} | B: {{ q.options[1] }} | C: {{ q.options[2] }} | D: {{ q.options[3] }} ]</span>
+                        <span class="q-correct">Answer: {{ q.correct }}</span>
+                    </label>
+                </li>
+            {% else %}
+                <li style="color: black;">No questions yet</li>
+            {% endfor %}
+        </ul>
+        <button type="submit" name="delete_selected" class="danger-btn" style="margin-top: 20px;">Delete Selected Questions</button>
+    </form>
+</div>
+
 
         <div class="buttons">
             <form method="POST" onsubmit="return confirm('Are you sure you want to delete all questions?');">
@@ -312,34 +510,33 @@
             </form>
         </div>
 
-        <div class="section">
-            <h3>Student Answers</h3>
-            <ol>
-                {% for student, ans_list in answers.items() %}
-                    <li><strong>{{ student }}</strong>:
-                        <ol>
-                            {% for ans in ans_list %}
-                                <li>
-                                    {{ ans[0] }} - Score: {{ ans[1] }}
-                                    <form method="POST" class="score-form">
-                                        <input type="hidden" name="student_name" value="{{ student }}">
-                                        <input type="hidden" name="answer_index" value="{{ loop.index0 }}">
-                                        <input type="number" name="score" min="0" max="10" placeholder="Score">
-                                        <input type="submit" name="submit_score" value="Update">
-                                    </form>
-                                </li>
-                            {% endfor %}
-                        </ol>
-                    </li>
+    <div class="section">
+    <h3>Student Answers</h3>
+    <ul class="student-answer-list">
+        {% for student, ans_list in answers.items() %}
+            <li>
+                <span class="student-name">👤 {{ student }}</span><br>
+
+                {% if ans_list == 'BLOCKED' %}
+                    <span style="color: red;">⚠️ This student has been blocked</span>
                 {% else %}
-                    <li>No answers submitted yet</li>
-                {% endfor %}
-            </ol>
-        </div>
+                    {% for ans in ans_list %}
+                        <div class="student-answer-line">
+                            <span class="q-text">Q{{ loop.index }}: {{ ans[0] }}</span>
+                            <span class="score-tag">Score: {{ ans[1] }}</span>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </li>
+        {% else %}
+            <li style="color: black;">No answers submitted yet</li>
+        {% endfor %}
+    </ul>
+</div>
 
-        <a href="{{ url_for('teacher_logout') }}">Logout</a>
-    </div>
-
+   <div class="text-center">
+  <a href="{{ url_for('teacher_logout') }}" class="logout-button">Logout</a>
+</div>
     <script>
         // Floating particles effect
         document.addEventListener('mousemove', function(e) {
@@ -378,4 +575,3 @@
         document.head.appendChild(style);
     </script>
 </body>
-</html>

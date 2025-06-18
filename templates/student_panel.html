@@ -214,10 +214,75 @@
                 font-size: 26px;
             }
         }
+        
+         .option-label {
+            display: block;
+            background: #f4f4f4;
+            border: 2px solid transparent;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 12px;
+            transition: transform 0.3s ease, background 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            font-size: 16px;
+            position: relative;
+            perspective: 600px;
+            transform-style: preserve-3d;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+
+        .option-label:hover {
+            transform: rotateY(5deg) scale(1.02);
+            background: #e0eaff;
+            box-shadow: 0 10px 18px rgba(0,0,0,0.15);
+        }
+
+        .option-label input[type="radio"] {
+            display: none;
+        }
+
+        .option-label::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: white;
+            border: 2px solid #667eea;
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all 0.3s ease;
+        }
+
+        .option-label.checked {
+            background: #d3e5ff;
+            transform: rotateY(-5deg) scale(1.01);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.12);
+        }
+
+        .option-label.checked::before {
+            background: #667eea;
+            border-color: #667eea;
+        }
+
+        .option-label span {
+            padding-left: 35px;
+            display: block;
+        }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    {% if blocked %}
+        <div class="container" id="main-container">
+            <h2 style="color: red;">You have been blocked 🚫</h2>
+            <div id="cheating-warning" style="display:block;">
+                You are not allowed to take this test due to suspicious activity.
+            </div>
+            <a href="{{ url_for('student_logout') }}" id="logout-link">← Logout</a>
+        </div>
+    {% else %}
     <div class="container" id="main-container">
         <h2>Welcome, {{ session['student'] }}</h2>
 
@@ -228,80 +293,114 @@
         {% if questions|length == 0 %}
             <p>No questions available at the moment.</p>
         {% else %}
-        {% if score is not none %}
-            <div class="score-block">
-                <p><strong>Your Total Score:</strong> {{ score }}</p>
-            </div>
-        {% else %}
-            <form method="POST" id="answer-form">
-                {% for q in questions %}
-                <div class="question-block">
-                    <b>Q{{ loop.index }}:</b> {{ q }}<br>
-                    <input 
-                        type="text" 
-                        name="answer_{{ loop.index0 }}" 
-                        placeholder="Type your answer..." 
-                        required
-                        value="{% if answers and answers[loop.index0] is defined %}{{ answers[loop.index0] }}{% endif %}">
-
-                    {% if scores and scores[loop.index0] is defined %}
-                        <div class="score-block" style="margin-top:8px; font-size:18px;">
-                            Score for this answer: <strong>{{ scores[loop.index0] }}</strong>
-                        </div>
-                    {% endif %}
+           {% if score is not none %}
+                <div class="score-block">
+                    <p><strong>Your Total Score:</strong> {{ score }}/{{ questions|length }}</p>
+                    <p><strong>Your Answers:</strong></p>
+                    <ul style="list-style: none; padding-left: 0;">
+                        {% for ans in student_answers %}
+                            <li style="margin-bottom: 10px; padding: 10px; border-radius: 8px;
+                                background-color: {% if ans[1] == '1' %}#d4edda{% else %}#f8d7da{% endif %};
+                                color: {% if ans[1] == '1' %}#155724{% else %}#721c24{% endif %};
+                                border: 1px solid {% if ans[1] == '1' %}#c3e6cb{% else %}#f5c6cb{% endif %};">
+                                Q{{ loop.index }}: {{ ans[0] }} —
+                                <strong>{% if ans[1] == '1' %}✔ Correct{% else %}✖ Incorrect{% endif %}</strong>
+                            </li>
+                        {% endfor %}
+                    </ul>
                 </div>
-                {% endfor %}
-                <button type="submit" class="submit-btn">Submit Answers</button>
-            </form>
-        {% endif %}
+
+                {% if incorrect_list %}
+                    <div class="score-block" style="background: #fff8e1; border: 2px dashed #f39c12; color: #8e5c00;">
+                        <h3 style="margin-top: 20px;">Review Incorrect Answers:</h3>
+                        <ul style="list-style: none; padding-left: 0;">
+                            {% for item in incorrect_list %}
+                                <li style="margin-bottom: 20px; background: #fffbe6; padding: 15px; border-radius: 10px; border: 1px solid #f0c36d;">
+                                    <strong>Q:</strong> {{ item.question }}<br>
+                                    <strong>Your Answer:</strong> 
+                                    <span style="color: red;">{{ item.your_answer if item.your_answer else "Not Answered" }}</span><br>
+                                    <strong>Correct Answer:</strong> 
+                                    <span style="color: green;">{{ item.correct_answer }}</span><br>
+                                    <strong>Options:</strong><br>
+                                    A. {{ item.options[0] }}<br>
+                                    B. {{ item.options[1] }}<br>
+                                    C. {{ item.options[2] }}<br>
+                                    D. {{ item.options[3] }}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+            {% else %}
+                <form method="POST" id="answer-form">
+                    {% for q in questions %}
+                        <div class="question-block">
+                            <b>Q{{ loop.index }}:</b> {{ q.q }}<br><br>
+
+                            <label class="option-label">
+                                <input type="radio" name="answer_{{ loop.index0 }}" value="A" required>
+                                <span>A. {{ q.options[0] }}</span>
+                            </label>
+
+                            <label class="option-label">
+                                <input type="radio" name="answer_{{ loop.index0 }}" value="B">
+                                <span>B. {{ q.options[1] }}</span>
+                            </label>
+
+                            <label class="option-label">
+                                <input type="radio" name="answer_{{ loop.index0 }}" value="C">
+                                <span>C. {{ q.options[2] }}</span>
+                            </label>
+
+                            <label class="option-label">
+                                <input type="radio" name="answer_{{ loop.index0 }}" value="D">
+                                <span>D. {{ q.options[3] }}</span>
+                            </label>
+                        </div>
+                        <br>
+                    {% endfor %}
+                    <button type="submit" class="submit-btn">Submit Answers</button>
+                </form>
+            {% endif %}
         {% endif %}
 
         <a href="{{ url_for('student_logout') }}" id="logout-link">← Logout</a>
     </div>
+    {% endif %}
 
+    <!-- JavaScript Section (Same as before) -->
     <script>
         let cheatingDetected = false;
-        let allowCheatingDetection = true;  // Flag to allow or block cheating detection
+        let allowCheatingDetection = true;
 
         function handleCheating(reason) {
             if (!cheatingDetected && allowCheatingDetection) {
                 cheatingDetected = true;
-
-                // Show blocking message
                 const warning = document.getElementById("cheating-warning");
                 warning.style.display = "block";
                 warning.textContent = `You have been blocked for: ${reason}`;
-
-                // Disable form inputs
                 const form = document.getElementById("answer-form");
                 if (form) {
                     const inputs = form.querySelectorAll("input, textarea, button");
                     inputs.forEach(input => input.disabled = true);
                 }
-
-                // Send cheating report to backend
                 fetch("/report_cheating", {
                     method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
+                    headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ reason: reason })
                 });
             }
         }
 
-        // Disable cheating detection on logout click
         document.getElementById("logout-link").addEventListener('click', function() {
             allowCheatingDetection = false;
         });
 
-        // Disable right-click
         document.addEventListener('contextmenu', event => {
             event.preventDefault();
             handleCheating("Right-click is not allowed.");
         });
 
-        // Disable keyboard shortcuts
         document.addEventListener('keydown', function(e) {
             const key = e.key.toLowerCase();
             if ((e.ctrlKey && ['c', 'v', 'u', 's'].includes(key)) || key === "f12") {
@@ -310,29 +409,35 @@
             }
         });
 
-        // Disable copy/paste using mouse
-        document.addEventListener('copy', function(e) {
+        document.addEventListener('copy', e => {
             e.preventDefault();
             handleCheating("Copy operation detected.");
         });
 
-        document.addEventListener('paste', function(e) {
+        document.addEventListener('paste', e => {
             e.preventDefault();
             handleCheating("Paste operation detected.");
         });
 
-        // Disable cut operation
-        document.addEventListener('cut', function(e) {
+        document.addEventListener('cut', e => {
             e.preventDefault();
             handleCheating("Cut operation detected.");
         });
 
-        // Detect tab switch or minimize
-        document.addEventListener('visibilitychange', function() {
+        document.addEventListener('visibilitychange', () => {
             if (document.hidden) {
                 handleCheating("You switched tab or minimized the browser.");
             }
         });
+
+        document.querySelectorAll('.option-label input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', function () {
+                let group = this.name;
+                document.querySelectorAll(`input[name="${group}"]`).forEach(r => {
+                    r.parentElement.classList.remove('checked');
+                });
+                this.parentElement.classList.add('checked');
+            });
+        });
     </script>
 </body>
-</html>

@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 import os
+from flask import jsonify
 
 app = Flask(__name__)
 app.secret_key = 'supersecretkey123'
@@ -12,75 +13,103 @@ QUESTIONS_FILE = os.path.join(DATA_DIR, 'questions.txt')
 ANSWERS_FILE = os.path.join(DATA_DIR, 'answers.txt')
 
 # Helper Functions
+
+def add_blocked_student(student_name):
+    with open(ANSWERS_FILE, 'a') as f:
+        f.write(f"{student_name}|BLOCKED\n")
+
 def read_accounts(filename):
     accounts = {}
     try:
         with open(filename, 'r') as f:
             for line in f:
-                line = line.strip()
-                if not line:
-                    continue
-                parts = line.split(maxsplit=1)
+                parts = line.strip().split(maxsplit=1)
                 if len(parts) == 2:
                     username, password = parts
                     accounts[username] = password
     except FileNotFoundError:
-        print(f"File {filename} not found, returning empty dict.")
+        pass
     return accounts
 
 def add_account(filename, username, password):
     os.makedirs(os.path.dirname(filename), exist_ok=True)
     with open(filename, 'a') as f:
         f.write(f"{username} {password}\n")
-    print(f"Added account '{username}' to {filename}")
 
-def read_questions():
+def read_structured_questions():
     questions = []
     try:
         with open(QUESTIONS_FILE, 'r') as f:
-            questions = [line.strip() for line in f if line.strip()]
+            for line in f:
+                parts = line.strip().split('|')
+                if len(parts) == 6:
+                    q, a, b, c, d, correct = parts
+                    questions.append({
+                        'q': q,
+                        'options': [a, b, c, d],
+                        'correct': correct.upper()
+                    })
     except FileNotFoundError:
-        print(f"Questions file {QUESTIONS_FILE} not found.")
-    print(f"Loaded questions: {questions}")
+        pass
     return questions
 
-def add_question(q):
+def add_question_line(line):
     os.makedirs(os.path.dirname(QUESTIONS_FILE), exist_ok=True)
     with open(QUESTIONS_FILE, 'a') as f:
-        f.write(q + "\n")
-    print(f"Added question: {q}")
+        f.write(line + "\n")
 
 def clear_questions():
     open(QUESTIONS_FILE, 'w').close()
-    print("Cleared all questions")
 
 def read_answers():
     answers = {}
     try:
         with open(ANSWERS_FILE, 'r') as f:
             for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+
                 if ':' in line:
-                    student, ans = line.strip().split(':', 1)
+                    student, ans = line.split(':', 1)
+                    student = student.strip()
+                    ans = ans.strip()
+
+                    
+                    if ans == 'BLOCKED':
+                        answers[student] = 'BLOCKED'
+                        continue
+
+                    
                     ans_list = []
                     for pair in ans.split(','):
                         pair = pair.strip()
                         if '|' in pair:
                             answer_text, score = pair.split('|', 1)
-                            ans_list.append( (answer_text.strip(), score.strip()) )
+                            ans_list.append((answer_text.strip(), score.strip()))
                         else:
-                            ans_list.append( (pair.strip(), '0') )
-                    answers[student.strip()] = ans_list
+                            ans_list.append((pair.strip(), '0'))
+                    answers[student] = ans_list
     except FileNotFoundError:
-        print(f"Answers file {ANSWERS_FILE} not found.")
+        pass
     return answers
 
-def add_answer(student, ans_list):
+
+def add_answer(student, ans_list, score_list):
     os.makedirs(os.path.dirname(ANSWERS_FILE), exist_ok=True)
     with open(ANSWERS_FILE, 'a') as f:
-        f.write(f"{student}: " + ', '.join([f"{a}|0" for a in ans_list]) + "\n")
+        f.write(f"{student}: " + ', '.join([f"{a}|{s}" for a, s in zip(ans_list, score_list)]) + "\n")
 
-# ---- Routes ----
+# Routes
 
+
+@app.route('/report_cheating', methods=['POST'])
+def report_cheating():
+    if 'student' in session:
+        student_name = session['student']
+        add_blocked_student(student_name)
+        return jsonify({'status': 'blocked'})
+    return jsonify({'status': 'error', 'message': 'Student not logged in'}), 403
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -118,61 +147,58 @@ def teacher_panel():
     if 'teacher' not in session:
         return redirect(url_for('teacher_login'))
 
-    if request.method == 'POST':
-        if 'add_question' in request.form:
-            question = request.form['question'].strip()
-            if question:
-                add_question(question)
+    questions = read_structured_questions()
+    answers = read_answers()
 
+    if request.method == 'POST':
+        # Add new question
+        if 'add_question' in request.form:
+            q = request.form['question'].strip()
+            optA = request.form['option_a'].strip()
+            optB = request.form['option_b'].strip()
+            optC = request.form['option_c'].strip()
+            optD = request.form['option_d'].strip()
+            correct = request.form['correct_option'].strip().upper()
+
+            if q and optA and optB and optC and optD and correct in ['A', 'B', 'C', 'D']:
+                add_question_line(f"{q}|{optA}|{optB}|{optC}|{optD}|{correct}")
+                questions = read_structured_questions()  # refresh after adding
+
+        # Delete all questions
         elif 'clear_questions' in request.form:
             clear_questions()
+            questions = []  
 
+        # Delete all students and their answers
         elif 'clear_students' in request.form:
             open(STUDENTS_FILE, 'w').close()
             open(ANSWERS_FILE, 'w').close()
-            print("Cleared all students and answers")
+            answers = {}
 
-        elif 'submit_score' in request.form:
-            student_name = request.form['student_name']
-            answer_index = int(request.form['answer_index'])
-            score = request.form['score']
+        # Delete selected questions using checkbox
+        elif 'delete_selected' in request.form:
+            indices_to_delete = request.form.getlist('delete_questions')
+            indices_to_delete = list(map(int, indices_to_delete))
 
-            answers = read_answers()
-            if student_name in answers:
-                ans_score_list = answers[student_name]
-                answer_text, _ = ans_score_list[answer_index]
-                ans_score_list[answer_index] = (answer_text, score)
+            questions = [q for i, q in enumerate(questions) if i not in indices_to_delete]
 
-                with open(ANSWERS_FILE, 'w') as f:
-                    for student, ans_list in answers.items():
-                        line_parts = [f"{a}|{s}" for a, s in ans_list]
-                        f.write(f"{student}: {', '.join(line_parts)}\n")
-            return redirect(url_for('teacher_panel'))
+            # Overwrite updated questions
+            with open(QUESTIONS_FILE, 'w') as f:
+                for q in questions:
+                    f.write(f"{q['q']}|{q['options'][0]}|{q['options'][1]}|{q['options'][2]}|{q['options'][3]}|{q['correct']}\n")
 
-    questions = read_questions()
-    answers = read_answers()
     return render_template('teacher_panel.html', questions=questions, answers=answers, enumerate=enumerate)
-@app.before_request
-def log_ip_address():
-    if "X-Forwarded-For" in request.headers:
-        ip = request.headers.getlist("X-Forwarded-For")[0].split(',')[0].strip()
-    else:
-        ip = request.remote_addr
-    print(f"[{request.method}] {request.path} - IP: {ip}")
-@app.before_request
-def log_ip_address():
-    ip = request.remote_addr
-    print(f"[{request.method}] {request.path} - IP: {ip}")
-    
+
+
 @app.route('/teacher/logout')
 def teacher_logout():
     session.pop('teacher', None)
-    return redirect(url_for('projects'))  # Redirect to main_2.html
+    return redirect(url_for('projects'))
 
 @app.route('/logout')
 def logout():
     session.clear()
-    return redirect(url_for('projects'))  # Redirect to main_2.html
+    return redirect(url_for('projects'))
 
 @app.route('/student/register', methods=['GET', 'POST'])
 def student_register():
@@ -203,33 +229,69 @@ def student_panel():
     if 'student' not in session:
         return redirect(url_for('student_login'))
 
-    questions = read_questions()
-    answers = read_answers()
-
     student_name = session['student']
+    questions = read_structured_questions()
+    answers = read_answers()
     student_answers = answers.get(student_name)
 
+    # ✅ Blocked student check
+    if student_answers == 'BLOCKED':
+        return "⚠️ You have been blocked from submitting the test. <a href='/student/logout'>Logout</a>"
+
+    # ✅ Student trying to submit answers
     if request.method == 'POST':
         if student_answers is not None:
-            return "You have already submitted your answers. <a href='/student/logout'>Logout</a>"
+            return "❗You have already submitted your answers. <a href='/student/logout'>Logout</a>"
 
-        answers_list = []
-        for i in range(len(questions)):
-            ans = request.form.get(f'answer_{i}', '').strip()
-            answers_list.append(ans)
-        add_answer(student_name, answers_list)
-        return "Answers submitted! <a href='/student/logout'>Logout</a>"
+        submitted_answers = []
+        score_list = []
+        incorrect_list = []
 
+        for i, q in enumerate(questions):
+            selected = request.form.get(f'answer_{i}', '').strip().upper()
+            submitted_answers.append(selected)
+
+            if selected == q['correct']:
+                score_list.append('1')
+            else:
+                score_list.append('0')
+                incorrect_list.append({
+                    'question': q['q'],
+                    'your_answer': selected if selected else "Not Answered",
+                    'correct_answer': q['correct'],
+                    'options': q['options']
+                })
+
+        add_answer(student_name, submitted_answers, score_list)
+        session['show_incorrect'] = incorrect_list  # temp store
+        return redirect(url_for('student_panel'))
+
+    #  Already submitted, show score & incorrect
     if student_answers is not None:
         total_score = sum(int(score) for _, score in student_answers)
-        return render_template('student_panel.html', score=total_score, questions=questions, student_answers=student_answers)
-    else:
-        return render_template('student_panel.html', score=None, questions=questions, student_answers=None)
+        incorrect_list = session.pop('show_incorrect', [])
+        return render_template('student_panel.html', 
+                                  score=total_score,
+    questions=questions,
+    student_answers=student_answers,
+    incorrect_list=incorrect_list,
+    block_message=None
+)
+
+    # First time, no submission
+    return render_template('student_panel.html',
+                           score=None,
+                           questions=questions,
+                           student_answers=None,
+                           incorrect_list=[])
+
+
+
 
 @app.route('/student/logout')
 def student_logout():
     session.pop('student', None)
-    return redirect(url_for('projects'))  # Redirect to main_2.html
+    return redirect(url_for('projects'))
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=5000)
