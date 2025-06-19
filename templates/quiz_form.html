@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ subject | capitalize }} - Set {{ set_id }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap');
+        
+        :root {
+            --primary-color: #6C63FF;
+            --secondary-color: #5A52D3;
+            --accent-color: #FF6584;
+            --light-color: #F8F9FF;
+            --dark-color: #1A1A2E;
+            --success-color: #6DD5A7;
+            --danger-color: #FF6B6B;
+            --gold-color: #FFD700;
+            --glass-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1A1A2E, #16213E);
+            color: var(--light-color);
+            position: relative;
+            overflow-x: hidden;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+        
+        /* Premium 3D Particle Background */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            opacity: 0;
+            animation: float 15s infinite linear;
+        }
+        
+        .particle:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+            background: var(--primary-color);
+            width: 8px;
+            height: 8px;
+        }
+        
+        .particle:nth-child(2) {
+            top: 80%;
+            left: 25%;
+            animation-delay: 2s;
+            background: var(--accent-color);
+        }
+        
+        .particle:nth-child(3) {
+            top: 10%;
+            left: 65%;
+            animation-delay: 4s;
+            background: var(--gold-color);
+            width: 10px;
+            height: 10px;
+        }
+        
+        .particle:nth-child(4) {
+            top: 60%;
+            left: 80%;
+            animation-delay: 6s;
+            background: var(--success-color);
+        }
+        
+        .particle:nth-child(5) {
+            top: 30%;
+            left: 50%;
+            animation-delay: 8s;
+            background: var(--primary-color);
+            width: 12px;
+            height: 12px;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Main Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: linear-gradient(145deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.95));
+            backdrop-filter: blur(12px);
+            border-radius: 25px;
+            padding: 40px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(108, 99, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(108, 99, 255, 0.1) 0%, transparent 70%);
+            animation: rotate 60s linear infinite;
+            z-index: -1;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--light-color);
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            position: relative;
+            padding-bottom: 15px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(108, 99, 255, 0.5);
+        }
+        
+        /* Form Styles */
+        .form-block {
+            margin-bottom: 30px;
+            animation: slideInUp 0.6s ease-out both;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 12px;
+            font-weight: 600;
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+        }
+        
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid rgba(108, 99, 255, 0.3);
+            border-radius: 12px;
+            background: rgba(15, 23, 42, 0.7);
+            color: var(--light-color);
+            font-size: 16px;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        input[type="text"]:focus,
+        input[type="number"]:focus {
+            border-color: var(--accent-color);
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(255, 101, 132, 0.3);
+            background: rgba(15, 23, 42, 0.9);
+            transform: translateY(-2px);
+        }
+        
+        /* Question Styles */
+        .question {
+            margin-bottom: 30px;
+            padding: 25px;
+            border-radius: 18px;
+            background: linear-gradient(145deg, rgba(26, 26, 46, 0.7), rgba(22, 33, 62, 0.8));
+            border: 1px solid rgba(108, 99, 255, 0.2);
+            transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+            animation: fadeIn 0.6s ease-out both;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .question::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+            transition: all 0.4s ease;
+        }
+        
+        .question:hover {
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            border-color: rgba(108, 99, 255, 0.4);
+        }
+        
+        .question:hover::before {
+            width: 8px;
+        }
+        
+        .question strong {
+            font-size: 1.3rem;
+            color: var(--light-color);
+            display: block;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        /* Option Styles */
+        .option {
+            display: block;
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            user-select: none;
+            transition: all 0.3s ease;
+            border-radius: 12px;
+            padding: 16px 20px 16px 60px;
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid rgba(108, 99, 255, 0.1);
+        }
+        
+        .option:hover {
+            background: rgba(108, 99, 255, 0.15);
+            transform: translateX(10px);
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .option input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+        
+        .checkmark {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            height: 24px;
+            width: 24px;
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            border-radius: 50%;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        .option:hover .checkmark {
+            transform: translateY(-50%) scale(1.1);
+            border-color: var(--accent-color);
+        }
+        
+        .option input:checked ~ .checkmark {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            box-shadow: 0 0 10px rgba(108, 99, 255, 0.5);
+        }
+        
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+        
+        .option input:checked ~ .checkmark:after {
+            display: block;
+            animation: checkPop 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        .option .checkmark:after {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: white;
+        }
+        
+        @keyframes checkPop {
+            0% { transform: translate(-50%, -50%) scale(0); }
+            70% { transform: translate(-50%, -50%) scale(1.2); }
+            100% { transform: translate(-50%, -50%) scale(1); }
+        }
+        
+        /* Button Styles */
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: white;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: 0 10px 20px rgba(108, 99, 255, 0.3);
+            margin: 40px 0 30px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: all 0.6s ease;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(108, 99, 255, 0.5);
+        }
+        
+        .submit-btn:hover::before {
+            left: 100%;
+        }
+        
+        .submit-btn:active {
+            transform: translateY(-2px);
+        }
+        
+        /* Back Link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.4s ease;
+            padding: 12px 20px;
+            border-radius: 12px;
+            background: rgba(255, 101, 132, 0.1);
+            border: 1px solid rgba(255, 101, 132, 0.2);
+        }
+        
+        .back-link:hover {
+            color: white;
+            background: rgba(255, 101, 132, 0.3);
+            transform: translateX(-10px);
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .back-link i {
+            margin-right: 8px;
+            font-size: 1.2rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 10px;
+            }
+            
+            .container {
+                padding: 30px 20px;
+                border-radius: 20px;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .question {
+                padding: 20px;
+            }
+            
+            .option {
+                padding: 14px 20px 14px 50px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Premium Particle Background -->
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+    
+    <div class="container animate__animated animate__fadeIn">
+        <h2 class="animate__animated animate__fadeInDown">{{ subject | upper }} - Set {{ set_id }}</h2>
+
+        {% if student_name == None %}
+            <!-- Ask for name and age before showing quiz -->
+            <form method="POST">
+                <div class="form-block" style="animation-delay: 0.1s;">
+                    <label><strong>Enter Your Name:</strong></label>
+                    <input type="text" name="student_name" required>
+                </div>
+
+                <div class="form-block" style="animation-delay: 0.2s;">
+                    <label><strong>Enter Your Age:</strong></label>
+                    <input type="number" name="student_age" required>
+                </div>
+
+                <button type="submit" class="submit-btn animate__animated animate__pulse animate__delay-1s">Start Quiz</button>
+            </form>
+        {% else %}
+            <!-- QUIZ ANSWER FORM -->
+            <form method="POST">
+                <input type="hidden" name="student_name_hidden" value="{{ student_name }}">
+                <input type="hidden" name="student_age_hidden" value="{{ student_age }}">
+
+                {% for q in questions %}
+                    <div class="question" style="animation-delay: {{ loop.index * 0.1 }}s;">
+                        <strong>Q{{ loop.index }}:</strong> {{ q.q }}<br>
+                        <label class="option">
+                            <input type="radio" name="q{{ loop.index0 }}" value="A" required>
+                            <span class="checkmark"></span>
+                            <span class="option-text">A. {{ q.options[0] }}</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q{{ loop.index0 }}" value="B">
+                            <span class="checkmark"></span>
+                            <span class="option-text">B. {{ q.options[1] }}</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q{{ loop.index0 }}" value="C">
+                            <span class="checkmark"></span>
+                            <span class="option-text">C. {{ q.options[2] }}</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q{{ loop.index0 }}" value="D">
+                            <span class="checkmark"></span>
+                            <span class="option-text">D. {{ q.options[3] }}</span>
+                        </label>
+                    </div>
+                {% endfor %}
+
+                <button type="submit" class="submit-btn animate__animated animate__pulse">Submit Answers</button>
+            </form>
+        {% endif %}
+
+        <a href="{{ url_for('index') }}" class="back-link animate__animated animate__fadeInUp">
+            <i>←</i> Back to Home
+        </a>
+    </div>
+
+    <script>
+        // Additional floating particles
+        document.addEventListener('DOMContentLoaded', function() {
+            const particlesContainer = document.querySelector('.particles');
+            const particleCount = 15;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random properties
+                const size = Math.random() * 8 + 4;
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                const delay = Math.random() * 15;
+                const duration = Math.random() * 15 + 10;
+                const colors = ['var(--primary-color)', 'var(--accent-color)', 'var(--gold-color)', 'var(--success-color)'];
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${posX}%`;
+                particle.style.top = `${posY}%`;
+                particle.style.animationDelay = `${delay}s`;
+                particle.style.animationDuration = `${duration}s`;
+                particle.style.background = color;
+                
+                particlesContainer.appendChild(particle);
+            }
+            
+            // Add hover effect to options
+            const options = document.querySelectorAll('.option');
+            options.forEach(option => {
+                option.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateX(10px)';
+                });
+                option.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateX(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

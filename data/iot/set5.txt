@@ -1,0 +1,47 @@
+Which of these supports asynchronous communication in IoT?|MQTT|HTTP|FTP|NTP|A
+Which sensor detects tilt/movement in a device?|GPS|Accelerometer|LDR|PIR|B
+Which parameter of LoRa defines range vs speed tradeoff?|Bandwidth|Spreading Factor|Duty Cycle|Latency|B
+What is true about CoAP?|Binary|Request-response|Streaming|TCP-based|B
+Which IoT feature helps in predictive maintenance?|Real-time data|AI/ML Analytics|Cloud alerts|App notifications|B
+Which protocol is NOT designed for IoT?|CoAP|MQTT|FTP|6LoWPAN|C
+Which of these is open-source IDE for embedded IoT coding?|CodeVisionAVR|Arduino IDE|Keil|MATLAB|B
+Which of the following is NOT a security measure?|Encryption|Authentication|Firewall|Compression|D
+What is Zigbee’s max theoretical data rate?|250 kbps|1 Mbps|100 kbps|10 Mbps|A
+Which tech is ideal for asset tracking in logistics?|RFID|Bluetooth|LoRa|IR|A
+Which of these helps optimize sensor data traffic?|Duty cycling|Overclocking|Power boosting|Pull-up resistance|A
+Which tool helps simulate IoT networks?|Tinkercad|Cisco Packet Tracer|Proteus|SolidWorks|C
+Which of these supports end-to-end IoT testing?|Node-RED|Arduino Serial Monitor|Postman|Katalon|D
+Which sensor detects alcohol/gas in IoT?|MQ3|IR|GPS|MPU6050|A
+What is the core difference between HTTP and MQTT?|Device support|Encryption|Data model|Connection type|D
+Which security layer handles TLS/SSL encryption in IoT?|Link Layer|Application Layer|Transport Layer|Network Layer|C
+What does ‘QoS 2’ ensure in MQTT?|At most once|At least once|Exactly once|No guarantee|C
+Which cloud service supports device shadows?|Azure|AWS IoT|Google Cloud|IBM Cloud|B
+What enables end devices in Zigbee to sleep & save power?|Beaconing|Polling|Routing|Token passing|A
+Which encoding is common in MQTT payloads?|YAML|HTML|JSON|DOCX|C
+Which of these is NOT a LoRaWAN device class?|Class A|Class B|Class C|Class D|D
+Which of these is an open-source RTOS for IoT?|RTLinux|Contiki|Windows CE|WatchOS|B
+Which pin on ESP8266 is used for flashing firmware?|D4|EN|GPIO0|RST|C
+Which command is used to flash firmware to ESP board?|esptool.py|flash-it.sh|firmware-load|burn-firmware|A
+What limits the frequency of LoRa transmissions?|LoRa ID|Antenna gain|Duty cycle regulations|WiFi presence|C
+Which layer of OSI handles packet forwarding?|Transport|Network|Session|Physical|B
+Which of the following is not a sensor module?|LDR|PIR|MQ2|NodeMCU|D
+Which is the first step in setting up MQTT communication?|Subscribe|Publish|Connect to broker|Disconnect|C
+What enables GPS location in IoT tracking?|GSM|IR|GNSS|I2C|C
+Which of these is a real-time clock module?|LDR|RTC DS1307|LM35|MPU6050|B
+Which tech is best suited for underwater IoT communication?|Wi-Fi|RFID|Acoustic|Zigbee|C
+Which of these is a smart agriculture IoT application?|Automatic irrigation|Online shopping|Social media|Fingerprint door|A
+Which unit handles decision-making in an IoT node?|Sensor|MCU|Motor|LED|B
+Which tool can visualize sensor data graphs in real time?|Node-RED|Photoshop|Notepad|Arduino IDE only|A
+Which is used for temperature sensing in precision apps?|DHT11|DS18B20|MQ135|LDR|B
+Which protocol is secure and suitable for RESTful IoT?|CoAP over DTLS|MQTT|Zigbee|HTTP|A
+Which technique prevents replay attacks in IoT?|Timestamps|Compression|Minification|Routing tables|A
+Which term describes IoT + AI integration?|Edge Networking|AIoT|Fog Sync|Smart Routing|B
+Which of these defines devices talking without human help?|M2M|P2P|I2C|IoT Mesh|A
+Which IoT standard is used in industrial automation?|Modbus|MQTT|CoAP|I2C|A
+Which protocol is designed for push-based messaging?|SMTP|MQTT|HTTP|POP|B
+Which OS is designed specifically for constrained IoT devices?|TinyOS|Windows 11|RedHat|SlackOS|A
+What is the key feature of ESP32 over ESP8266?|No WiFi|Dual core & BLE|More expensive only|No GPIO|B
+Which tool is useful for analyzing network traffic in IoT?|Wireshark|NodeMCU|Arduino IDE|Google Chrome|A
+Which of the following is not an IoT board?|Arduino Uno|ESP32|Raspberry Pi|GTX 4090|D
+Which GPIO mode is used to read button state?|OUTPUT|PWM|INPUT|ANALOG|C
+Which cloud platform has "IoT Hub"?|AWS|Azure|GCP|ThingSpeak|B

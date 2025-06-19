@@ -1,0 +1,51 @@
+What does IoT stand for?|Internet of Techniques|Internet of Tools|Internet of Things|Integration of Things|C
+Which component connects physical world to digital in IoT?|Router|Sensor|Processor|Cloud|B
+Which of the following is NOT an IoT communication protocol?|HTTP|MQTT|CoAP|SMTP|D
+Which layer of IoT architecture includes sensors & actuators?|Network Layer|Perception Layer|Application Layer|Security Layer|B
+Which protocol is lightweight and ideal for IoT?|FTP|MQTT|SMTP|HTTP|B
+What does MQTT stand for?|Message Queuing Telemetry Transport|Multiple Queue Telemetry Technology|Main Query Transmission Tool|Message Query Transfer Topology|A
+Which of the following is NOT an IoT device?|Smartwatch|Smartphone|LED bulb|Electric Kettle|D
+Which wireless tech is widely used in smart home IoT?|Bluetooth|RFID|Zigbee|Ethernet|C
+Which microcontroller is popular in IoT projects?|Raspberry Pi|8051|Arduino Uno|Pentium|C
+What does actuator do in IoT?|Sends data|Stores data|Takes action|Processes data|C
+Which of the following is NOT an IoT application?|Smart Cities|Online Banking|Smart Agriculture|Smart Home|B
+IoT devices are typically connected to the Internet using?|Optical cable|5G|NFC|Coaxial Cable|B
+What is a cloud in IoT context?|Water vapor|Weather|Remote storage and computing|Router|C
+Which is not a cloud platform for IoT?|AWS IoT|Microsoft Azure|Google Nest|IBM Watson|C
+What does "Smart" in Smart Device mean?|Expensive|Compact|Networked|Heavy|C
+Which component processes sensor data in IoT?|Actuator|Gateway|Microcontroller|Repeater|C
+Which protocol uses publish-subscribe model?|MQTT|HTTP|FTP|CoAP|A
+Zigbee operates in which frequency band?|2.4 GHz|5 GHz|900 MHz|1.2 GHz|A
+Which technology is used for short-range IoT communication?|Wi-Fi|Bluetooth|LoRa|NFC|B
+Which protocol is used to assign IP addresses in IoT?|HTTP|DHCP|MQTT|DNS|B
+What is the role of IoT gateway?|UI Design|Power supply|Protocol translation and data forwarding|Storage|C
+Which protocol is secure for IoT data transmission?|TCP|UDP|HTTPS|ICMP|C
+Which one is NOT a component of IoT architecture?|Perception|Application|Transport|Network|C
+In which layer are data analytics and visualization done?|Perception|Application|Network|Security|B
+Which is the cheapest and low-power IoT platform?|ESP32|Raspberry Pi|Arduino Uno|BeagleBone|C
+Which technology helps in remote firmware updates?|OTA|LAN|IR|RTC|A
+Which of these is a constraint of IoT devices?|High RAM|High CPU|Low power|None|C
+Which language is commonly used in IoT development?|Python|Ruby|Kotlin|COBOL|A
+Which protocol is specifically for constrained devices?|SMTP|CoAP|HTTP|TCP|B
+Which device connects local IoT network to internet?|Switch|Repeater|Gateway|Modem|C
+Which tech is used in Smart Cards and RFID?|NFC|Wi-Fi|Bluetooth|Zigbee|A
+IoT full system includes?|Sensors + Cloud + App|Only WiFi|Only Sensor|Only Cloud|A
+Which of these is NOT a wireless standard?|Zigbee|Wi-Fi|Ethernet|LoRa|C
+Which of these is an example of Industrial IoT?|Smart Fan|Wearable Watch|Smart Thermostat|Smart Factory|D
+What is Fog computing in IoT?|Cloud Storage|Edge layer processing|WiFi|Sensor tech|B
+Which is a cloud-based IoT platform?|WhatsApp|Instagram|ThingSpeak|YouTube|C
+Which tech is used in smart street lights?|Manual switch|RFID|IoT sensors + cloud|Only bulb|C
+Which is used for IoT hardware simulation?|Proteus|Android Studio|Visual Studio|After Effects|A
+Which of these is a real-time OS used in IoT?|Windows|Linux|FreeRTOS|macOS|C
+IoT devices use which energy source typically?|Nuclear|Battery|Coal|Solar only|B
+What is the function of a sensor?|Generate heat|Capture data|Move device|Give output|B
+What is the range of Bluetooth in IoT?|1m|10m|100m|1000m|B
+Which technology supports long-range low-power use?|Bluetooth|NFC|LoRaWAN|Wi-Fi|C
+Which of the following is an IoT security concern?|Encryption|Authentication|Data leakage|All of these|D
+What is latency in IoT?|Data speed|Time delay|Bandwidth|Voltage drop|B
+Which of these is an environmental IoT application?|Smart irrigation|Fitness tracker|Online Shopping|Video editing|A
+Which protocol does HTTP run on?|TCP|UDP|CoAP|FTP|A
+Which term describes machine-to-machine communication?|M2M|P2P|SMS|IR|A
+Which OS is widely used in Raspberry Pi for IoT?|Ubuntu|Android|Raspbian|iOS|C
+Which one is not a sensor?|DHT11|LDR|MQ135|LED|D
+Which is used to store IoT data permanently?|RAM|Register|Flash memory|Cache|C

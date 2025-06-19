@@ -1,0 +1,49 @@
+Which port is used by MQTT protocol by default?|80|443|1883|8080|C
+Which protocol uses UDP in IoT communication?|CoAP|HTTP|MQTT|FTP|A
+Which layer is responsible for secure transmission in IoT?|Application|Transport|Network|Security|D
+What is the function of a broker in MQTT?|Send SMS|Encrypt data|Relay messages|Store passwords|C
+What is the maximum number of nodes Zigbee supports?|10|255|65,000+|1000|C
+Which of the following supports RESTful architecture?|MQTT|HTTP|FTP|Modbus|B
+What does LPWAN stand for?|Low Power Wide Area Network|Long Protocol Wireless Area Network|Lightweight Public Wireless Access Network|Low Profile Wi-Fi Adapter Network|A
+Which encryption is commonly used in IoT?|AES|DES|RSA|All of these|D
+Which security concept ensures only allowed users access IoT systems?|Encryption|Authentication|Latency|Availability|B
+Which of these attacks overloads IoT devices with traffic?|Brute Force|DDoS|Injection|Replay|B
+Which IoT layer translates data between protocols?|Device Layer|Network Layer|Middleware Layer|Application Layer|C
+Which of the following is most memory efficient protocol?|HTTP|FTP|MQTT|CoAP|D
+Which term describes decision-making at device level in IoT?|Cloud computing|Edge computing|Fog computing|Backhaul|B
+Which protocol is most suitable for battery-operated IoT devices?|CoAP|HTTPS|FTP|TCP|A
+What is the advantage of using fog computing in IoT?|Increased latency|High bandwidth requirement|Lower latency|No security|C
+Which tech ensures secure booting of IoT device?|Blockchain|BIOS|Trusted Platform Module|OAuth|C
+What is the main challenge of IPv4 in IoT?|Low power|Complex code|Address exhaustion|High speed|C
+Which of the following uses mesh topology?|LoRa|Zigbee|Bluetooth|Ethernet|B
+Which of these ensures time synchronization in IoT networks?|HTTP|NTP|CoAP|TCP|B
+What is the maximum data rate of LoRa?|50 Kbps|1 Mbps|250 Kbps|100 Mbps|A
+Which of the following is most commonly used SoC for IoT?|Intel i5|ESP8266|AMD Ryzen|8051|B
+Which of the following is stateless protocol?|MQTT|CoAP|FTP|HTTP|D
+Which protocol provides reliable delivery over TCP?|MQTT|CoAP|LoRa|NFC|A
+Which data format is commonly used in IoT payloads?|XML|CSV|JSON|XLSX|C
+Which of the following protocols is most suited for constrained networks?|HTTP|SMTP|CoAP|Telnet|C
+What is the range of LoRa in rural areas?|10m|1km|5km|15km|D
+Which layer does LoRaWAN operate in?|Data link|Application|Network|Transport|C
+Which of the following reduces power usage in sensors?|Clock boosting|Duty cycling|Signal buffering|Overclocking|B
+Which component performs analytics in IoT?|Sensor|Cloud|Gateway|Actuator|B
+Which of these is used for location in IoT?|RFID|NFC|GPS|MQTT|C
+Which of these security threats involves intercepting messages?|Sniffing|Jamming|Phishing|Flooding|A
+Which protocol is commonly used for device discovery?|Bluetooth|Zigbee|mDNS|CoAP|C
+What is the function of DTLS in IoT?|Location tracking|Secure CoAP communication|Sensor Calibration|IP mapping|B
+Which cloud service provides ML with IoT?|AWS IoT|Azure Sphere|Google Cloud IoT Core|All of these|D
+What is true about edge computing?|It increases centralization|High latency|Less data traffic|Requires cloud always|C
+What is BLE in IoT?|Bluetooth Long Edition|Bluetooth Low Energy|Broad Light Ethernet|Basic Level Encoding|B
+Which is NOT a transport layer protocol?|TCP|UDP|MQTT|SCTP|C
+Which standard defines IPv6 over low-power networks?|6LoWPAN|802.15.4|LoRaWAN|Z-Wave|A
+What is the role of OTA in IoT devices?|Remote firmware update|Over Time Authentication|Over Tracking Alerts|Offline TCP Access|A
+Which of these supports publish/subscribe model?|CoAP|FTP|MQTT|HTTP|C
+What is the range of Z-Wave?|100m|10m|30m|500m|C
+Which of these offers maximum bandwidth?|Wi-Fi|LoRa|Bluetooth|Zigbee|A
+Which protocol supports Quality of Service levels?|HTTP|MQTT|CoAP|SMTP|B
+Which of the following defines device identity?|UUID|MAC Address|IP Address|All of these|D
+Which of these is used in smart lighting systems?|CoAP|Z-Wave|MQTT|All of these|D
+What is the challenge in firmware OTA updates?|Bandwidth usage|Security risk|Power consumption|All of these|D
+Which technique ensures device trust in IoT?|CAPTCHA|Device Hardening|Digital Certificates|Proxy|C
+Which AI model helps in IoT predictions?|CNN|LSTM|KNN|All of these|D
+What is the function of a load balancer in IoT Cloud?|UI rendering|Distribute workload|Increase latency|Store passwords|B

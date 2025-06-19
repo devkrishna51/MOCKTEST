@@ -1,0 +1,50 @@
+What is the extension of Python file?|.pyt|.pt|.py|.python|C
+Which function is used to output in Python?|print()|output()|write()|echo()|A
+What is the keyword to define a function in Python?|func|function|define|def|D
+Which operator is used for exponentiation in Python?|^|**|exp|^^|B
+What will type("5") return?|int|float|str|bool|C
+Which data type is mutable in Python?|int|float|str|list|D
+What is the result of 3 == 3.0 in Python?|False|True|Error|None|B
+Which of the following is a valid variable name?|2name|_name|my-name|class|B
+Which keyword is used to start a loop in Python?|repeat|loop|for|iterate|C
+Which of these is not a logical operator in Python?|and|or|not|nor|D
+How do you start a comment in Python?|##|--|//|#|D
+Which method is used to add item in list?|insert()|add()|append()|put()|C
+What will len("Python") return?|6|5|7|None|A
+What is the output of print(10//3)?|3.33|3|4|Error|B
+Which data structure stores key-value pairs?|list|set|tuple|dictionary|D
+Which function returns user input in Python?|scanf()|input()|get()|read()|B
+Which function is used to convert string to integer?|int()|str()|float()|bool()|A
+Which of the following is immutable?|list|dictionary|tuple|set|C
+Which loop runs at least once?|for|while|do-while|None of these|C
+What is range(5) in Python?|0 to 4|1 to 5|0 to 5|1 to 4|A
+What is the index of first element in a list?|1|0|-1|Depends on data|B
+Which operator is used for modulus in Python?|%|mod|//|/|A
+Which statement is used to skip current loop iteration?|skip|next|continue|pass|C
+Which of these is not a Python data type?|list|int|real|set|C
+Which keyword is used to handle exception?|handle|except|error|pass|B
+What is None in Python?|0|false|null|special constant|D
+Which function returns length of list?|length()|size()|len()|count()|C
+Which function is used to open a file?|file.open()|openfile()|open()|read()|C
+What is if __name__ == "__main__" used for?|module detection|syntax error|string check|none|A
+How do you import a module?|import module|#include module|load module|using module|A
+What is the default mode of open()?|read|write|append|none|A
+Which string method removes whitespace?|strip()|trim()|remove()|delete()|A
+Which method returns string in uppercase?|capital()|upper()|toUpper()|uppercase()|B
+Which function returns max value in list?|max()|maximum()|top()|highest()|A
+What is the output of bool(0)?|True|False|0|Error|B
+What does type([]) return?|list|dict|set|tuple|A
+Which keyword is used to define class in Python?|define|object|class|new|C
+What is used to define a block of code?|braces|brackets|indentation|colons|C
+Which of the following is not used in Python?|;|:|{}|()|A
+How do you handle multiple exceptions?|except A or B|try-except-except|try-multi|except (A, B)|D
+Which function is used to find square root?|sqrt()|math.sqrt()|square()|root()|B
+What is output of print("a" * 3)?|aaa|a3|Error|3a|A
+Which method adds element to set?|add()|append()|insert()|push()|A
+Which keyword defines inheritance?|base|inherit|extends|super|D
+What is output of print(type(10.0))?|int|float|double|decimal|B
+Which function gives ASCII value?|ord()|ascii()|asc()|char()|A
+Which function gives character from ASCII?|chr()|ascii()|ord()|char()|A
+Which module is used for math functions?|numpy|random|math|os|C
+What is a docstring in Python?|Documentation|Multiline comment|Function note|All of these|D
+What is the correct way to raise an exception?|raise Exception|throw Exception|error Exception|raiseError|A

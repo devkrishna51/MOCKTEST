@@ -1,0 +1,48 @@
+What is the output of len([1, 2, 3])?|2|3|4|Error|B
+Which function can be used to convert list to tuple?|list()|tuple()|array()|convert()|B
+What does list("abc") return?|['abc']|['a','b','c']|('a','b','c')|Error|B
+Which keyword is used for defining a class?|define|object|class|new|C
+Which function can give remainder in division?|div()|remainder()|%|mod()|C
+Which function is used to reverse a list?|flip()|reverse()|reversed()|rev()|C
+Which of the following is a tuple?|[1,2]|{1,2}|(1,2)|<1,2>|C
+Which file mode is used for binary writing?|"bw"|“wb”|“wr”|“rb”|B
+Which method is used to add multiple items to a list?|append()|extend()|insert()|add()|B
+What is the result of 3 != 4?|False|True|Error|None|B
+What is the data type of True?|str|bool|int|float|B
+Which error occurs when dividing by zero?|ValueError|ZeroDivisionError|TypeError|ArithmeticError|B
+Which is not a valid mode for open()?|"r+"|"rb"|"wt"|"close"|D
+Which keyword is used to define an abstract class?|abstract|interface|abc|@abstractmethod|D
+What is the output of type(10)?|float|int|str|bool|B
+Which of these is not used for conditional branching?|if|elif|else|switch|D
+What is the output of print("Hello"[1])?|H|e|l|o|B
+Which function returns list of characters from string?|split()|list()|char()|strsplit()|B
+Which of the following is an identity operator?|==|is|!=|in|B
+Which method is used to remove last item from list?|remove()|del()|pop()|cut()|C
+Which loop is best when number of iterations is known?|while|for|do-while|loop|B
+Which of these is an infinite loop example?|while 1:|for i in range(10):|if True:|loop forever|A
+What will range(2,10,2) generate?|2 to 10 by 2|2,4,6,8|2,4,6,8,10|2 to 9|B
+Which function is used to get user input?|input()|scanf()|read()|prompt()|A
+What is output of '5' + '5'?|10|'55'|5|'10'|B
+What is output of 5 + int('5')?|55|10|Error|None|B
+Which keyword is used to define private variable in class?|__|private|_private|priv|A
+Which of the following defines class constructor?|init()|start()|class()|new()|A
+What does os.getcwd() do?|Change directory|Get current directory|List files|Create directory|B
+Which module is used to get system information?|os|sys|platform|all of these|D
+What will list(range(0)) return?|None|0|[]|Error|C
+Which function gives square root of a number?|sqrt()|square()|math.sqrt()|math.pow()|C
+What is type({}) in Python?|list|dict|set|tuple|B
+Which one is a frozen (immutable) set?|set()|tuple()|frozenset()|dict()|C
+Which method changes all letters to lowercase?|lower()|small()|down()|format()|A
+Which method changes all letters to uppercase?|up()|upper()|big()|raise()|B
+Which method checks if a string is all digits?|isdigit()|number()|count()|isnumeric()|A
+Which operator is used for floor division?|/|//|%|**|B
+What does int('10') return?|10|'10'|Error|None|A
+Which keyword defines a static method in class?|static|@static|@staticmethod|None|C
+What does dir() return?|Directory path|List of attributes|None|Size|B
+Which function pauses execution temporarily?|pause()|delay()|sleep()|wait()|C
+Which module provides random number functions?|random|math|os|array|A
+What is the output of print("A" > "B")?|True|False|Error|None|B
+Which method converts string to list by separator?|split()|break()|listify()|explode()|A
+Which method returns position of a substring?|index()|position()|find()|locate()|A
+What is type(5.0)?|float|int|double|real|A
+Which keyword is used to inherit a class?|super|inherits|extends|class|A

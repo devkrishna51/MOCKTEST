@@ -1,0 +1,51 @@
+Which of the following is a keyword in Python?|value|lambda|define|echo|B
+What will print(2 ** 3 ** 2) output?|512|64|36|729|A
+What is the default return value of a function if not specified?|None|0|False|Empty string|A
+Which keyword is used to create a generator in Python?|def|yield|gen|return|B
+What does is keyword check?|Type|Value|Identity|Error|C
+Which function checks if all elements are True?|all()|any()|max()|check()|A
+Which method removes dictionary item?|delete()|pop()|remove()|discard()|B
+Which statement is used to define an anonymous function?|lambda|anon|hidden|func|A
+What is the output of bool([])?|True|False|None|0|B
+Which keyword is used to exit a loop prematurely?|exit|break|stop|pass|B
+How is a Python set defined?|{}|[]|()|set[]|A
+Which of the following is unordered?|list|tuple|set|string|C
+Which module is used for working with dates?|date|datetime|calendar|time|B
+Which method returns number of items in dict?|length()|count()|len()|size()|C
+Which function is used to sort a list?|sort()|sorted()|order()|arrange()|B
+What is the output of 5 and 0?|5|0|True|False|B
+Which function finds index in list?|position()|search()|find()|index()|D
+How to create an empty dictionary?|dict()|[]|{}|both A and C|D
+Which module is used to generate random numbers?|math|random|number|stats|B
+Which function is used to check type of variable?|typeof()|check()|type()|is_type()|C
+Which function is used to round numbers?|round()|ceil()|floor()|fix()|A
+Which module is used to interact with OS?|sys|os|file|dir|B
+How to handle exception in Python?|if-else|try-catch|try-except|loop|C
+Which loop is used when number of iterations is unknown?|for|while|foreach|loop|B
+Which function is used to read one line from a file?|read()|readline()|readfile()|line()|B
+How to remove file in Python?|os.remove()|file.remove()|delete()|rm()|A
+What does strip() do in string?|Trims|Joins|Splits|Formats|A
+Which operator is used to compare object identity?|==|is|equals|:=|B
+Which is true about Python functions?|Must return a value|Can return multiple values|Only accept one argument|Can't be nested|B
+What is the scope of variable defined inside a function?|Global|Block|Local|Loop|C
+What is the purpose of global keyword?|Make variable local|Make variable constant|Declare global variable inside function|None|C
+Which of these is used for string formatting?|%|{}|format()|All of these|D
+What does join() method do?|Splits list|Combines strings|Formats string|None|B
+Which function gets the largest number?|min()|max()|high()|top()|B
+Which method checks if string ends with a substring?|ends()|endswith()|finish()|terminate()|B
+What is output of print(bool("False"))?|True|False|Error|None|A
+What happens if you divide by 0 in Python?|0|None|ZeroDivisionError|Infinity|C
+Which keyword is used to import specific part of module?|import all|from|export|load|B
+What is the use of pass statement?|Terminates loop|Skips execution|Does nothing|Exits function|C
+Which method is used to get keys of dictionary?|getkeys()|keys()|keylist()|fetchkeys()|B
+Which type of error occurs when variable is not defined?|SyntaxError|NameError|KeyError|TypeError|B
+Which function is used to generate a sequence of numbers?|range()|sequence()|loop()|list()|A
+Which method converts string to lowercase?|lower()|small()|minimize()|down()|A
+Which built-in function returns max of two numbers?|greater()|maximum()|max()|top()|C
+What is slicing in Python used for?|Dividing numbers|Splitting strings|Extracting part of list/string|Sorting|C
+Which function reads file line-by-line in loop?|file.read()|file.readline()|file.readlines()|file.next()|C
+Which operator is used for assignment in Python?|==|=|:=|!=|B
+Which module is used to take command line input?|os|sys|platform|cli|B
+Which string method returns count of a substring?|count()|index()|find()|occur()|A
+What is output of 3 < 4 < 5?|True|False|Syntax Error|None|A
+Which of these is a Python IDE?|Tinkercad|Thonny|AutoCAD|VSCO|B

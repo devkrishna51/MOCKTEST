@@ -61,35 +61,55 @@
     </div>
   </section>
 
-  <section id="skills" aria-labelledby="skills-title">
-    <h2 id="skills-title">Skills</h2>
-    <div class="skills-grid" role="list">
-      <div class="skill-card" role="listitem" tabindex="0" aria-label="C Programming Skill">
-        <i class="fab fa-cuttlefish"></i>
-        <span>C Programming</span>
+<section id="skills" aria-labelledby="skills-title">
+  <h2 id="skills-title">Skills</h2>
+  <div class="skills-grid" role="list">
+
+    <a href="{{ url_for('subject_page', subject_name='iot') }}">
+      <div class="skill-card" role="listitem" tabindex="0" aria-label="IOT Skill">
+        <i class="fas fa-network-wired"></i>
+        <span>IOT</span>
       </div>
+    </a>
+
+    <a href="{{ url_for('subject_page', subject_name='javascript') }}">
       <div class="skill-card" role="listitem" tabindex="0" aria-label="JavaScript Skill">
         <i class="fab fa-js-square"></i>
         <span>JavaScript</span>
       </div>
+    </a>
+
+    <a href="{{ url_for('subject_page', subject_name='python') }}">
       <div class="skill-card" role="listitem" tabindex="0" aria-label="Python Skill">
         <i class="fab fa-python"></i>
         <span>Python</span>
       </div>
-      <div class="skill-card" role="listitem" tabindex="0" aria-label="React Skill">
-        <i class="fab fa-react"></i>
-        <span>React</span>
+    </a>
+
+    <a href="{{ url_for('subject_page', subject_name='html') }}">
+      <div class="skill-card" role="listitem" tabindex="0" aria-label="HTML Skill">
+        <i class="fab fa-html5"></i>
+        <span>HTML</span>
       </div>
-      <div class="skill-card" role="listitem" tabindex="0" aria-label="AI & Machine Learning Skill">
-        <i class="fas fa-robot"></i>
-        <span>AI &amp; ML</span>
+    </a>
+
+    <a href="{{ url_for('subject_page', subject_name='css') }}">
+      <div class="skill-card" role="listitem" tabindex="0" aria-label="CSS Skill">
+        <i class="fab fa-css3"></i>
+        <span>CSS</span>
       </div>
-      <div class="skill-card" role="listitem" tabindex="0" aria-label="Database Management Skill">
-        <i class="fas fa-database"></i>
-        <span>DB Management</span>
+    </a>
+
+    <a href="{{ url_for('subject_page', subject_name='m1') }}">
+      <div class="skill-card" role="listitem" tabindex="0" aria-label="M1 Skill">
+        <i class="fab fa-wordpress"></i>
+        <span>M1</span>
       </div>
-    </div>
-  </section>
+    </a>
+
+  </div>
+</section>
+
 
   <section id="projects" aria-labelledby="projects-title">
     <h2 id="projects-title">Projects</h2>

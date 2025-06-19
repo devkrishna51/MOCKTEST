@@ -1,0 +1,49 @@
+What is the primary benefit of IPv6 in IoT?|Higher speed|Device naming|Unlimited addressing|Encryption|C
+Which of these is not a feature of MQTT?|Low bandwidth|Publish/Subscribe|Stateless|Reliable delivery|C
+Which port is used for secure MQTT communication?|443|8883|80|22|B
+Which layer provides end-to-end delivery in IoT?|Physical|Application|Transport|Session|C
+Which storage type is best for large-scale IoT data?|EEPROM|Hard Disk|Cloud Storage|SD Card|C
+Which of these is a fog computing platform?|Azure Stream Analytics|Google Forms|HTTP Server|PowerBI|A
+Which security method helps ensure message integrity?|Encryption|Hashing|Compression|Authentication|B
+Which of these attacks can fake sensor data?|Spoofing|Sniffing|Flooding|Jamming|A
+Which of these is not a property of CoAP?|Lightweight|Supports TCP|Resource-Oriented|RESTful|B
+What is used to uniquely identify devices in an IoT network?|Username|IP Address|Device Key|MAC Address|D
+Which wireless protocol supports star, tree, mesh topology?|Z-Wave|Zigbee|Bluetooth|NFC|B
+Which is NOT a cloud vendor for IoT services?|AWS|Google Cloud|Azure|WhatsApp|D
+What does RPL stand for in IoT?|Remote Protocol Layer|Routing Protocol for Low power|Remote Packet Locator|Reliable Packet Link|B
+Which hardware allows GPS location tracking?|DHT22|MPU6050|Neo-6M|L298N|C
+Which sensor is used to detect fire?|PIR|Flame Sensor|IR Sensor|Ultrasonic|B
+Which parameter is most important in power-critical IoT?|Processor speed|RAM|Power consumption|Display type|C
+Which is a typical feature of LoRaWAN?|High bandwidth|Short range|Low power|Real-time streaming|C
+Which is used to analyze patterns in IoT data?|PowerShell|AI/ML Algorithms|BIOS|MIPS|B
+Which cloud model is best for smart cities?|Public cloud|Private cloud|Hybrid cloud|Personal cloud|C
+Which cloud service helps create IoT dashboards easily?|Google Docs|ThingSpeak|Photoshop|Node.js|B
+Which attack floods a device with signals to disable it?|Jamming|Spoofing|Spamming|Proxy|A
+Which of these is not a reason to use fog computing?|High latency|Faster decision|Reduced cloud dependency|Real-time response|A
+Which wireless tech has max range in open field?|Bluetooth|Zigbee|LoRa|Wi-Fi|C
+Which of the following helps in real-time data transmission?|HTTP|MQTT|POP|SMTP|B
+Which element in IoT makes automatic decisions?|Actuator|Sensor|Controller|Cloud AI|D
+Which one is used to control motors in IoT?|DHT11|L298N|PIR Sensor|IR Sensor|B
+Which bus is used to connect multiple sensors with same pins?|I2C|UART|PWM|SPI|A
+Which of the following uses symmetric key encryption?|RSA|AES|DSA|ECC|B
+Which sensor detects motion by heat difference?|PIR|Ultrasonic|Gas Sensor|IR|A
+Which file format is used for firmware updates in IoT?|.hex|.xls|.exe|.bat|A
+Which is used to represent IoT sensor status visually?|Excel|Line chart|LCD|LED|D
+Which of these protocols is secure and lightweight?|FTP|CoAP|MQTT over TLS|SMTP|C
+Which is an open-source IoT platform?|Firebase|Node-RED|Google Cloud|Microsoft Edge|B
+Which gateway protocol converts Zigbee to Wi-Fi?|NAT|Zigbee2MQTT|DHCP|HTTP|B
+Which is not part of 3-layer IoT architecture?|Perception|Network|Storage|Application|C
+Which allows storing structured data from sensors?|MySQL|Excel|CSS|FTP|A
+Which of these ensures data reliability over unstable network?|TCP|UDP|FTP|Zigbee|A
+Which of these protocols supports IPv6 for low power devices?|6LoWPAN|LoRaWAN|Wi-Fi|SPI|A
+Which ensures message is not altered in transit?|Compression|Hashing|Encoding|Padding|B
+Which is the ideal use-case of edge computing?|High-volume cloud AI|Low-latency local decision|Data archival|Remote sensing|B
+Which of these tech is best for indoor navigation?|GPS|IR|BLE|RFID|C
+Which of these allows periodic sensor updates automatically?|Webhook|Polling|Manual input|SMS|A
+What does BLE beacon transmit?|Video|Sound|Unique ID|Password|C
+Which cloud platform offers "IoT Core"?|IBM|AWS|Azure|Google|D
+Which of the following is NOT real-time OS for IoT?|FreeRTOS|Contiki|TinyOS|Ubuntu|D
+What is function of a watchdog timer in microcontrollers?|Sleep scheduling|Memory expansion|Reset on failure|Speed boost|C
+Which bus allows full duplex sensor communication?|SPI|UART|PWM|ADC|A
+Which function allows a sensor to detect analog data?|PWM|ADC|EEPROM|I2C|B
+Which of the following is not an actuator?|Motor|Relay|Speaker|Camera|D

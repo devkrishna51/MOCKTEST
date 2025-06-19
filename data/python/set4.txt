@@ -1,0 +1,49 @@
+Which library is used for numerical computing in Python?|pandas|numpy|matplotlib|scipy|B
+What is the correct way to import NumPy?|import numpy as np|import np as numpy|import numpy()|numpy import|A
+Which function creates an array in NumPy?|array()|arr()|create()|matrix()|A
+Which of these creates a 1D array?|np.array([1, 2, 3])|np.array([[1],[2],[3]])|np.zeros((2,2))|np.ones((3,3))|A
+Which function creates an array of zeros?|np.zeros()|np.zero()|np.blank()|np.empty()|A
+Which function creates an array of ones?|np.ones()|np.full()|np.zeros()|np.oneslike()|A
+What is the output of np.arange(5)?|[1 2 3 4 5]|[0 1 2 3 4]|[0 1 2 3 4 5]|Error|B
+Which function creates evenly spaced numbers?|np.arange()|np.linspace()|np.split()|np.range()|B
+What is the shape of np.array([[1,2],[3,4]])?|[2,2]|2|4|[1,4]|A
+Which attribute returns shape of array?|shape|size|type|dimension|A
+Which function returns total number of elements?|size|shape|len|type|A
+Which function returns type of array elements?|dtype|type|typeof|data|A
+Which function is used to reshape an array?|reshape()|resize()|shape()|modify()|A
+What will np.array([1,2,3]).ndim return?|0|1|2|3|B
+What will np.array([[1,2],[3,4]]).ndim return?|1|2|3|0|B
+Which function returns identity matrix?|np.eye()|np.identity()|np.ones()|np.zeros()|A
+Which function is used to create a range with steps?|arange()|range()|step()|linspace()|A
+Which function fills all elements with same value?|full()|ones()|fill()|same()|A
+Which of the following creates a 2D array?|np.array([[1,2],[3,4]])|np.array([1,2,3])|np.array(5)|np.linspace(1,2,5)|A
+Which function returns random values?|np.random.rand()|np.rand()|np.random()|np.random.random()|A
+Which is a valid NumPy data type?|int32|number|text|strin|A
+What does np.zeros((2,3)).shape return?|[2,3]|(2,3)|[6]|2|B
+Which method returns max value in array?|max()|np.max()|maximum()|both A and B|D
+Which function returns min value?|min()|np.min()|minimum()|all of these|D
+Which of the following sums all elements?|np.sum()|np.add()|np.total()|np.combine()|A
+How to calculate mean of array?|mean()|np.mean()|average()|np.avg()|B
+How to find square root of elements?|np.sqrt()|np.power(2)|np.square()|np.exp()|A
+Which function joins two arrays?|np.concatenate()|np.join()|np.combine()|np.merge()|A
+What is axis 0 in a 2D array?|Rows|Columns|Diagonal|None|A
+What is axis 1 in 2D array?|Rows|Columns|Diagonal|None|B
+Which method is used for matrix multiplication?|np.dot()|np.multiply()|np.cross()|np.times()|A
+Which function returns standard deviation?|np.std()|np.variance()|np.var()|np.stdev()|A
+Which method sorts array?|sort()|np.sort()|array.sort()|all of these|D
+Which method flattens a multi-D array?|flatten()|ravel()|reshape(-1)|all of these|D
+Which method creates array of given shape without initializing?|np.empty()|np.zeros()|np.ones()|np.full()|A
+Which function finds position of max value?|np.argmax()|np.maxindex()|np.top()|np.index()|A
+Which function finds position of min value?|np.argmin()|np.minindex()|np.bottom()|np.index()|A
+Which function finds cumulative sum?|np.cumsum()|np.sumall()|np.cum()|np.running_sum()|A
+What does np.array([1,2]) + np.array([3,4]) return?|[4,6]|[3,6]|[1,2,3,4]|Error|A
+Which operator is used for element-wise multiplication?||**|@|+|A
+Which symbol is used for matrix multiplication?|@||dot|x|A
+Which NumPy function returns true for NaN values?|np.isnan()|np.isnull()|np.empty()|np.checkNaN()|A
+Which function converts list to NumPy array?|np.array()|np.tolist()|np.convert()|np.arr()|A
+Which function gives transpose of matrix?|np.transpose()|np.T|np.flip()|both A and B|D
+How to get diagonal of matrix?|np.diag()|np.diagonal()|np.axis()|np.row()|A
+Which function rounds array values?|np.round()|np.floor()|np.ceil()|all of these|D
+Which function returns unique values?|np.unique()|np.distinct()|np.values()|np.filter_unique()|A
+What is returned by np.linspace(0, 1, 5)?|Even 5 values between 0 & 1|Only 0 & 1|Random values|All 1s|A
+Which of these functions generates random integers?|np.random.randint()|np.random.rand()|np.rand()|np.int()|A

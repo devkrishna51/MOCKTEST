@@ -14,6 +14,25 @@ ANSWERS_FILE = os.path.join(DATA_DIR, 'answers.txt')
 
 # Helper Functions
 
+
+def load_questions(subject, set_id):
+    file_path = os.path.join(DATA_DIR, subject, f'set{set_id}.txt')
+    questions = []
+    try:
+        with open(file_path, 'r') as f:
+            for line in f:
+                parts = line.strip().split('|')
+                if len(parts) == 6:
+                    q, a, b, c, d, correct = parts
+                    questions.append({
+                        'q': q,
+                        'options': [a, b, c, d],
+                        'correct': correct.strip().upper()
+                    })
+    except:
+        pass
+    return questions
+
 def add_blocked_student(student_name):
     with open(ANSWERS_FILE, 'a') as f:
         f.write(f"{student_name}|BLOCKED\n")
@@ -286,12 +305,77 @@ def student_panel():
                            incorrect_list=[])
 
 
+@app.route('/quiz/<subject>/<int:set_id>', methods=['GET', 'POST'])
+def quiz(subject, set_id):
+    questions = load_questions(subject, set_id)
+
+    if request.method == 'POST':
+        # Pehle check karo form me naam/age aaye hai ya question answers
+        if 'student_name' in request.form and 'student_age' in request.form:
+            # Name/Age submit hua hai, ab quiz show karo
+            student_name = request.form['student_name']
+            student_age = request.form['student_age']
+            return render_template('quiz_form.html',
+                                   subject=subject,
+                                   set_id=set_id,
+                                   student_name=student_name,
+                                   student_age=student_age,
+                                   questions=questions)
+
+        else:
+            # Quiz answer submit hua hai
+            student_name = request.form.get('student_name_hidden', 'Unknown')
+            student_age = request.form.get('student_age_hidden', 'N/A')
+
+            student_answers = []
+            score = 0
+            incorrect = []
+
+            for i, q in enumerate(questions):
+                ans = request.form.get(f'q{i}', '')
+                student_answers.append(ans)
+                if ans == q['correct']:
+                    score += 1
+                else:
+                    incorrect.append({
+                        'question': q['q'],
+                        'your_answer': ans if ans else "Not Answered",
+                        'correct_answer': q['correct'],
+                        'options': q['options']
+                    })
+
+            return render_template('quiz_result.html',
+                                   student_name=student_name,
+                                   student_age=student_age,
+                                   score=score,
+                                   total=len(questions),
+                                   incorrect_answers=incorrect)
+
+    # First GET request
+    return render_template('quiz_form.html',
+                           subject=subject,
+                           set_id=set_id,
+                           student_name=None,
+                           student_age=None,
+                           questions=questions)
+
 
 
 @app.route('/student/logout')
 def student_logout():
     session.pop('student', None)
     return redirect(url_for('projects'))
+
+@app.route('/subject/<subject_name>')
+def subject_page(subject_name):
+    template_name = f'subject_{subject_name}.html'
+    print(f"Trying to render: {template_name}")
+    try:
+        return render_template(template_name)
+    except Exception as e:
+        print(f"Error: {e}")
+        return f"Subject page not found for: {template_name}", 404
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)

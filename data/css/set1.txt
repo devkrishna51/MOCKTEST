@@ -1,0 +1,51 @@
+What does CSS stand for?|Creative Style Sheets|Cascading Style Sheets|Computer Style Sheets|Colorful Style Sheets|B
+Which HTML tag is used to link CSS?|<style>|<link>|<script>|<css>|B
+Which property changes the text color?|font-color|color|text|text-color|B
+How to make text bold?|text-style: bold|style: bold|weight: bold|font-weight: bold|D
+How to select an element with id "header"?|#header|header|header|.header|A
+How to select elements with class "menu"?|#menu|menu|.menu|menu|C
+What is the default position in CSS?|relative|absolute|static|fixed|C
+Which property sets background color?|background-color|bg-color|bg|color|A
+How to apply external CSS?|<style src="style.css">|<script src="style.css">|<link rel="stylesheet" href="style.css">|<css src="style.css">|C
+Which unit is relative to font size?|px|cm|em|mm|C
+Which CSS property sets space between lines?|spacing|text-spacing|line-height|line-space|C
+What does "px" stand for?|points|percent|pixels|padding|C
+Which property sets margin inside border?|margin|padding|inset|space|B
+How to center a block element?|margin: auto|center: true|align: center|text-align: center|A
+Which property hides an element?|opacity: 0|hide: true|display: none|visibility: hidden|C
+How to make element transparent?|transparency|opacity|visibility|alpha|B
+Which selector selects all elements?|#|.||:all|C
+What is z-index used for?|zebra effect|zoom level|layer ordering|border radius|C
+Which pseudo-class selects first child?|:first-child|:first|:child|:nth-child(1)|A
+Which property controls font type?|font|type|font-family|font-type|C
+Which property is used to underline text?|underline|text-decoration|decoration|line-style|B
+Which property controls the text size?|font-size|text-size|size|font|A
+Which property adds space outside the border?|padding|margin|spacing|border-spacing|B
+Which property changes list bullet type?|list-type|list-style|bullet-type|style-list|B
+Which pseudo-class selects hovered element?|:hovered|::hover|:hover|onhover|C
+Which unit is fixed and not relative?|em|rem|%|px|D
+Which property sets border width?|border-thickness|border-width|border-size|border|B
+Which property sets element height?|height|element-height|h|size|A
+Which value makes an element invisible but occupies space?|display: none|opacity: 0|visibility: hidden|hide: true|C
+What value is used for no decoration?|none|no-decoration|null|off|A
+What is the correct syntax for comments in CSS?|// comment|<!-- comment -->|/ comment */|# comment|C
+Which property is used for shadow effect on text?|text-shadow|text-blur|shadow|font-shadow|A
+Which CSS property controls spacing between characters?|text-spacing|letter-spacing|char-spacing|character-space|B
+Which value makes an element float to the right?|right|float: right|align-right|float-right|B
+Which property aligns text to the center?|text-center|align: center|text-align: center|align-text|C
+What is the use of media query?|CSS variables|Responsive design|Animations|Fonts|B
+Which property is used to make rounded corners?|border-radius|corner-radius|round-corner|curve|A
+Which property sets the shadow of a box?|box-shadow|shadow|div-shadow|container-shadow|A
+What is the default display value for div?|block|inline|inline-block|none|A
+What is the use of "position: absolute"?|relative to parent|fixed to screen|relative to browser|relative to root|A
+Which value positions element relative to viewport?|fixed|relative|static|inherit|A
+Which property is used to stretch background image?|background-resize|background-stretch|background-size|background-fit|C
+Which selector targets <p> inside <div>?|div > p|div + p|div p|p div|C
+Which selector selects element on focus?|:hover|:active|:visited|:focus|D
+Which property is used to animate elements?|animation|transition|effect|motion|A
+Which shorthand sets all margins?|margin|all-margin|spacing|outer-padding|A
+Which is valid RGB color format?|rgb(255,255,255)|rgb#255-255-255|color(255,255,255)|#rgb(255,255,255)|A
+Which keyword makes property inherit from parent?|copy|extend|inherit|pass|C
+Which property sets maximum width of element?|max-width|maxsize|width-limit|max|A
+Which property sets content overflow behavior?|overflow|content-overflow|scroll|overflowing|A
+Which property sets visibility of element?|display|opacity|visibility|shown|C

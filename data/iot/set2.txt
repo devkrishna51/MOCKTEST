@@ -1,0 +1,49 @@
+Which type of network is used in home automation?|MAN|WAN|LAN|PAN|D
+Which microcontroller has built-in Wi-Fi?|8051|ESP8266|PIC|AVR|B
+What is the primary role of an IoT hub?|Data processing|Data storage|Device coordination|Display data|C
+Which memory stores program code in IoT microcontrollers?|RAM|EEPROM|ROM|Cache|C
+Which of the following is an IoT input device?|Relay|Speaker|Temperature Sensor|LED|C
+What does GPIO stand for?|General Purpose Internet Output|Global Power Interface Output|General Purpose Input Output|General Protocol Input Output|C
+Which of the following helps reduce power consumption in IoT?|Deep Sleep Mode|RAM expansion|Using LCD|Multiple Wi-Fi modules|A
+Which of these is a temperature and humidity sensor?|LDR|DHT11|MQ2|IR sensor|B
+Which cloud is commonly used for small IoT projects?|AWS|Azure|IBM Watson|ThingSpeak|D
+What is the full form of API?|Application Program Interface|Automated Protocol Interface|Application Power Interface|Applied Protocol Interface|A
+Which of these is an output device in IoT?|Buzzer|IR sensor|Gas sensor|PIR sensor|A
+What is the typical voltage for Arduino Uno?|12V|9V|3.3V|5V|D
+Which sensor is used to detect gas leaks?|MQ2|DHT11|LDR|PIR|A
+Which of the following is a cloud messaging protocol?|SMTP|MQTT|POP|DHCP|B
+What is the function of RTC in IoT?|Reset timer|Real Time Clock|Relay Timer Controller|Rapid Test Cycle|B
+Which microcontroller is better for Wi-Fi IoT project?|Arduino Mega|ESP32|ATMega16|8051|B
+Which of these is not a wireless protocol?|Zigbee|Wi-Fi|Bluetooth|HDMI|D
+Which OS is most lightweight for IoT?|Windows 10|Ubuntu|FreeRTOS|macOS|C
+Which sensor detects human motion?|Gas sensor|Ultrasonic|PIR sensor|LDR|C
+Which pin is used for analog input in Arduino Uno?|PWM|A0|D0|VCC|B
+Which of these protocols is RESTful?|CoAP|MQTT|HTTP|FTP|C
+What is the expansion of RFID?|Radio Frequency Identification|Remote Frequency Identification|Radio Forward Identification|Resonant Field Identification|A
+Which communication medium does Zigbee use?|IR|Ultrasound|Radio waves|Laser|C
+Which component stores logs and data in cloud?|Actuator|Controller|Database|Sensor|C
+What is the function of a relay module?|Input temperature|Switch high voltage device|Display data|Store memory|B
+Which platform is used to visualize real-time IoT data?|WordPress|YouTube|ThingSpeak|Excel|C
+Which sensor detects distance?|LDR|IR sensor|PIR|MQ135|B
+Which of these is not an open source IoT platform?|ThingSpeak|Kaa|Arduino Cloud|Azure|D
+What is "edge computing" in IoT?|Cloud-only computation|Sensor connection|Processing data near source|Firewall management|C
+Which of the following allows voice-based IoT interaction?|Google Assistant|Facebook|Excel|Zoom|A
+Which tool is used to program Arduino boards?|Arduino IDE|Visual Basic|DevC++|MATLAB|A
+What is the use of LoRa in IoT?|Short range fast communication|High power draw|Long range low power communication|Encryption|C
+Which protocol is best suited for unreliable networks in IoT?|TCP|UDP|ICMP|SMTP|B
+Which of the following provides dynamic IP to IoT device?|HTTP|DHCP|DNS|NAT|B
+Which tech is best for outdoor smart farming?|NFC|Bluetooth|LoRa|IR|C
+Which of these is an industrial communication protocol?|Modbus|NFC|Wi-Fi|UDP|A
+Which of these helps in energy monitoring at home?|Smart Fan|Smart Meter|Light Sensor|GSM|B
+Which platform combines AI and IoT for smart cities?|TensorFlow|Azure|Android|AWS Greengrass|D
+Which is not a benefit of IoT?|Automation|Cost saving|Manual errors|Increased labor|D
+Which kind of signal is used by analog sensors?|Binary|Digital|PWM|Continuous|D
+Which of these is NOT a connectivity protocol?|Wi-Fi|LoRa|HTTP|HDD|D
+Which sensor is used in weather stations?|LDR|Gas sensor|DHT22|PIR|C
+Which is NOT a microcontroller board?|Arduino Uno|Raspberry Pi|ESP8266|Macbook|D
+Which is true about smart homes?|Manual control only|No internet needed|Internet controlled devices|Very high power usage|C
+Which tool is used for IoT hardware simulation online?|Figma|Tinkercad|VS Code|Bootstrap|B
+Which of these sensors detects light?|LDR|PIR|MQ135|IR sensor|A
+Which of the following is used for data encryption?|RSA|PWM|GPIO|ADC|A
+Which of the following measures air quality?|DHT11|PIR|MQ135|ESP32|C
+Which language is NOT commonly used in IoT?|Python|C|COBOL|Embedded C|C

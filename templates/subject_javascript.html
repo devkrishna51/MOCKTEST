@@ -1,0 +1,18 @@
+<!-- templates/subject_javascript.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>javascript Quiz Sets</title>
+</head>
+<body>
+    <h2>Select a Set for javascript</h2>
+    <ul>
+        <li><a href="{{ url_for('quiz', subject='javascript', set_id=1) }}">Set 1</a></li>
+        <li><a href="{{ url_for('quiz', subject='javascript', set_id=2) }}">Set 2</a></li>
+        <li><a href="{{ url_for('quiz', subject='javascript', set_id=3) }}">Set 3</a></li>
+        <li><a href="{{ url_for('quiz', subject='javascript', set_id=4) }}">Set 4</a></li>
+        <li><a href="{{ url_for('quiz', subject='javascript', set_id=5) }}">Set 5</a></li>
+    </ul>
+    <a href="{{ url_for('index') }}">← Back to Home</a>
+</body>
+</html>
