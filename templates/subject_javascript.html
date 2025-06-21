@@ -1,18 +1,551 @@
-<!-- templates/subject_javascript.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>javascript Quiz Sets</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Quiz Sets</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #4a6fa5;
+            --secondary-color: #166088;
+            --accent-color: #4fc3f7;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+            --success-color: #28a745;
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            color: var(--dark-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        }
+
+        #canvas-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.15;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 3rem;
+            background-color: rgba(255, 255, 255, 0.93);
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            animation: fadeIn 0.8s ease-out;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(79, 195, 247, 0.1) 0%, transparent 70%);
+            z-index: -1;
+            animation: rotate 20s linear infinite;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            color: var(--secondary-color);
+            font-size: 2.5rem;
+            position: relative;
+            padding-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(79, 195, 247, 0.4);
+        }
+        
+        .sets-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .set-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .set-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+            transition: var(--transition);
+            z-index: -1;
+        }
+
+        .set-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(79, 195, 247, 0.1) 0%, transparent 100%);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: -1;
+        }
+        
+        .set-card:hover {
+            transform: translateY(-10px) scale(1.03) rotateY(5deg) rotateX(5deg);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15), 0 0 30px rgba(79, 195, 247, 0.2);
+        }
+        
+        .set-card:hover::before {
+            height: 100%;
+            opacity: 0.1;
+        }
+
+        .set-card:hover::after {
+            opacity: 1;
+        }
+        
+        .set-card a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .set-card i {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            transition: var(--transition);
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .set-card:hover i {
+            color: var(--accent-color);
+            transform: scale(1.2) translateY(-5px);
+            filter: drop-shadow(0 5px 10px rgba(79, 195, 247, 0.4));
+        }
+
+        .set-card span {
+            transition: var(--transition);
+        }
+
+        .set-card:hover span {
+            transform: translateY(5px);
+            color: var(--primary-color);
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.8rem 2rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(22, 96, 136, 0.3);
+            position: relative;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .back-btn:hover {
+            transform: translateX(-5px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(22, 96, 136, 0.4);
+        }
+
+        .back-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            opacity: 0;
+            transition: var(--transition);
+            z-index: -1;
+        }
+
+        .back-btn:hover::before {
+            opacity: 1;
+        }
+        
+        .back-btn i {
+            margin-right: 0.8rem;
+            transition: var(--transition);
+        }
+        
+        .back-btn:hover i {
+            transform: translateX(-5px);
+        }
+        
+        .header-icon {
+            display: block;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            animation: float 3s ease-in-out infinite;
+            filter: drop-shadow(0 5px 10px rgba(74, 111, 165, 0.3));
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(5deg); }
+        }
+
+        .floating-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .shape {
+            position: absolute;
+            opacity: 0.1;
+            animation: float-shapes 15s infinite linear;
+        }
+
+        @keyframes float-shapes {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.1; }
+            90% { opacity: 0.1; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem;
+                margin: 1rem;
+            }
+            
+            .sets-grid {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+                gap: 1.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+
+            .set-card {
+                padding: 1.5rem 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 1.5rem;
+            }
+            
+            .sets-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+            
+            .set-card {
+                padding: 1.2rem 0.8rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Glow effect for cards */
+        .glow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: radial-gradient(circle at center, rgba(79, 195, 247, 0.3) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+        }
+
+        .set-card:hover .glow {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
-    <h2>Select a Set for javascript</h2>
-    <ul>
-        <li><a href="{{ url_for('quiz', subject='javascript', set_id=1) }}">Set 1</a></li>
-        <li><a href="{{ url_for('quiz', subject='javascript', set_id=2) }}">Set 2</a></li>
-        <li><a href="{{ url_for('quiz', subject='javascript', set_id=3) }}">Set 3</a></li>
-        <li><a href="{{ url_for('quiz', subject='javascript', set_id=4) }}">Set 4</a></li>
-        <li><a href="{{ url_for('quiz', subject='javascript', set_id=5) }}">Set 5</a></li>
-    </ul>
-    <a href="{{ url_for('index') }}">← Back to Home</a>
+    <div id="canvas-container"></div>
+    <div class="floating-shapes" id="floating-shapes"></div>
+    
+    <div class="container">
+        <div class="header-icon">
+            <i class="fab fa-js-square fa-5x"></i>
+        </div>
+        <h2>JavaScript Quiz Sets</h2>
+        
+        <div class="sets-grid">
+            <div class="set-card">
+                <div class="glow"></div>
+                <a href="{{ url_for('quiz', subject='javascript', set_id=1) }}">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>Set 1: Basics</span>
+                </a>
+            </div>
+            
+            <div class="set-card">
+                <div class="glow"></div>
+                <a href="{{ url_for('quiz', subject='javascript', set_id=2) }}">
+                    <i class="fas fa-code"></i>
+                    <span>Set 2: Functions</span>
+                </a>
+            </div>
+            
+            <div class="set-card">
+                <div class="glow"></div>
+                <a href="{{ url_for('quiz', subject='javascript', set_id=3) }}">
+                    <i class="fas fa-object-group"></i>
+                    <span>Set 3: Objects</span>
+                </a>
+            </div>
+            
+            <div class="set-card">
+                <div class="glow"></div>
+                <a href="{{ url_for('quiz', subject='javascript', set_id=4) }}">
+                    <i class="fas fa-project-diagram"></i>
+                    <span>Set 4: DOM</span>
+                </a>
+            </div>
+            
+            <div class="set-card">
+                <div class="glow"></div>
+                <a href="{{ url_for('quiz', subject='javascript', set_id=5) }}">
+                    <i class="fas fa-rocket"></i>
+                    <span>Set 5: Advanced</span>
+                </a>
+            </div>
+        </div>
+        
+        <a href="{{ url_for('index') }}" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            Back to Home
+        </a>
+    </div>
+
+    <script>
+        // 3D Background Animation with Three.js
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set up Three.js scene
+            const container = document.getElementById('canvas-container');
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+            
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            container.appendChild(renderer.domElement);
+            
+            // Create particles
+            const particlesGeometry = new THREE.BufferGeometry();
+            const particleCount = 500;
+            
+            const posArray = new Float32Array(particleCount * 3);
+            
+            for(let i = 0; i < particleCount * 3; i++) {
+                posArray[i] = (Math.random() - 0.5) * 10;
+            }
+            
+            particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+            
+            const particlesMaterial = new THREE.PointsMaterial({
+                size: 0.03,
+                color: 0x4fc3f7,
+                transparent: true,
+                opacity: 0.6,
+                blending: THREE.AdditiveBlending
+            });
+            
+            const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+            scene.add(particlesMesh);
+            
+            camera.position.z = 3;
+            
+            // Animation loop
+            function animate() {
+                requestAnimationFrame(animate);
+                
+                particlesMesh.rotation.x += 0.0005;
+                particlesMesh.rotation.y += 0.0005;
+                
+                renderer.render(scene, camera);
+            }
+            
+            animate();
+            
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            });
+            
+            // Floating shapes animation
+            const shapesContainer = document.getElementById('floating-shapes');
+            const shapes = ['circle', 'triangle', 'square', 'pentagon'];
+            const colors = ['#4a6fa5', '#166088', '#4fc3f7', '#343a40'];
+            
+            for(let i = 0; i < 15; i++) {
+                const shape = document.createElement('div');
+                shape.classList.add('shape');
+                
+                const size = Math.random() * 50 + 20;
+                const shapeType = shapes[Math.floor(Math.random() * shapes.length)];
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                
+                shape.style.width = `${size}px`;
+                shape.style.height = `${size}px`;
+                shape.style.left = `${Math.random() * 100}vw`;
+                shape.style.bottom = `-${size}px`;
+                shape.style.animationDuration = `${Math.random() * 15 + 10}s`;
+                shape.style.animationDelay = `${Math.random() * 5}s`;
+                
+                if(shapeType === 'circle') {
+                    shape.style.borderRadius = '50%';
+                    shape.style.background = `radial-gradient(circle, ${color}, transparent 70%)`;
+                } else if(shapeType === 'triangle') {
+                    shape.style.width = '0';
+                    shape.style.height = '0';
+                    shape.style.borderLeft = `${size/2}px solid transparent`;
+                    shape.style.borderRight = `${size/2}px solid transparent`;
+                    shape.style.borderBottom = `${size}px solid ${color}`;
+                    shape.style.background = 'transparent';
+                } else {
+                    shape.style.background = color;
+                }
+                
+                shapesContainer.appendChild(shape);
+            }
+            
+            // Enhanced hover effects with GSAP
+            const cards = document.querySelectorAll('.set-card');
+            
+            cards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const x = e.clientX - card.getBoundingClientRect().left;
+                    const y = e.clientY - card.getBoundingClientRect().top;
+                    
+                    const centerX = card.offsetWidth / 2;
+                    const centerY = card.offsetHeight / 2;
+                    
+                    const angleX = (y - centerY) / 20;
+                    const angleY = (centerX - x) / 20;
+                    
+                    gsap.to(card, {
+                        rotateX: angleX,
+                        rotateY: angleY,
+                        transformPerspective: 1000,
+                        ease: "power2.out",
+                        duration: 0.5
+                    });
+                    
+                    // Glow effect follow
+                    const glow = card.querySelector('.glow');
+                    gsap.to(glow, {
+                        x: x - centerX,
+                        y: y - centerY,
+                        ease: "power2.out",
+                        duration: 0.5
+                    });
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    gsap.to(card, {
+                        rotateX: 0,
+                        rotateY: 0,
+                        ease: "elastic.out(1, 0.5)",
+                        duration: 1
+                    });
+                    
+                    const glow = card.querySelector('.glow');
+                    gsap.to(glow, {
+                        x: 0,
+                        y: 0,
+                        ease: "power2.out",
+                        duration: 0.5
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,49 @@
+Which tag provides a fallback for unsupported browsers?|<fallback>|<noscript>|<fail>|<unsupported>|B
+What does the contenteditable attribute do?|Makes element editable|Changes layout|Fixes content|Hides text|A
+What is the default encoding of modern HTML?|UTF-8|ANSI|ISO-8859-1|UTF-16|A
+Which API is used in <canvas> for drawing?|CanvasAPI|2DContext|WebGL|Context2D|B
+What is the use of the <track> tag?|Audio control|Video caption/subtitle|Animation|Scrollbar|B
+What value of autocomplete disables autofill?|off|disable|false|none|A
+Which attribute is used for validation pattern?|regex|check|pattern|validate|C
+What is the purpose of <datalist>?|Dropdown of suggestions|Group options|Autocomplete form|Placeholder|A
+Which HTML tag defines relationship between document and external resource?|<meta>|<link>|<style>|<script>|B
+Which tag defines instructions for search engines?|<meta name="robots">|<robots>|<search>|<engine>|A
+Which tag adds structured metadata using schema.org?|<data>|<meta itemprop="">|<micro>|<prop>|B
+What does defer do in <script> tag?|Executes first|Blocks HTML|Delays until DOM is parsed|Skips script|C
+What does async do in <script>?|Runs after page loads|Runs with HTML parsing|Waits for DOM|Blocks render|B
+Which HTML5 element represents machine-readable date/time?|<time>|<date>|<datetime>|<calendar>|A
+Which input type provides color picker?|text|color|rgb|palette|B
+Which is the best tag for marking up navigation links?|<nav>|<menu>|<ul>|<link>|A
+Which input type restricts input to numbers only?|type="num"|type="digit"|type="number"|type="numeric"|C
+What attribute specifies maximum characters allowed?|maxlength|max|limit|maxchars|A
+Which tag is used to embed external webpages?|<iframe>|<embed>|<object>|All of these|D
+What does the <object> tag allow?|Load external CSS|Embed any multimedia|Add SVG only|Host <style>|B
+Which element is ideal for showing progress status?|<status>|<progress>|<meter>|<bar>|B
+Which tag indicates a scalar measurement within known range?|<progress>|<scale>|<meter>|<range>|C
+What is the role of <output> tag?|Display button|Show result|Input data|Reset value|B
+Which attribute allows multiple file upload?|multiple|files|multi|more|A
+What is the correct way to add accessibility label?|aria-label|label|alt|a11y|A
+Which tag represents a contact address in a document?|<address>|<location>|<contact>|<footer>|A
+What does <abbr> tag represent?|Bold|Abbreviation|Active text|Hidden info|B
+What is the use of <bdi> tag?|Bi-directional isolation|Bold italic|Image block|Blur design|A
+Which element visually highlights a word?|<mark>|<highlight>|<style>|<focus>|A
+What’s the best element to define footer navigation links?|<nav>|<footer>|<div>|<menu>|B
+Which attribute is used to focus an element on page load?|focus|autofocus|onfocus|selected|B
+What tag defines legal/copyright information?|<legal>|<small>|<footer>|<note>|C
+Which form input type is suitable for selecting month only?|type="date"|type="month"|type="calendar"|type="select"|B
+Which element represents side content or ad bar?|<sidebar>|<aside>|<nav>|<section>|B
+Which HTML tag was deprecated in HTML5?|<center>|<div>|<em>|<strong>|A
+What does the novalidate attribute do in forms?|Disables JS|Skips browser validation|Resets form|Adds error|B
+What is the correct way to set form encoding for file upload?|enctype="text/plain"|enctype="multipart/form-data"|enctype="url"|enctype="base64"|B
+What does accept attribute in file input do?|Restrict file types|Accepts form|Validates size|Encrypts file|A
+Which element is best for embedding YouTube video?|<embed>|<iframe>|<video>|<object>|B
+Which value of target opens form result in new tab?|_blank|_new|_self|_tab|A
+What does <meta http-equiv="refresh"> do?|Auto reloads page|Sets language|Adds cache|Adds cookies|A
+Which tag helps in detecting browser compatibility?|<meta http-equiv="X-UA-Compatible">|<browser>|<support>|<compat>|A
+Which attribute gives a short hint to input fields?|placeholder|title|label|hint|A
+Which attribute in <form> defines where to send data?|action|method|target|href|A
+Which element represents grouped content in forms?|<section>|<fieldset>|<div>|<group>|B
+Which tag should wrap <legend>?|<form>|<label>|<fieldset>|<title>|C
+What’s the best way to provide accessible form labels?|<label for="id">|title attribute|aria-name|id only|A
+Which tag defines emphasized importance (not just bold)?|<b>|<strong>|<span>|<em>|B
+Which tag is used to declare base URL for relative links?|<base>|<link>|<url>|<meta>|A

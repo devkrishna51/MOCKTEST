@@ -1,0 +1,54 @@
+What is the first step in building an IoT application?|Connect Wi-Fi|Install app|Define the problem/use case|Buy sensors|C
+Which language is commonly used in IoT device programming?|Photoshop|HTML|Python|MS Word|C
+Which of the following is used to collect data in IoT applications?|Wi-Fi module|Camera|Sensor|Actuator|C
+Which device is best for edge-level data processing?|Cloud server|Mobile phone|Raspberry Pi|Desktop PC|C
+Why is MQTT preferred in IoT apps?|Heavy data handling|High security|Lightweight and efficient|High speed|C
+Which of these is responsible for sending data to cloud in IoT?|Battery|Sensor|Gateway|Microcontroller|C
+Which of the following is not an IoT application domain?|Smart farming|Smart education|Traditional book printing|Smart healthcare|C
+What is a "real-time" IoT system expected to do?|Store data only|Respond instantly|Work without software|React after a long delay|B
+Which of these is important in IoT application scalability?|Wired connection|Modular design|Data storage format|Color of device|B
+Which of these tools can be used to build IoT dashboards?|Notepad|MS Paint|Node-RED|Adobe Reader|C
+
+What does the term "interoperability" mean in IoT?|Devices from different vendors work together|Only sensors used|No connectivity|Devices work independently|A
+Which database is suitable for time-series data in IoT?|MongoDB|Excel|MySQL|InfluxDB|D
+What is the function of a firmware in IoT devices?|Device-level control code|Battery charging|Display image|User interface|A
+Which of the following is an IoT cloud platform?|ThingSpeak|Instagram|Wattpad|Photoshop|A
+In IoT applications, actuators are used for?|Wi-Fi connection|Data analysis|Monitoring only|Performing actions based on data|D
+Which of the following makes IoT development easier?|Low-level coding|Manual coding from scratch|Pre-built IoT platforms|Hardware only|C
+Which protocol uses a publish-subscribe model in IoT?|MQTT|SSH|FTP|HTTP|A
+Which of these is an essential aspect of IoT app development lifecycle?|User emotions|Event management|Requirement analysis|Gaming graphics|C
+Why is power management critical in IoT devices?|They are battery-powered|They are stationary|They use too much RAM|They have long cables|A
+Which board is ideal for prototyping IoT apps?|Monitor|Hard disk|Arduino|Printer board|C
+
+What is "sensor fusion"?|Breaking sensors|Ignoring sensor inputs|Combining outputs from multiple sensors|Confusing sensors|C
+Which of the following is an IoT-specific protocol for constrained networks?|CoAP|IPSec|SMTP|HTTPS|A
+What is the role of an IoT gateway?|Generates electricity|Only charges the device|Bridges local and cloud communication|Shows display|C
+What is latency in an IoT system?|Data size|Sensor length|Battery life|Time delay in data transmission|D
+What is edge computing?|Outdated method|Processing near data source|Processing in cloud|Centralized processing|B
+Which platform is best for visual programming in IoT?|MS Access|BlueJ|Visual Studio|Node-RED|D
+Which network is used for low power long range IoT communication?|USB|Bluetooth|LAN|LoRa|D
+Why are APIs important in IoT applications?|For hardware testing|To enable communication between services|To build circuits|For UI design|B
+Which of the following can be used to visualize sensor data?|Paint|Excel|Camera|IoT cloud dashboards|D
+Which of the following helps reduce IoT network congestion?|Unlimited packets|Data compression|High graphics|Adding users|B
+
+What kind of data do IoT devices primarily generate?|Structured and real-time data|Video data|Audio data|Compressed movie files|A
+Which of the following is NOT a real-time IoT platform?|Azure IoT|ThingSpeak|VLC Media Player|AWS IoT|C
+What is the purpose of OTA (Over-the-Air) updates?|Remote firmware update|Install desktop OS|Battery backup|Change sensors|A
+How is cloud important in IoT applications?|For user login only|For color management|For printing|For data sharing and storage|D
+What is a common challenge in building IoT applications?|Too many developers|Strong Wi-Fi signals|Frequent updates|Lack of standardization and security|D
+What is payload in IoT communication?|Actual data transferred|Battery type|Box|Header|A
+What’s the use of a mobile app in an IoT system?|Remote monitoring and control|Code replacement|Only download photos|Battery upgrade|A
+Which one is an example of a rule-based IoT system?|Voice recognition|Chatbot|IFTTT automation|AI model|C
+Why is real-time analytics important in IoT?|To delay output|Only for UI|To respond to events instantly|To increase RAM|C
+Which of the following helps protect IoT application data?|Obfuscation|Encryption|Plain text|Debug mode|B
+
+Which layer handles application logic in IoT architecture?|Application layer|Perception layer|Network layer|Transmission layer|A
+What’s the use of microservices in IoT applications?|Monolithic systems|Scalable and modular system design|Complex design|Increased latency|B
+Which one is used for remote device control?|VR headset|Touchpad|Power cable|REST API|D
+What does “device provisioning” mean in IoT?|Painting devices|Shipping devices|Adding decorative cover|Setting up device credentials and configs|D
+What is commonly used to automate IoT workflows?|IoT rule engines|Manual tasks|Google Sheets|Paint|A
+What is an IoT "digital twin"?|Remote control|Human helper|Virtual replica of physical device|A clone robot|C
+What is telemetry in IoT?|Sound frequency|Electricity generation|Graphic design|Remote data collection|D
+Which one can cause device overload in IoT?|Limited bandwidth|Sleep mode|Efficient code|Optimized algorithm|A
+Why are SDKs useful in IoT app development?|To play games|To help developers integrate functionalities|For fashion design|For debugging CSS|B
+Which of these helps reduce IoT device energy consumption?|Idle CPU|Always-on display|Sleep modes and low-power design|Constant polling|C

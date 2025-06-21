@@ -1,0 +1,47 @@
+What does HTML stand for?|HyperText Markup Language|Hyperlink Text Language|Home Tool Markup Language|Hyperlinking & Texting Language|A
+Which tag is used to create a numbered list?|<ul>|<ol>|<list>|<dl>|B
+Which tag defines a table row?|<td>|<tr>|<th>|<table>|B
+What does <br> tag do in HTML?|Creates a bold text|Adds a new paragraph|Inserts a line break|Breaks link|C
+Which tag is used to embed an image in HTML?|<img>|<image>|<src>|<media>|A
+Which attribute is used to provide image URL?|href|src|link|path|B
+What is the correct syntax to create a hyperlink?|<a>link</a>|<a src="...">|<a href="...">|<link href="...">|C
+Which tag creates a dropdown menu?|<input type="select">|<menu>|<select>|<dropdown>|C
+Which tag is used to group related options in a form?|<group>|<fieldset>|<optiongroup>|<formgroup>|B
+Which HTML element is used to capture multiline text input?|<textarea>|<input type="text">|<input type="box">|<input multiline>|A
+What does the action attribute in a form specify?|Form ID|Server URL|Method|Form style|B
+Which input type allows file upload?|text|file|image|button|B
+What is the correct tag to display a checkbox?|<input type="check">|<checkbox>|<input type="checkbox">|<check>|C
+Which element is used to define metadata?|<meta>|<data>|<style>|<info>|A
+Where should the <title> tag be placed?|Inside <body>|Inside <head>|After <html>|Anywhere|B
+What is the default method of form submission?|GET|POST|PUT|SEND|A
+Which HTML5 tag is used to play video?|<media>|<video>|<vid>|<mp4>|B
+What does autoplay attribute do in video tag?|Auto reload|Auto play video|Auto zoom|Auto loop|B
+Which tag defines a navigation menu in HTML5?|<nav>|<menu>|<header>|<aside>|A
+Which tag defines the main content of document?|<head>|<main>|<body>|<core>|B
+What is the purpose of <article> tag?|To define a section|To define a blog post or news item|To create div|To hold nav|B
+Which tag is used to define external CSS link?|<style src="...">|<link rel="stylesheet">|<css>|<script rel="css">|B
+Which attribute is used to open a link in new tab?|target="_blank"|newtab="true"|open="new"|tab="blank"|A
+What does <hr> tag do?|Adds horizontal rule|Adds heading rule|Adds hyperlink reference|Adds line of dots|A
+Which tag is used to define a list item?|<li>|<list>|<ul>|<ol>|A
+What is the default type of <ol> list?|Lowercase|Decimal|Roman|None|B
+Which input type is used for passwords?|text|password|secure|hidden|B
+What does readonly attribute do?|Disables form|Makes field non-editable|Hides field|None|B
+Which tag represents a table cell?|<cell>|<td>|<tc>|<tr>|B
+Which HTML tag is used to insert JavaScript?|<script>|<js>|<javascript>|<code>|A
+Which attribute gives tooltip on hover?|title|hover|label|alt|A
+What is the default alignment of <div>?|Left|Center|Right|Justified|A
+Which tag is semantic in HTML5?|<div>|<span>|<section>|<b>|C
+Which tag is used to group elements without affecting style?|<span>|<div>|<group>|<container>|A
+Which tag is used to embed audio in HTML5?|<audio>|<sound>|<media>|<play>|A
+Which tag is used for a short quotation?|<quote>|<q>|<blockquote>|<ref>|B
+What does <em> tag do?|Italic|Underline|Bold|Caps|A
+What does <strong> tag represent?|Important text|Red text|Italic text|None|A
+What tag defines an inline frame?|<iframe>|<frame>|<embed>|<media>|A
+What tag creates a drop-down with searchable options?|<datalist>|<input type="select">|<autocomplete>|<list>|A
+What is the maximum value of progress bar?|100|Any number|1|Depends on max|D
+Which attribute is used to pre-fill a form field?|value|default|placeholder|text|A
+Which tag is used to group form fields together?|<fieldset>|<section>|<formgroup>|<box>|A
+Which tag is used to define a label for input?|<label>|<formlabel>|<text>|<inputlabel>|A
+Which HTML tag is used for keyboard input?|<kbd>|<key>|<keyboard>|<input>|A
+Which tag adds a tooltip to abbreviation?|<abbr>|<short>|<tooltip>|<hover>|A
+What does <mark> tag do?|Highlights|Makes bold|Makes italic|Adds note|A

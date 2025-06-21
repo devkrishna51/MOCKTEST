@@ -1,0 +1,50 @@
+Which of the following is used to detect light intensity?|LDR (Light Dependent Resistor)|Thermistor|GPS sensor|Barometer|A
+Which actuator can convert electrical energy to mechanical rotation?|LED|Servo motor|Thermometer|Sensor|B
+What does an accelerometer measure?|Magnetic field|Sound waves|Acceleration or movement|Temperature|C
+A microcontroller receives input from?|Monitor|Sensor|Fan|Printer|B
+The heart of most embedded IoT systems is the?|Power adapter|Battery|Microcontroller|Fan|C
+A device that makes a mechanical movement is?|Sensor|Display|Actuator|Calculator|C
+Which of these can be used to detect tilt or angle?|Thermostat|Gyroscope|LCD screen|LED|B
+Which component interprets input and controls output?|Microcontroller|Sensor|Router|Switch|A
+Which of the following outputs light as an action?|LCD|LED|Thermistor|Buzzer|B
+Which device can measure altitude in IoT systems?|Light sensor|Magnetometer|Barometer|GPS module|C
+Which of these can act as both input and output device?|Sensor|Relay|Microcontroller|Switch|C
+What does a relay do in an IoT system?|Measure pressure|Display data|Act as electronic switch|Sense motion|C
+Which of these is a microcontroller board?|SD card|Raspberry Pi|Arduino Uno|Wi-Fi Router|C
+Which component is responsible for executing logic in IoT devices?|LED|Buzzer|Microcontroller|Potentiometer|C
+Which type of sensor detects temperature change?|Pressure sensor|Gas sensor|Thermistor|LDR|C
+A DC motor is used as?|Sensor|Actuator|Controller|Display|B
+Which component receives signal and gives physical response?|Sensor|Actuator|Switch|RAM|B
+What kind of sensor is used in air conditioning systems?|Sound sensor|Temperature sensor|Rain sensor|Gyroscope|B
+Microcontrollers are different from microprocessors because they?|Need external memory|Don t execute code|Are used in laptops|Have built-in memory and I/O|D
+Which of these is used for sound detection?|IR sensor|Thermistor|Microphone|Accelerometer|C
+Which of these detects the presence of a magnetic field?|Barometer|LDR|Magnetometer|Humidity sensor|C
+Which component can open or close a circuit?|Sensor|Actuator|Relay|Microcontroller|C
+A fan that turns on at high temperature is controlled by?|Manual switch|Cloud|Sensor + actuator|Light|C
+Which of the following sensors is used in automatic door systems?|PIR sensor|Rain sensor|Sound sensor|Humidity sensor|A
+What is the function of the GPIO pins on a microcontroller?|Internet connection|Display content|Power supply only|Input/output interface|D
+Which device allows water flow control in smart farming?|Soil sensor|Water pump actuator|Fan|Light sensor|B
+Which of these is typically programmable in embedded IoT systems?|Sensor|Battery|Microcontroller|Capacitor|C
+The output of a sensor is typically given in?|Mechanical rotation|Audio file|Electrical signal|Binary image|C
+Which sensor is best for detecting hand gestures?|Humidity sensor|Gyroscope|IR proximity sensor|Rain sensor|C
+Which actuator would move a robotic wheel?|LED|Servo motor|PIR sensor|Light sensor|B
+In a smart system, which device controls LED lights based on sensor input?|Router|Microcontroller|Printer|Mouse|B
+Which component would be used to measure vibration?|Vibration sensor|Relay|Speaker|Timer|A
+Which sensor is used to detect gas leakage?|Gyroscope|Flame sensor|Gas sensor|Touch sensor|C
+Which of these can sense moisture content?|Light sensor|Moisture sensor|GPS sensor|Pressure sensor|B
+What allows microcontrollers to interface with external components?|LCD|GPIO pins|Sensors only|LEDs only|B
+What is the purpose of EEPROM in microcontrollers?|To store RAM temporarily|To connect display|To control actuators|To store program/data permanently|D
+Which of the following is a multi-purpose development board?|Arduino|Speaker|Resistor|USB drive|A
+Which of these is an actuator used in home automation?|Light bulb|Temperature sensor|Humidity sensor|Barometer|A
+Which part of a microcontroller executes program logic?|I/O port|CPU|RAM|LED|B
+A gas sensor gives output to?|Actuator|Microcontroller|Display screen|Router|B
+Which device helps a robot detect direction change?|Thermostat|Gyroscope|LED|Switch|B
+Which of these sensors is used for flame detection?|Pressure sensor|Gas sensor|IR flame sensor|Microphone|C
+What is an example of an actuator output in cars?|Brake pedal reads foot|Automatic wiper starts|Cabin temperature displayed|Speed shown|B
+In a microcontroller, ROM is used for?|Temporary program storage|Permanent program storage|Sensor detection|Image display|B
+Which of these is not a function of an actuator?|Turning motor|Controlling valve|Sensing light|Opening door|C
+Which sensor helps to turn off fans automatically when it gets cold?|Light sensor|Touch sensor|Temperature sensor|Motion sensor|C
+A sound buzzer in an IoT circuit is an example of?|Actuator|Sensor|Input device|Camera|A
+What connects the actuator to a microcontroller?|Network|Keyboard|Control signal|LED wire|C
+Microcontrollers are often embedded in?|Web browsers|Laptops|IoT devices|Bluetooth speakers only|C
+What is the first step in sensor-actuator communication loop?|Send command|Receive cloud data|Sense environment data|Display output|C

@@ -1,0 +1,51 @@
+Which technology is commonly used for IoT in smart homes?|HDMI|Zigbee|VGA|USB|B
+In an IoT system, a microcontroller is mainly used to?|Store data|Display videos|Control and process sensor input|Print documents|C
+Which connection type does not require internet access?|Cloud-based|Manual logging|Local device-to-device|Device-to-cloud|C
+In smart agriculture, IoT sensors help monitor?|Stock prices|Soil and weather conditions|Text files|Library books|B
+A thing in IoT that can control a machine based on input is called?|Processor|Sensor|Actuator|Cloud|C
+Which of the following is a cloud service for IoT?|Google Cloud IoT|MS Paint|LibreOffice|Gmail only|A
+Which is a wireless protocol optimized for very low power?|Wi-Fi|Zigbee|Ethernet|USB 3.0|B
+What component allows an IoT device to act based on decision logic?|RAM|Actuator|Joystick|Sound card|B
+Which of the following supports machine-to-machine communication?|MQTT|JPEG|MP3|PDF|A
+What is an essential component in IoT wearables?|Gaming chip|Motion sensor|TV tuner|Printer|B
+How does an IoT smart bulb receive command to turn on?|Manual switch|Data signal via protocol|Printed command|Direct electricity|B
+Which of these is not a communication model in IoT?|Push|Pull|Hybrid|Voice-over-IP|D
+Which IoT device helps in indoor air quality monitoring?|Smoke detector|Gas sensor|CD player|Electric bell|B
+The connection between things and internet is handled by?|Browser|Gateway|Spreadsheet|Webcam|B
+Which method is used to ensure safe data transfer in IoT?|Password|Data compression|Encryption|Text formatting|C
+What makes IoT devices intelligent?|Ability to connect to TV|Having LED lights|Capability to sense, process and act|Being colorful|C
+IoT is part of which type of computing?|Offline computing|Traditional computing|Ubiquitous computing|Analog computing|C
+Which communication type sends real-time alerts?|Batch mode|Push mode|Scheduled logging|Offline method|B
+Which of these is an example of physical layer in IoT?|Data server|Wi-Fi module|Presentation layer|Web hosting|B
+In smart parking, the system detects?|User ID|Weather info|Vehicle presence|Food delivery|C
+Which of the following is used to measure humidity in IoT?|Gyroscope|Moisture sensor|Humidity sensor|Light sensor|C
+Which identifies IoT things over internet?|SSID|IP address|Brightness level|HTML tag|B
+Which layer is responsible for connecting to external networks?|Physical|Transport|Network|Presentation|C
+What is an example of end-user interaction in IoT?|Raw data processing|Data routing|Sensor input|Smartphone control app|D
+What is the main task of a sensor in an IoT thing?|To print output|To sense and send data|To visualize output|To charge device|B
+A connected refrigerator that adjusts temperature is an example of?|Manual control|IoT-based appliance|Wired server|Cloud-only system|B
+Which of these is used for identifying and tracking IoT objects?|PIR sensor|Light sensor|RFID|Power cable|C
+Which of these helps in long-distance data transmission in IoT?|Bluetooth|Wi-Fi only|LoRaWAN|USB hub|C
+IoT things communicate with cloud using?|Sensors only|Switches|Internet protocols|TV apps|C
+In IoT, which layer handles raw data collection?|Application|Network|Perception|Presentation|C
+IoT devices consume less power because?|They use bright lights|They are small|They use energy-efficient communication|They never turn on|C
+Which sensor helps detect fall in a wearable IoT device?|Magnetometer|Accelerometer|Thermal sensor|Speaker|B
+Which of these is not a typical use case of IoT?|Smart agriculture|Smart water monitoring|File compression|Home automation|C
+Which of the following is an example of an actuator?|Thermostat adjusting temperature|Sensor measuring light|Cloud storing data|Phone ringing|A
+Which protocol uses publish/subscribe mechanism in IoT?|HTTP|FTP|MQTT|SMTP|C
+The combination of sensing and control in IoT creates?|Manual system|Static process|Smart environment|Offline communication|C
+Which of these is an identifier for wireless communication?|IP address|Barcode|CD label|Web image|A
+What is the function of a gateway in IoT?|Act as final display|Control appliances directly|Bridge between device and cloud|Recharge devices|C
+Which of these is a unique property of IoT things?|Fixed memory|Always online|Interconnectivity and intelligence|Can print documents|C
+In smart cities, traffic sensors use?|User feedback|Manual settings|Cameras and IoT sensors|Billboards|C
+What is an advantage of IoT in industries?|Increased paperwork|Manual supervision|Predictive maintenance|Longer shift hours|C
+Which of these technologies supports IoT messaging with lightweight data?|POP3|IMAP|MQTT|SMTP|C
+IoT-enabled machines in factories are often called?|Manual tools|Cloud players|Industrial Things|Office processors|C
+What is an example of device-to-device connection?|Smartphone to web|Sensor to printer|Sensor to microcontroller|Cloud to phone|C
+Which device responds based on sensed input?|Projector|Actuator|Hard disk|Modem|B
+Which of the following is used in smart lighting control?|CD ROM|Touchpad|Motion sensor|Loudspeaker|C
+Which layer is at the top in IoT architecture model?|Perception|Network|Application|Communication|C
+IoT-enabled garbage bins help by?|Displaying time|Collecting statistics|Sending fill-level alerts|Printing labels|C
+In a smart lock system, the lock is?|Sensor|Gateway|Actuator|Data store|C
+IoT connectivity in remote areas is often supported by?|LAN cables|LoRa or NB-IoT|Fiber optics|FM Radio|B
+A thing in IoT is called "smart" when it can?|Just connect to the internet|Interact and respond autonomously|Be colorful|Have a touchscreen|B

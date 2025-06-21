@@ -1,0 +1,49 @@
+Which layer in IoT architecture handles data analysis and decision-making?|Business Layer|Perception Layer|Network Layer|Session Layer|A
+Which of the following protocols is best suited for constrained devices with limited power?|CoAP|HTTP|SMTP|FTP|A
+Which communication model allows multiple devices to interact with each other without a server?|Device-to-Device|Device-to-Cloud|Gateway-to-Cloud|Client-to-Client|A
+Which sensor is used to measure rotational speed in IoT systems?|Gyroscope|Thermistor|PIR|LDR|A
+Which of the following uses publish-subscribe architecture?|MQTT|HTTP|FTP|SMTP|A
+Which security layer is essential in ensuring encrypted communication in IoT?|Transport Layer Security|Application Layer|Data Link Layer|Session Layer|A
+Which protocol works on Constrained RESTful Environments?|CoAP|MQTT|POP3|TCP|A
+Which of these IoT concepts reduces cloud traffic by processing data at the source?|Edge Computing|Fog Storage|Cloud Control|Back-End Sharing|A
+Which of the following is a unique challenge in IoT device authentication?|Scalability of identity|Use of passwords|Memory overflow|Driver compatibility|A
+What is a key drawback of using HTTP in constrained IoT environments?|High overhead|No support for GET requests|Low latency|Lightweight nature|A
+Which of the following is NOT a component of IoT ecosystem?|Presentation Layer|Device|Network|Cloud Platform|A
+Which technique is used to assign IP addresses to billions of IoT devices?|IPv6|IPv4|MAC|URL|A
+Which sensor is used for detecting flames or fire in IoT-based safety systems?|IR Flame Sensor|PIR Sensor|Smoke Sensor|LDR Sensor|A
+What is the function of a transducer in IoT?|Convert one form of energy to another|Store data|Transmit power|Encrypt data|A
+Which wireless tech supports long-range communication for IoT with low power?|LoRa|Bluetooth|Zigbee|Wi-Fi|A
+Which IoT layer is responsible for sensing and acquiring data?|Perception Layer|Network Layer|Transport Layer|Application Layer|A
+What does the “constraint” in CoAP refer to?|Limited computing resources|Lack of sensors|Unstable electricity|Expensive cloud|A
+Which of the following is NOT typically considered a threat to IoT devices?|SQL Injection|Firmware hacking|Physical tampering|Secure boot|D
+Why is scalability a major concern in IoT architecture?|Massive number of devices|Low speed|No programming required|Too much RAM|A
+Which one is not an IoT connectivity option?|Ethernet|Li-Fi|NFC|CD-ROM|D
+Which type of address is essential for uniquely identifying IoT nodes?|MAC Address|Subnet Mask|Gateway Address|PIN Code|A
+In MQTT, what is the role of a broker?|Distributes messages between publishers and subscribers|Saves data|Hosts website|Manages power supply|A
+Which layer is responsible for transmission of IoT data?|Network Layer|Perception Layer|Data Layer|Knowledge Layer|A
+Which of the following is a real-time constraint in IoT systems?|Low latency|High power usage|Big screen|Color display|A
+Why are embedded operating systems used in IoT?|Low resource requirement|Faster GUI|HD graphics|Multiplayer support|A
+What is the use of IPv6 in IoT?|More device addresses|More speed|More memory|More battery|A
+Which one is a lightweight data format used in IoT?|JSON|XML|PDF|DOC|A
+Which of the following uses REST architecture in IoT?|CoAP|MQTT|SMTP|Telnet|A
+What is one advantage of mesh network topology in IoT?|Multiple paths for communication|Only one hub|High power use|Linear routing|A
+Which layer translates raw signals from sensors?|Perception Layer|Transport Layer|Session Layer|Application Layer|A
+Which type of computing occurs at the network edge close to IoT devices?|Edge Computing|Cloud Computing|Central Computing|Power Computing|A
+Which one is a key feature of Zigbee protocol?|Low power consumption|High bandwidth|Long-range|High cost|A
+Which device ensures data routing between devices in an IoT setup?|Gateway|Sensor|Transducer|Motor|A
+Which type of IP address allows global device recognition?|Public IPv6|Private IPv4|NAT Address|MAC only|A
+Which technology allows short-range wireless communication using magnetic fields?|NFC|Wi-Fi|Zigbee|RFID|A
+Which of the following is NOT a role of IoT cloud platforms?|Cooking analysis|Device management|Data processing|Remote monitoring|A
+Which feature is crucial in real-time IoT applications?|Low latency|High resolution|User interface|Color scheme|A
+What is the function of a smart actuator?|Execute action on command|Generate data|Analyze sensor input|Store sensor values|A
+Which one of these is an IoT data communication protocol?|6LoWPAN|PHP|SMTP|HTML|A
+Which layer is responsible for establishing and terminating communication sessions?|Session Layer|Data Link Layer|Application Layer|Cloud Layer|A
+What is Fog Computing designed to do?|Extend cloud computing closer to edge|Replace cloud|Block data|Disable sensors|A
+Which encryption technique is used in IoT for confidentiality?|AES|HTTP|NFC|LDR|A
+Which of these is NOT a part of IoT communication model?|User-to-Device|Device-to-Device|Device-to-Cloud|Cloud-to-Device|A
+Which IoT concept uses AI for automation and decision-making?|Smart IoT|Fast IoT|Embedded Cloud|Zigbee|A
+Which is the primary purpose of data aggregation in IoT?|Reduce bandwidth usage|Increase data|Corrupt data|Decode firmware|A
+Which device stores processing logic in an IoT node?|Microcontroller|Motor|Router|Sensor|A
+What is the function of a gateway in security?|Firewall and filtering|Display output|Control motor|Power the device|A
+What happens when there is no unique ID in an IoT device?|Address conflict|Faster data|More storage|No power|A
+Which of the following ensures that IoT devices don’t share incorrect data?|Data integrity|Data loss|Low bandwidth|Code injection|A

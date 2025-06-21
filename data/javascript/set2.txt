@@ -1,0 +1,48 @@
+What will typeof undefined return?|undefined|null|object|string|A
+What will typeof NaN return?|NaN|number|string|undefined|B
+What does Array.isArray([]) return?|true|false|undefined|null|A
+How to find length of array arr?|arr.size|arr.length|length(arr)|arr.len|B
+Which method returns part of an array?|slice()|splice()|split()|subarray()|A
+Which method changes original array?|slice()|splice()|join()|map()|B
+Which method creates a new array from existing one?|splice()|join()|map()|concat()|C
+What is null in JavaScript?|undefined|zero|empty object|false|C
+What is the default value of unassigned variable?|null|undefined|0|false|B
+Which operator is used for exponentiation?|^|**|exp()|^^|B
+Which function is used to delay execution?|setTimeout()|setInterval()|delay()|timeout()|A
+What is the interval between loops in setInterval()?|continuous|fixed|in milliseconds|in seconds|C
+What is the output of "5" * 2?|10|"10"|NaN|52|A
+What will console.log(2 + true) output?|2|true|3|NaN|C
+Which object represents the browser window?|document|this|window|navigator|C
+Which method selects element using CSS selector?|getElementById()|getElementsByClassName()|querySelector()|getBySelector()|C
+What is the result of typeof [] === typeof {}?|true|false|undefined|error|A
+Which keyword refers to the current object?|self|object|this|current|C
+Which method adds item at beginning of array?|push()|pop()|shift()|unshift()|D
+Which loop is used to iterate over object keys?|for|while|for...in|for...of|C
+Which loop is used to iterate over array values?|for...of|for...in|each|loop|A
+How do you convert JSON string to object?|JSON.stringify()|JSON.parse()|parseJSON()|toJSON()|B
+What does JSON.stringify() do?|parses object|converts object to string|removes null|clones object|B
+Which keyword is used to return value from function?|exit|stop|return|output|C
+Which function merges two arrays?|append()|combine()|concat()|merge()|C
+Which method finds index of an element?|find()|indexOf()|search()|getIndex()|B
+Which method filters elements based on condition?|filter()|map()|reduce()|check()|A
+Which method runs function for each array item?|each()|every()|forEach()|loop()|C
+Which method accumulates array to single value?|map()|reduce()|filter()|compact()|B
+What is the default value of a const variable?|must assign|0|null|undefined|A
+What happens if you reassign a const variable?|updates|removes|error|undefined|C
+Which of these is a falsy value?|0|"0"|[]|"false"|A
+Which of these is a truthy value?|""|0|[]|undefined|C
+What does !false return?|false|true|0|null|B
+How many parameters can a function take?|1|2|as many as needed|only 10|C
+What is scope of a let variable?|function|global|block|object|C
+What is hoisting?|Reversing variables|Moving to top|Loading later|Sorting|B
+Which variables are hoisted?|let and const only|var only|all variables|none|B
+What is closure in JS?|Function + global|Function + scope|Block scope|object scope|B
+What is lexical scope?|scope of browser|parent-child scope|local inside block|inner variable only|B
+What is the use of bind()?|Binds two arrays|Binds function with object|Binds class|Binds data|B
+Which keyword is used to import a module in ES6?|require|export|import|include|C
+Which keyword exports code from module?|import|require|module|export|D
+Which data structure stores key-value pairs?|Set|Array|Object|List|C
+Which type allows unique values only?|Object|Set|Array|Map|B
+What will new Set([1,1,2]) return?|[1,2]|[1,1,2]|Set(1,2)|Set(2,1)|A
+What does map.set("a", 1) do?|Adds key-value|Removes a|Fails|Sorts map|A
+Which method gets value from Map?|map.get(key)|map.value()|map.fetch()|map.find()|A

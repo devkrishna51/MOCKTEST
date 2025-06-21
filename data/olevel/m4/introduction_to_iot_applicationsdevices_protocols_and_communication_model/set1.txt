@@ -1,0 +1,50 @@
+What does IoT stand for?|Internet of Tools|Internet of Thinking|Internet of Things|Internal of Things|C
+Which of the following is an IoT application area?|Agriculture|Healthcare|Smart Homes|All of the above|D
+Which device is commonly used in smart homes?|Smoke Detector|Smart Bulb|Thermostat|All of the above|D
+Which sensor detects motion?|Motion Sensor|Temperature Sensor|Light Sensor|Proximity Sensor|A
+Which protocol is used for short-range communication in IoT?|Wi-Fi|Bluetooth|Ethernet|Satellite|B
+Which protocol is lightweight and used for small sensors?|HTTP|FTP|MQTT|SMTP|C
+Which layer is responsible for communication in IoT?|Application Layer|Perception Layer|Network Layer|All of these|C
+What is the full form of RFID?|Radio Frequency Identity Data|Remote Frequency ID|Radio Frequency Identification|Random Frequency Integrated Device|C
+Which of the following is a communication protocol used in IoT?|ZigBee|FTP|SMTP|POP3|A
+Which device can collect environmental data in IoT?|Sensor|Actuator|Router|Server|A
+Which one is an example of an actuator?|LED|Temperature Sensor|Microphone|Camera|A
+Which is a feature of IoT devices?|Connected to Internet|Autonomous|Remote Monitoring|All of the above|D
+Which of the following is a wearable IoT device?|Smart Shoes|Fitness Band|Smart Glasses|All of the above|D
+What is the function of a gateway in IoT?|Send SMS|Connect networks|Power supply|Store data|B
+What is the role of Cloud in IoT?|Data Storage|Processing|Analytics|All of the above|D
+Which communication model is used in IoT?|Push-Pull|Request-Response|Publish-Subscribe|All of the above|D
+Which one is a popular cloud platform for IoT?|ThingSpeak|Google Docs|Photoshop|WinZip|A
+Which of the following is an open-source IoT platform?|Arduino|Raspberry Pi|NodeMCU|All of these|D
+Which protocol works best for constrained devices?|HTTP|MQTT|SMTP|TCP|B
+Which of the following is an industrial IoT application?|Smart Factory|Smartwatch|Smartphone|Email|A
+Which device converts physical data to digital signals?|Sensor|Actuator|Display|Switch|A
+Which communication method is best for long range?|Bluetooth|Wi-Fi|LoRa|NFC|C
+What does LPWAN stand for?|Low Power Wireless Area Network|Limited Power Wide Area Network|Low Power Wide Area Network|Long Packet Wireless Area Network|C
+Which sensor is used in smart irrigation?|Moisture Sensor|Heat Sensor|Motion Sensor|Sound Sensor|A
+Which protocol is commonly used in smart lighting?|ZigBee|SMTP|POP3|DNS|A
+What does the 'smart' in smart devices mean?|Expensive|Stylish|Connected and Automated|Rechargeable|C
+Which device sends commands to an actuator?|Cloud|Sensor|Controller|Transistor|C
+Which of the following is a network technology?|Ethernet|HDMI|USB|VGA|A
+Which layer includes sensors and devices?|Network Layer|Perception Layer|Application Layer|Presentation Layer|B
+Which IoT device is used for facial recognition?|Camera|Thermometer|Speaker|Microphone|A
+Which is the most commonly used communication protocol in IoT?|MQTT|SMTP|POP3|ARP|A
+Which device collects physical input in IoT?|Sensor|Relay|LED|Motor|A
+Which technology is used in contactless cards?|ZigBee|Bluetooth|RFID|Ethernet|C
+What does NFC stand for?|Near Field Communication|Non-Flexible Cable|Network Frequency Control|No Field Contact|A
+Which IoT protocol is based on topic-based messaging?|HTTP|MQTT|FTP|POP|B
+Which communication model requires a central broker?|Client-Server|Publish-Subscribe|P2P|Direct-Link|B
+Which is not a benefit of IoT?|Automation|Real-time data|Increased power usage|Remote control|C
+Which component connects local devices to the internet?|Sensor|Camera|IoT Gateway|Power Supply|C
+Which IoT protocol uses minimum bandwidth?|MQTT|FTP|HTTPS|TCP|A
+Which of the following is not a sensor?|Gyroscope|Accelerometer|LED|Thermometer|C
+Which layer handles data security in IoT?|Network Layer|Security Layer|Application Layer|Transport Layer|B
+Which protocol is used to access web servers?|HTTP|FTP|SMTP|MQTT|A
+Which device receives signal and performs action?|Sensor|Actuator|Monitor|Controller|B
+Which device is used in smart health monitoring?|ECG Sensor|Thermal Camera|All of the above|None|C
+Which is not an IoT communication model?|Push-Pull|Pub-Sub|Client-Server|Chain-Link|D
+Which of the following is a characteristic of IoT devices?|Scalability|Portability|Internet Connectivity|All of the above|D
+Which of the following is an example of smart agriculture?|Drone Sprayer|Soil Moisture Sensor|Climate Control System|All of the above|D
+Which of the following uses IoT in transportation?|Smart Traffic Lights|Vehicle Tracking|Automatic Toll|All of the above|D
+What does an actuator do?|Converts data to action|Stores data|Reads temperature|Analyzes network|A
+Which protocol is suitable for email transfer, not IoT?|MQTT|SMTP|CoAP|ZigBee|B

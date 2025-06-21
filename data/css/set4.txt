@@ -1,0 +1,47 @@
+Which property is used to change the text color?|font-color|text-color|color|foreground|C
+What is the correct syntax to apply CSS to an HTML element?|style="color:red;"|css="color:red;"|style:color=red|apply:color|A
+Which selector selects an element with id "main"?|#main|.main|main|*main|A
+Which selector selects all elements with class "container"?|#container|*container|.container|container|C
+Which of the following is a combinator in CSS?|+|&|?|@|A
+How to apply the same style to multiple selectors?|Separate with ,|Use &|Use &&|Apply one-by-one|A
+Which property sets spacing between border and content?|margin|padding|gap|spacing|B
+Which CSS value makes an element hidden but takes space?|display:none|opacity:0|visibility:hidden|visibility:none|C
+What does display: inline-block; do?|Blocks fully|Inline only|Inline + block features|Nothing|C
+Which value of position keeps the element relative to window on scroll?|relative|absolute|fixed|sticky|C
+Which value of position sticks element after scrolling a bit?|fixed|sticky|absolute|inherit|B
+Which unit is scalable and relative to font size?|px|em|cm|mm|B
+Which unit is based on root font size?|rem|em|px|pt|A
+Which property prevents content from spilling out?|overflow:auto|overflow:hidden|overflow:scroll|All of these|D
+What is the difference between auto and 0 in margin?|No difference|auto centers|auto removes|0 centers|B
+How to make a responsive layout?|Use px units|Use fixed width|Use % or vw units|Disable width|C
+Which property is used to create animations?|@animate|@keyframes|@frame|@motion|B
+Which property sets duration of animation?|animation-time|animation-speed|animation-duration|animation-length|C
+Which property is used to delay animation?|animation-delay|animation-wait|animation-start|animation-hold|A
+What does transition: all 0.5s; do?|Nothing|Makes it fast|Adds delay|Applies transition to all|D
+Which selector targets the first line of a paragraph?|::first-line|:first-line|first-line|.first-line|A
+Which selector targets the first letter of a paragraph?|:letter|:first-letter|::first-letter|letter:first|C
+How to apply style to <a> when mouse hovers?|a:click|a:hover|hover a|a:active|B
+Which pseudo-class selects elements when focused?|:hover|:target|:active|:focus|D
+How to write media query for screens less than 600px?|@media screen and (max-width: 600px)|@media (width <= 600px)|@responsive 600px|@media max(600px)|A
+Which display type creates flexible layout?|block|inline|flex|absolute|C
+Which flex property changes the direction of items?|flex-direction|flex-align|flex-way|direction|A
+Which flex property distributes space around items?|justify-content|align-items|align-content|gap|A
+Which property aligns items vertically in flexbox?|align-items|flex-align|vertical-align|flex-top|A
+Which property wraps flex items into new lines?|flex-wrap|flex-break|wrap|line-wrap|A
+Which value of flex-direction arranges items from bottom to top?|row|column|column-reverse|row-reverse|C
+Which layout system is used to create 2D grids?|flexbox|css-grid|box-grid|float-grid|B
+Which property defines number of columns in grid?|grid-columns|grid-template-columns|column-grid|columns|B
+Which function repeats grid tracks?|repeat()|grid-repeat()|track()|loop()|A
+How to create 3 equal columns in grid?|grid-template-columns: auto auto auto;|1fr 1fr 1fr|repeat(3, 1fr)|All of these|D
+Which selector matches nth child of parent?|:child(n)|:nth-child(n)|:nth(n)|child:nth|B
+Which function is used to calculate values dynamically?|calc()|math()|value()|count()|A
+Which property adds shadow to a box?|box-shadow|shadow-box|element-shadow|box-blur|A
+Which property applies gradient background?|background-style|gradient|background-gradient|background-image|D
+What is linear gradient direction for top to bottom?|to bottom|to top|top|vertical|A
+Which property adds blur effect?|filter:blur()|blur()|shadow:blur|background-blur|A
+Which property makes border dashed?|border-type|border-style: dashed;|border-style: dots;|dashed: border;|B
+How to center text inside element?|text-align: center;|center-text: true;|align: middle;|text:center;|A
+What is default value of z-index?|1|auto|0|none|B
+Which value of float places element on right?|right|float:right|float-right|float: right;|D
+What property is used to clear float effect?|clear|reset|overflow:auto|clear: both;|D
+Which shorthand sets all padding sides?|padding: top right bottom left;|padding: all;|padding: x y;|padding: block;|A

@@ -1,0 +1,49 @@
+What is the first step in building an IoT application?|Deploying sensors|Defining the problem|Buying devices|Testing the app|B  
+Which platform is commonly used to develop IoT applications?|Node-RED|Instagram|Facebook|Photoshop|A  
+What does MQTT help in for IoT apps?|Data transmission|Image processing|Hardware testing|UI designing|A  
+Which language is widely used in IoT app development?|Ruby|PHP|Python|Swift|C  
+Which database is commonly used in IoT applications for real-time data?|Oracle|MySQL|Excel|MongoDB|D  
+Why is scalability important in IoT applications?|To handle more devices in future|For offline use|To reduce memory|To make apps lighter|A  
+Which of the following is a cloud platform for IoT?|Google Docs|Outlook|AWS IoT Core|XAMPP|C  
+Which communication protocol is best suited for constrained devices?|SMTP|FTP|MQTT|HTTP|C  
+What is the role of an actuator in IoT app development?|Displaying ads|Sensing data|Sending notifications|Performing actions|D  
+Which of the following helps visualize IoT data in dashboards?|Blynk|GitHub|Excel|Arduino IDE|A  
+Which hardware is essential in prototyping IoT apps?|Arduino|CPU Fan|Mouse|Monitor|A  
+What does REST API provide to IoT apps?|Graphical UI|Device charging|Communication interface|Hardware control|C  
+Which model defines IoT communication flow?|OSI Model|TCP/IP Model|Waterfall Model|IoT Communication Model|D  
+Which is not a common IoT architecture layer?|Application Layer|Perception Layer|Transmission Layer|Network Layer|C  
+Which storage option is best for large-scale IoT data?|RAM|Floppy disk|Cloud storage|SD card|C  
+Which board is popular for IoT prototyping with Wi-Fi?|Intel i3|Raspberry Pi|NodeMCU|AVR|C  
+What is the key challenge in building IoT apps?|Too many buttons|Device interoperability|Too much RAM|Sensor overload|B  
+Edge computing in IoT means?|Only wireless transfer|Processing in cloud|Exporting to Excel|Processing data locally near devices|D  
+Which sensor would be used in a smart farming IoT app?|Gas sensor|Temperature sensor|Light sensor|Soil moisture sensor|D  
+How do IoT devices communicate securely?|Without encryption|Via USB|With hard drives|Using encrypted protocols|D  
+Which programming concept is essential in IoT apps?|Multithreading|Recursion|Event-driven programming|Encapsulation|C  
+What is the role of a mobile app in IoT application?|Power the sensors|Display status and controls|Act as microcontroller|Replace firmware|B  
+Which of these is an example of a real-world IoT application?|Smart Irrigation System|Notepad++|MS Paint|Word Processor|A  
+Which wireless technology is low-power and ideal for IoT?|USB|WiFi|Ethernet|Bluetooth Low Energy (BLE)|D  
+What is the purpose of using APIs in IoT app development?|Slow down devices|Transfer sensor data between layers|Color changing|Add animations|B  
+Which development environment is commonly used with Raspberry Pi for IoT?|Turbo C++|Paint|Visual Studio|Thonny (Python IDE)|D  
+Which of the following supports drag-and-drop IoT development?|Node-RED|Tally|WordPad|MATLAB|A  
+What type of user interface is ideal in IoT apps?|Audio-only|Command line only|Notepad logs|Mobile responsive dashboards|D  
+Which of these tools is used to test APIs in IoT apps?|Postman|Photoshop|Excel|PowerPoint|A  
+Which IoT platform uses visual programming and flows?|XAMPP|Node-RED|Notepad|TinkerCAD|B  
+Which component handles sensor integration in an IoT app?|Frontend|Microcontroller|Database|Cloud|B  
+Which is a common output device in IoT apps?|Sensor|Actuator|Camera lens|Microphone|B  
+Why is real-time data processing important in IoT?|To delay decisions|To increase cost|To sleep devices|For timely actions|D  
+Which tool is used for real-time cloud-based dashboards in IoT?|Paint 3D|ThingSpeak|TikTok|MS Excel|B  
+Which is not a type of actuator in IoT?|LDR|LED|Servo Motor|Speaker|A  
+What is "interoperability" in IoT applications?|Bluetooth only|Changing sensors quickly|Storing data in files|Support across multiple devices and platforms|D  
+What is the biggest concern while building healthcare IoT apps?|Internet speed|Screen brightness|Data privacy and accuracy|Battery size|C  
+Which protocol is lightweight and often used in constrained IoT environments?|HTTPS|HTTP|SMTP|CoAP|D  
+In IoT app testing, what is "stress testing"?|Breaking the code|Overloading the system to test limits|Testing only UI|Testing sensors under water|B  
+Which device is best for small-scale IoT application demo?|ESP32|Refrigerator|Smartphone|Washing machine|A  
+Which of these is an open-source IoT platform?|Blynk|Windows|WhatsApp|PowerPoint|A  
+Why is OTA (Over-the-Air) important in IoT?|To update firmware remotely|To increase download speed|To fly drones|To connect routers|A  
+What does latency refer to in IoT apps?|Delay in data transmission|Power failure|Data accuracy|High temperature|A  
+Which sensor is used in smart waste management IoT systems?|Humidity Sensor|Ultrasonic Sensor|Speed Sensor|Gas Sensor|B  
+What does a device registry do in IoT platforms?|Downloads files|Authenticates and manages devices|Changes font style|Stores user profiles|B  
+Which of these is used to trigger actions based on data conditions in IoT?|Text files|SQL Queries|Event triggers|If-else statements|C  
+Which one is NOT essential while building a robust IoT app?|Data handling|Security|Scalability|Device theft|D  
+Which is a popular IoT operating system for constrained devices?|RIOT OS|Windows IoT Core|Ubuntu|Chrome OS|A  
+Why is simulation important before deployment?|To design logo|To avoid writing code|For fun|To test without real hardware|D

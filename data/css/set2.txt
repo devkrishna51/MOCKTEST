@@ -1,0 +1,51 @@
+What does visibility: hidden; do?|Hides and keeps space|Removes element|Makes transparent|Disables click|A
+Which property sets the font style to italic?|font-style: italic|style: italic|text-style: italic|italic: true|A
+Which CSS property sets shadow to an element’s box?|box-shadow|shadow-box|outline-shadow|element-shadow|A
+Which value of cursor shows a pointer hand?|default|pointer|click|hover|B
+Which CSS property controls the stacking order of elements?|order|z-index|priority|layer|B
+What does position: relative; do?|Nothing|Positions relative to normal flow|Removes element|Fixes to parent|B
+What does position: fixed; do?|Sticks relative to parent|Scrolls away|Sticks to viewport|Does nothing|C
+Which unit scales better on different screens?|em|px|cm|mm|A
+What does font-variant: small-caps; do?|Makes text italic|Uppercases lowercase letters|Bold|Nothing|B
+What is the default display value for <span>?|block|inline|inline-block|none|B
+Which value of text-decoration removes underline?|none|hide|disable|clear|A
+Which of the following properties is not inherited?|color|font-family|margin|letter-spacing|C
+What does display: contents; do?|Hides element|Shows only children|Sets content block|Nothing|B
+Which is a valid shorthand for setting all borders?|border|border-all|set-border|outline|A
+Which value of overflow adds scrollbars only if needed?|auto|scroll|visible|hidden|A
+What is the default value of flex-grow?|0|1|auto|none|A
+What does justify-content: space-around; do?|Equal spacing between + around items|Items stick together|Equal space left and right|Aligns left|A
+Which pseudo-class applies when checkbox is selected?|:focus|:hover|:checked|:selected|C
+What does filter: blur(5px) do?|Adds shadow|Adds blur|Zooms|Darkens|B
+Which is used to make elements semi-transparent?|opacity|visibility|alpha|filter|A
+What does :nth-child(odd) select?|1st, 3rd, 5th… elements|2nd, 4th…|Only first|Even items|A
+What is the opposite of :hover?|:focus|:not(:hover)|:unhover|:off|B
+What does :disabled select?|Active inputs|Disabled form controls|Read-only items|Hidden elements|B
+What does display: table-cell; emulate?|<td>|<div>|<p>|<tr>|A
+Which property sets how words break on overflow?|word-break|overflow-word|break-word|word-wrap|A
+Which value of white-space prevents text wrapping?|nowrap|wrap|no-wrap|pre-wrap|A
+What does vertical-align: middle; work with?|inline or table-cell elements|block elements|div only|absolute elements|A
+Which selector selects elements inside another element?|element element|element > element|element + element|element - element|A
+What does :first-of-type select?|First of tag type inside parent|First child only|Element with class first|Last element|A
+How many values does margin accept?|1 to 4|Only 1|Always 4|Max 2|A
+Which rule targets an element when printing?|@media print|@print|@print-media|@media screen|A
+What does transition: all 0.4s ease; apply to?|All animatable properties|Only color|Only height|Nothing|A
+Which of the following is not a transition timing function?|ease|smooth|ease-in-out|linear|B
+Which property gives space between flex/grid items?|gap|margin|padding|spacing|A
+Which property is used to change background image position?|background-align|background-position|bg-position|image-position|B
+Which value of background-repeat tiles image horizontally only?|repeat-x|repeat-y|repeat|no-repeat|A
+What does clip-path do?|Crops a visible area|Adds border|Adds animation|Skews element|A
+Which is not a valid border-style?|dashed|groove|blurry|solid|C
+What is inherit used for?|Use parent value|Default value|Ignore property|Disable element|A
+What does initial do in CSS?|Resets to browser default|Inherit from parent|Set to 0|None|A
+Which property is used to scale elements?|transform: scale()|transition: scale()|zoom: in|resize: scale()|A
+Which property allows resizing of textarea?|resize|text-size|box-grow|scale|A
+Which value of list-style-type gives no bullet?|none|blank|empty|hidden|A
+What does unicode-bidi deal with?|Text direction|Font spacing|Word break|Letter casing|A
+What does visibility: collapse; do on table row?|Hides and removes space|Just hides|Disables click|Does nothing|A
+Which of these values allows resizing in all directions?|both|horizontal|vertical|all|A
+Which value of cursor disables pointer click?|none|not-allowed|wait|default|B
+Which property is used to apply multiple background images?|background-image|multi-bg|layer-image|bg-stack|A
+Which property specifies how background should scroll?|background-attachment|scroll-mode|scroll-type|bg-scroll|A
+Which color code format uses 6-digit hexadecimal?|#RRGGBB|rgb()|hsl()|rgba()|A
+Which tool allows reusability in SCSS?|@mixin|@csslet|@share|@component|A

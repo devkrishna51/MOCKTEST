@@ -1,18 +1,476 @@
-<!-- templates/subject_m1.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>m1 Quiz Sets</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M1 Quiz Sets</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <style>
+        :root {
+            --math-blue: #2c3e50;
+            --math-teal: #3498db;
+            --math-orange: #e74c3c;
+            --math-purple: #9b59b6;
+            --light-gray: #ecf0f1;
+            --dark-gray: #2c3e50;
+            --white: #ffffff;
+            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f7fa;
+            color: var(--dark-gray);
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Math Graph Paper Background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(44, 62, 80, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(44, 62, 80, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: -1;
+        }
+
+        /* 3D Math Symbols Floating */
+        #math-symbols-3d {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            position: relative;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--math-blue);
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--math-teal), var(--math-purple));
+            border-radius: 2px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--math-blue);
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .sets-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .set-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .set-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--math-teal), var(--math-purple));
+            transition: var(--transition);
+            z-index: 1;
+        }
+
+        .set-card:hover {
+            transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .set-card:hover::before {
+            height: 100%;
+            opacity: 0.1;
+        }
+
+        .set-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--math-teal);
+            transition: var(--transition);
+        }
+
+        .set-card:hover .set-icon {
+            color: var(--math-purple);
+            transform: scale(1.1) rotate(10deg);
+        }
+
+        .set-title {
+            font-weight: 500;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--math-blue);
+            transition: var(--transition);
+        }
+
+        .set-card:hover .set-title {
+            color: var(--math-orange);
+        }
+
+        .set-number {
+            font-size: 0.9rem;
+            color: var(--math-teal);
+            font-weight: 500;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.8rem 2rem;
+            background: linear-gradient(135deg, var(--math-teal), var(--math-purple));
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .back-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--math-purple), var(--math-teal));
+            opacity: 0;
+            transition: var(--transition);
+            z-index: -1;
+        }
+
+        .back-btn:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+        }
+
+        .back-btn:hover::before {
+            opacity: 1;
+        }
+
+        .back-btn i {
+            margin-right: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .back-btn:hover i {
+            transform: translateX(-3px);
+        }
+
+        /* Floating math symbols */
+        .floating-symbols {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .math-symbol {
+            position: absolute;
+            font-family: 'Times New Roman', serif;
+            font-weight: bold;
+            color: rgba(52, 152, 219, 0.1);
+            font-size: 2rem;
+            animation: float-symbols 20s infinite linear;
+            user-select: none;
+        }
+
+        @keyframes float-symbols {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.1; }
+            90% { opacity: 0.1; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 2.5rem;
+            }
+
+            .sets-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 2rem 1rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .sets-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h2>Select a Set for m1</h2>
-    <ul>
-        <li><a href="{{ url_for('quiz', subject='m1', set_id=1) }}">Set 1</a></li>
-        <li><a href="{{ url_for('quiz', subject='m1', set_id=2) }}">Set 2</a></li>
-        <li><a href="{{ url_for('quiz', subject='m1', set_id=3) }}">Set 3</a></li>
-        <li><a href="{{ url_for('quiz', subject='m1', set_id=4) }}">Set 4</a></li>
-        <li><a href="{{ url_for('quiz', subject='m1', set_id=5) }}">Set 5</a></li>
-    </ul>
-    <a href="{{ url_for('index') }}">← Back to Home</a>
+    <div id="math-symbols-3d"></div>
+    <div class="floating-symbols" id="floating-symbols"></div>
+    
+    <div class="container">
+        <header>
+            <h2>O-level M1</h2>
+            <p class="subtitle">Information Technology Tools and Network Basics</p>
+        </header>
+        
+        <div class="sets-grid">
+           <div class="sets-grid">
+    <div class="set-card">
+        <a href="/quiz/m1/1" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:5;"></a>
+        <div class="set-icon"><i class="fas fa-laptop-code"></i></div>
+        <h3 class="set-title">Introduction to Computer</h3>
+        <div class="set-number">Set 1</div>
+    </div>
+
+    <div class="set-card">
+        <a href="/quiz/m1/2" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:5;"></a>
+        <div class="set-icon"><i class="fas fa-desktop"></i></div>
+        <h3 class="set-title">Introduction to Operating System</h3>
+        <div class="set-number">Set 2</div>
+    </div>
+
+    <div class="set-card">
+        <a href="/quiz/m1/3" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:5;"></a>
+        <div class="set-icon"><i class="fas fa-file-word"></i></div>
+        <h3 class="set-title">Word Processing</h3>
+        <div class="set-number">Set 3</div>
+    </div>
+
+    <div class="set-card">
+        <a href="/quiz/m1/4" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:5;"></a>
+        <div class="set-icon"><i class="fas fa-file-excel"></i></div>
+        <h3 class="set-title">Spreadsheet</h3>
+        <div class="set-number">Set 4</div>
+    </div>
+
+    <div class="set-card">
+        <a href="/quiz/m1/5" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:5;"></a>
+        <div class="set-icon"><i class="fas fa-chalkboard"></i></div>
+        <h3 class="set-title">Libre Office Impress</h3>
+        <div class="set-number">Set 5</div>
+    </div>
+
+    <div class="set-card">
+        <a href="/quiz/m1/6" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:5;"></a>
+        <div class="set-icon"><i class="fas fa-globe"></i></div>
+        <h3 class="set-title">Introduction to Internet & WWW</h3>
+        <div class="set-number">Set 6</div>
+    </div>
+
+    <div class="set-card">
+        <a href="/quiz/m1/7" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:5;"></a>
+        <div class="set-icon"><i class="fas fa-network-wired"></i></div>
+        <h3 class="set-title">Internet, Email & Networking</h3>
+        <div class="set-number">Set 7</div>
+    </div>
+</div>
+
+        </div>
+        
+        <div class="text-center">
+            <a href="{{ url_for('index') }}" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // 3D Math Symbols Background
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set up Three.js scene for math symbols
+            const container = document.getElementById('math-symbols-3d');
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+            
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            container.appendChild(renderer.domElement);
+            
+            // Create math symbols
+            const symbols = ['∫', '∑', '∂', 'Δ', '∞', '√', '∏', '≈', '≠', '≤', '≥'];
+            const symbolMeshes = [];
+            
+            symbols.forEach((symbol, index) => {
+                const geometry = new THREE.TextGeometry(symbol, {
+                    size: 0.5,
+                    height: 0.1,
+                    font: new THREE.Font(JSON.parse('{"glyphs":{"'+symbol+'":{"x_min":0,"x_max":1,"ha":1,"o":""}},"familyName":"Arial","resolution":100,"boundingBox":{"xMin":0,"xMax":1,"yMin":0,"yMax":1},"underlineThickness":0.05}'))
+                });
+                
+                const material = new THREE.MeshBasicMaterial({ 
+                    color: 0x3498db,
+                    transparent: true,
+                    opacity: 0.1
+                });
+                
+                const mesh = new THREE.Mesh(geometry, material);
+                
+                // Random position
+                mesh.position.x = (Math.random() - 0.5) * 20;
+                mesh.position.y = (Math.random() - 0.5) * 20;
+                mesh.position.z = (Math.random() - 0.5) * 20;
+                
+                // Random rotation
+                mesh.rotation.x = Math.random() * Math.PI;
+                mesh.rotation.y = Math.random() * Math.PI;
+                
+                scene.add(mesh);
+                symbolMeshes.push(mesh);
+            });
+            
+            camera.position.z = 5;
+            
+            // Animation loop
+            function animate() {
+                requestAnimationFrame(animate);
+                
+                symbolMeshes.forEach(mesh => {
+                    mesh.rotation.x += 0.002;
+                    mesh.rotation.y += 0.003;
+                });
+                
+                renderer.render(scene, camera);
+            }
+            
+            animate();
+            
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            });
+            
+            // Floating math symbols
+            const symbolsContainer = document.getElementById('floating-symbols');
+            const mathSymbols = ['∫', '∑', '∂', 'Δ', '∞', '√', '∏', '≈', '≠', '≤', '≥', 'α', 'β', 'γ', 'θ', 'π', 'σ', 'φ', 'ω'];
+            
+            for(let i = 0; i < 20; i++) {
+                const symbol = document.createElement('div');
+                symbol.classList.add('math-symbol');
+                
+                const symbolText = mathSymbols[Math.floor(Math.random() * mathSymbols.length)];
+                const size = Math.random() * 2 + 1;
+                const opacity = Math.random() * 0.1 + 0.05;
+                const color = `rgba(52, 152, 219, ${opacity})`;
+                
+                symbol.textContent = symbolText;
+                symbol.style.fontSize = `${size}rem`;
+                symbol.style.color = color;
+                symbol.style.left = `${Math.random() * 100}vw`;
+                symbol.style.bottom = `-${size}rem`;
+                symbol.style.animationDuration = `${Math.random() * 15 + 10}s`;
+                symbol.style.animationDelay = `${Math.random() * 5}s`;
+                
+                symbolsContainer.appendChild(symbol);
+            }
+            
+            // Enhanced hover effects with GSAP
+            const cards = document.querySelectorAll('.set-card');
+            
+            cards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const x = e.clientX - card.getBoundingClientRect().left;
+                    const y = e.clientY - card.getBoundingClientRect().top;
+                    
+                    const centerX = card.offsetWidth / 2;
+                    const centerY = card.offsetHeight / 2;
+                    
+                    const angleX = (y - centerY) / 20;
+                    const angleY = (centerX - x) / 20;
+                    
+                    gsap.to(card, {
+                        rotateX: angleX,
+                        rotateY: angleY,
+                        transformPerspective: 1000,
+                        ease: "power2.out",
+                        duration: 0.5
+                    });
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    gsap.to(card, {
+                        rotateX: 0,
+                        rotateY: 0,
+                        ease: "elastic.out(1, 0.5)",
+                        duration: 1
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>

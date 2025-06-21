@@ -1,0 +1,51 @@
+What does a temperature sensor measure?|Color|Heat|Humidity|Light|B
+Which of these is an actuator?|Thermometer|LED light|Gas sensor|Ultrasonic sensor|B
+What is the main function of a microcontroller in IoT?|Store movies|Control and process data from sensors|Display content|Connect to printer|B
+Which sensor detects motion?|GPS|PIR sensor|Barometer|Magnetometer|B
+Which sensor is used to detect moisture in soil?|Thermometer|Moisture sensor|IR sensor|Light sensor|B
+What component converts electrical signals into physical movement?|Sensor|Display|Actuator|Router|C
+A microcontroller contains?|Only RAM|CPU, memory, I/O ports|CD-ROM|Only display|B
+Which of the following is a digital sensor?|Thermistor|PIR sensor|Photoresistor|Mercury thermometer|B
+What is the role of an actuator?|Sense data|Visualize information|Perform physical action|Transmit signals|C
+Which of these can be used to control a servo motor?|Actuator|Sensor|Microcontroller|Router|C
+Which of these is an analog sensor?|Ultrasonic sensor|Potentiometer|Touch sensor|Digital compass|B
+Which of the following devices senses distance?|LED|LCD|Ultrasonic sensor|Speaker|C
+Which component is best to rotate a robotic arm?|Gyroscope|Actuator (motor)|Sensor|Buzzer|B
+What is measured by a pressure sensor?|Electricity|Sound|Force per unit area|Light intensity|C
+A humidity sensor is used to detect?|Wind speed|Rainfall|Moisture in air|Sunlight|C
+Microcontrollers are usually programmed using?|Voice commands|Text editors|Programming languages|Paint|C
+An actuator receives data from?|Sensor|Microcontroller|Cloud|Keyboard|B
+Which component helps in taking physical input from the environment?|Motor|Microcontroller|Sensor|Battery|C
+Which sensor is used in wearable fitness devices?|Rain sensor|Light sensor|Accelerometer|Fan|C
+What is the main characteristic of a microcontroller?|External storage|Large size|Embedded control|No processing unit|C
+Which sensor is commonly used in smart lighting systems?|Pressure sensor|PIR motion sensor|GPS sensor|RFID|B
+Actuators are used in IoT for?|Storing data|Sending emails|Controlling physical systems|Printing results|C
+Which component would adjust fan speed based on temperature?|Actuator|Sensor|Cloud|Dashboard|A
+Microcontrollers can be found in?|Smartphones|Smartwatches|Smart appliances|All of the above|D
+A temperature sensor provides input to?|Microcontroller|Speaker|LED|Actuator|A
+Which of the following performs a decision-making task in IoT?|Sensor|Display|Microcontroller|Speaker|C
+Which of the following sensors detects magnetic field?|Accelerometer|Magnetometer|Gyroscope|PIR sensor|B
+What is an example of an actuator output?|Humidity reading|LED light turns on|Temperature value|Speed value|B
+Which component would you use to detect orientation?|PIR sensor|Accelerometer|Microcontroller|Speaker|B
+Which of these is not a sensor?|Humidity detector|DC Motor|Light sensor|Ultrasonic rangefinder|B
+Which part of IoT is used to read environmental data?|Microcontroller|Sensor|Actuator|Display|B
+Which is a common use of microcontrollers in IoT?|Data analysis in cloud|Hardware designing|Controlling and processing sensor input|Only printing|C
+An actuator works in response to?|Manual button|Control signals from microcontroller|Internet connection|Voice call|B
+Which sensor is used in automatic wiper systems in cars?|Temperature sensor|Rain sensor|Smoke sensor|Gas sensor|B
+Sensors provide which type of data?|Actionable commands|Cloud storage|Raw input|Processed result|C
+Which of these is a multi-axis motion tracking sensor?|Thermistor|Gyroscope|Barometer|LDR|B
+Which is responsible for executing code on a hardware device?|Monitor|Router|Microcontroller|Sensor|C
+A buzzer in IoT is an example of?|Sensor|Actuator|Microcontroller|Converter|B
+What is the output of a gas sensor connected to a microcontroller?|Wi-Fi signal|Sound|Voltage/data signal|Mechanical force|C
+Microcontrollers operate on which kind of power supply?|High voltage AC|Battery/low DC|Solar only|None|B
+Which sensor is used in fingerprint scanners?|Ultrasonic sensor|Biometric sensor|Sound sensor|Thermal sensor|B
+What is commonly used to display output from microcontrollers?|Fan|LCD screen|Sensor|Relay|B
+An IoT door lock is opened using?|Sensor input|Actuator action|Light sensor|Gyroscope|B
+Which of these sensors is used in GPS navigation systems?|Barometer|Accelerometer|GPS module|PIR|C
+A flame sensor is used to detect?|Electricity|Smoke|Heat or fire|Sound|C
+The MCU stands for?|Main Control Unit|Micro C Unit|Microcontroller Unit|Medium Computing Unit|C
+Which component controls robot movement in automation?|Light sensor|Actuator|Sensor|Buzzer|B
+What does an analog sensor provide?|Digital signal|Fixed current|Variable voltage signal|Static image|C
+Which of the following components interacts with both sensors and actuators?|Microcontroller|Battery|Router|Heater|A
+Which of these sensors is used for direction detection?|Temperature sensor|GPS|Gyroscope|Flame sensor|C
+Which component allows sensing, logic, and control in one chip?|Actuator|Microcontroller|Sensor|Relay|B

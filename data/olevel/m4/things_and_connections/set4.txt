@@ -1,0 +1,51 @@
+Which component in IoT detects temperature changes?|Wi-Fi chip|Temperature sensor|LED light|Motor|B
+IoT devices are called "smart" because they can?|Blink LEDs|Connect to the internet only|Sense and respond|Just store data|C
+What is the main communication technology in smart homes?|USB|HDMI|Wi-Fi|Ethernet|C
+Which of these best represents the function of a sensor?|Data viewer|Data storage|Data collector|Data formatter|C
+Device-to-cloud model in IoT includes?|Manual transfer|Printer control|Direct upload to server|Offline operation|C
+Which protocol supports low-bandwidth messaging in IoT?|POP3|MQTT|DNS|Telnet|B
+What is used to monitor body movement in fitness trackers?|Light sensor|Accelerometer|Thermostat|GPS only|B
+IoT "thing" can also be called?|A user|A webpage|A physical object with connectivity|An email|C
+Which IoT layer is responsible for interpreting raw data?|Perception|Presentation|Network|Application|D
+Which of the following is not a "thing" in IoT?|Smartwatch|Air conditioner with sensors|Notebook paper|Light sensor bulb|C
+Smart traffic systems use what type of IoT input?|Manual feedback|Physical counters|Vehicle sensors and cameras|Time-based logs|C
+Zigbee is commonly used for?|Video streaming|Short-range IoT communication|Downloading documents|Keyboard input|B
+An actuator is best defined as?|A data sender|A physical component that reacts|A display unit|A browser tool|B
+Which of these can detect motion?|PIR sensor|Rain gauge|Thermometer|Microphone|A
+Which protocol is used for IoT device communication in smart energy meters?|SMTP|Zigbee|FTP|IMAP|B
+Which of these technologies supports long-range connectivity for IoT farms?|Bluetooth|Zigbee|LoRa|Wi-Fi|C
+An RFID tag helps in?|Playing music|Tracking objects|Data processing|Display projection|B
+A connected refrigerator is an example of?|Manual control device|Disconnected thing|IoT-enabled appliance|Legacy system|C
+Which communication model is used when a device initiates the connection?|Push|Request-response|Multicast|Async|B
+The brain of an IoT system is usually the?|Power supply|Sensor|Microcontroller|Network switch|C
+In IoT, CoAP stands for?|Cloud of API|Constrained Application Protocol|Connect and Access Protocol|Control Over Air Protocol|B
+IoT things often operate on?|Voice commands|Remote sensing and actuation|CD-ROM inputs|Wired desktop signals|B
+Which of the following tracks location in IoT?|PIR sensor|Light sensor|GPS module|Relay|C
+Which of these helps in automation through IoT?|Keyboard shortcut|Sensor + Actuator|LED screen|QR code|B
+IoT things use which kind of network addressing?|Street address|MAC/IP Address|User ID|Device name|B
+Which of the following is used for home device automation?|PIR sensor|Web form|Voice assistant|TV remote|C
+IoT devices work best when they can?|Stay offline|Print forms|Sense, analyze, and communicate|Rotate automatically|C
+Which part of IoT architecture is closest to the physical environment?|Application layer|Cloud layer|Perception layer|Security layer|C
+A connected washing machine that schedules itself is an example of?|Manual operation|Offline control|Autonomous IoT device|Simple hardware|C
+An IoT-enabled car system can?|Print tickets|Navigate and detect faults|Record music|Transfer movies|B
+Which of the following helps in human device interaction in IoT?|IP address|GUI/Apps|RAM|Backup file|B
+IoT devices usually use which protocol to reduce energy use?|HTTP|MQTT|Telnet|POP|B
+Which of these helps visualize IoT data in real time?|Projector|Excel sheet|Dashboard|Image viewer|C
+What is a benefit of using mesh networks in IoT?|Single point of failure|High latency|Redundancy and coverage|Costly wiring|C
+Which type of sensor is used in automatic lighting systems?|Sound sensor|Motion sensor|Humidity sensor|Pressure sensor|B
+Which of the following can trigger an IoT alarm system?|High volume music|Sensor-detected breach|Manual file edit|CD-ROM input|B
+IoT devices usually communicate using?|Database queries|Network protocols|Browser add-ons|Screenshot tools|B
+What is the primary use of an actuator in a smart water system?|Collecting data|Processing forms|Opening/closing valves|Sending messages|C
+What helps reduce cloud dependency in IoT?|Offline storage|Edge computing|Ink saving|Local print|B
+Which of the following IoT devices is best for navigation?|Thermometer|Humidity sensor|GPS tracker|IR blaster|C
+Which network topology provides redundancy in IoT communication?|Bus|Ring|Mesh|Point-to-point|C
+Which of these is considered a constraint in IoT devices?|High CPU|Low power and memory|Large screens|Multitasking OS|B
+Which of these systems uses multiple IoT sensors in real-time?|TV|Smart Dustbin|Gaming Console|Digital Clock|B
+Which IoT connection type is most used in wearable devices?|Zigbee|HDMI|Bluetooth|Ethernet|C
+Which of these can detect orientation in mobile devices?|Pressure sensor|Microphone|Gyroscope|Actuator|C
+IoT things are able to communicate using?|Printed logs|Manual typing|Machine-to-machine networking|Pen drives|C
+Which type of signal does a sensor usually generate?|Analog/digital|Printed|Graphical|Optical only|A
+Which is responsible for converting sensor signals into actions?|Display|LED|Actuator|Keyboard|C
+IoT communication requires which of the following?|Paper trail|Network medium|Physical signature|Pen input|B
+Which term best defines a complete IoT setup of connected devices?|Internet|Smartware|IoT Ecosystem|Intranet|C
+Which of the following improves range in rural IoT solutions?|PIR sensor|USB cable|LoRa antenna|Color screen|C

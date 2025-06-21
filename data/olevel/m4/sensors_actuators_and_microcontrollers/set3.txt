@@ -1,0 +1,51 @@
+Which type of sensor is used to measure temperature?|LDR|Thermistor|Accelerometer|Gyroscope|B
+Which device converts physical quantity to electrical signal?|Actuator|Transistor|Sensor|Relay|C
+Which of the following is an example of an actuator?|Thermistor|LED|Microphone|Photodiode|B
+What is the role of microcontroller in IoT devices?|Only stores data|Only senses data|Controls and processes data|Only transmits data|C
+Which sensor is used to detect light intensity?|LDR|Thermistor|Ultrasonic Sensor|Relay|A
+Which of the following is not a type of sensor?|Proximity|Temperature|Relay|Humidity|C
+Which sensor is used to detect distance using ultrasonic waves?|Infrared sensor|Temperature sensor|Ultrasonic sensor|Pressure sensor|C
+Which microcontroller is most commonly used in Arduino boards?|ATmega328P|8051|ARM Cortex|PIC16F877A|A
+Which of the following sensors can detect motion?|Accelerometer|LDR|Humidity Sensor|Light Sensor|A
+Which of the following converts electrical energy into mechanical movement?|Sensor|Microcontroller|Actuator|Processor|C
+Which sensor is used in automatic street light systems?|Thermistor|LDR|GPS|Vibration Sensor|B
+Which of the following is a digital sensor?|DHT11|LDR|Thermistor|Photodiode|A
+Which unit controls the functioning of all sensors and actuators in IoT devices?|Router|Modem|Microcontroller|Power Supply|C
+What kind of sensor is used in smoke detectors?|Proximity Sensor|Gas Sensor|Humidity Sensor|Ultrasonic Sensor|B
+Which sensor is used for position detection?|PIR Sensor|Potentiometer|Light Sensor|Sound Sensor|B
+Which of these sensors is used to detect vibration?|IR Sensor|Microphone|Piezoelectric Sensor|Touch Sensor|C
+Which component executes commands sent by a microcontroller?|Sensor|Actuator|Display|ADC|B
+Which device converts analog signal to digital?|ADC|DAC|Relay|Sensor|A
+Which of the following is used to control appliances in IoT?|Sensor|ADC|Actuator|LCD|C
+Which device is used to detect moisture in soil?|LDR|Moisture Sensor|Accelerometer|Gyroscope|B
+Which component is responsible for sensing temperature in environment?|Gyroscope|Thermistor|Ultrasonic Sensor|Relay|B
+What is a PIR sensor used for?|Sound Detection|Light Detection|Motion Detection|Temperature Detection|C
+Which is not an actuator?|Motor|Heater|Thermistor|Relay|C
+Which type of sensor is used in smart watches to detect orientation?|GPS|Accelerometer|LDR|Gyroscope|D
+What does a gyroscope measure?|Speed|Temperature|Light|Angular velocity|D
+Which is an example of an analog sensor?|DHT11|IR Sensor|LDR|GPS|C
+Which device can turn on a light bulb when it receives a signal?|Sensor|Microcontroller|Actuator|Buzzer|C
+Which sensor is best for heart rate monitoring?|Accelerometer|Pulse Sensor|LDR|PIR Sensor|B
+Which of the following sensors detect gases?|Flame Sensor|Gas Sensor|Tilt Sensor|Proximity Sensor|B
+Which is not a function of microcontroller?|Processing|Actuation|Controlling|Sensing|D
+Which of the following is an input device in IoT?|Relay|Sensor|Buzzer|Motor|B
+Which of the following is a common output device?|LDR|LED|Sensor|Transducer|B
+What type of device is a servo motor?|Sensor|Controller|Actuator|Transmitter|C
+Which sensor is used in fire alarms?|LDR|IR Sensor|Flame Sensor|PIR Sensor|C
+What type of signal does a digital sensor give?|Variable|Analog|Discrete|Continuous|C
+Which sensor is used in automatic taps?|Ultrasonic|IR|Gas Sensor|Light Sensor|B
+Which of these is a processing unit in IoT devices?|Router|Microcontroller|Sensor|Relay|B
+What does ADC stand for?|Analog Device Controller|Analog Data Converter|Analog to Digital Converter|Automatic Data Controller|C
+Which is used to output audio alerts in IoT?|LED|Buzzer|Relay|ADC|B
+What is the function of an actuator in IoT?|To collect data|To send data|To perform physical action|To store data|C
+Which sensor is used to detect level of water?|Moisture Sensor|IR Sensor|Ultrasonic Sensor|Touch Sensor|C
+Which sensor is used in anti-theft systems?|Touch Sensor|Proximity Sensor|Flame Sensor|Thermistor|B
+Which is not a use of microcontroller?|Controlling devices|Data storage|Mechanical movement|Signal processing|C
+Which of the following is used to connect microcontroller to internet?|Sensor|Wi-Fi Module|Relay|LED|B
+Which microcontroller is used in NodeMCU?|8051|PIC|ATmega|ESP8266|D
+Which of the following sensors is used in smart farming?|Gyroscope|Humidity Sensor|Vibration Sensor|Flame Sensor|B
+Which is not a sensor?|IR Sensor|LDR|Heater|Accelerometer|C
+Which sensor is used to track orientation?|Gyroscope|Relay|Moisture Sensor|PIR Sensor|A
+Which of these components can be used to automate a door lock?|LDR|Servo Motor|Humidity Sensor|Buzzer|B
+Which device receives commands from controller and acts accordingly?|ADC|Sensor|Actuator|IR Sensor|C
+Which of the following converts motion into electric signal?|Microcontroller|Actuator|Sensor|Motor|C

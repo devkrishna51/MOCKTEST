@@ -1,0 +1,51 @@
+Which protocol is publish-subscribe based and lightweight?|HTTP|MQTT|TCP|FTP|B
+What does an actuator do in an IoT system?|Senses data|Displays info|Converts signals to actions|Stores data|C
+Which IoT communication model uses a central broker?|Client-Server|Peer-to-Peer|Publish-Subscribe|Ring|C
+Which protocol is best for low-bandwidth unreliable networks?|HTTP|FTP|MQTT|SMTP|C
+Which of the following is a long-range, low-power IoT protocol?|Wi-Fi|Bluetooth|LoRa|Zigbee|C
+In IoT, which layer is responsible for data perception?|Application Layer|Perception Layer|Network Layer|Security Layer|B
+Which of the following is not an IoT communication protocol?|CoAP|ZigBee|SMTP|MQTT|C
+Which microcontroller is widely used in DIY IoT projects?|Raspberry Pi|Intel Edison|Arduino Uno|ESP32|C
+Which IoT component acts as an interface between sensor and cloud?|Client|Actuator|Gateway|Display|C
+Which one is an open standard protocol used in constrained devices?|CoAP|HTTPS|FTP|IMAP|A
+Which protocol works over UDP and supports REST architecture?|MQTT|HTTP|CoAP|FTP|C
+Which IoT platform is developed by Google for secure development?|ThingSpeak|Firebase|AWS IoT|Azure IoT|B
+Which protocol is binary-based and lightweight, often used with sensors?|CoAP|SMTP|FTP|MQTT|D
+Which layer ensures routing and connectivity in IoT?|Application Layer|Transport Layer|Network Layer|Perception Layer|C
+Which component initiates sensing in an IoT system?|Actuator|Cloud|Sensor|Protocol|C
+What is the purpose of the Application Layer in IoT?|Routing|Security|Data Presentation|Sensing|C
+Which of the following ensures secure communication in IoT?|TLS|POP|HTTP|UDP|A
+Which protocol uses port 1883 by default?|HTTP|FTP|MQTT|Telnet|C
+What does edge computing mean in IoT?|Processing on cloud|Processing at sensors|Processing near data source|Processing in gateway|C
+Which one is an example of fog computing device?|Central Server|Arduino|Local Router|Mainframe|C
+What is the use of sensor fusion in IoT?|Combining multiple sensor data|Reducing cost|Controlling actuators|Storing cloud data|A
+Which type of sensor measures orientation and tilt?|Gyroscope|Thermometer|Moisture Sensor|PIR Sensor|A
+What is the function of a protocol stack?|Display output|Sensing signals|Manage communication flow|Power management|C
+Which IoT protocol is used in smart meters and home automation?|LoRa|FTP|ZigBee|POP3|C
+Which protocol is used for secure messaging in IoT?|MQTT|MQTTS|HTTP|DNS|B
+In IoT, data from multiple devices is sent to cloud using?|Email|Central Server|Gateway|Browser|C
+Which of the following is a device layer in communication model?|Perception Layer|Cloud Layer|Presentation Layer|Application Layer|A
+Which device is capable of both sensing and acting?|Transceiver|Relay|SoC|Node|D
+Which protocol is used for real-time messaging?|FTP|SMTP|MQTT|POP3|C
+Which of the following is not part of the IoT architecture?|Perception|Application|Cloud|Database|D
+Which model is used to publish data to multiple subscribers?|Push-Pull|Client-Server|Multicast|Pub-Sub|D
+Which microcontroller comes with built-in Wi-Fi?|Arduino Uno|8051|ESP8266|Raspberry Pi Zero|C
+Which protocol is used to send commands to devices?|POP3|HTTP|MQTT|SMTP|C
+In communication models, who is the message initiator in Client-Server?|Server|Client|Broker|Device|B
+Which of the following is cloud-based IoT platform?|LoRa|Zigbee|ThingSpeak|Modbus|C
+Which communication protocol is event-driven?|HTTP|MQTT|SMTP|CoAP|B
+Which of the following ensures authentication and encryption?|TCP|TLS/SSL|UDP|IP|B
+Which is a disadvantage of cloud-only model?|Scalability|Latency|Storage|Automation|B
+Which one is a layered architecture model in IoT?|Flat Model|Ring Model|3-Layer Model|Pyramid Model|C
+Which layer provides services to users in IoT?|Transport Layer|Application Layer|Network Layer|Session Layer|B
+Which IoT model is most suitable for real-time traffic alerts?|Client-Server|Push-Pull|Pub-Sub|Point-to-Point|C
+Which communication protocol is RESTful and used in IoT?|FTP|HTTP|SMTP|Telnet|B
+Which of the following uses 802.15.4 standard?|Wi-Fi|Bluetooth|ZigBee|NFC|C
+Which protocol is based on request/response communication?|MQTT|HTTP|CoAP|XMPP|B
+Which protocol provides Quality of Service (QoS) levels?|HTTP|MQTT|FTP|SMTP|B
+Which sensor is used in intrusion detection?|PIR Sensor|Sound Sensor|Gyro Sensor|Light Sensor|A
+Which component provides unique identification to devices?|MAC Address|IP Address|Gateway|RFID Tag|D
+Which device stores and filters data before cloud upload?|Sensor|Actuator|Gateway|Router|C
+Which IoT protocol supports resource discovery?|CoAP|MQTT|HTTP|SMTP|A
+Which protocol enables energy-efficient wireless comms?|ZigBee|Ethernet|SMTP|Wi-Fi|A
+Which layer of IoT handles data analytics?|Perception|Application|Transport|Presentation|B

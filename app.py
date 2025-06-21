@@ -12,14 +12,22 @@ STUDENTS_FILE = os.path.join(DATA_DIR, 'student_accounts.txt')
 QUESTIONS_FILE = os.path.join(DATA_DIR, 'questions.txt')
 ANSWERS_FILE = os.path.join(DATA_DIR, 'answers.txt')
 
-# Helper Functions
+# Helper Functionsimport chardet
 
 
-def load_questions(subject, set_id):
-    file_path = os.path.join(DATA_DIR, subject, f'set{set_id}.txt')
+        
+def load_questions(subject, set_id, topic=None):
     questions = []
     try:
-        with open(file_path, 'r') as f:
+        if topic:
+            topic = topic.lower().replace(" ", "_").replace("-", "").replace("–", "").replace("&", "and")
+            file_path = os.path.join(DATA_DIR, 'olevel', subject, topic, f'set{set_id}.txt')
+        else:
+            file_path = os.path.join(DATA_DIR, subject, f'set{set_id}.txt')
+
+        print("📂 Loading questions from:", file_path)
+
+        with open(file_path, 'r', encoding='utf-8-sig') as f:
             for line in f:
                 parts = line.strip().split('|')
                 if len(parts) == 6:
@@ -29,8 +37,10 @@ def load_questions(subject, set_id):
                         'options': [a, b, c, d],
                         'correct': correct.strip().upper()
                     })
-    except:
-        pass
+
+    except Exception as e:
+        print("❌ Error reading file:", e)
+
     return questions
 
 def add_blocked_student(student_name):
@@ -121,6 +131,18 @@ def add_answer(student, ans_list, score_list):
 
 # Routes
 
+@app.route("/olevel")
+def olevel_home():
+    return render_template("olevel.html")
+@app.route("/olevel/<subject>")
+def olevel_subject(subject):
+    topics = {
+        'm1': ['Introduction to computer', 'Introduction to Operating System' , 'Libre Office Writer' ,'Libre Office Calc' ,'Libre Office Impress', 'Introduction to Internet & WWW', 'Internet, Email & Networking'],
+        'm2': ['Introduction to Web Design', 'Editors' ,'HTML Basics' ,'Cascading Style Sheets (CSS)', 'CSS Framework' ,'JavaScript and Angular JS','Photo Editor'],
+        'm3': ['Introduction to Programming', 'Algorithm and Flowcharts to solve problems' , 'Introduction to Python' ,'Operators, Expressions and Python Statements' ,'Sequence data types' ,'Functions','File Processing','Modules' ,'NumPy Basics'],
+        'm4': ['Introduction to IoT – Applications/Devices, Protocols and Communication Model', 'Things and Connections' , 'Sensors, Actuators and Microcontrollers', 'Building IoT Applications' , 'Security and Future of IoT Ecosystem' ,'Soft skills-Personality Development']
+    }
+    return render_template("olevel_topics.html", subject=subject.upper(), topics=topics.get(subject, []))
 
 @app.route('/report_cheating', methods=['POST'])
 def report_cheating():
@@ -132,6 +154,76 @@ def report_cheating():
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/olevel/quiz/<subject>/<topic>/<int:set_id>', methods=['GET', 'POST'])
+def olevel_quiz(subject, topic, set_id):
+    file_path = os.path.join(DATA_DIR, 'olevel', subject, topic, f'set{set_id}.txt')
+    questions = []
+
+    # Simple question loading (without flash)
+    with open(file_path, 'r', encoding='utf-8') as f:
+        for line in f:
+            parts = line.strip().split('|')
+            if len(parts) == 6:
+                q, a, b, c, d, correct = parts
+                questions.append({
+                    'q': q,
+                    'options': [a, b, c, d],
+                    'correct': correct.strip().upper()
+                })
+
+    # Step 1: Name & Age Form
+    if request.method == 'POST':
+        if 'student_name' in request.form and 'student_age' in request.form:
+            student_name = request.form['student_name']
+            student_age = request.form['student_age']
+
+            return render_template('quiz_form.html',
+                                   subject=subject,
+                                   topic=topic,
+                                   set_id=set_id,
+                                   student_name=student_name,
+                                   student_age=student_age,
+                                   questions=questions)
+
+        # Step 2: Quiz Submission
+        elif 'student_name_hidden' in request.form:
+            student_name = request.form.get('student_name_hidden', 'Unknown')
+            student_age = request.form.get('student_age_hidden', 'N/A')
+
+            student_answers = []
+            score = 0
+            incorrect = []
+
+            for i, q in enumerate(questions):
+                ans = request.form.get(f'q{i}', '').strip().upper()
+                student_answers.append(ans)
+                if ans == q['correct']:
+                    score += 1
+                else:
+                    incorrect.append({
+                        'question': q['q'],
+                        'your_answer': ans if ans else "Not Answered",
+                        'correct_answer': q['correct'],
+                        'options': q['options']
+                    })
+
+            return render_template('quiz_result.html',
+                                   student_name=student_name,
+                                   student_age=student_age,
+                                   score=score,
+                                   total=len(questions),
+                                   incorrect_answers=incorrect)
+
+    # GET request: first load of form
+    return render_template('quiz_form.html',
+                           subject=subject,
+                           topic=topic,
+                           set_id=set_id)
+
+
+
+
 
 @app.route('/projects')
 def projects():
@@ -307,14 +399,13 @@ def student_panel():
 
 @app.route('/quiz/<subject>/<int:set_id>', methods=['GET', 'POST'])
 def quiz(subject, set_id):
-    questions = load_questions(subject, set_id)
-
     if request.method == 'POST':
-        # Pehle check karo form me naam/age aaye hai ya question answers
+        # Step 1: Check if student is submitting name & age (initial form)
         if 'student_name' in request.form and 'student_age' in request.form:
-            # Name/Age submit hua hai, ab quiz show karo
             student_name = request.form['student_name']
             student_age = request.form['student_age']
+            questions = load_questions(subject, set_id)  # ✅ Reload questions here
+
             return render_template('quiz_form.html',
                                    subject=subject,
                                    set_id=set_id,
@@ -323,9 +414,10 @@ def quiz(subject, set_id):
                                    questions=questions)
 
         else:
-            # Quiz answer submit hua hai
+            # Step 2: Answers are being submitted
             student_name = request.form.get('student_name_hidden', 'Unknown')
             student_age = request.form.get('student_age_hidden', 'N/A')
+            questions = load_questions(subject, set_id)  # ✅ Reload questions again
 
             student_answers = []
             score = 0
@@ -351,14 +443,14 @@ def quiz(subject, set_id):
                                    total=len(questions),
                                    incorrect_answers=incorrect)
 
-    # First GET request
+    # Step 3: First GET request, show name/age form
+    questions = load_questions(subject, set_id)
     return render_template('quiz_form.html',
                            subject=subject,
                            set_id=set_id,
                            student_name=None,
                            student_age=None,
                            questions=questions)
-
 
 
 @app.route('/student/logout')

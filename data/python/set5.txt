@@ -1,0 +1,50 @@
+What is the correct way to start a function?|function myFunc():|def myFunc():|func myFunc():|start myFunc():|B
+Which method adds an item to the end of a list?|add()|append()|insert()|extend()|B
+What is the output of "python".upper()?|Python|PYTHON|python|Error|B
+Which operator is used to repeat a string?|+||%|^|B
+What is the default start index of a Python list?|1|0|-1|None|B
+Which of the following is not a Python keyword?|while|return|define|pass|C
+What is the output of "a"+"b"?|ab|a b|a+b|Error|A
+What does len([]) return?|1|0|None|Error|B
+Which loop is best for fixed iterations?|while|for|if|loop|B
+Which function is used to convert int to string?|str()|int()|chr()|string()|A
+What is the output of print(bool(""))?|True|False|None|Error|B
+What is the correct file extension for Python files?|.python|.pt|.py|.p|C
+Which symbol is used for comments in Python?|@|#|//|--|B
+What is the output of 2**3?|6|8|9|Error|B
+Which function is used to read complete file?|read()|readall()|readfile()|get()|A
+What does strip() do to a string?|Trims whitespace|Removes middle characters|Joins words|Lowercase|A
+How is a block of code defined in Python?|Indentation|Braces|Brackets|Quotes|A
+What is the result of 10 % 3?|1|3|0|10|A
+Which function returns the largest number?|max()|top()|biggest()|high()|A
+Which function creates a range of numbers?|range()|list()|array()|seq()|A
+What is a correct syntax to import math module?|import math|using math|include math|require math|A
+Which of the following is a tuple?|[1,2]|{1,2}|(1,2)|<1,2>|C
+Which of these is a correct class definition?|def class:|class MyClass:|class = MyClass|MyClass():|B
+What is output of bool(1)?|True|False|None|Error|A
+What keyword is used to check multiple conditions?|if|else|elif|elseif|C
+Which function is used to find ASCII value?|ascii()|ord()|char()|asc()|B
+Which function returns character from ASCII?|chr()|ord()|ascii()|str()|A
+What is the output of print(type(10.5))?|float|int|str|bool|A
+Which function removes item by value from list?|pop()|remove()|del()|discard()|B
+Which method inserts item at specific position?|insert()|add()|append()|push()|A
+Which operator is used to compare values?|==|=|:=|equals|A
+What is the output of 10//3?|3.3|3|4|Error|B
+What is used to define a class method?|def method()|@classmethod|class()|method:|B
+What will set([1,2,2,3]) return?|[1,2,2,3]|{1,2,3}|(1,2,2,3)|[1,2,3,3]|B
+Which function returns type of variable?|type()|kind()|datatype()|varType()|A
+Which function checks if all items are True?|check()|verify()|all()|any()|C
+Which function checks if at least one item is True?|some()|all()|any()|one()|C
+Which operator is used to join lists?|+||&|join|A
+Which method checks string starts with substring?|startswith()|start()|begins()|prefix()|A
+What does input() function return?|int|str|float|bool|B
+What is used to handle errors?|try-except|if-else|loop|break|A
+Which function closes an open file?|file.close()|closefile()|close()|shut()|A
+Which function reads lines from file into list?|readlines()|read()|readfile()|listread()|A
+Which keyword is used to stop loop early?|stop|end|break|exit|C
+Which keyword skips loop iteration?|skip|continue|pass|next|B
+What is output of print("Hi", end="")?|Hi|Hi\n|Hi |HiNone|A
+Which statement creates object from class?|new MyClass()|MyClass()|MyClass.create()|MyClass.new()|B
+Which of the following is a Boolean type?|True|1|'True'|"1"|A
+Which method removes all elements from list?|clear()|delete()|removeall()|empty()|A
+Which statement defines inheritance in Python?|class B(A):|inherits B from A|class A->B|B extends A|A

@@ -1,0 +1,47 @@
+What is the correct syntax to print a message in JavaScript?|echo("Hello");|console.log("Hello");|print("Hello");|printf("Hello");|B
+Which keyword is used to declare a variable in JavaScript?|var|int|string|define|A
+How do you write a single-line comment in JavaScript?|// comment|<!-- comment -->|# comment|** comment|A
+How do you write a multi-line comment in JavaScript?|<!-- -->|/* */|# #|!! !!|B
+What is the output of typeof "hello"?|string|text|char|word|A
+Which symbol is used for strict equality?|==|=|===|equal|C
+What is the correct way to define a function in JavaScript?|function myFunc()|def myFunc()|fn myFunc()|func myFunc()|A
+Which method can be used to round numbers?|round()|Math.round()|math.round()|int()|B
+Which built-in method joins array elements into a string?|merge()|combine()|join()|concat()|C
+What is the correct way to create an array in JavaScript?|let arr = "1,2,3"|let arr = [1,2,3]|let arr = (1,2,3)|let arr = {1,2,3}|B
+How do you access the third element in array arr?|arr[3]|arr(3)|arr[2]|arr{3}|C
+Which of these is a primitive data type in JavaScript?|Object|Array|Boolean|Function|C
+Which operator is used for logical AND?|&&|and|&|AND|A
+Which operator is used for logical OR?|or|||||:|B
+What will typeof null return?|null|object|undefined|string|B
+How do you check if a is not equal to b?|a != b|a !== b|a <> b|both A and B|D
+Which loop is guaranteed to run at least once?|for|while|do-while|none|C
+What does NaN stand for?|No available number|Not a number|Null and Nothing|Negative and Null|B
+Which keyword is used to exit a loop early?|exit|stop|break|return|C
+Which keyword skips an iteration of a loop?|skip|break|pass|continue|D
+Which method adds an element to the end of an array?|append()|add()|push()|insert()|C
+Which method removes the last element from an array?|delete()|pop()|shift()|splice()|B
+Which method removes the first element of an array?|pop()|unshift()|shift()|remove()|C
+Which keyword defines a block-scoped variable?|var|const|let|both B and C|D
+Which function parses a string to an integer?|parseInt()|int()|convertInt()|Number.int()|A
+Which function converts a string to float?|parseFloat()|float()|toFloat()|Number.float()|A
+Which object is used to work with dates?|datetime|date|Date|time|C
+How to write an alert box in JavaScript?|msg("Hi")|alert("Hi")|box("Hi")|console("Hi")|B
+What will 2 + '3' return?|5|23|NaN|undefined|B
+What will '5' - 2 return?|3|'3'|NaN|52|A
+What is the result of typeof []?|array|object|list|undefined|B
+Which operator returns the remainder?|%|/|rem|mod|A
+How do you declare a constant?|const x = 5|constant x = 5|let const x = 5|define x = 5|A
+How to check the type of a variable?|typeOf()|typeof|typeof()|checkType()|C
+What is the value of Boolean(0)?|true|false|null|undefined|B
+What is the result of 5 == "5"?|true|false|NaN|Error|A
+What is the result of 5 === "5"?|true|false|undefined|NaN|B
+Which method converts array to string with commas?|join()|split()|toString()|concat()|C
+Which function converts string to array?|Array.from()|toArray()|stringToArray()|makeArray()|A
+Which event runs when a button is clicked?|onHover|onClick|onPress|onTouch|B
+Which event runs when a page is fully loaded?|onStart|onBegin|onReady|onLoad|D
+Which keyword is used to define a class?|class|struct|object|define|A
+How do you create an object in JS?|let obj = {}|let obj = []|let obj = new object()|object = {}|A
+What does DOM stand for?|Document Object Module|Data Object Model|Document Object Model|Display Object Model|C
+Which method gets an element by ID?|getElementByName()|getElementByClass()|getElementById()|querySelectorAll()|C
+How do you prevent default form submission?|event.preventDefault()|form.stop()|return false|stopDefault()|A
+What will isNaN("hello") return?|true|false|NaN|undefined|A

@@ -1,0 +1,49 @@
+Which of the following has the highest specificity?|Element Selector|Class Selector|ID Selector|Universal Selector|C
+What is the default position value of an HTML element?|absolute|relative|static|fixed|C
+Which CSS unit is relative to the font size of the parent?|em|rem|px|vh|A
+Which unit is relative to the root element’s font size?|px|rem|em|vw|B
+What is the use of z-index?|Change color|Set visibility|Layer elements|Set width|C
+Which pseudo-class targets the first child of a parent?|:first|:first-child|:first-element|:only-child|B
+Which pseudo-element is used to insert content before an element?|:after|before()|::before|insert-before|C
+What does display: none; do to an element?|Hides but takes space|Hides and removes space|Fades element|Disables element|B
+Which property sets how the background image repeats?|repeat|bg-repeat|background-repeat|image-repeat|C
+Which value of position will fix the element relative to viewport?|absolute|fixed|sticky|relative|B
+Which property is used to make text bold?|text-weight|font-bold|weight|font-weight|D
+Which property controls spacing inside border?|margin|padding|gap|indent|B
+What will margin: 10px 20px; apply?|10 top/bottom, 20 left/right|10 all|20 all|Top only|A
+Which property makes an element inline-block?|display|float|position|block-type|A
+Which CSS rule is more specific?|#id|.class|div|*|A
+How can you apply same style to h1 and h2?|h1 h2 {}|h1, h2 {}|h1 > h2 {}|h1 + h2 {}|B
+Which selector targets element with attribute data-id?|[data-id]|#data-id|.data-id|data-id|A
+Which keyword is used to override all other styles?|override|force|!important|priority|C
+Which property defines transition duration?|animation-time|transition-time|transition-duration|duration|C
+Which value of display creates a flex container?|flex-box|flex|inline-flex|block-flex|B
+Which property sets minimum width of element?|min-width|max-width|width|min-size|A
+Which property is used to align flex items?|align|align-items|justify-items|flex-align|B
+What does overflow: hidden; do?|Adds scrollbar|Hides extra content|Expands box|Nothing|B
+What is the default value of box-sizing?|border-box|content-box|padding-box|auto|B
+Which CSS property applies shadow to text?|text-shadow|font-shadow|shadow|text-outline|A
+Which property is not inherited by default?|color|font-size|padding|letter-spacing|C
+Which media feature checks screen width?|min-width|max-device|device-width|width|D
+Which selector selects every 2nd child element?|:nth-child(2)|:nth(2)|:nth-of-type(2)|:nth-child(even)|D
+Which value of position sticks an element when scrolling?|sticky|fixed|absolute|relative|A
+Which keyword makes flex item grow to fill space?|flex-grow|stretch|expand|fill|A
+Which shorthand sets top/right/bottom/left margins?|margin|box|border|spacing|A
+What does visibility: hidden; do?|Hides and removes space|Hides but keeps space|Disables|None|B
+Which selector targets direct children only?|element child|element > child|element + child|element ~ child|B
+Which property is used to set opacity?|visibility|display|opacity|alpha|C
+Which property sets spacing between lines of text?|line-height|text-spacing|text-height|font-height|A
+Which CSS property is used to transform elements?|animation|transition|transform|change|C
+Which transform rotates element by 45 degrees?|rotate(45deg)|turn(45)|transform(45)|skew(45)|A
+What is the correct format to apply custom font?|@font|font-family|@font-face|custom-font|C
+Which layout module is used to make grids?|grid-box|grid|display: grid|layout-grid|C
+Which property defines grid columns?|grid-cols|grid-template-columns|col-template|column-grid|B
+Which function is used to repeat columns in grid?|repeat()|loop()|auto-cols()|grid-repeat()|A
+Which color format uses percentages and degrees?|hex|rgb|rgba|hsl|D
+Which property controls the order of flex/grid items?|order|index|position|layer|A
+Which value makes text italic?|font-style: italic|text-italic|font-italic|style: italic|A
+Which border value creates rounded corners?|border-style|border-radius|round-border|corner|B
+Which pseudo-class selects focused element?|:active|:hover|:focus|:target|C
+What happens if two rules have equal specificity?|First wins|Last wins|Random|Error|B
+Which CSS property is used to animate changes?|animation|transition|effect|motion|B
+Which property controls gap between grid cells?|gap|space|grid-gap|cell-gap|A

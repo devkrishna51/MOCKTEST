@@ -1,18 +1,712 @@
-<!-- templates/subject_css.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>CSS Quiz Sets</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <style>
+        :root {
+            --neon-blue: #0ff0fc;
+            --neon-pink: #ff00ff;
+            --neon-purple: #9d00ff;
+            --neon-green: #00ff9d;
+            --dark-bg: #0a0a1a;
+            --light-text: rgba(255, 255, 255, 0.9);
+            --cyber-yellow: #f5d742;
+            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        body {
+            font-family: 'Orbitron', 'Poppins', sans-serif;
+            background: var(--dark-bg);
+            color: var(--light-text);
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            perspective: 1000px;
+            position: relative;
+        }
+
+        /* === 3D PARTICLE BACKGROUND === */
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -3;
+            opacity: 0.2;
+        }
+
+        /* === CYBERPUNK GRID BACKGROUND === */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(rgba(15, 240, 252, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(15, 240, 252, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridMove 20s linear infinite;
+            z-index: -2;
+        }
+
+        @keyframes gridMove {
+            0% { background-position: 0 0; }
+            100% { background-position: 100px 100px; }
+        }
+
+        /* === NEON SCANLINES === */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(90deg, transparent 49%, var(--neon-blue) 50%, transparent 51%),
+                linear-gradient(transparent 49%, var(--neon-pink) 50%, transparent 51%);
+            background-size: 20px 20px;
+            opacity: 0.1;
+            pointer-events: none;
+            z-index: -1;
+            animation: scanlines 0.5s linear infinite;
+        }
+
+        @keyframes scanlines {
+            from { background-position: 0 0; }
+            to { background-position: 0 20px; }
+        }
+
+        /* === MAIN CONTAINER === */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem;
+            position: relative;
+            z-index: 1;
+            backdrop-filter: blur(5px);
+        }
+
+        /* === CYBERPUNK HEADER === */
+        h2 {
+            text-align: center;
+            margin: 3rem 0;
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--cyber-yellow);
+            text-shadow: 
+                0 0 5px var(--cyber-yellow),
+                0 0 15px var(--cyber-yellow),
+                0 0 30px var(--cyber-yellow);
+            position: relative;
+            letter-spacing: 3px;
+            animation: neonPulse 1.5s infinite alternate;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 4px;
+            background: var(--neon-blue);
+            box-shadow: 0 0 15px var(--neon-blue), 0 0 30px var(--neon-blue);
+            border-radius: 50%;
+        }
+
+        @keyframes neonPulse {
+            0% { opacity: 0.8; text-shadow: 0 0 5px var(--cyber-yellow); }
+            100% { opacity: 1; text-shadow: 0 0 20px var(--cyber-yellow), 0 0 40px var(--cyber-yellow); }
+        }
+
+        /* === CYBERPUNK QUIZ CARDS === */
+        .quiz-sets {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin: 5rem 0;
+        }
+
+        .quiz-sets li {
+            position: relative;
+            transform-style: preserve-3d;
+            transition: var(--transition);
+            animation: floatIn 0.8s ease-out forwards;
+            opacity: 0;
+            perspective: 1000px;
+        }
+
+        @keyframes floatIn {
+            from { transform: translateY(50px) rotateX(-30deg); opacity: 0; }
+            to { transform: translateY(0) rotateX(0); opacity: 1; }
+        }
+
+        .quiz-sets li:nth-child(1) { animation-delay: 0.1s; }
+        .quiz-sets li:nth-child(2) { animation-delay: 0.2s; }
+        .quiz-sets li:nth-child(3) { animation-delay: 0.3s; }
+        .quiz-sets li:nth-child(4) { animation-delay: 0.4s; }
+        .quiz-sets li:nth-child(5) { animation-delay: 0.5s; }
+
+        .quiz-sets li a {
+            display: block;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            background: rgba(10, 10, 30, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 8px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.3rem;
+            border: 1px solid var(--neon-blue);
+            box-shadow: 
+                0 0 15px rgba(15, 240, 252, 0.3),
+                0 0 30px rgba(15, 240, 252, 0.1),
+                inset 0 0 15px rgba(15, 240, 252, 0.1);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transform-style: preserve-3d;
+        }
+
+        .quiz-sets li a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(15, 240, 252, 0.1) 0%, transparent 100%);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: -1;
+        }
+
+        .quiz-sets li a::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
+            transition: var(--transition);
+            z-index: -1;
+        }
+
+        .quiz-sets li:hover {
+            transform: translateY(-15px);
+        }
+
+        .quiz-sets li:hover a {
+            background: rgba(15, 240, 252, 0.15);
+            box-shadow: 
+                0 0 25px var(--neon-blue),
+                0 0 50px var(--neon-pink),
+                inset 0 0 20px rgba(15, 240, 252, 0.3);
+            border: 1px solid var(--neon-pink);
+            color: var(--neon-green);
+            transform: rotateY(10deg) rotateX(5deg);
+        }
+
+        .quiz-sets li:hover a::before {
+            opacity: 1;
+            animation: neonShine 1.5s forwards;
+        }
+
+        .quiz-sets li:hover a::after {
+            height: 100%;
+            opacity: 0.1;
+        }
+
+        @keyframes neonShine {
+            0% { transform: translateX(-100%) rotate(30deg); }
+            100% { transform: translateX(100%) rotate(30deg); }
+        }
+
+        /* === GLOW EFFECT === */
+        .glow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: radial-gradient(circle at center, rgba(15, 240, 252, 0.3) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .quiz-sets li:hover .glow {
+            opacity: 1;
+        }
+
+        /* === BACK BUTTON === */
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, var(--neon-blue), var(--neon-pink));
+            color: var(--dark-bg);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            box-shadow: 
+                0 0 20px var(--neon-blue),
+                0 0 40px var(--neon-pink);
+            transition: var(--transition);
+            position: fixed;
+            bottom: 3rem;
+            left: 3rem;
+            z-index: 10;
+            border: none;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .back-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--neon-pink), var(--neon-blue));
+            opacity: 0;
+            transition: var(--transition);
+            z-index: -1;
+        }
+
+        .back-button:hover {
+            transform: translateX(-5px) scale(1.05);
+            box-shadow: 
+                0 0 30px var(--neon-blue),
+                0 0 60px var(--neon-pink);
+        }
+
+        .back-button:hover::before {
+            opacity: 1;
+        }
+
+        .back-button i {
+            margin-right: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .back-button:hover i {
+            transform: translateX(-5px);
+        }
+
+        /* === FLOATING CSS LOGO === */
+        .css-logo {
+            position: fixed;
+            bottom: 3rem;
+            right: 3rem;
+            font-size: 5rem;
+            color: var(--neon-pink);
+            opacity: 0.2;
+            z-index: -1;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        /* === FLOATING SHAPES === */
+        .floating-shapes {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -2;
+            overflow: hidden;
+        }
+
+        .shape {
+            position: absolute;
+            opacity: 0.1;
+            animation: float-shapes 15s infinite linear;
+        }
+
+        @keyframes float-shapes {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.1; }
+            90% { opacity: 0.1; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* === RESPONSIVE DESIGN === */
+        @media (max-width: 992px) {
+            h2 {
+                font-size: 3rem;
+            }
+
+            .quiz-sets {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem;
+            }
+
+            h2 {
+                font-size: 2.5rem;
+                margin: 2rem 0;
+            }
+
+            .quiz-sets {
+                grid-template-columns: 1fr 1fr;
+                gap: 1.5rem;
+                margin: 3rem 0;
+            }
+
+            .back-button {
+                padding: 0.8rem 2rem;
+                bottom: 2rem;
+                left: 2rem;
+            }
+
+            .css-logo {
+                font-size: 4rem;
+                bottom: 2rem;
+                right: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 2rem;
+            }
+
+            .quiz-sets {
+                grid-template-columns: 1fr;
+            }
+
+            .back-button {
+                padding: 0.7rem 1.5rem;
+                font-size: 1rem;
+                bottom: 1.5rem;
+                left: 1.5rem;
+            }
+
+            .css-logo {
+                font-size: 3rem;
+                bottom: 1.5rem;
+                right: 1.5rem;
+            }
+        }
+
+        .quiz-sets li .quiz-card {
+            background: rgba(10, 10, 30, 0.8);
+            border: 1px solid var(--neon-blue);
+            padding: 2rem;
+            border-radius: 12px;
+            backdrop-filter: blur(8px);
+            text-align: center;
+            box-shadow: 0 0 10px rgba(15, 240, 252, 0.4), inset 0 0 10px rgba(15, 240, 252, 0.1);
+            transition: var(--transition);
+        }
+
+        .quiz-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1.2rem;
+            color: var(--cyber-yellow);
+            text-shadow: 0 0 10px var(--cyber-yellow);
+            letter-spacing: 1px;
+        }
+
+        .start-btn {
+            padding: 0.75rem 1.5rem;
+            background: transparent;
+            border: 2px solid var(--neon-green);
+            color: var(--neon-green);
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 1rem;
+            box-shadow: 0 0 10px var(--neon-green);
+            transition: 0.3s ease-in-out;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .start-btn::before {
+            content: '';
+            position: absolute;
+            left: -100%;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, var(--neon-green), transparent);
+            z-index: -1;
+            transition: 0.5s;
+        }
+
+        .start-btn:hover {
+            background: var(--neon-green);
+            color: var(--dark-bg);
+            box-shadow: 0 0 15px var(--neon-green), 0 0 30px var(--neon-green);
+            transform: scale(1.05);
+        }
+
+        .start-btn:hover::before {
+            left: 100%;
+        }
+    </style>
 </head>
-<body>
-    <h2>Select a Set for CSS</h2>
-    <ul>
-        <li><a href="{{ url_for('quiz', subject='css', set_id=1) }}">Set 1</a></li>
-        <li><a href="{{ url_for('quiz', subject='css', set_id=2) }}">Set 2</a></li>
-        <li><a href="{{ url_for('quiz', subject='css', set_id=3) }}">Set 3</a></li>
-        <li><a href="{{ url_for('quiz', subject='css', set_id=4) }}">Set 4</a></li>
-        <li><a href="{{ url_for('quiz', subject='css', set_id=5) }}">Set 5</a></li>
-    </ul>
-    <a href="{{ url_for('index') }}">← Back to Home</a>
+  <div id="particles-js"></div>
+    <div class="floating-shapes" id="floating-shapes"></div>
+
+    <div class="container">
+        <h2>Choose Question Sets</h2>
+
+        <ul class="quiz-sets">
+            <li>
+                <div class="quiz-card">
+                    <h3>SET 1: CSS Basics</h3>
+                    <a href="{{ url_for('quiz', subject='css', set_id=1) }}" class="start-btn">Start Quiz</a>
+                </div>
+                <div class="glow"></div>
+            </li>
+            <li>
+                <div class="quiz-card">
+                    <h3>SET 2: Flexbox & Grid</h3>
+                    <a href="{{ url_for('quiz', subject='css', set_id=2) }}" class="start-btn">Start Quiz</a>
+                </div>
+                <div class="glow"></div>
+            </li>
+            <li>
+                <div class="quiz-card">
+                    <h3>SET 3: CSS Animations</h3>
+                    <a href="{{ url_for('quiz', subject='css', set_id=3) }}" class="start-btn">Start Quiz</a>
+                </div>
+                <div class="glow"></div>
+            </li>
+            <li>
+                <div class="quiz-card">
+                    <h3>SET 4: Advanced CSS</h3>
+                    <a href="{{ url_for('quiz', subject='css', set_id=4) }}" class="start-btn">Start Quiz</a>
+                </div>
+                <div class="glow"></div>
+            </li>
+            <li>
+                <div class="quiz-card">
+                    <h3>SET 5: CSS Architecture</h3>
+                    <a href="{{ url_for('quiz', subject='css', set_id=5) }}" class="start-btn">Start Quiz</a>
+                </div>
+                <div class="glow"></div>
+            </li>
+        </ul>
+    </div>
+
+    <a href="{{ url_for('index') }}" class="back-button">
+        <i class="fas fa-arrow-left"></i> DASHBOARD
+    </a>
+
+    <div class="css-logo">
+        <i class="fab fa-css3-alt"></i>
+    </div>
+
+    <script>
+        // Initialize Three.js particle background
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set up Three.js scene
+            const container = document.getElementById('particles-js');
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+            
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            container.appendChild(renderer.domElement);
+            
+            // Create particles
+            const particlesGeometry = new THREE.BufferGeometry();
+            const particleCount = 800;
+            
+            const posArray = new Float32Array(particleCount * 3);
+            const colorArray = new Float32Array(particleCount * 3);
+            
+            for(let i = 0; i < particleCount * 3; i++) {
+                posArray[i] = (Math.random() - 0.5) * 10;
+                
+                // Assign neon colors randomly
+                const colorChoice = Math.floor(Math.random() * 4);
+                switch(colorChoice) {
+                    case 0: // Neon blue
+                        colorArray[i] = Math.random() * 0.2 + 0.8; // R
+                        colorArray[i+1] = Math.random() * 0.5 + 0.5; // G
+                        colorArray[i+2] = Math.random() * 0.5 + 0.5; // B
+                        break;
+                    case 1: // Neon pink
+                        colorArray[i] = Math.random() * 0.5 + 0.5; // R
+                        colorArray[i+1] = Math.random() * 0.2 + 0.1; // G
+                        colorArray[i+2] = Math.random() * 0.5 + 0.5; // B
+                        break;
+                    case 2: // Neon green
+                        colorArray[i] = Math.random() * 0.2 + 0.1; // R
+                        colorArray[i+1] = Math.random() * 0.5 + 0.5; // G
+                        colorArray[i+2] = Math.random() * 0.2 + 0.4; // B
+                        break;
+                    case 3: // Neon purple
+                        colorArray[i] = Math.random() * 0.5 + 0.5; // R
+                        colorArray[i+1] = Math.random() * 0.2 + 0.1; // G
+                        colorArray[i+2] = Math.random() * 0.5 + 0.5; // B
+                        break;
+                }
+            }
+            
+            particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+            particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colorArray, 3));
+            
+            const particlesMaterial = new THREE.PointsMaterial({
+                size: 0.03,
+                vertexColors: true,
+                transparent: true,
+                opacity: 0.8,
+                blending: THREE.AdditiveBlending
+            });
+            
+            const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+            scene.add(particlesMesh);
+            
+            camera.position.z = 3;
+            
+            // Animation loop
+            function animate() {
+                requestAnimationFrame(animate);
+                
+                particlesMesh.rotation.x += 0.0003;
+                particlesMesh.rotation.y += 0.0005;
+                
+                renderer.render(scene, camera);
+            }
+            
+            animate();
+            
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            });
+            
+            // Floating shapes animation
+            const shapesContainer = document.getElementById('floating-shapes');
+            const shapes = ['circle', 'triangle', 'square', 'hexagon'];
+            const colors = ['#0ff0fc', '#ff00ff', '#00ff9d', '#f5d742'];
+            
+            for(let i = 0; i < 20; i++) {
+                const shape = document.createElement('div');
+                shape.classList.add('shape');
+                
+                const size = Math.random() * 80 + 40;
+                const shapeType = shapes[Math.floor(Math.random() * shapes.length)];
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                
+                shape.style.width = `${size}px`;
+                shape.style.height = `${size}px`;
+                shape.style.left = `${Math.random() * 100}vw`;
+                shape.style.bottom = `-${size}px`;
+                shape.style.animationDuration = `${Math.random() * 15 + 10}s`;
+                shape.style.animationDelay = `${Math.random() * 5}s`;
+                
+                if(shapeType === 'circle') {
+                    shape.style.borderRadius = '50%';
+                    shape.style.background = `radial-gradient(circle, ${color}, transparent 70%)`;
+                } else if(shapeType === 'triangle') {
+                    shape.style.width = '0';
+                    shape.style.height = '0';
+                    shape.style.borderLeft = `${size/2}px solid transparent`;
+                    shape.style.borderRight = `${size/2}px solid transparent`;
+                    shape.style.borderBottom = `${size}px solid ${color}`;
+                    shape.style.background = 'transparent';
+                } else {
+                    shape.style.background = color;
+                    if(shapeType === 'hexagon') {
+                        shape.style.clipPath = 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)';
+                    }
+                }
+                
+                shapesContainer.appendChild(shape);
+            }
+            
+            // Enhanced hover effects with GSAP
+            const cards = document.querySelectorAll('.quiz-sets li');
+            
+            cards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const x = e.clientX - card.getBoundingClientRect().left;
+                    const y = e.clientY - card.getBoundingClientRect().top;
+                    
+                    const centerX = card.offsetWidth / 2;
+                    const centerY = card.offsetHeight / 2;
+                    
+                    const angleX = (y - centerY) / 20;
+                    const angleY = (centerX - x) / 20;
+                    
+                    gsap.to(card, {
+                        rotateX: angleX,
+                        rotateY: angleY,
+                        transformPerspective: 1000,
+                        ease: "power2.out",
+                        duration: 0.5
+                    });
+                    
+                    // Glow effect follow
+                    const glow = card.querySelector('.glow');
+                    gsap.to(glow, {
+                        x: x - centerX,
+                        y: y - centerY,
+                        ease: "power2.out",
+                        duration: 0.5
+                    });
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    gsap.to(card, {
+                        rotateX: 0,
+                        rotateY: 0,
+                        ease: "elastic.out(1, 0.5)",
+                        duration: 1
+                    });
+                    
+                    const glow = card.querySelector('.glow');
+                    gsap.to(glow, {
+                        x: 0,
+                        y: 0,
+                        ease: "power2.out",
+                        duration: 0.5
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>

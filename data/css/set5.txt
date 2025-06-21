@@ -1,0 +1,49 @@
+What is the use of flex-wrap?|Sets flex direction|Wraps flex items|Aligns items|Adds margin|B
+Which value of flex-wrap prevents wrapping?|nowrap|wrap|wrap-reverse|none|A
+Which CSS property allows smooth transition?|transition|transform|animation|duration|A
+What does vh unit stand for?|viewport height|virtual height|visible height|view height|A
+What does vw unit stand for?|viewport width|vertical width|view width|visible width|A
+What does min-height: 100vh do?|Sets height to full screen|Minimum 100px|Adds padding|Nothing|A
+What does object-fit: cover do to images?|Stretch|Crop to fill|Shrink|Repeat|B
+Which property aligns items along the main axis in flex?|justify-content|align-items|align-content|align-self|A
+Which property aligns items along the cross axis in flex?|align-items|justify-content|flex-wrap|direction|A
+Which shorthand sets padding in all directions?|padding: top right bottom left|padding: full|padding-all|padding-set|A
+What does :not(.class) select?|Only .class|Everything except .class|All elements|None|B
+Which selector selects every 3rd child?|:nth-child(3n)|:nth-child(3)|:nth(3)|:every-3|A
+What is the default value of z-index?|1|0|auto|none|C
+What does overflow-x: scroll; do?|Hides x content|Shows horizontal scroll|Nothing|Error|B
+Which keyword disables animation on a property?|none|auto|unset|initial|A
+Which function is used to make CSS reusable?|@include|@function|@define|@mixin|D
+What is the main benefit of rem over em?|Always relative to root|Always absolute|Faster|None|A
+Which value centers flex items vertically?|align-items: center|justify-content: center|align: middle|center-all|A
+Which value centers flex items horizontally?|justify-content: center|align-items: center|align: middle|center-all|A
+Which layout allows automatic item placement?|float|inline|grid|block|C
+What does grid-auto-rows define?|Column size|Row size|Gutter size|Template area|B
+Which function calculates a value in CSS?|calc()|compute()|eval()|math()|A
+Which value of display is used for table layout?|display: table|display: grid|display: row|display: layout|A
+What does position: absolute do?|Positions relative to nearest non-static parent|Fixes to screen|Relative to document|None|A
+Which layout mode is ideal for complex 2D layouts?|Flexbox|Float|Grid|Inline|C
+Which CSS pseudo-element adds content after element?|::after|:after|after()|insert-after|A
+What does outline: none; do?|Removes outer border|Hides content|Adds margin|None|A
+Which property changes transition effect style?|transition-timing-function|transition-type|ease-style|animation-type|A
+Which transition timing function starts slow then fast?|ease-in|ease-out|ease-in-out|linear|A
+Which value of display removes space but not element?|none|block|inline|hidden|A
+Which is used to group media queries?|@group|@bundle|@media|@if|C
+Which value makes grid columns equal width?|1fr|100px|auto-fit|repeat|A
+Which tag supports inline style?|<div style="">|<css style="">|<style>|<span style="">|D
+What is the effect of text-transform: uppercase;?|Capital letters|Bold|Italic|Underline|A
+What does white-space: nowrap do?|No line breaks|Wraps text|Adds space|Removes whitespace|A
+Which CSS property is used to break long words?|word-break|text-wrap|break-word|split-text|A
+What does column-count: 2; do?|2 lines|2 pages|2 columns|2 rows|C
+Which property defines how many columns text flows into?|column-gap|column-count|column-fill|text-columns|B
+Which selector targets multiple classes?|.a.b|.a, .b|a .b|#a.b|B
+Which property defines the direction of text?|text-direction|direction|writing-mode|text-align|B
+Which property controls indentation of first line?|text-indent|line-indent|padding-left|margin-left|A
+Which is NOT a valid value for display?|inline|float|block|grid|B
+Which property creates space between columns in grid?|column-gap|gap|grid-gap|all of these|D
+Which CSS3 feature allows resizing an element?|resize|zoom|scale|transform|A
+Which unit is fixed and not responsive?|px|em|rem|vw|A
+Which selector targets input elements only?|input|form input|input{}|all of these|D
+What does pointer-events: none; do?|Disables mouse actions|Hides pointer|Changes cursor|Fixes element|A
+Which property allows rotation, scaling, and skewing?|transform|transition|rotate|translate|A
+What does translateX(100px) do?|Moves right 100px|Scales width|Rotates|Skews|A

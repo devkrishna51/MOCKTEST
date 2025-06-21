@@ -439,7 +439,8 @@
     <div class="container animate__animated animate__fadeIn">
         <h2 class="animate__animated animate__fadeInDown">{{ subject | upper }} - Set {{ set_id }}</h2>
 
-        {% if student_name == None %}
+        {% if not student_name %}
+
             <!-- Ask for name and age before showing quiz -->
             <form method="POST">
                 <div class="form-block" style="animation-delay: 0.1s;">

@@ -1,0 +1,37 @@
+Which tag defines time or date?|<time>|<date>|<datetime>|<t>|A
+What is the correct tag for footer section?|<bottom>|<footer>|<foot>|<down>|B
+Which HTML element shows tooltip text?|title attribute|alt attribute|tooltip tag|data attribute|A
+Which tag shows keyboard input?|<kbd>|<code>|<input>|<key>|A
+Which tag shows sample output?|<output>|<samp>|<result>|<console>|B
+Which tag defines user’s input?|<input>|<var>|<code>|<user>|B
+Which tag is used for computer code?|<code>|<comp>|<script>|<text>|A
+What is the use of <mark> tag?|Underline text|Highlight text|Make bold|Italic|B
+What is the use of <wbr> tag?|Page break|Word break opportunity|Line break|None|B
+Which attribute prevents input editing?|disabled|readonly|checked|blocked|B
+What is the use of required attribute?|Makes field optional|Validates number|Makes field mandatory|Auto-fill|C
+Which input type accepts email?|<input type="email">|<email>|<input mail>|<text email>|A
+Which tag is used for multiline input?|<input>|<textarea>|<text>|<form>|B
+Which tag creates definition list?|<dl>|<dd>|<dt>|All of these|D
+What is the role of <dt> tag?|List term|List value|List end|Definition text|A
+Which input type is used for selecting file?|<input type="file">|<input file>|<file>|<upload>|A
+Which input type is used for selecting color?|<input type="color">|<color>|<input type="hex">|<input type="rgb">|A
+What does the autofocus attribute do?|Zoom input|Keep input highlighted|Focus field on load|Disable input|C
+Which tag is used for adding favicon?|<icon>|<meta rel="icon">|<link rel="icon">|<head icon>|C
+Which element helps in responsive meta tag?|viewport|screen|scale|device|A
+What is the default method of form submission?|GET|POST|SEND|AUTO|A
+Which method is secure for password submission?|POST|GET|SEND|INPUT|A
+What is the default target of form?|_self|_blank|_top|_parent|A
+Which input type is used for selecting date?|<input type="date">|<input type="datetime">|<date>|<calendar>|A
+Which HTML tag is deprecated?|<font>|<b>|<i>|<strong>|A
+Which attribute is used to group radio buttons?|group|name|value|id|B
+Which tag is used for placeholder text?|placeholder attribute|placeholder tag|data-label|caption|A
+What is the function of <canvas>?|Drawing|Table|Image|Form|A
+Which tag is used to embed SVG graphics?|<svg>|<canvas>|<vector>|<shape>|A
+What is use of <noscript> tag?|Hide JavaScript|Run script|Fallback content|Include script|C
+Which element is used to declare character set?|<meta charset="">|<charset>|<meta content-type>|<encoding>|A
+What does <base> tag do?|Set base URL|Set home|Add CSS|Add JS|A
+Which tag is used to show deleted text?|<del>|<strike>|<delete>|<removed>|A
+Which tag is used to show inserted text?|<add>|<insert>|<ins>|<new>|C
+Which tag adds text direction?|<bdo>|<dir>|<textdir>|<flow>|A
+Which element defines emphasized text?|<i>|<em>|<strong>|<b>|B
+What is the output of <input type="range">?|Slider|Progress bar|Bar|None|A

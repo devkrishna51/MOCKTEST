@@ -1,0 +1,49 @@
+Which HTML tag is used to define a list item?|<li>|<ul>|<ol>|<item>|A
+What is the correct way to define a hyperlink that opens in same tab?|<a href="url">|<a target="_self">|<a open="_self">|<a url="link">|A
+Which input type hides the characters entered?|password|hidden|text|secure|A
+Which tag is used to create a numbered list?|<ol>|<ul>|<li>|<list>|A
+What does the <hr> tag define?|Horizontal line|High resolution|Hyperlink resource|Header|A
+Which tag is used to create a form?|<form>|<forms>|<input>|<fieldset>|A
+How to preselect an option in dropdown?|selected|chosen|default|preselect|A
+What is the default type of <button>?|submit|button|reset|none|A
+How to make input field required?|required|mandatory|mustfill|requiredfield|A
+Which tag makes text italic?|<i>|<em>|<italic>|Both A and B|D
+Which HTML element defines strong importance?|<strong>|<b>|<bold>|<imp>|A
+How to specify placeholder text in input?|placeholder="text"|default="text"|hint="text"|label="text"|A
+What is the function of the <base> tag?|Set base URL|Bold text|Load JS|None|A
+Which input type is used for date selection?|date|calendar|time|datetime|A
+Which tag creates a dropdown option?|<option>|<select>|<drop>|<choose>|A
+Which tag creates a radio button?|<input type="radio">|<radio>|<input type="circle">|<option type="radio">|A
+What is the function of the <legend> tag?|Caption for fieldset|Create label|Add heading|Define shortcut|A
+Which tag is used for external CSS linking?|<link>|<css>|<style>|<script>|A
+What is the correct syntax for background color?|style="background-color:red;"|bgcolor="red;"|color="red;"|background="red;"|A
+Which tag creates a tooltip?|title|hover|tooltip|info|A
+What is the default method for form submission?|GET|POST|SEND|RECEIVE|A
+Which tag defines preformatted text?|<pre>|<code>|<format>|<txt>|A
+What is the correct HTML tag for inserting a line separator?|<hr>|<line>|<br>|<separator>|A
+How to embed CSS inside HTML?|<style>|<css>|<link>|<script>|A
+What is the role of <script>?|Embed JS|Add CSS|Add fonts|Create link|A
+Which tag is not supported in HTML5?|<center>|<section>|<article>|<footer>|A
+What is the function of the <track> tag?|Subtitles for video|Progress bar|Audio speed|None|A
+Which tag defines client-side image map?|<map>|<imagemap>|<area>|<imgmap>|A
+Which tag is used to include favicon?|<link rel="icon">|<img icon="">|<meta favicon>|<head icon="">|A
+What does <output> tag do?|Displays calculation result|Returns input|Submits data|None|A
+What does <bdo> tag do?|Overrides text direction|Bold only|Changes case|None|A
+How to define a short cut key?|accesskey|shortcut|key|ctrl|A
+What is the role of <summary>?|Summary of <details>|Add table heading|Footer text|Intro paragraph|A
+Which tag is used to define keyboard input?|<kbd>|<code>|<input>|<ctrl>|A
+Which tag creates a definition term?|<dt>|<df>|<define>|<dl>|A
+How to make field read-only?|readonly|disabled|static|locked|A
+Which tag defines sample output from a computer?|<samp>|<code>|<out>|<result>|A
+What is the use of <meta name="viewport">?|Responsive design|Color scheme|SEO|None|A
+What does <del> tag represent?|Deleted text|Bold text|Italic text|None|A
+Which tag is used to add quotation block?|<blockquote>|<quote>|<bq>|<quoteblock>|A
+Which tag adds line over the text?|<s>|<strike>|<del>|All|D
+What is the use of <ins> tag?|Inserted text|Important text|Italic text|None|A
+What is <colgroup> used for?|Group table columns|List group|Align rows|Group cells|A
+Which tag helps to control column properties in a table?|<col>|<td>|<tr>|<thead>|A
+What is <wbr> tag used for?|Optional line break|Bold italic|Warning block|None|A
+Which tag is used for abbreviation?|<abbr>|<short>|<abbrv>|<def>|A
+Which tag is used to define computer code?|<code>|<kbd>|<samp>|<var>|A
+Which tag defines a variable in programming?|<var>|<code>|<kbd>|<const>|A
+Which tag is used to define an area inside image map?|<area>|<zone>|<imgarea>|<hotspot>|A

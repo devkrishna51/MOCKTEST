@@ -1,0 +1,48 @@
+What is the first step in building an IoT application?|Choosing a logo|Connecting devices|Identifying the problem and use-case|Writing a report|C
+Which language is commonly used to program IoT microcontrollers?|Python|JavaScript|C/C++|HTML|C
+What is the purpose of sensors in IoT apps?|To store videos|To detect physical conditions|To display graphics|To draw charts|B
+Which platform is popular for prototyping IoT applications?|Tally|Raspberry Pi|Photoshop|WordPress|B
+In a typical IoT app, the actuator’s job is to?|Collect data|Store files|Perform physical action|Scan code|C
+Which of the following is essential for remote monitoring in IoT?|TV screen|Local cable|Internet connectivity|CD reader|C
+What kind of architecture do most IoT applications follow?|Client-server|Peer-to-peer|Cloud-based layered|Email based|C
+Why is real-time data important in IoT applications?|For decoration|For historical use only|For immediate decision-making|For games|C
+Which cloud platform is commonly used in IoT applications?|Dropbox|YouTube|AWS IoT Core|Outlook|C
+What is the role of an API in an IoT app?|Improve UI|Add noise|Connect and communicate with services/devices|Change themes|C
+Which one is not part of an IoT application layer?|Presentation|Perception|Network|Marketing|D
+Which of the following allows mobile access to IoT devices?|Power cable|Ethernet|Cloud platform|Keyboard|C
+Why is edge computing important in IoT apps?|To slow down system|To reduce data size and latency|To increase costs|To display ads|B
+Which board is ideal for lightweight IoT applications?|PlayStation|Arduino Uno|Scanner|GPU|B
+Data collected by IoT applications is sent to?|Recycle bin|Cloud storage or servers|Hard disk only|Speaker|B
+Which of these is a machine-to-machine communication protocol in IoT?|HTML|SMTP|MQTT|PDF|C
+What type of user interface is common in IoT apps?|Terminal only|Command prompt|Web or mobile dashboards|None|C
+In building a smart irrigation app, the key sensor is?|Thermometer|Gas sensor|Soil moisture sensor|Barometer|C
+Which file type stores sensor data in IoT logs?|.jpg|.csv|.mp3|.exe|B
+What is “latency” in IoT app performance?|Speed of fan|Delay in data transfer|Memory size|Screen size|B
+What is used to give control commands in an IoT app?|Sensor|Speaker|Actuator|Microcontroller|C
+Which connectivity is low-power and long-range in IoT apps?|Bluetooth|Ethernet|LoRaWAN|USB|C
+Which of the following is best for real-time visualization in IoT apps?|Notepad|Graphical dashboard|Printer|Barcode reader|B
+Which of these is NOT typically required in an IoT app?|Sensor data|Connectivity module|User feedback|Car engine|D
+Which of the following ensures security in IoT apps?|Open password|Public network|Encrypted communication|Default login|C
+A smart home IoT app may include which feature?|Light control|Game download|HDMI output|Screenshot|A
+What is a gateway device in IoT?|Smartphone only|Local admin|Device that bridges sensors to internet|Firewall breaker|C
+Which of the following can cause an IoT app to fail?|Strong encryption|Faulty sensor data|Regular updates|Responsive design|B
+What is device provisioning in IoT?|Washing devices|Assigning unique identities to devices|Upgrading display|Closing ports|B
+An IoT app backend must be able to?|Handle data processing and commands|Play video|Zoom image|Translate languages|A
+Which IDE is commonly used for Arduino-based IoT development?|PyCharm|Eclipse|Arduino IDE|NetBeans|C
+Which of these improves user interaction in IoT apps?|Complex code|Minimal design and feedback|Long texts|Hidden buttons|B
+Why is scalability important in IoT application design?|To increase bugs|To limit devices|To support growing number of devices|To reduce cloud|C
+Which of these protocols is used to access IoT data via REST APIs?|HTTP|FTP|SMTP|LAN|A
+What is a digital twin in IoT app context?|A cloned phone|Virtual model of a physical device|Duplicate SIM|Copy of app code|B
+Which of the following is a data analytics tool in IoT app ecosystems?|MS Paint|Power BI|WhatsApp|FileZilla|B
+What does uptime mean in an IoT app?|Color time|Device download time|System availability duration|Charging time|C
+Which of the following helps in controlling devices remotely?|Web dashboard|Joystick only|USB pen drive|Scanner|A
+A good IoT app UI must be?|Flashy and complex|Minimal, intuitive, and responsive|Dark and hidden|Non-clickable|B
+Which platform uses Node-RED for building IoT flows?|PowerPoint|Adobe XD|IBM Watson IoT|CorelDraw|C
+IoT apps in healthcare help with?|Video games|Patient monitoring and alerts|Creating reports|Photoshop|B
+Which of the following is a wireless communication module in IoT?|Resistor|Capacitor|ESP8266|Diode|C
+Why is data filtering important in IoT apps?|To decorate output|To compress images|To avoid unnecessary data transmission|To delay data|C
+Which of these is a key backend database option for IoT apps?|MS Word|MySQL|Paint|VLC|B
+How can an IoT app control multiple devices simultaneously?|One command only|Manual toggling|Group-based device control|By turning off cloud|C
+Smart wearables usually connect to apps via?|LAN cable|Serial port|Bluetooth|Mouse|C
+Which mobile OS is most targeted in IoT app development?|Symbian|DOS|Android/iOS|Blackberry|C
+IoT application lifecycle begins with?|Shutdown|App store|Design and planning|Bluetooth scan|C

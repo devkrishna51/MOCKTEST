@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ subject }} Topics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4361ee;
+            --secondary-color: #3a0ca3;
+            --accent-color: #f72585;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+            --card-bg: rgba(255, 255, 255, 0.9);
+            --text-color: #2b2d42;
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 2rem;
+            margin: 0;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Floating background elements */
+        .floating-shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.1;
+            z-index: -1;
+            animation: float 15s infinite linear;
+        }
+        
+        .shape-1 {
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, var(--primary-color) 0%, transparent 70%);
+            top: -150px;
+            left: -150px;
+            animation-delay: 0s;
+        }
+        
+        .shape-2 {
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, var(--accent-color) 0%, transparent 70%);
+            bottom: -100px;
+            right: -100px;
+            animation-delay: 3s;
+        }
+        
+        .shape-3 {
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, var(--secondary-color) 0%, transparent 70%);
+            top: 30%;
+            right: -75px;
+            animation-delay: 6s;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            50% {
+                transform: translate(50px, 50px) rotate(180deg);
+            }
+            100% {
+                transform: translate(0, 0) rotate(360deg);
+            }
+        }
+
+        /* Pulsing animation for accent elements */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        h2 {
+            text-align: center;
+            color: var(--secondary-color);
+            margin-bottom: 2.5rem;
+            font-size: 2.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--accent-color);
+            border-radius: 2px;
+            animation: pulse 2s infinite;
+        }
+        
+        .topics-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .topic-block {
+            background: var(--card-bg);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            transition: var(--transition);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .topic-block::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(67,97,238,0.05) 0%, rgba(255,255,255,0) 100%);
+            z-index: -1;
+        }
+        
+        .topic-block:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            border-bottom: 2px solid rgba(67,97,238,0.2);
+            padding-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        h3 i {
+            color: var(--accent-color);
+            animation: pulse 2s infinite;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 1rem;
+        }
+        
+        li {
+            background: rgba(67, 97, 238, 0.1);
+            border-radius: 8px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(67,97,238,0.1);
+        }
+
+        li::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(67,97,238,0.2) 0%, rgba(67,97,238,0) 100%);
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        li:hover {
+            background: rgba(67, 97, 238, 0.2);
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 5px 15px rgba(67,97,238,0.2);
+        }
+
+        li:hover::before {
+            opacity: 1;
+        }
+        
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            z-index: 1;
+        }
+
+        a i {
+            transition: var(--transition);
+        }
+
+        li:hover a i {
+            transform: rotate(15deg);
+            color: var(--accent-color);
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 1.5rem;
+            }
+            
+            ul {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 0.75rem;
+            }
+
+            .topic-block {
+                padding: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .topic-block {
+                padding: 1.25rem;
+            }
+            
+            ul {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* Floating bubbles animation */
+        @keyframes bubble {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.7;
+            }
+            90% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .bubbles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            animation: bubble 10s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="bubbles" id="bubbles"></div>
+    <div class="floating-shape shape-1"></div>
+    <div class="floating-shape shape-2"></div>
+    <div class="floating-shape shape-3"></div>
+    
+   <div class="topics-container">
+    <h2>{{ subject }} Topics</h2>
+    {% for topic in topics %}
+        <div class="topic-block">
+            <h3><i class="fas fa-folder-open"></i> {{ topic }}</h3>
+            <ul>
+                {% for i in range(1, 6) %}
+                    <li>
+<a href="{{ url_for('olevel_quiz', subject=subject.lower(), topic=topic|lower|replace(' ', '_')|replace('-', '')|replace('–', '')|replace('&', 'and')|replace('/', '')|replace(',', '')|replace('__', '_'), set_id=i) }}">
+    Set {{ i }}
+</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+</div>
+
+
+    <script>
+        // Create floating bubbles
+        function createBubbles() {
+            const bubblesContainer = document.getElementById('bubbles');
+            const bubbleCount = 15;
+            
+            for (let i = 0; i < bubbleCount; i++) {
+                const bubble = document.createElement('div');
+                bubble.classList.add('bubble');
+                
+                // Random size between 10px and 40px
+                const size = Math.random() * 30 + 10;
+                bubble.style.width = `${size}px`;
+                bubble.style.height = `${size}px`;
+                
+                // Random position
+                bubble.style.left = `${Math.random() * 100}%`;
+                bubble.style.bottom = `-${size}px`;
+                
+                // Random animation duration and delay
+                const duration = Math.random() * 10 + 10;
+                const delay = Math.random() * 5;
+                bubble.style.animation = `bubble ${duration}s ${delay}s infinite linear`;
+                
+                // Random opacity
+                bubble.style.opacity = Math.random() * 0.3 + 0.1;
+                
+                bubblesContainer.appendChild(bubble);
+            }
+        }
+        
+        // Initialize bubbles when page loads
+        window.addEventListener('load', createBubbles);
+    </script>
+</body>
+</html>

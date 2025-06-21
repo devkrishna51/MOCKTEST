@@ -1,0 +1,49 @@
+Why is encryption essential in IoT communication?|To slow down traffic|To beautify messages|To secure data transfer|To improve display|C
+Which of these attacks intercepts communication between two devices?|DDoS|Man-in-the-Middle|Phishing|Ransomware|B
+Which of these protects IoT data during transmission?|Firewall|Display settings|Encryption|Password reset|C
+Firmware in IoT should be?|Updated regularly|Ignored|Never modified|Erased often|A
+Weak passwords in IoT devices can lead to?|Faster boot|Unauthorized access|Longer battery life|High speed|B
+Why should unused ports be closed in IoT devices?|To save power|To improve screen quality|To reduce attack surface|To enable sound|C
+A brute-force attack targets?|Sensors|Ports|Passwords|Wires|C
+Which of the following is a preventive action for IoT devices?|Using default passwords|Delaying updates|Changing passwords regularly|Keeping ports open|C
+What does 2FA stand for in IoT security?|Two File Access|Two-Factor Authentication|Two Folder Assignment|Trusted File Access|B
+What is phishing in IoT context?|Sensor calibration|Sending fake data links|Battery drain|Cloud backup|B
+What is the future solution to secure millions of IoT devices?|More wires|Manual updates|AI-based threat detection|Open passwords|C
+A smart home device should only connect to?|Unknown networks|Public Wi-Fi|Trusted networks|Open hotspots|C
+IoT future depends on which networking technology?|VGA|5G|CRT|DVD|B
+What is the risk of storing IoT data without encryption?|Speed boost|Increased cost|Data theft|Better visuals|C
+How does over-the-air (OTA) update help in IoT?|Improves weight|Automates software patching|Turns on lights|Removes storage|B
+Which of these can increase IoT vulnerability?|Using strong credentials|Running old firmware|Firewall enabled|Encrypted messaging|B
+A secure password should be?|Short and simple| 123456 |Long and complex|Same as username|C
+Which layer deals with data encryption in IoT?|Perception|Network|Application|Transport|B
+Which of these is used to verify identity in IoT?|Encryption|Decryption|Authentication|Routing|C
+Data privacy in IoT ensures?|Free data|Hidden sensor|User information protection|Slow speed|C
+Which device needs highest security in a smart home?|LED bulb|Smart TV|Smart lock|Electric fan|C
+Which of these threats can control thousands of IoT devices at once?|Phishing|Botnet|Wi-Fi jam|Cable failure|B
+Secure boot ensures?|Only verified firmware runs|Faster startup|New color settings|Bluetooth range|A
+In future, IoT security will depend on?|Paper records|Sensor brand|Standardized protocols|User creativity|C
+What is spoofing in IoT?|Replacing device identity|Changing fonts|Battery upgrade|Printing labels|A
+AI in security helps to?|Visualize data|Detect threats in real-time|Play music|Monitor weather|B
+What helps identify unusual patterns in IoT network traffic?|Firewall|Anomaly detection system|Speaker|Reset button|B
+Which attack locks device access and demands ransom?|DDoS|Trojan|Ransomware|Rootkit|C
+Data stored on cloud should be?|Compressed|Encrypted|Deleted often|Public|B
+How can blockchain enhance IoT security?|Increases cost|Decentralized, tamper-proof records|Slows communication|Reduces battery|B
+A device that logs security events is called?|Actuator|Sensor|Security Logger|Buzzer|C
+IoT ecosystems should be designed with?|Open ports|Hard-coded passwords|Security by design|Single layer encryption|C
+What is device hardening in IoT?|Adding buttons|Changing design|Reducing vulnerabilities|Improving color|C
+Which tool detects vulnerabilities in IoT software?|Compiler|Vulnerability scanner|Printer|Router|B
+Future smart cities need IoT security for?|Street names|Waste management, traffic, lighting|Music system|Billboards|B
+A secure API in IoT ensures?|Free memory|Safe interactions between services|LED blinking|Power control|B
+Which organization promotes global IoT security standards?|UNESCO|IETF|BBC|NBA|B
+End-to-end encryption in IoT protects?|Color data|Images only|Data from source to destination|Sound only|C
+How do biometric logins improve IoT security?|Store photos|Authenticate via unique human traits|Slow response|Add noise|B
+Which is not a type of IoT threat?|DDoS|Firmware update|Botnet|Spoofing|B
+What is the biggest IoT risk in public places?|Loud noise|Open Wi-Fi networks|Flashlight|Strong signal|B
+Why should default usernames be changed in IoT?|Looks better|Security best practice|Faster boot|Better graphics|B
+How does 5G improve future IoT ecosystems?|Makes sensors hot|Increases latency|Enables faster, real-time communication|Reduces storage|C
+Secure data transmission avoids?|Buffering|Color fading|Data tampering|Temperature rise|C
+Security audit in IoT helps to?|Enter password|Play video|Identify security weaknesses|Clean dust|C
+Which of these enhances IoT access control?|Strong password policy|Auto-login|Fixed IP|Open port|A
+Which part of IoT is most vulnerable to physical tampering?|Cloud|Wi-Fi|Edge device|Router firmware|C
+Role of security gateway in IoT is?|Internet boosting|Power control|Filter malicious traffic|Display ads|C
+Future of IoT ecosystem depends on?|Manual monitoring|Security, privacy, and intelligence|Game support|Wired devices only|B

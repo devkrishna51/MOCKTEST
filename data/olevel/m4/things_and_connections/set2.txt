@@ -1,0 +1,52 @@
+oT device that changes its state after getting a command is?|Sensor|Actuator|Microphone|Display|B
+Which of the following helps IoT devices communicate globally?|Mobile app|Internet connectivity|LED lights|Color themes|B
+In IoT, which component acts as the brain of the thing?|Camera|Microcontroller|Speaker|Screen|B
+Which protocol uses minimal bandwidth and is suitable for IoT?|HTTP|FTP|MQTT|Telnet|C
+What is the role of the perception layer in IoT?|Application hosting|Sensing environment|Routing data|Managing storage|B
+A “thing” in IoT is any?|Digital form|Network cable|Connected physical object|Word document|C
+Which of the following is not a sensor?|Temperature probe|Accelerometer|RFID tag|Router|D
+Smart streetlights turn on based on?|Manual button|Time of day|Light sensors|Switchboard|C
+Which connection is commonly used in home IoT automation?|Fiber cable|Mobile signals|Wi-Fi|DVD-ROM|C
+Which of these is not a valid IoT communication protocol?|MQTT|CoAP|POP3|HTTP|C
+What is used to detect fire or smoke in IoT?|Color sensor|Gas sensor|Motion detector|Rain gauge|B
+Which type of sensor is used for detecting obstacles in robots?|Gyroscope|Ultrasonic|Temperature|Sound sensor|B
+IoT devices use cloud computing to?|Print images|Store and analyze data|Charge remotely|Display videos|B
+Which of the following enables IoT data visualization?|Actuator|Sensor|Dashboard|Audio speaker|C
+Which connection is best suited for battery-powered IoT sensors?|Wi-Fi|Zigbee|HDMI|Ethernet|B
+A smart thermostat can?|Sense pressure|Control room lights|Regulate temperature|Play songs|C
+What is the main function of an actuator in IoT?|Measure voltage|Detect light|Perform a physical action|Show graphs|C
+Which component is necessary for wireless communication in IoT?|Microphone|LED|Wi-Fi/Bluetooth module|Scanner|C
+In IoT, the term “node” refers to?|Color chip|Connected device|USB port|Backup folder|B
+Which of the following is not part of IoT system?|Sensor|Switch|Router|Mouse|D
+What defines a smart IoT object?|Stylish design|Web page access|Connectivity and autonomy|Text editor|C
+Which device uses motion to automate lights?|Gyroscope|PIR sensor|Vibration sensor|Humidity sensor|B
+Device-to-cloud connections in IoT allow?|Local backup only|Remote data storage|LED blinking|Audio output|B
+Which IoT application uses soil sensors?|Smart parking|Smart farming|Smart TV|Smartwatch|B
+What is the benefit of using IPv6 in IoT?|Limited IP addresses|Faster downloads|More unique device addresses|Larger displays|C
+Which IoT term describes converting physical input into digital data?|Transmission|Encoding|Sensing|Decoding|C
+IoT systems are primarily based on which type of computing?|Quantum|Grid|Distributed|Offline|C
+A wearable fitness tracker monitors?|Wi-Fi speed|Typing speed|Heart rate|Power supply|C
+Which of the following is used for indoor navigation in IoT?|Bluetooth beacon|Ethernet switch|HDMI connector|Router only|A
+A smart plug is used to?|Monitor browser history|Control power supply|Send SMS|Play media|B
+Which module connects sensors and cloud in IoT?|Converter|Microcontroller|Signal booster|Web editor|B
+IoT solutions in manufacturing are called?|Home IoT|Agritech|Industrial IoT|Retail IoT|C
+Which of the following helps conserve energy in IoT devices?|Voice output|Low power chips|Touchscreens|Ink usage|B
+An IoT-enabled fan turns on when?|Temperature exceeds threshold|TV is on|You press mouse|Speaker plays music|A
+IoT connections are considered “smart” because they?|Make sounds|Store data only|Sense, communicate and act|Require daily reset|C
+Which network technology works best for rural IoT farms?|Wi-Fi|LoRa|USB|VGA|B
+Which of the following is not typically embedded in an IoT thing?|Sensor|Controller|Monitor|Transmitter|C
+What type of address is MAC?|Media Access Control|Manual Allocation Code|Machine Assigned Chip|Micro Access Circuit|A
+Which is a short-range wireless protocol suitable for IoT?|LoRaWAN|Wi-Fi|Zigbee|DSL|C
+In IoT, “real-time” data refers to?|Pre-saved data|Data sent on schedule|Live data from sensor|Archived backups|C
+Which cloud model is most used in IoT applications?|IaaS|PaaS|SaaS|BaaS|A
+A smart irrigation system operates based on?|Scheduled timers only|Soil moisture sensors|Text messages|Sun position|B
+In device-to-device communication, both devices must?|Be connected to projector|Support internet browser|Have compatible communication protocol|Use same color|C
+Which of these is an actuator in a smart irrigation system?|Pump|Soil sensor|Wi-Fi chip|Router|A
+Which device can track fitness metrics?|Barcode reader|Fitness band|PC monitor|Flash drive|B
+What allows IoT devices to work in a closed environment without internet?|Bluetooth|Mobile data|Fiber optics|Voice chat|A
+Why is data compression important in IoT?|Better display|Less power consumption|To increase screen size|To enable voice command|B
+Which of the following is part of the IoT device’s firmware?|PDF viewer|Network stack and drivers|Spreadsheet|Email handler|B
+An IoT-based alert system sends notifications via?|Printout|Handwritten notes|Digital messages|Postcards|C
+The physical “thing” in IoT must have?|Color and shape|Smartphone OS|Sensors and connectivity|Internet browser|C
+Which of the following is a challenge in IoT connectivity?|Overheating screens|Limited sensors|Interference and range issues|Too many colors|C
+An IoT camera in a smart doorbell performs?|Only audio processing|Only sensing light|Image capture and transmission|Power management|C

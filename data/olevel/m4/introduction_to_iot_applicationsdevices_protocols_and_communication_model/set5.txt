@@ -1,0 +1,52 @@
+What is the goal of IoT technology?|Connect devices to internet|Build gaming apps|Design electric motors|Create offline tools|A
+Which IoT communication model involves data sharing between cloud services?|Back-End Data Sharing|Device-to-Device|Cloud-to-Device|Gateway Communication|A
+Which of these is an example of Industrial IoT (IIoT)?|Smart Factory|WhatsApp|MS Paint|Digital Watch|A
+Which protocol is designed for real-time machine-to-machine communication?|MQTT|SMTP|POP3|FTP|A
+Which of the following is an actuator?|Servo Motor|Thermometer|Light Sensor|Microphone|A
+What is the full form of RFID?|Radio Frequency Identification|Remote Frequency Input Device|Rapid Function IoT Device|Radio Figure ID|A
+Which protocol is stateless and commonly used on web for IoT?|HTTP|MQTT|POP|IMAP|A
+Which of the following is a fog computing feature?|Brings computing near the edge|Replaces microcontrollers|Saves battery|Improves screen resolution|A
+Which of these sensors is best for measuring distance?|Ultrasonic Sensor|LDR|DHT11|RFID|A
+What does the  smart  in smart devices imply?|Connected and automated|Expensive|Colorful|None of these|A
+Which type of IoT system is a smart irrigation system?|Agriculture IoT|Medical IoT|Entertainment IoT|Transport IoT|A
+What is one benefit of 6LoWPAN in IoT?|IPv6 over Low Power Networks|Image compression|Bluetooth replacement|File encryption|A
+Which of the following defines the uniqueness of an IoT node?|MAC Address|Wi-Fi Name|Gateway Password|LAN IP|A
+Which of these ensures secure communication in IoT?|TLS|HTML|JPG|LDR|A
+Which of these is NOT an application of IoT?|Typing tutor|Smart Meter|Smart City|Smart Healthcare|A
+Which layer of IoT architecture deals with routing and data transmission?|Network Layer|Perception Layer|Business Layer|Transport Layer|A
+Which sensor is suitable for detecting human motion?|PIR Sensor|IR Sensor|Gas Sensor|RFID Reader|A
+Which of these communication technologies is best for short-range IoT?|Bluetooth|LoRaWAN|NFC|4G|A
+Which protocol uses minimal bandwidth and is ideal for small devices?|CoAP|SMTP|FTP|SSH|A
+Which one is not a type of actuator?|Light Sensor|Relay|DC Motor|Buzzer|A
+What does a Smart Grid monitor and manage?|Electricity supply|Internet plans|Smartphones|Weather|A
+Which wireless technology supports mesh networking in IoT?|Zigbee|Bluetooth|Ethernet|NFC|A
+In which IoT layer are sensors placed?|Perception Layer|Network Layer|Data Layer|Management Layer|A
+Which of these is a power supply concern in IoT?|Battery life|Wi-Fi speed|Bluetooth range|Sensor weight|A
+Which of these IoT applications monitors air pollution levels?|Smart Environment|Smart Farming|Smart Industry|Smart Grid|A
+Which technology is helpful in contactless payments in IoT?|NFC|Zigbee|Ethernet|RFID Tags|A
+What is the use of the  Things  in Internet of Things?|Collect and send data|Transmit sound|Produce electricity|Play games|A
+Which of the following is NOT a benefit of IoT?|Slower automation|Remote monitoring|Data-driven insights|Efficient resource use|A
+Which cloud platform is by Microsoft for IoT?|Azure IoT|AWS IoT|IBM IoT|Google IoT|A
+Which protocol is more reliable but heavier in IoT?|HTTP|MQTT|CoAP|Bluetooth|A
+What does latency refer to in IoT?|Delay in data transfer|Internet plan|Device size|Wi-Fi signal range|A
+Which of these is a physical device in IoT?|Sensor|Data Packet|Protocol|Bandwidth|A
+Which sensor is used for measuring light intensity?|LDR|PIR|IR|Thermistor|A
+Which of these is NOT a feature of smart transportation using IoT?|Manual road crossing|Vehicle tracking|Traffic alerts|Automatic tolls|A
+Which of these helps with unique tracking of packages?|RFID|LED|IR Sensor|Zigbee|A
+Which is an example of smart home automation?|Smart Lights|Television only|Fan regulator|TV remote|A
+What does the term  ubiquitous  mean in IoT?|Available everywhere|Expensive|Battery powered|Automatic only|A
+Which of these stores firmware in IoT devices?|EEPROM|RAM|Cache|Register|A
+Which of these defines a rule engine in IoT platforms?|Logic processing component|Storage|Actuator|Gateway|A
+Which of the following is NOT used in smart farming?|Joystick|Soil sensor|Moisture sensor|Drones|A
+Which sensor is used to detect presence of gas?|MQ-2|LDR|PIR|Ultrasonic|A
+Which of the following is true about IoT gateways?|Acts as middle layer|Only stores data|Controls sensors|Detects movement|A
+Which communication model is most reliable in real-time control?|Device-to-Device|Device-to-Cloud|Cloud-to-Cloud|Email|A
+What does  interoperability  mean in IoT context?|Devices can work together|High price|No cloud support|Manual config only|A
+Which unit converts energy and performs physical action?|Actuator|Sensor|Microchip|Transistor|A
+Which protocol is suitable for sending commands to actuators?|MQTT|FTP|SMTP|POP|A
+Which of these platforms provides open-source IoT support?|ThingSpeak|Windows 11|Outlook|Photoshop|A
+What does firmware do in an IoT device?|Controls hardware|Displays UI|Enhances video|Loads image|A
+Which tech uses electromagnetic fields for object detection?|RFID|Wi-Fi|GPS|Bluetooth|A
+Which is the top layer of the IoT architecture?|Application/Business Layer|Network Layer|Physical Layer|Sensor Layer|A
+Which of these is NOT a feature of cloud computing in IoT?|Gaming|Data Storage|Analytics|Scalability|A
+Which part of the IoT system provides intelligence and decisions?|Cloud / AI / Business Logic|Battery|Motor|Sensor|A

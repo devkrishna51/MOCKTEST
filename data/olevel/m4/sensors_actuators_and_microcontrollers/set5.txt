@@ -1,0 +1,50 @@
+What is the primary function of a sensor in an IoT system?|To process data|To display data|To detect physical changes|To control devices|C
+Which of the following is an example of an actuator?|Temperature sensor|LDR|DC motor|Thermistor|C
+Which microcontroller is commonly used in Arduino boards?|ATmega328|Intel 8051|PIC16F877A|STM32F4|A
+What does an accelerometer measure?|Temperature|Humidity|Motion and tilt|Sound|C
+Which component converts electrical signal into physical movement?|Sensor|Transducer|Actuator|Amplifier|C
+Which sensor is used to detect light intensity?|PIR sensor|LDR|Ultrasonic sensor|IR sensor|B
+Which of the following is a digital sensor?|Thermistor|LDR|Ultrasonic sensor|RTD|C
+Microcontrollers are mainly used for?|Data storage|High-speed processing|Embedded control tasks|Internet browsing|C
+Which protocol is commonly used for communication between microcontroller and sensor?|HTTP|UART|SMTP|FTP|B
+An actuator in a smart home could be?|Light bulb|Smoke detector|Thermometer|Humidity sensor|A
+Which sensor is used in fire detection systems?|IR sensor|Gas sensor|Flame sensor|Proximity sensor|C
+Which microcontroller family is used in ARM-based boards?|AVR|PIC|STM32|Intel|C
+The input device in an embedded system is usually a?|Relay|Sensor|Motor|LCD|B
+Output of a temperature sensor is typically?|Motion|Light|Analog voltage|Humidity|C
+Which component controls the functioning of an embedded system?|Sensor|Actuator|Microcontroller|Relay|C
+What is PWM in context of microcontrollers?|Pulse Width Modulation|Power With Motor|Programmable Wiring Model|Passive Wave Method|A
+The DHT11 sensor measures?|Pressure and Humidity|Temperature and Humidity|Motion and Light|Sound and Gas|B
+Which of the following is not a type of sensor?|PIR|LDR|GPS|LCD|D
+An actuator receives signal from?|User input|Sensor|Microcontroller|Wi-Fi|C
+A servo motor is commonly used as?|Sensor|Display|Actuator|Power supply|C
+Which of the following is a feature of microcontrollers?|Large memory|Low power consumption|GPU support|Multitasking OS|B
+IR sensor is used to detect?|Humidity|Light intensity|Proximity|Gas|C
+Gas sensors can detect?|CO2|UV rays|Sound|Speed|A
+What is the role of ADC in microcontrollers?|Convert digital to analog|Amplify input|Convert analog to digital|Connect to internet|C
+Actuators are used to?|Monitor environment|Store data|Convert signal to action|Transmit data|C
+Which one is an analog sensor?|LDR|Ultrasonic|IR digital|RFID|A
+The most basic microcontroller contains?|CPU, RAM, I/O ports|GPU, ROM, USB|Hard disk, Ethernet, BIOS|Monitor, Keyboard, RAM|A
+Relay is an example of?|Sensor|Actuator|Microcontroller|Transistor|B
+A microcontroller interacts with sensors and actuators using?|Operating system|Embedded code|Cloud software|Browsers|B
+Which pin of Arduino Uno is used for analog input?|D13|A0|TX|GND|B
+Which component receives digital signal and performs mechanical operation?|Sensor|Microcontroller|Actuator|Memory|C
+Which of the following measures humidity?|PIR|DHT11|IR sensor|Gas sensor|B
+Which is not a characteristic of microcontrollers?|Embedded|Low power|Real-time OS|High graphical output|D
+Which sensor is suitable for measuring water level?|Ultrasonic sensor|LDR|PIR|IR|A
+A PIR sensor is used to detect?|Sound|Light|Motion|Pressure|C
+Which of these is used to drive high power loads using microcontrollers?|Relay|Resistor|Diode|Sensor|A
+What does the term  embedded  imply in embedded systems?|Internet-based|Graphical|Hardware-software integration|Cloud-only|C
+A transducer converts?|Mechanical to digital|One form of energy to another|Data to power|Signal to display|B
+ESP32 is an example of?|Sensor|Actuator|Wi-Fi Module with microcontroller|Motor driver|C
+Which sensor is used in GPS devices?|Humidity|Positioning|Light|IR|B
+What is the output of a digital sensor?|Continuous signal|No signal|Discrete signal|Noise|C
+Actuators are responsible for?|Sensing the environment|Processing data|Taking action|Storing data|C
+Which sensor can be used to avoid obstacles in robots?|Gas sensor|Ultrasonic sensor|LDR|Thermal sensor|B
+What is the use of a gyroscope in a drone?|Sound detection|Speed control|Orientation sensing|Temperature control|C
+Which sensor is best for measuring distance without contact?|PIR|Ultrasonic|Touch|Thermistor|B
+Which of the following is an embedded development board?|Raspberry Pi|ATX Motherboard|Graphics Card|Router|A
+Analog input pins on Arduino Uno are labeled as?|D0 to D13|A0 to A5|PWM0 to PWM5|U0 to U5|B
+What is the role of a microcontroller in automation?|Data analysis|Decision making & control|Only display output|Only take input|B
+Which sensor can detect motion using infrared?|Ultrasonic|PIR|DHT11|Thermistor|B
+Which sensor works based on ultrasonic waves?|LDR|IR|Ultrasonic sensor|DHT22|C

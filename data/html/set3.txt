@@ -1,0 +1,51 @@
+What does HTML stand for?|Hyper Trainer Marking Language|Hyper Text Markup Language|Hyper Text Marketing Language|Hyperlink Text Mark Language|B
+Which tag is used to create a hyperlink in HTML?|<a>|<link>|<href>|<hyper>|A
+Which HTML tag is used to insert an image?|<img>|<image>|<src>|<pic>|A
+Which attribute is used to provide the image path in <img>?|href|alt|src|path|C
+What is the correct HTML element for inserting a line break?|<br>|<break>|<lb>|<line>|A
+Which tag makes text bold in HTML?|<b>|<strong>|<bold>|Both A and B|D
+What is the function of the <title> tag?|Sets document title|Adds main heading|Links CSS|None|A
+Where is the correct place to insert a CSS link?|Inside <head>|After <body>|Before <html>|Anywhere|A
+Which doctype is correct for HTML5?|<!DOCTYPE html>|<!DOCTYPE HTML PUBLIC>|<!HTML5>|<doctype html5>|A
+Which tag is used for unordered lists?|<ul>|<ol>|<li>|<list>|A
+Which tag defines a table row?|<tr>|<td>|<table>|<th>|A
+What does <td> define?|Table data|Table header|Table row|Title|A
+Which input type defines a slider in HTML5?|range|slider|scroll|bar|A
+How to make a checkbox?|<input type="check">|<input type="checkbox">|<checkbox>|<input checkbox>|B
+What is the correct syntax for a comment in HTML?|<!-- Comment -->|// Comment|/* Comment */|# Comment|A
+Which tag represents emphasized text?|<em>|<i>|<b>|<mark>|A
+What is the purpose of the alt attribute in <img>?|Alternate text|Image link|Tooltip|URL|A
+How to open a link in new tab?|target="_blank"|target="_newtab"|open="new"|blank="true"|A
+What is the default display of <div>?|block|inline|none|grid|A
+Which element is used for short quotations?|<q>|<blockquote>|<quote>|<shortquote>|A
+Which element is semantic?|<article>|<div>|<span>|<font>|A
+What does the <canvas> tag do?|Draw graphics|Store data|Display images|Play video|A
+Which tag embeds a video?|<video>|<media>|<movie>|<vid>|A
+How to create a dropdown?|<select>|<input type="dropdown">|<optionbox>|<list>|A
+Which tag adds metadata to HTML?|<meta>|<data>|<link>|<info>|A
+HTML entities start with?|&|%|$|@|A
+Which tag is used for a progress bar?|<progress>|<bar>|<meter>|<loading>|A
+What is <noscript> tag used for?|Fallback when JS is disabled|Add JS code|Hide content|None|A
+Which tag is used to define navigation links?|<nav>|<menu>|<list>|<navigation>|A
+<mark> tag is used for?|Highlighting text|Bold text|Italic text|None|A
+How many heading levels in HTML?|6|3|5|4|A
+Which tag is used for main content?|<main>|<content>|<body>|<section>|A
+Which tag is used to group inline elements?|<span>|<div>|<group>|<inline>|A
+Which tag defines a caption for a table?|<caption>|<title>|<head>|<summary>|A
+What is the purpose of <fieldset>?|Group form elements|Add field|Add border|None|A
+Which tag represents contact info?|<address>|<location>|<contact>|<info>|A
+HTML uses which scripting language?|JavaScript|PHP|Python|Ruby|A
+What does <abbr> stand for?|Abbreviation|Abstract|About|Absolute|A
+Which is not a valid HTML tag?|<footer>|<aside>|<article>|<background>|D
+What is <iframe> used for?|Embed another page|Frame layout|Audio|None|A
+Which tag is used for audio files?|<audio>|<sound>|<media>|<song>|A
+What is role of <meta charset="UTF-8">?|Encoding|Language|Layout|Theme|A
+What does <label> do?|Label for input|Add name|Submit form|None|A
+What is the output of <sup>2</sup>?|²|2|2nd|square|A
+Which element is used for multiline text input?|<textarea>|<input type="text">|<input type="box">|<text>|A
+<time> tag is used for?|Time values|Set clock|Run timer|None|A
+Which tag defines definition list?|<dl>|<list>|<ul>|<def>|A
+Which element is not supported in HTML5?|<font>|<section>|<nav>|<header>|A
+Which attribute disables an input field?|disabled|readonly|hidden|none|A
+What does <details> do?|Toggle content|Add summary|Show alert|None|A
+Which tag is used for headings in table?|<th>|<td>|<tr>|<thead>|A

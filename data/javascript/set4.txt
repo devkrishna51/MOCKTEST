@@ -1,0 +1,48 @@
+What will typeof null return in JavaScript?|object|null|undefined|number|A
+Which keyword declares a block-scoped variable?|var|let|scope|define|B
+What is the output of [] + []?|0|[]|""|NaN|C
+What is the result of true + false?|true|false|1|NaN|C
+What does NaN === NaN return?|true|false|Error|undefined|B
+What is the output of typeof NaN?|NaN|object|number|string|C
+Which function converts string to number?|parseInt()|toString()|toFixed()|split()|A
+What is the output of typeof undefined?|null|undefined|object|string|B
+Which operator checks both value and type?|==|!=|===|<>|C
+Which keyword is used to stop setInterval?|stopInterval|pauseInterval|clearInterval|reset|C
+What will "5" - 2 return?|3|52|"3"|NaN|A
+What is the value of typeof []?|object|array|undefined|function|A
+Which method adds an element to end of array?|add()|insert()|push()|append()|C
+What does Array.isArray([]) return?|true|false|undefined|array|A
+Which loop is guaranteed to execute at least once?|for|while|do...while|foreach|C
+What does setTimeout(fn, 0) do?|Runs instantly|Blocks script|Adds fn to event queue|Throws error|C
+Which object represents browser window?|window|browser|document|navigator|A
+What is this in global scope?|undefined|window|document|null|B
+Which method selects an element by id?|getElementByClass()|querySelector()|getElementById()|selectId()|C
+What is the output of typeof function() {}?|object|function|string|method|B
+What is returned by [].length?|undefined|NaN|0|null|C
+Which function converts object to JSON string?|stringify()|parse()|JSON.parse()|JSON.stringify()|D
+Which symbol creates a template literal?|""|''|``|~~|C
+What is a closure in JS?|Loop inside loop|Function with local memory|HTML element|Promise|B
+What is the scope of a var declared inside a function?|Block|Global|Function|Module|C
+Which function merges arrays in JS?|join()|merge()|concat()|combine()|C
+What does splice() do in array?|Reverses it|Removes/adds items|Filters it|Sorts it|B
+What is the result of "2" + 2 + 2?|222|6|NaN|Error|A
+Which keyword creates a constant variable?|constant|const|final|fix|B
+What is the output of typeof Symbol()?|object|symbol|string|function|B
+Which method is used to delay execution?|wait()|pause()|setTimeout()|hold()|C
+Which keyword is used in try-catch block?|except|error|catch|fail|C
+Which function converts string to float?|parseFloat()|parseInt()|toFixed()|toFloat()|A
+What is document in JS?|Window object|HTML Object|DOM interface|Null|C
+Which function is used to add element to start of array?|unshift()|shift()|push()|pop()|A
+What will "5" * "2" return?|10|"52"|NaN|Error|A
+Which function removes last item of array?|shift()|pop()|splice()|remove()|B
+Which operator is used for exponentiation?|^|**|exp|power|B
+What is output of Boolean("")?|true|false|""|undefined|B
+What is Promise.resolve(5)?|Rejected promise|Resolved promise|Pending|Error|B
+Which method executes function for each array item?|loop()|map()|each()|forEach()|D
+Which is not a primitive in JS?|string|number|object|boolean|C
+Which function is used to delay code in async way?|await|setInterval|setTimeout|callback|C
+What does await work inside?|normal function|arrow function|async function|any function|C
+Which method parses a JSON string?|parse()|stringify()|decode()|eval()|A
+What is typeof Infinity?|undefined|number|string|NaN|B
+What is !!value used for?|Convert to integer|Negate value|Convert to Boolean|Check length|C
+What is returned by typeof undefinedVar if variable is not declared?|undefined|null|ReferenceError|string|D

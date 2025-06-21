@@ -14,10 +14,10 @@
     <a href="#" class="logo" aria-label="KrishnaDev Home"> MOCKTEST</a>
     <ul id="nav-links">
       <li><a href="#hero" class="active">Home</a></li>
+      <li><a href="#skills">Mocktest</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#projects">Notes</a></li>
+      <li><a href="#contact">Contact us</a></li>
     </ul>
     <div id="hamburger" aria-label="Menu" role="button" tabindex="0" aria-expanded="false">
       <span></span>
@@ -45,24 +45,8 @@
     </div>
   </header>
 
-  <section id="about" aria-labelledby="about-title">
-    <h2 id="about-title">About Developer</h2>
-    <div class="content-wrapper">
-      <div class="profile-pic" aria-hidden="true">
-       <img src="{{ url_for('static', filename='photos/myprofile.jpg') }}" alt="Sample" loading="lazy" />
-      </div>
-      <div class="about-text">
-        <p>
-          I’m Krishna Seth, a seasoned full stack developer with experience in C programming, artificial intelligence, and building scalable, secure applications.
-          Passionate about creating educational platforms, AI assistants, and robust file management systems with an emphasis on security and user experience.
-          I believe in clean, efficient code and beautiful, intuitive interfaces.
-        </p>
-      </div>
-    </div>
-  </section>
-
 <section id="skills" aria-labelledby="skills-title">
-  <h2 id="skills-title">Skills</h2>
+  <h2 id="skills-title">Choose Subject</h2>
   <div class="skills-grid" role="list">
 
     <a href="{{ url_for('subject_page', subject_name='iot') }}">
@@ -100,15 +84,32 @@
       </div>
     </a>
 
-    <a href="{{ url_for('subject_page', subject_name='m1') }}">
-      <div class="skill-card" role="listitem" tabindex="0" aria-label="M1 Skill">
-        <i class="fab fa-wordpress"></i>
-        <span>M1</span>
-      </div>
-    </a>
+   <a href="{{ url_for('olevel_home') }}">
+  <div class="skill-card" role="listitem" tabindex="0" aria-label="O-Level Skill">
+    <i class="fas fa-layer-group"></i>
+    <span>O-Level</span>
+  </div>
+</a>
+
 
   </div>
 </section>
+
+  <section id="about" aria-labelledby="about-title">
+    <h2 id="about-title">About Developer</h2>
+    <div class="content-wrapper">
+      <div class="profile-pic" aria-hidden="true">
+       <img src="{{ url_for('static', filename='photos/myprofile.jpg') }}" alt="Sample" loading="lazy" />
+      </div>
+      <div class="about-text">
+        <p>
+          I’m Krishna Seth, a seasoned full stack developer with experience in C programming, artificial intelligence, and building scalable, secure applications.
+          Passionate about creating educational platforms, AI assistants, and robust file management systems with an emphasis on security and user experience.
+          I believe in clean, efficient code and beautiful, intuitive interfaces.
+        </p>
+      </div>
+    </div>
+  </section>
 
 
   <section id="projects" aria-labelledby="projects-title">
@@ -143,7 +144,7 @@
 
   <section id="contact" aria-labelledby="contact-title">
     <h2 id="contact-title">Contact Me</h2>
-    <h3> Email - krishnsethm762@gmail.com <br> Add - CAINA's HEAD QUATERS , Varanasi ,<br> U.P. INDIA - 221001 </h3>
+    <h3> Email - ks3256265@gmail.com <br> Add - CAINA's HEAD QUATERS , Varanasi ,<br> U.P. INDIA - 221001 </h3>
     <div class="contact-links" role="list">
       <a href="#" class="contact-link" role="listitem" aria-label="Email Krishna Seth"><i class="fas fa-envelope"></i></a>
       <a href="#" target="_blank" rel="noopener noreferrer" class="contact-link" role="listitem" aria-label="LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>

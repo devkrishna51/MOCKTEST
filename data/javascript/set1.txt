@@ -1,0 +1,46 @@
+What is the default value of an uninitialized variable in JavaScript?|null|undefined|0|NaN|B
+Which method converts a number to string?|toString()|parseInt()|Stringify()|join()|A
+Which of these is NOT a valid loop in JavaScript?|for|while|foreach|loop|D
+Which method adds elements to beginning of an array?|push()|unshift()|shift()|append()|B
+What is the correct syntax to bind this?|bind(this)|this.bind()|bind = this|this = bind|A
+Which method returns part of an array?|slice()|split()|splice()|extract()|A
+Which method removes elements from array?|slice()|splice()|trim()|cut()|B
+Which method turns a string into array?|split()|join()|slice()|arrayify()|A
+Which function executes after every given milliseconds?|setInterval()|setTimeout()|setEvery()|repeat()|A
+What is the output of "abc".charAt(1)?|a|b|c|undefined|B
+Which method checks if array includes an item?|has()|includes()|exist()|check()|B
+How can you prevent a form from submitting?|event.preventDefault()|event.stop()|form.pause()|form.prevent()|A
+Which method returns the index of an item in array?|index()|find()|indexOf()|search()|C
+Which method returns true if any condition matches?|all()|some()|any()|match()|B
+Which method returns true only if all match?|some()|all()|every()|matchAll()|C
+What is event.target?|Element that has event|HTML body|JS file|Window object|A
+What does Object.keys(obj) return?|object|string|array of keys|null|C
+What does Object.values(obj) return?|array of values|keys only|string|null|A
+Which is correct way to define a class in ES6?|class MyClass{}|function class(){}|Class:MyClass|new class MyClass{}|A
+How to create object from class?|className.create()|className()|new className()|object(className)|C
+Which keyword is used to inherit class?|extends|inherits|super|parent|A
+Which keyword is used to call parent class constructor?|parent|super|extends|base|B
+What will "hello".toUpperCase() return?|HELLO|Hello|hello|Error|A
+What will "TEST".toLowerCase() return?|TEST|test|Test|error|B
+What is the use of trim()?|Remove all spaces|Remove trailing/leading spaces|Convert to number|Format string|B
+What is Number("abc")?|NaN|Error|abc|null|A
+Which of the following is falsy?|0|""|false|All of the above|D
+What does Array.from("abc") return?|["abc"]|['a','b','c']|abc|undefined|B
+Which operator is used to spread elements?|...|**|///|>>|A
+Which operator copies only shallow properties?|spread (...)|clone()|assign()|All of these|A
+Which keyword declares variable accessible in full block?|var|let|block|scope|B
+Which value is returned when accessing non-existent object key?|null|undefined|false|error|B
+Which event triggers when input is changed and loses focus?|keydown|keyup|change|input|C
+Which event triggers on each keystroke?|keydown|keypress|keyup|input|D
+What is the result of !!"abc"?|true|false|abc|NaN|A
+Which function makes HTTP request?|fetch()|httpGet()|send()|XML()|A
+Which method chains async calls more cleanly?|.then()|await|callback|both A and B|D
+Which keyword defines a promise-based async function?|async|await|then|delay|A
+How to handle error in promise?|.fail()|.catch()|try-catch|.error()|B
+Which keyword pauses an async function until Promise resolves?|stop|wait|await|pause|C
+Which method is used to merge objects in JS?|merge()|combine()|Object.assign()|add()|C
+What does new Date().getFullYear() return?|Time|Month|Year|Day|C
+Which built-in object detects browser info?|navigator|browser|system|window|A
+What is localStorage used for?|Server storage|Database|Client-side key-value|RAM|C
+What does JSON.parse() do?|Converts JSON to object|Converts object to string|Parses string to number|None|A
+What does JSON.stringify() do?|Object → string|String → object|String → array|None|A

@@ -1,0 +1,50 @@
+What is the output of typeof NaN?|number|string|NaN|undefined|A
+What will console.log(0.1 + 0.2 === 0.3) return?|true|false|NaN|undefined|B
+typeof typeof 1 evaluates to?|number|string|object|undefined|B
+What is the result of [] + []?|[]|""|undefined|TypeError|B
+Boolean("") returns?|true|false|undefined|null|B
+Which of the following is falsy?|0|""|"false"|[]|B
+What does parseInt("08") return?|8|0|NaN|null|A
+How is "2" + 2 evaluated?|22|4|NaN|undefined|A
+What is the output of "5" - 3?|2|53|NaN|undefined|A
+Which of these is not a JavaScript data type?|Number|String|Character|Boolean|C
+typeof null returns?|object|null|undefined|NaN|A
+Which statement is true about let?|Block scoped|Function scoped|Global scoped|None|A
+What will be result of typeof NaN === "number"?|true|false|undefined|NaN|A
+What will '5' == 5 return?|true|false|error|undefined|A
+What will '5' === 5 return?|true|false|error|undefined|B
+What does isNaN("hello") return?|true|false|NaN|undefined|A
+Which method converts JSON to object?|JSON.parse()|JSON.stringify()|toObject()|parseJSON()|A
+What does [].constructor === Array return?|true|false|undefined|error|A
+What is the result of !!false?|false|true|NaN|undefined|A
+What does typeof [] return?|object|array|list|undefined|A
+Which of the following is an Immediately Invoked Function?|(() => {})()|function(){}|()=>{}|function call(){}|A
+Which symbol is used for strict equality?|==|=|===|!==|C
+console.log(2 + '2') will return?|4|22|NaN|undefined|B
+What is the output of null == undefined?|true|false|NaN|error|A
+Which value is not loosely equal to false?|""|0|null|true|D
+typeof function(){} is?|function|object|string|undefined|A
+How to check if variable is array?|Array.isArray(var)|var instanceof Array|typeof var == "array"|A & B|D
+What does setTimeout return?|timer ID|undefined|function|object|A
+typeof Infinity?|number|Infinity|undefined|NaN|A
+Is '0' == false true or false?|true|false|NaN|undefined|A
+What will be output: '20' - '5' + '2'?|152|17|202|NaN|A
+What is output of 3 > 2 > 1?|true|false|NaN|undefined|B
+What is result of typeof undefined?|undefined|null|object|string|A
+What is typeof Symbol()?|symbol|object|string|undefined|A
+Which one is not a primitive?|Number|String|Object|Boolean|C
+What does typeof NaN === typeof "hello" return?|true|false|error|undefined|A
+What will typeof (new Date()) return?|object|date|string|function|A
+console.log([] == false)?|true|false|error|undefined|A
+console.log(null + 1)?|1|null|NaN|undefined|A
+What is value of 1 + "2" + 3?|123|6|33|NaN|A
+What does +"2" return?|2|"2"|NaN|undefined|A
+typeof new Function() is?|function|object|string|undefined|A
+let a = (1,2,3); What is a?|1|2|3|undefined|C
+How to deeply compare two objects?|===|JSON.stringify|Object.is|Custom function|D
+What will be output of typeof true + false?|string|boolean|number|object|A
+What is typeof null in JS?|object|null|undefined|string|A
+What does [1] + 1 return?|11|2|NaN|undefined|A
+console.log("b" + "a" + + "a" + "a") outputs?|baNaNa|banana|error|banaNa|A
+What is default return type of a function with no return?|undefined|null|0|false|A
+console.log([] == ![]) returns?|true|false|error|NaN|A

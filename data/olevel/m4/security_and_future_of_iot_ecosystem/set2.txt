@@ -1,0 +1,50 @@
+Which of the following is a major security concern in IoT?|Scalability|Latency|Data Breach|Connectivity|C  
+What is the full form of DDoS?|Distributed Denial of Service|Dynamic Domain of Security|Data Delivery on Service|Distributed Data on Server|A  
+What does encryption ensure in IoT communication?|Speed|Security|Low Power|Bandwidth|B  
+Which key is used in asymmetric encryption?|Private key|Session key|Secret key|Shared key|A  
+Which of these is an example of a physical security threat to IoT devices?|Virus|Worm|Device Theft|Phishing|C  
+Which of the following is a future application of IoT?|Smart Home|Remote Surgery|Cloud Storage|Gaming Console|B  
+Which one is used to secure data transmission in IoT?|Bluetooth|Wi-Fi|SSL/TLS|Zigbee|C  
+Which of the following is a type of malware attack?|Sensor breach|Worm|Firewall|VPN|B  
+Which technique is used to prevent unauthorized access?|Encryption|Open network|Public IP|Default Passwords|A  
+What does 'authentication' mean in IoT security?|Storing data|Validating users|Compressing data|Reducing power|B  
+Which of the following is a legal challenge in IoT?|Patent issues|Sensor range|RAM size|Power loss|A  
+Which concept describes controlling access in IoT systems?|Access Control|Routing|Signal Processing|Frequency Modulation|A  
+Which of the following ensures only authorized users can access data?|Backup|Access Control|Overclocking|Data Replication|B  
+What is one major privacy concern in IoT devices?|User Interface|Design|Data Leakage|Connectivity|C  
+Which of these is a common authentication method?|Captcha|Biometric|Firewall|Router|B  
+Which future tech may enhance IoT security?|Blockchain|GPS|OLED|USB|A  
+What can be used to detect intrusion in IoT systems?|Firewall|Intrusion Detection System|Load Balancer|Proxy Server|B  
+Which organization regulates IoT device compliance in India?|TRAI|ISRO|DOT|MeitY|D  
+What is the role of firewall in IoT security?|Speed up network|Filter unauthorized traffic|Compress files|Monitor sensors|B  
+Which one is a software-based security feature in IoT?|Antivirus|Power backup|EEPROM|Microcontroller|A  
+Why is software update important in IoT security?|Increase size|Add sensors|Fix vulnerabilities|Remove Wi-Fi|C  
+Which of the following can protect IoT data in transit?|Zigbee|Bluetooth|TLS|Ethernet|C  
+Which attack floods the device with fake traffic?|Phishing|Malware|DDoS|Spoofing|C  
+What is the goal of future IoT standardization?|Legal issues|Data theft|Interoperability|Bandwidth saving|C  
+Which of these is a biometric authentication?|Password|PIN|Fingerprint|Token|C  
+Which of the following is an ethical concern in IoT?|Usability|Responsiveness|Surveillance|Cost|C  
+What is spoofing in IoT?|Enhancing signal|Blocking connection|Masquerading identity|Encrypting data|C  
+What helps in protecting user privacy?|Data Sharing|Data Selling|Data Encryption|Data Logging|C  
+Which one is NOT a feature of secure IoT system?|Authentication|Authorization|Encryption|Open Ports|D  
+Which type of attack tricks user to give personal data?|DDoS|Phishing|MITM|Spoofing|B  
+Which is a future scope of IoT in agriculture?|Irrigation|Tractor|Smart Farming|Manual Ploughing|C  
+What is the function of VPN in IoT?|Provide cloud|Extend battery|Secure communication|Reduce RAM|C  
+Which IoT attack monitors communication secretly?|Eavesdropping|Spoofing|Jamming|Phishing|A  
+Which is a secure network protocol for IoT?|HTTP|FTP|MQTT with TLS|SMTP|C  
+Which component stores sensitive data on devices?|Firewall|EEPROM|CPU|Sensor|B  
+What is one method to ensure firmware integrity?|Disabling updates|Open access|Code signing|Weak passwords|C  
+Which future technology will empower secure transactions?|Blockchain|Excel|USB|RFID|A  
+Which method encrypts and decrypts with the same key?|Symmetric encryption|Asymmetric encryption|Public-key|Biometric|A  
+Which of the following is used in secure boot process?|Password|Certificate|Sensor|Database|B  
+Which is a challenge in IoT security?|Low cost|Wide adoption|Scalability|Authentication|D  
+Which protocol helps in device identity management?|IPv6|HTTP|LDAP|Z-Wave|C  
+Which security principle restricts data to intended users?|Integrity|Confidentiality|Availability|Redundancy|B  
+Which of these is used to prevent firmware tampering?|Access Control|Firmware Hashing|Jamming|Phishing|B  
+Why default passwords are dangerous in IoT devices?|Easy to remember|Enhance performance|Cause vulnerability|Save time|C  
+Which standard is used for security in Wi-Fi?|WPA2|HTTP|TCP|MQTT|A  
+Which security layer ensures devices are physically protected?|Hardware Security|Application Security|Network Security|Transport Security|A  
+What is data integrity in IoT?|Data speed|Data duplication|Data accuracy|Data compression|C  
+What is the benefit of using blockchain in IoT?|Slows network|Consumes battery|Improves trust|Removes encryption|C  
+Which device acts as security gateway in IoT systems?|Actuator|Router|Modem|Firewall|D  
+What does secure firmware update protect from?|User input|Device restart|Malicious code|Battery drain|C  

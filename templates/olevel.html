@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>O-Level Subjects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <style>
+        :root {
+            --primary-blue: #2c3e50;
+            --accent-teal: #3498db;
+            --accent-orange: #e74c3c;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: var(--primary-blue);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 3rem 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+
+        .subject-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .subject-card {
+            position: relative;
+            background: var(--white);
+            border-radius: 10px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .subject-icon {
+            font-size: 3rem;
+            color: var(--accent-teal);
+            margin-bottom: 1rem;
+            transition: 0.3s ease;
+        }
+
+        .subject-card:hover .subject-icon {
+            color: var(--accent-orange);
+        }
+
+        .subject-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .stretched-link {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>O-Level Subjects</h2>
+            <p class="subtitle">Select your subject to begin your learning journey</p>
+        </header>
+
+        <div class="subject-grid">
+            <div class="subject-card">
+                <i class="subject-icon fas fa-desktop"></i>
+                <h3 class="subject-title">M1</h3>
+                <a href="{{ url_for('olevel_subject', subject='m1') }}" class="stretched-link"></a>
+            </div>
+
+            <div class="subject-card">
+                <i class="subject-icon fab fa-html5"></i>
+                <h3 class="subject-title">M2</h3>
+                <a href="{{ url_for('olevel_subject', subject='m2') }}" class="stretched-link"></a>
+            </div>
+
+            <div class="subject-card">
+                <i class="subject-icon fab fa-python"></i>
+                <h3 class="subject-title">M3</h3>
+                <a href="{{ url_for('olevel_subject', subject='m3') }}" class="stretched-link"></a>
+            </div>
+
+            <div class="subject-card">
+                <i class="subject-icon fas fa-wifi"></i>
+                <h3 class="subject-title">M4</h3>
+                <a href="{{ url_for('olevel_subject', subject='m4') }}" class="stretched-link"></a>
+            </div>
+        </div>
+    </div>
+     <script>
+        // Floating math symbols
+        document.addEventListener('DOMContentLoaded', function() {
+            const symbolsContainer = document.getElementById('floating-symbols');
+            const mathSymbols = ['∫', '∑', '∂', 'Δ', '∞', '√', '∏', '≈', '≠', '≤', '≥'];
+            
+            for(let i = 0; i < 15; i++) {
+                const symbol = document.createElement('div');
+                symbol.classList.add('math-symbol');
+                
+                const symbolText = mathSymbols[Math.floor(Math.random() * mathSymbols.length)];
+                const size = Math.random() * 2 + 1;
+                const left = Math.random() * 100;
+                const delay = Math.random() * 5;
+                const duration = Math.random() * 15 + 10;
+                
+                symbol.textContent = symbolText;
+                symbol.style.fontSize = `${size}rem`;
+                symbol.style.left = `${left}vw`;
+                symbol.style.bottom = `-${size}rem`;
+                symbol.style.animationDuration = `${duration}s`;
+                symbol.style.animationDelay = `${delay}s`;
+                
+                symbolsContainer.appendChild(symbol);
+            }
+            
+            // Simple hover effect with JavaScript
+            const cards = document.querySelectorAll('.subject-card');
+            
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-10px)';
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+   

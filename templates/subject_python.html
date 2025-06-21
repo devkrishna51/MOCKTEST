@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Quiz Sets | CodeMaster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+    <title>Python Quiz Sets</title>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
         :root {
             --primary: #3776ab;
@@ -15,12 +16,17 @@
             --success: #28a745;
             --python-yellow: #ffd43b;
             --python-blue: #3776ab;
+            --card-bg: rgba(30, 30, 30, 0.7);
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -30,6 +36,7 @@
             min-height: 100vh;
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             overflow-x: hidden;
+            line-height: 1.6;
         }
 
         .container {
@@ -37,17 +44,21 @@
             margin: 0 auto;
             padding: 2rem;
             position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         .python-logo {
-            position: absolute;
+            position: fixed;
             top: 20px;
             right: 20px;
-            width: 80px;
-            height: 80px;
+            width: clamp(60px, 8vw, 80px);
+            height: clamp(60px, 8vw, 80px);
             opacity: 0.1;
             z-index: -1;
             animation: float 6s ease-in-out infinite;
+            will-change: transform;
         }
 
         @keyframes float {
@@ -61,12 +72,12 @@
 
         header {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: clamp(1rem, 5vw, 3rem);
             position: relative;
         }
 
         h1 {
-            font-size: 3.5rem;
+            font-size: clamp(2rem, 6vw, 3.5rem);
             font-weight: 800;
             margin-bottom: 1rem;
             background: linear-gradient(90deg, var(--python-blue), var(--python-yellow));
@@ -90,7 +101,7 @@
         }
 
         h2 {
-            font-size: 1.5rem;
+            font-size: clamp(1rem, 3vw, 1.5rem);
             color: rgba(255, 255, 255, 0.8);
             font-weight: 400;
             margin-bottom: 0.5rem;
@@ -98,23 +109,26 @@
 
         .sets-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+            gap: clamp(1rem, 3vw, 2rem);
+            margin: clamp(1rem, 5vw, 3rem) 0;
+            width: 100%;
         }
 
         .set-card {
-            background: rgba(30, 30, 30, 0.7);
+            background: var(--card-bg);
             border-radius: 15px;
-            padding: 2rem;
+            padding: clamp(1rem, 3vw, 2rem);
             text-align: center;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             border: 1px solid rgba(55, 118, 171, 0.3);
             position: relative;
             overflow: hidden;
             z-index: 1;
+            will-change: transform;
         }
 
         .set-card::before {
@@ -151,7 +165,7 @@
         }
 
         .set-card h3 {
-            font-size: 1.8rem;
+            font-size: clamp(1.2rem, 4vw, 1.8rem);
             margin-bottom: 1rem;
             color: var(--python-yellow);
             font-weight: 600;
@@ -159,25 +173,30 @@
 
         .set-card p {
             color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 1.5rem;
-            font-size: 0.9rem;
+            margin-bottom: clamp(1rem, 3vw, 1.5rem);
+            font-size: clamp(0.8rem, 2vw, 0.9rem);
         }
 
         .btn {
             display: inline-block;
-            padding: 0.8rem 2rem;
+            padding: clamp(0.6rem, 2vw, 0.8rem) clamp(1.5rem, 4vw, 2rem);
             background: linear-gradient(45deg, var(--python-blue), var(--accent));
             color: white;
             border: none;
             border-radius: 50px;
-            font-size: 1rem;
+            font-size: clamp(0.9rem, 2vw, 1rem);
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            position: relative;
+         
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(55, 118, 171, 0.4);
             text-decoration: none;
+            will-change: transform;
+           
+             z-index: 10;
+             pointer-events: auto;
+             position: relative;
         }
 
         .btn::after {
@@ -209,18 +228,20 @@
         .back-btn {
             display: inline-flex;
             align-items: center;
-            padding: 0.8rem 1.5rem;
+            padding: clamp(0.6rem, 2vw, 0.8rem) clamp(1rem, 3vw, 1.5rem);
             background: rgba(255, 255, 255, 0.1);
             color: white;
             border: none;
             border-radius: 50px;
-            font-size: 1rem;
+            font-size: clamp(0.9rem, 2vw, 1rem);
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
-            margin-top: 2rem;
+            margin-top: clamp(1rem, 3vw, 2rem);
             backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            will-change: transform;
         }
 
         .back-btn:hover {
@@ -231,6 +252,8 @@
         .back-btn svg {
             margin-right: 8px;
             transition: transform 0.3s ease;
+            width: clamp(12px, 3vw, 16px);
+            height: clamp(12px, 3vw, 16px);
         }
 
         .back-btn:hover svg {
@@ -238,14 +261,15 @@
         }
 
         .snake-decoration {
-            position: absolute;
-            width: 200px;
-            height: 200px;
+            position: fixed;
+            width: clamp(100px, 25vw, 200px);
+            height: clamp(100px, 25vw, 200px);
             background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%233776ab" d="M50 0 Q75 25 50 50 Q25 75 50 100" /></svg>') no-repeat;
             background-size: contain;
             opacity: 0.1;
             z-index: -1;
             animation: slither 20s linear infinite;
+            will-change: transform;
         }
 
         .snake-decoration:nth-child(1) {
@@ -280,6 +304,7 @@
         /* 3D Card effect on hover */
         .set-card {
             perspective: 1000px;
+            transform-style: preserve-3d;
         }
 
         .set-card-inner {
@@ -296,13 +321,14 @@
 
         /* Particle animation */
         .particles {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             z-index: -2;
             overflow: hidden;
+            pointer-events: none;
         }
 
         .particle {
@@ -310,6 +336,7 @@
             background: rgba(255, 212, 59, 0.6);
             border-radius: 50%;
             animation: float-particle 15s infinite linear;
+            will-change: transform;
         }
 
         @keyframes float-particle {
@@ -329,18 +356,13 @@
             }
         }
 
-        /* Responsive design */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-            
-            .sets-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .set-card {
-                padding: 1.5rem;
+        /* Performance optimizations */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
             }
         }
 
@@ -348,9 +370,48 @@
         .python-glow {
             text-shadow: 0 0 10px rgba(55, 118, 171, 0.7), 0 0 20px rgba(55, 118, 171, 0.5);
         }
+
+        /* Loading animation */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--dark);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loader::after {
+            content: '';
+            width: 50px;
+            height: 50px;
+            border: 5px solid var(--python-blue);
+            border-top-color: var(--python-yellow);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Enhanced focus states for accessibility */
+        .btn:focus-visible, .back-btn:focus-visible {
+            outline: 2px solid var(--python-yellow);
+            outline-offset: 2px;
+        }
     </style>
 </head>
 <body>
+    <div class="loader" id="loader"></div>
+    
     <div class="particles" id="particles"></div>
     <div class="snake-decoration"></div>
     <div class="snake-decoration"></div>
@@ -358,13 +419,13 @@
     <div class="container">
         <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%233776ab' /><path fill='%23ffd43b' d='M50 25 L75 50 L50 75 L25 50 Z' /></svg>" alt="Python Logo" class="python-logo">
         
-        <header>
+        <header class="animate__animated animate__fadeIn">
             <h1 class="python-glow">Python Quiz</h1>
             <h2>Test your Python knowledge with these challenging sets</h2>
         </header>
         
         <div class="sets-container">
-            <div class="set-card">
+            <div class="set-card animate__animated animate__fadeInUp" style="--animate-delay: 0.1s">
                 <div class="set-card-inner">
                     <h3>Set 1</h3>
                     <p>Basic syntax, data types, and operations</p>
@@ -372,7 +433,7 @@
                 </div>
             </div>
             
-            <div class="set-card">
+            <div class="set-card animate__animated animate__fadeInUp" style="--animate-delay: 0.2s">
                 <div class="set-card-inner">
                     <h3>Set 2</h3>
                     <p>Control flow and functions</p>
@@ -380,7 +441,7 @@
                 </div>
             </div>
             
-            <div class="set-card">
+            <div class="set-card animate__animated animate__fadeInUp" style="--animate-delay: 0.3s">
                 <div class="set-card-inner">
                     <h3>Set 3</h3>
                     <p>Data structures and algorithms</p>
@@ -388,7 +449,7 @@
                 </div>
             </div>
             
-            <div class="set-card">
+            <div class="set-card animate__animated animate__fadeInUp" style="--animate-delay: 0.4s">
                 <div class="set-card-inner">
                     <h3>Set 4</h3>
                     <p>Object-oriented programming</p>
@@ -396,7 +457,7 @@
                 </div>
             </div>
             
-            <div class="set-card">
+            <div class="set-card animate__animated animate__fadeInUp" style="--animate-delay: 0.5s">
                 <div class="set-card-inner">
                     <h3>Set 5</h3>
                     <p>Advanced topics and Pythonic patterns</p>
@@ -405,7 +466,7 @@
             </div>
         </div>
         
-        <a href="{{ url_for('index') }}" class="back-btn">
+        <a href="{{ url_for('index') }}" class="back-btn animate__animated animate__fadeIn" style="--animate-delay: 0.6s">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="19" y1="12" x2="5" y2="12"></line>
                 <polyline points="12 19 5 12 12 5"></polyline>
@@ -415,10 +476,22 @@
     </div>
 
     <script>
-        // Create floating particles
+        // Enhanced loading experience
         document.addEventListener('DOMContentLoaded', function() {
+            // Simulate loading (remove in production)
+            setTimeout(() => {
+                document.getElementById('loader').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('loader').style.display = 'none';
+                }, 500);
+            }, 800);
+            
+            // Create optimized floating particles
             const particlesContainer = document.getElementById('particles');
-            const particleCount = 30;
+            const particleCount = Math.min(30, Math.floor(window.innerWidth / 20));
+            
+            // Use document fragment for better performance
+            const fragment = document.createDocumentFragment();
             
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
@@ -442,22 +515,79 @@
                 // Random opacity
                 particle.style.opacity = Math.random() * 0.5 + 0.1;
                 
-                particlesContainer.appendChild(particle);
+                fragment.appendChild(particle);
             }
             
-            // Add 3D tilt effect to cards on mouse move
+            particlesContainer.appendChild(fragment);
+            
+            // Enhanced 3D tilt effect with performance optimizations
             const cards = document.querySelectorAll('.set-card');
+            let lastTime = 0;
+            const throttleDelay = 16; // ~60fps
+            
+            const handleCardTilt = (e, card) => {
+                const now = Date.now();
+                if (now - lastTime < throttleDelay) return;
+                lastTime = now;
+                
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const xAxis = (centerX - x) / 20;
+                const yAxis = (centerY - y) / 20;
+                
+                card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg) translateY(-10px)`;
+            };
             
             cards.forEach(card => {
                 card.addEventListener('mousemove', (e) => {
-                    const xAxis = (window.innerWidth / 2 - e.pageX) / 20;
-                    const yAxis = (window.innerHeight / 2 - e.pageY) / 20;
-                    card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg) translateY(-10px)`;
+                    handleCardTilt(e, card);
                 });
                 
                 card.addEventListener('mouseleave', () => {
                     card.style.transform = 'translateY(-10px) scale(1.03)';
                 });
+            });
+            
+            // Responsive adjustments
+            function handleResize() {
+                // Adjust particle count on resize
+                const currentParticles = particlesContainer.querySelectorAll('.particle').length;
+                const desiredCount = Math.min(30, Math.floor(window.innerWidth / 20));
+                
+                if (currentParticles !== desiredCount) {
+                    particlesContainer.innerHTML = '';
+                    const fragment = document.createDocumentFragment();
+                    
+                    for (let i = 0; i < desiredCount; i++) {
+                        const particle = document.createElement('div');
+                        particle.classList.add('particle');
+                        const size = Math.random() * 4 + 2;
+                        particle.style.width = `${size}px`;
+                        particle.style.height = `${size}px`;
+                        particle.style.left = `${Math.random() * 100}vw`;
+                        particle.style.top = `${Math.random() * 100}vh`;
+                        const duration = Math.random() * 10 + 10;
+                        const delay = Math.random() * -20;
+                        particle.style.animationDuration = `${duration}s`;
+                        particle.style.animationDelay = `${delay}s`;
+                        particle.style.opacity = Math.random() * 0.5 + 0.1;
+                        fragment.appendChild(particle);
+                    }
+                    
+                    particlesContainer.appendChild(fragment);
+                }
+            }
+            
+            // Debounce resize handler
+            let resizeTimeout;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(handleResize, 200);
             });
         });
     </script>

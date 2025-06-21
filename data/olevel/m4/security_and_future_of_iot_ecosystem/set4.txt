@@ -1,0 +1,53 @@
+Which is a major security concern in IoT devices?|High cost|Lack of internet|Weak authentication|Large size|C
+Which protocol is often vulnerable in IoT networks?|HTTPS|MQTT|SSH|SFTP|B
+What type of attack targets IoT by overwhelming network traffic?|Man-in-the-middle|Phishing|DDoS|SQL injection|C
+Which technology enhances IoT device security by ensuring identity?|NFC|Biometrics|OLED|PWM|B
+What does encryption provide in IoT communication?|Power saving|Speed boost|Data confidentiality|Device management|C
+What is the full form of DDoS?|Distributed Denial of Service|Data Distribution over Systems|Digital Denial of Service|Data Deletion over Server|A
+Firmware updates in IoT are important for?|Charging battery|Improving size|Fixing vulnerabilities|Adding sensors|C
+Which of the following is used for securing IoT data in transit?|Plain text|Encryption|Tokenization|No protection|B
+Which of the following can help in protecting IoT networks from external attacks?|Gateway|Firewall|Sensor|LED|B
+Which of these can uniquely identify an IoT device?|MAC address|User name|Operating system|Keyboard|A
+
+IoT botnets are created using?|Firewalls|Secured nodes|Compromised devices|Encrypted data|C
+Security in IoT must cover?|Only hardware|Only software|Both hardware and software|Only sensors|C
+In IoT, device authentication means?|Device location|Device design|Verifying identity|Device price|C
+The future of IoT heavily depends on?|Wires|Manual processing|AI and machine learning|Disk drives|C
+Which of the following is a future trend in IoT?|Dial-up modem|Autonomous systems|Manual configuration|Analog meters|B
+Which of the following is a privacy risk in IoT?|Better control|Encrypted communication|Data leakage|User authentication|C
+Which algorithm is used in secure communication for IoT?|RSA|FIFO|LIFO|CRC|A
+Which of the following ensures data integrity in IoT?|Delay|Packet loss|Hashing|Storage|C
+What is edge computing in IoT?|Storing data in cloud|Computing near data source|Sending all data to internet|Deleting old data|B
+Which layer in IoT architecture deals with data encryption?|Perception|Network|Application|Security|B
+
+What is the purpose of secure boot in IoT devices?|Faster startup|Safe shutdown|Verified startup code|Energy saving|C
+What is the main goal of IoT security?|Better UI|Faster charging|Protect data and device|Increase size|C
+Which of the following is a threat to IoT networks?|Firewall|Antivirus|Botnet|VPN|C
+Which approach is useful for securing future IoT devices?|Ignoring updates|Leaving ports open|Regular updates|No authentication|C
+Which communication protocol is known to be secure in IoT?|Telnet|FTP|HTTPS|None|C
+Which of these helps reduce latency in IoT processing?|Cloud computing|Wired networks|Edge computing|Manual update|C
+Which component is essential for maintaining IoT security?|Display|Power supply|Firmware|Loudspeaker|C
+Which of these is an AI-based advancement in IoT security?|Motion sensing|Machine learning anomaly detection|LDR sensing|Analog filter|B
+Which of the following is not a future trend in IoT?|Self-healing systems|Context-aware computing|Manual logbooks|Predictive maintenance|C
+IoT malware generally targets?|Application features|Sensors only|Device vulnerabilities|Screens|C
+
+A secured IoT network must include?|Weak passwords|Open ports|Access control|Unpatched firmware|C
+Which organization works on standardizing IoT security?|IEEE|Google|UNESCO|W3C|A
+Why are default passwords a risk in IoT?|They increase speed|They save battery|They are predictable|They use less RAM|C
+Which term refers to IoT systems acting without human input?|Manual control|Autonomous|Remote-only|Inactive|B
+Which of the following reduces unauthorized access?|Open Wi-Fi|Strong passwords|Shared passwords|No passwords|B
+IoT security challenges include?|Short wires|Frequent charging|Scalability|Small screens|C
+Which security method involves verifying multiple factors?|Single sign-on|One-time password|Multi-factor authentication|Basic login|C
+Blockchain in IoT can help with?|Larger memory|Open source display|Tamper-proof records|High speed fans|C
+Which type of sensor can cause privacy invasion if hacked?|LDR|Motion|Camera|Temperature|C
+A strong IoT password should include?|Only letters|Common words|Complex combinations|Device name|Ctuyiop[
+Which is an example of ethical concern in IoT?|Faster devices|Lower prices|Surveillance misuse|More RAM|C
+Which helps build trust in IoT devices?|Color|Brand name|Security certification|Marketing|C
+The future of IoT will likely involve?|Lesser devices|Fewer connections|Massive interconnectivity|No sensors|C
+Which cloud model is often used in IoT for future growth?|Private|Public|Hybrid|Local|C
+IoT devices should be tested for?|Speed only|Cost saving|Security vulnerabilities|Packaging|C
+What is over-the-air (OTA) update in IoT?|Wi-Fi signal boost|Remote firmware update|Battery charging|Sensor cleaning|B
+IoT edge devices process data?|Centrally|In the cloud|At the source|After uploading|C
+Which of the following can stop a DDoS attack?|Malware|Strong password|Firewall and filters|LDR|C
+IoT devices that adapt based on user behavior use?|Static data|Hardcoded rules|AI algorithms|Manual switching|C
+Which of the following helps ensure secure device identity?|LED lights|QR code|Digital certificates|Relays|C

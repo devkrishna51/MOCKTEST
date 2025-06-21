@@ -1,0 +1,49 @@
+What is the term �thing� in IoT typically referring to?|Only software|Only hardware|Any physical object with a sensor|Only computers|C
+In IoT, the connection between devices is usually established via?|Human interaction|Mechanical links|Network protocols|Manual switches|C
+Which of the following is not a type of IoT connection?|Device-to-device|Human-to-human|Device-to-cloud|Device-to-gateway|B
+The heart of IoT communication lies in?|Direct cabling|Broadcast television|Network connectivity|Manual control|C
+Which of the following is an example of a �thing� in IoT?|Web browser|Thermostat|PDF file|Spreadsheet|B
+Which layer in IoT is responsible for sensing physical parameters?|Application layer|Network layer|Perception layer|Transport layer|C
+Device-to-cloud communication involves which of the following?|Only local servers|Direct human interface|Cloud-based data transmission|Printed forms|C
+Which of the following is a protocol commonly used in IoT device connection?|SMTP|FTP|MQTT|POP3|C
+A smart home device that adjusts temperature is an example of?|Manual control|Non-IoT device|IoT-enabled thing|Static machine|C
+IoT "connections" refer to the ability of devices to?|Compute high-end graphics|Work independently|Share data and interact|Use only wires|C
+In IoT, a �smart� device is one that can?|Only blink lights|Only display time|Sense, process, and communicate data|Play music|C
+Which is not an essential element for IoT connectivity?|Sensors|Network|Power supply|Keyboard|D
+Device-to-device communication is typically seen in?|Standalone PCs|Industrial IoT systems|TV remotes|Web browsing|B
+A wearable fitness tracker is an example of?|Cloud storage|Sensor gateway|IoT thing|Data server|C
+Which of these is a key requirement of IoT communication?|High video quality|Voice support|Low power networking|Gaming features|C
+Which of the following does not define a thing in IoT context?|Temperature sensor|Smart bulb|Bluetooth speaker|Word document|D
+Smart cities use which kind of IoT connection for traffic monitoring?|Manual timing|Data-entry forms|Sensor-based communication|Paper logs|C
+What enables IoT devices to send data to cloud?|Keyboard|Wi-Fi module|Flashlight|Speaker|B
+What type of IoT connection is used in a smart agricultural system?|Manual watering|Notebook logging|Sensor-based soil monitoring|Daily human check|C
+The Perception Layer of IoT architecture is responsible for?|Data routing|Cloud storage|Physical sensing|Visualization|C
+In IoT, an embedded system in a �thing� allows it to?|Run videos|Install games|Sense and respond|Print documents|C
+Which is a component of IoT device-to-cloud model?|Sensor only|No Internet|Cloud server|DVD writer|C
+Which wireless technology is often used for short-range IoT communication?|HDMI|USB|Bluetooth|VGA|C
+A smart refrigerator that tracks inventory is an example of?|Manual system|Non-electronic device|Connected IoT thing|Basic fridge|C
+Which protocol is best suited for low bandwidth, IoT communications?|SMTP|TCP|MQTT|IMAP|C
+Which of the following is essential in IoT to identify devices uniquely?|Power cable|MAC address|Screen size|Operating system|B
+What allows things to communicate over the internet?|Sensor only|Manual log|IP address|CD drive|C
+Device-to-gateway communication usually passes data through?|Manual log|Switchboards|Intermediate controller|Fiber wires|C
+IoT devices often rely on which energy-efficient communication?|Bluetooth Low Energy|DSL|Ethernet|Optical drive|A
+Which layer deals with processing and storage in IoT?|Perception|Network|Application|Middleware|C
+What is typically found in an IoT device?|Typewriter|Sensor and microcontroller|Ink cartridge|Web browser|B
+IoT devices are connected to the cloud using?|Email server|Manual cable sync|Internet protocols|Portable storage|C
+Which sensor is used to detect motion in IoT systems?|Sound sensor|Gyroscope|PIR sensor|Temperature probe|C
+A smart irrigation system senses?|Air pressure|Soil moisture|Cloud density|Rainbows|B
+In IoT, things and connections together enable?|Entertainment only|Data processing and action|Photo editing|Offline usage|B
+IoT allows devices to?|Be non-interactive|Be isolated|Collect and exchange data|Only perform one task|C
+The gateway in IoT serves as?|A door|An exit point|Data bridge between devices and cloud|A power source|C
+RFID is used in IoT for?|Cooking food|Writing data|Device identification and tracking|Downloading games|C
+Which communication model allows IoT devices to send data without request?|Request-response|Push model|Pull model|Manual update|B
+A �thing� in IoT must have?|Display unit|Communication capability|CD slot|Mouse|B
+What helps IoT devices to interact with the environment?|Sensor and actuator|Power cable|Monitor|Fan|A
+Which of the following best describes �connected things�?|Non-electronic objects|Objects with display|Internet-enabled devices|Manual machines|C
+Which connection type is used when a sensor connects to a local processor?|Device-to-cloud|Device-to-device|Cloud-to-cloud|Manual|B
+What does the term �smart� imply in IoT context?|Fancy design|Internet and computation capability|Colorful lights|Audio feature|B
+IoT things need which unique number to connect online?|PIN|MAC address|Phone number|Date of manufacture|B
+Which component stores and processes data in IoT systems?|Sensor|Actuator|Gateway|Cloud server|D
+Which of the following is not a valid IoT connection method?|Wi-Fi|Zigbee|Infrared|Television broadcast|D
+The connection between a smartwatch and smartphone is?|Device-to-cloud|Cloud-to-device|Device-to-device|Server-to-device|C
+Which is a benefit of IoT connections?|Manual updates|Lack of control|Real-time monitoring|Disconnection|C

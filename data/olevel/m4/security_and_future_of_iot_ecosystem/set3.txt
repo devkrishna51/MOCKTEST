@@ -1,0 +1,49 @@
+What does IoT security primarily focus on?|Speed|Data Privacy and Protection|Connectivity|Cost Reduction|B
+Which of the following is a common IoT security threat?|Data compression|Data theft|High resolution|Low voltage|B
+Which protocol is considered secure for IoT communication?|HTTP|FTP|MQTT over TLS|Telnet|C
+Which term refers to unauthorized access to IoT devices?|Encryption|Authentication|Hacking|Protocoling|C
+What is used to protect data during transmission in IoT?|Plain text|Encryption|Compression|Hashing only|B
+Which device can become a threat if hacked in IoT?|Smart Bulb|Smart Lock|Thermostat|All of the above|D
+What is the role of authentication in IoT security?|Increase speed|Grant access to valid users|Block connectivity|Save power|B
+Which of the following is not a good IoT security practice?|Default passwords|Firmware updates|Firewall usage|Encrypted channels|A
+Which of these ensures data integrity in IoT?|Encryption|Hashing|Ping|Beaconing|B
+What is the full form of TLS?|Transport Layer Security|Transmission Lock Security|Trusted Link Security|Technology Level Standard|A
+Firmware updates in IoT devices help to?|Add advertisements|Fix vulnerabilities|Reduce power usage|Connect to Wi-Fi|B
+Botnets in IoT are used to?|Secure networks|Improve performance|Launch DDoS attacks|Add sensors|C
+Which of the following is a privacy concern in IoT?|Data theft|Device cost|Power supply|Display quality|A
+IoT security depends on which three main pillars?|Confidentiality, Integrity, Availability|Speed, Range, Cost|Devices, Servers, Code|Sensors, Actuators, Memory|A
+Which cryptographic technique is widely used in IoT?|Symmetric encryption|Asymmetric encryption|Both|None|C
+The Mirai botnet was primarily composed of?|Routers|Printers|IoT devices|Cloud servers|C
+A strong password policy helps prevent?|Connectivity errors|Power overloads|Unauthorized access|Sensor failure|C
+What does multi-factor authentication involve?|One password|One username|Multiple verification steps|One-time payment|C
+Which of the following IoT layers is most vulnerable?|Perception layer|Network layer|Application layer|All layers|D
+What is a digital certificate used for in IoT?|Display temperature|Authenticate identity|Measure voltage|Store passwords|B
+Which organization standardizes IoT security guidelines?|WTO|IEEE|ITU|UNESCO|B
+A secure IoT system should include?|Data encryption|Access control|Regular updates|All of the above|D
+What can reduce the risk of IoT attacks?|Ignoring security|Using weak passwords|Encrypting data|Opening ports|C
+Which of these is not a future challenge for IoT?|Scalability|Interoperability|Security|Wired connection|D
+Blockchain can help IoT by?|Securing transactions|Increasing weight|Reducing light|Heating devices|A
+What is meant by device hardening in IoT?|Making device waterproof|Improving signal strength|Reducing vulnerabilities|Adding colors|C
+Which of these is considered a physical IoT security threat?|Packet sniffing|Malware|Device theft|Brute force attack|C
+Which future technology will greatly impact IoT?|Blockchain|AI|5G|All of the above|D
+What does GDPR stand for in context of IoT?|Global Data Privacy Regulation|General Data Protection Regulation|Government Device Policy Rules|Generic Device Protection Rights|B
+What kind of attack floods the IoT device with traffic?|Phishing|DDoS|Spoofing|None|B
+Why is security more challenging in IoT?|Small size|Diversity of devices|Limited display|Low resolution|B
+End-to-end encryption ensures?|Fast processing|Reduced costs|Complete data security|Signal range|C
+Which of these can be used to secure device communication?|AES|DES|TLS|All of these|D
+What is the function of a firewall in IoT?|Increase temperature|Monitor physical changes|Block unauthorized access|Charge battery|C
+Why are default passwords dangerous in IoT?|They look good|Easy to guess|Expensive|Help speed up work|B
+What is an intrusion detection system in IoT?|It boosts power|Detects unauthorized activity|Saves bandwidth|Heats devices|B
+What is edge computing's role in IoT security?|Sending data to cloud|Immediate data processing near source|Weakens security|Removes sensors|B
+The term  zero trust architecture  in IoT means?|Trust all devices|Deny all unknown devices|Trust only verified sources|No password required|C
+What should be avoided in secure IoT deployment?|Strong encryption|Default credentials|Regular patches|Firewall rules|B
+The IoT cyber kill chain is a concept related to?|Speed of data|Power usage|Attack stages|Device weight|C
+Why is software patching important in IoT?|Adds sensors|Fixes security flaws|Reduces brightness|Extends wires|B
+What is meant by OTA in IoT?|Over The Air update|Over Time Algorithm|On-Time Access|One-Time Authentication|A
+What does an IoT honeypot do?|Stores data|Attracts attackers to monitor them|Charges devices|Filters IP addresses|B
+Which device can benefit most from AI in security?|Smart camera|Smart fridge|Thermostat|Air purifier|A
+In future, which network will enhance IoT device performance?|2G|3G|4G|5G|D
+A common weak point in IoT security is?|Encrypted traffic|Strong passwords|Unsecured APIs|Closed ports|C
+Which layer of IoT deals with data processing and security enforcement?|Network|Perception|Application|Presentation|C
+The purpose of access control in IoT is to?|Increase RAM|Speed up CPU|Restrict unauthorized use|Enhance sound|C
+Future of IoT will depend heavily on?|Cloud computing|Blockchain|Security policies|All of the above|D

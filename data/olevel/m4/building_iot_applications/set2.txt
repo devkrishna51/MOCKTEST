@@ -1,0 +1,49 @@
+What is the first step in building an IoT application?|Data visualization|Hardware selection|Deployment|Cloud hosting|B  
+Which language is commonly used to program IoT devices like Arduino?|Python|C/C++|Java|Ruby|B  
+What is the role of sensors in an IoT application?|Store data|Display output|Collect data from environment|Secure network|C  
+Which platform is widely used for rapid prototyping of IoT projects?|Raspberry Pi|Arduino|Cloud|Windows|B  
+Which protocol is most suitable for constrained IoT environments?|HTTP|FTP|MQTT|SMTP|C  
+Which board comes with built-in Wi-Fi for IoT projects?|Arduino UNO|ESP8266|8051|PIC|B  
+Which of these is NOT part of a typical IoT architecture?|Sensors|Actuators|Compiler|Cloud|C  
+Which component performs edge-level processing in IoT?|Cloud|Gateway|Sensor|Display|B  
+What does cloud provide in IoT systems?|Data storage and analytics|Sensor signals|Battery backup|Signal amplification|A  
+Which of the following is a key feature of IoT dashboards?|Network routing|Data logging and visualization|Firmware update|Hardware interfacing|B  
+Which of the following is best for real-time data visualization in IoT?|MySQL|Google Sheets|ThingsBoard|JSON file|C  
+Which technology is used for location-based IoT apps?|RFID|GPS|LDR|NFC|B  
+Which of the following platforms supports Node-RED?|Windows only|Raspberry Pi|Only mobile|Arduino UNO|B  
+Which programming language is commonly used with Raspberry Pi in IoT?|Assembly|Python|C#|Swift|B  
+Which of the following is a cloud IoT platform?|GitHub|Firebase|ThingSpeak|Docker|C  
+What kind of application is Smart Farming?|Personal IoT|Industrial IoT|Consumer IoT|None of these|B  
+Which device connects sensors to the internet in IoT systems?|Router|Bridge|Gateway|Repeater|C  
+Which of the following is essential in IoT app development lifecycle?|Only hardware testing|Ignoring security|Requirement analysis|None of these|C  
+Which IoT app layer handles data processing and logic?|Device Layer|Network Layer|Application Layer|Sensor Layer|C  
+Which of the following tools is used to simulate IoT devices?|Wireshark|Cisco Packet Tracer|Proteus|MATLAB|C  
+What is the role of APIs in IoT applications?|Power supply|Data sharing between modules|Circuit design|Noise reduction|B  
+Which component of IoT deals with decision making?|Actuators|Sensors|Application logic|Internet|C  
+Which software is used to write code for Arduino?|MS Word|Arduino IDE|Chrome|Photoshop|B  
+What is the output of a motion detection IoT application?|Temperature reading|Water level|Presence alert|Color change|C  
+Which IoT app helps manage home appliances via mobile?|Industrial SCADA|Smart Home System|PLC System|Firewall|B  
+What is the main advantage of cloud in IoT?|Heat generation|No storage|Scalability|Wired connection|C  
+Which of the following is NOT a cloud platform for IoT?|AWS IoT|Google Cloud IoT|Excel Cloud|Azure IoT Hub|C  
+Which interface connects microcontroller to a sensor?|HDMI|I2C/SPI|Ethernet|Wi-Fi|B  
+What is meant by OTA in IoT?|Over the Analyzer|Online to App|Over-the-Air updates|Over Task Automation|C  
+Which of these helps monitor IoT devices remotely?|Compiler|Firmware|Dashboard|Battery|C  
+What is the function of an actuator in IoT apps?|Store data|Receive cloud updates|Perform physical action|Connect to Wi-Fi|C  
+Which of the following is not used in IoT application backend?|Flask|Django|Node.js|Photoshop|D  
+In smart city applications, which is a common IoT use-case?|Air quality monitoring|SMS tracking|Video editing|Mouse tracking|A  
+Which platform allows device-to-cloud connectivity easily?|Google Forms|Microsoft Paint|Blynk|Notepad|C  
+Which of the following can be used to trigger actions in IoT apps?|Sensor data|Background image|HTML code|Screenshot|A  
+Which board can handle complex AI-based IoT applications?|ESP32|Arduino Nano|Raspberry Pi|8051|C  
+What type of data do most sensors produce?|Text|Binary|Analog/Digital|Video|C  
+Which of the following tools is used to version control IoT app code?|Wireshark|Git|Paint|Excel|B  
+Which cloud service offers no-code dashboards for IoT?|Arduino IDE|Blynk|Notepad|C Compiler|B  
+Which of these is critical in testing an IoT app?|Front-end speed|Voltage fluctuation|Real-world conditions|Speaker quality|C  
+Which protocol is suitable for low-power wide-area networks in IoT?|LoRaWAN|Ethernet|SMTP|FTP|A  
+What is device provisioning in IoT?|Giving name|Connecting device to Wi-Fi|Registering device with cloud|Changing IP|C  
+Which software helps in IoT mobile app development?|Photoshop|Android Studio|AutoCAD|Paint|B  
+Which IoT app helps control temperature automatically?|Fitness band|Smart thermostat|Voice assistant|IR blaster|B  
+What is the function of feedback loop in IoT systems?|Charge battery|Display GUI|Improve system behavior|Control power|C  
+Which of the following is required for deploying IoT apps at scale?|Remote update|Manual switching|No sensors|Offline access only|A  
+Which of these is an example of edge computing in IoT?|Cloud dashboard|Arduino processing sensor data|Excel report|Wi-Fi router|B  
+What is latency in context of IoT application?|Security level|Delay in data transfer|Sensor type|Signal strength|B  
+What is the main challenge in building IoT applications?|Power supply|Data collection|Scalability and integration|Sensor cost|C

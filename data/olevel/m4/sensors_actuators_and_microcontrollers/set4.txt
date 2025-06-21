@@ -1,0 +1,50 @@
+What does a sensor do in an IoT system?|It processes data|It stores data|It senses physical parameters|It displays data|C
+Which of the following is a temperature sensor?|LDR|DHT11|Relay|Servo Motor|B
+An actuator is used to?|Sense environment|Measure temperature|Perform action|Store data|C
+Which sensor is commonly used to detect light intensity?|Ultrasonic Sensor|LDR|IR Sensor|DHT22|B
+Which of the following is not a sensor?|Accelerometer|Microphone|Relay|Thermistor|C
+Microcontrollers are used in IoT to?|Act as a router|Display web pages|Control sensors and actuators|Store cloud data|C
+Which component executes the commands in a microcontroller system?|Sensor|Actuator|Microcontroller|Display|B
+Which of these is a microcontroller?|Raspberry Pi|NodeMCU|LDR|IR Sensor|B
+An IR sensor is mostly used to detect?|Humidity|Temperature|Obstacle|Sound|C
+DHT11 is a sensor that detects?|Light|Motion|Humidity and temperature|Noise|C
+Which microcontroller is widely used with Arduino IDE?|ESP32|Raspberry Pi|Intel Galileo|Jetson Nano|A
+Which of the following sensors is analog?|Thermistor|DHT11|Digital IR|Ultrasonic|A
+A relay is used to?|Measure voltage|Sense light|Switch high-power devices|Detect motion|C
+Which one of these is not an actuator?|LED|Servo Motor|Ultrasonic Sensor|DC Motor|C
+PWM is used to?|Control motor speed|Sense voltage|Connect to WiFi|Store data|A
+Which sensor would you use to detect motion?|Ultrasonic|DHT11|LDR|Thermistor|A
+Which of the following microcontrollers has in-built WiFi?|Atmega328p|ESP8266|Arduino Uno|PIC16F877A|B
+What is the main advantage of using a microcontroller?|Faster internet|Reduced cost and size|Large memory|Cloud storage|B
+Which device can convert electrical energy into mechanical motion?|LDR|Sensor|Actuator|Resistor|C
+Which of these is not part of the sensing layer in IoT?|Temperature sensor|Motion detector|LED|Light sensor|C
+Which microcontroller is most suitable for compact IoT applications?|Raspberry Pi 4|Arduino Mega|ESP32|Intel NUC|C
+Servo motor rotates at?|Full 360  continuously|Fixed small angles accurately|Random degrees|Only forward direction|B
+Which of these sensors is used in automatic street lights?|Ultrasonic|IR|LDR|Pressure sensor|C
+Actuators are typically controlled by?|Cloud server|Battery|Microcontroller|Sensor|C
+Which sensor is used to detect distance accurately?|Thermistor|Ultrasonic Sensor|DHT11|IR Sensor|B
+Which of the following is an example of digital sensor?|Thermistor|LDR|DHT11|MQ135|C
+Which pin on a microcontroller is used to receive data?|VCC|GND|RX|TX|C
+Which sensor can detect gas levels in the air?|LDR|Thermistor|MQ2|DHT11|C
+What is the role of ADC in microcontrollers?|Convert digital to analog|Convert analog to digital|Amplify signal|Store sensor data|B
+Which one is an output device in an IoT system?|Sensor|Actuator|Microphone|Thermistor|B
+Which microcontroller is based on 32-bit architecture?|Atmega328|ESP32|PIC16F877A|AVR|B
+The full form of LDR is?|Light Detecting Resistor|Light Dependent Resistor|Low Density Resistor|Linear Device Resistor|B
+Ultrasonic sensors work on principle of?|Infrared waves|Pressure difference|Sound waves|Light intensity|C
+Which of the following is not an actuator?|DC motor|Servo motor|Buzzer|LDR|D
+In which unit is temperature typically measured by a sensor?|Decibel|Lux|Celsius|Volt|C
+Which of these microcontrollers supports Bluetooth as well?|ESP8266|ESP32|AVR|8051|B
+Which of the following is used to measure sound levels?|Ultrasonic Sensor|Microphone|Thermistor|IR Sensor|B
+What kind of sensor is used for soil moisture detection?|Humidity Sensor|Moisture Sensor|IR Sensor|Gas Sensor|B
+Which sensor is used in smart parking systems?|IR Sensor|Temperature Sensor|LDR|Microphone|A
+Which microcontroller uses MicroPython?|Arduino Uno|ESP8266|AVR|Raspberry Pi Pico|D
+Which protocol is used by sensors to communicate in IoT?|MQTT|HTTPS|FTP|SMTP|A
+In which format does a digital sensor provide output?|Continuous Voltage|Analog Waveform|Binary Values|Current|C
+Which actuator is commonly used in robotic arms?|Buzzer|Relay|Servo Motor|LDR|C
+Which of these sensors can measure multiple parameters?|DHT11|LDR|Thermistor|IR|A
+Which of the following is not a function of a microcontroller?|Processing data|Controlling outputs|Cloud data storage|Reading inputs|C
+A microcontroller contains?|CPU, RAM, ROM, I/O ports|Only CPU|Only Memory|Only Input device|A
+Which sensor is commonly used in fire detection?|IR Sensor|Flame Sensor|LDR|Ultrasonic Sensor|B
+Which component would you use to trigger a water pump?|Sensor|LED|Relay|IR Sensor|C
+Which microcontroller can be used for AI tasks on edge?|AVR|8051|ESP32|Raspberry Pi|D
+Which sensor is best for real-time motion sensing?|Accelerometer|DHT11|LDR|Gas Sensor|A

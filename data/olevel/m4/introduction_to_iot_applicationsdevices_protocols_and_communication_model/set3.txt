@@ -1,0 +1,50 @@
+Which protocol is publish-subscribe based and lightweight?|HTTP|MQTT|TCP|FTP|B
+IoT stands for?|Internet of Television|Internet of Things|Interface of Things|Internet of Tools|B
+Which of the following is not a communication model in IoT?|Request-Response|Publish-Subscribe|Exclusive-Broadcast|Push-Pull|C
+Which layer handles data formatting and encryption?|Perception Layer|Network Layer|Application Layer|Security Layer|D
+ZigBee is best described as?|High-power protocol|Short-range communication protocol|Long-range satellite system|Optical fiber link|B
+Which of these is a sensing device in IoT?|Router|Temperature Sensor|Modem|Switch|B
+Which communication protocol works in constrained devices?|HTTP|FTP|MQTT|SMTP|C
+IoT devices are usually connected via?|Wi-Fi|Ethernet|Bluetooth|All of the above|D
+Which one is not an IoT protocol?|CoAP|MQTT|SMTP|ZigBee|C
+Smart homes are example of?|Industrial IoT|Consumer IoT|Enterprise IoT|All of these|B
+Which technology provides location services in IoT?|GPS|ZigBee|CoAP|MQTT|A
+The brain of IoT system is called?|Sensor|Gateway|Controller|Actuator|C
+CoAP stands for?|Constrained Application Protocol|Controlled Access Protocol|Common Application Path|Connection Access Point|A
+The communication model where one device requests and another responds?|Publish-Subscribe|Request-Response|Push-Pull|Event-Driven|B
+Which of the following uses REST architecture?|CoAP|MQTT|ZigBee|LoRa|A
+In IoT, actuator is used for?|Sensing|Controlling|Storing|Visualizing|B
+Which protocol is suitable for delay-sensitive applications?|MQTT|CoAP|UDP|HTTP|C
+Which is not a feature of IoT?|Autonomous Control|Manual Operation|Connectivity|Sensing|B
+IoT devices mostly generate what type of data?|Static|Real-time|Delayed|No data|B
+Which of the following is not a layer of IoT architecture?|Perception Layer|Network Layer|Storage Layer|Application Layer|C
+A smart irrigation system is an example of?|Wearable IoT|Agricultural IoT|Medical IoT|Industrial IoT|B
+Which of the following is an LPWAN technology?|Wi-Fi|LoRa|Bluetooth|Z-Wave|B
+Gateway in IoT is used for?|Charging device|Data visualization|Protocol translation|None|C
+Which is the main concern in IoT security?|Latency|Bandwidth|Privacy|Color depth|C
+Which of these is an example of actuator?|Humidity sensor|Camera|Relay|Thermometer|C
+IoT applications are mostly based on?|Centralized computing|Cloud computing|Analog computing|Quantum computing|B
+IPv6 is useful in IoT due to?|Limited addresses|Wider addresses|Cost|Speed|B
+Which of these is a challenge in IoT?|High latency|Limited connectivity|Security|All of the above|D
+What does RFID stand for?|Radio Frequency Identity|Random Field Identity|Range Frequency ID|Real Field ID|A
+Which of the following is not wireless communication?|ZigBee|Bluetooth|Ethernet|LoRa|C
+Smartwatches fall under which category?|Agriculture IoT|Industrial IoT|Wearable IoT|Automotive IoT|C
+Which sensor measures acceleration?|Gyroscope|Accelerometer|Magnetometer|Thermometer|B
+Which protocol uses TCP port 1883 by default?|HTTP|FTP|MQTT|SMTP|C
+Which is a characteristic of CoAP?|Binary protocol|Uses TCP|Lightweight|Heavyweight|C
+IoT Gateway connects?|Cloud to Human|Sensor to Actuator|Sensor network to Internet|Sensor to Database|C
+Which of these is not an IoT protocol?|6LoWPAN|ZigBee|SMTP|CoAP|C
+Which protocol runs over UDP?|MQTT|HTTP|CoAP|FTP|C
+Which layer processes the data received from sensors?|Network Layer|Application Layer|Perception Layer|Routing Layer|B
+IoT devices are usually resource–?|Abundant|Unlimited|Constrained|Rich|C
+Which of these is a standard for wireless PANs?|ZigBee|NFC|WiMAX|RFID|A
+Which is a lightweight messaging protocol for small sensors and devices?|SMTP|MQTT|TCP|HTTP|B
+Which of these technologies is most power efficient?|Wi-Fi|ZigBee|Bluetooth|LTE|B
+IoT helps in making devices?|Manual|Intelligent|Larger|Expensive|B
+Which of the following does not belong to M2M communication?|Smartphone call|Smart Grid|Smart Parking|Smart Agriculture|A
+Which of the following is a data visualization platform?|ThingSpeak|MQTT|ZigBee|CoAP|A
+What is the main purpose of sensors in IoT?|Acting|Controlling|Measuring|Visualizing|C
+Which of the following uses star topology?|Bluetooth|ZigBee|LoRa|Wi-Fi|D
+Which protocol is commonly used in Smart Agriculture?|CoAP|HTTP|MQTT|FTP|C
+Which of the following is not IoT hardware?|Raspberry Pi|Arduino|NodeMCU|Photoshop|D
+Which technology is mostly used for short range communication?|ZigBee|NFC|WiMAX|5G|B

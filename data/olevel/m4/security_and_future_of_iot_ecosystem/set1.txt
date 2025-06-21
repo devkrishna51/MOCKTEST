@@ -1,0 +1,50 @@
+What is a major security concern in IoT systems?|Fast connection|Data privacy|Color quality|Loud noise|B
+Which of the following is used to secure communication in IoT?|Unencrypted data|TLS/SSL|Plain text|Screen lock|B
+IoT devices are more vulnerable because they?|Have strong firewalls|Are always offline|Use weak/default passwords|Don't use internet|C
+What is a botnet in IoT context?|Sensor group|Malware-controlled network of devices|Power backup|Device upgrade|B
+Which attack targets IoT device overload and shutdown?|Wi-Fi scan|DDoS attack|Fingerprint lock|Battery surge|B
+Why is firmware update important in IoT?|To increase weight|To update games|To fix security bugs|To change color|C
+A secure IoT system must have?|No password|Default credentials|Encrypted data transfer|Open ports|C
+What is the role of authentication in IoT security?|To paint device|To allow trusted access|To display UI|To reduce memory|B
+Which of these is a potential threat in IoT?|Firewall|Antivirus|Unauthorized access|LED blinking|C
+Which component ensures integrity in IoT communication?|Loudspeaker|Encryption|Display|Power supply|B
+Why are IoT devices easy targets for hackers?|Frequent monitoring|Open source hardware|Limited resources and weak security|Heavy encryption|C
+Which standard helps in secure IoT communication?|SMTP|CoAP|SSL/TLS|FTP|C
+What is the function of data encryption in IoT?|Speed up apps|Improve screen brightness|Protect data during transfer|Track location|C
+What is meant by  zero trust  in IoT?|Trust only known networks|Always trust internal devices|No device is trusted by default|Ignore firewalls|C
+What type of update enhances security in IoT devices?|Manual reboot|Hardware replacement|Firmware update|LED upgrade|C
+What is a strong authentication method for IoT?|Username only|Default password|Two-factor authentication|Color detection|C
+Which of these can compromise IoT device security?|Encrypted login|Software patch|Default username/password|Firewall|C
+What ensures that data was not changed during transmission?|Firewall|Data integrity checks|Display resolution|Device color|B
+A secure IoT system should regularly?|Shut down|Update firmware|Change appearance|Ignore threats|B
+What is the biggest challenge in securing billions of IoT devices?|Too much RAM|High bandwidth|Scalability and standardization|Fast CPUs|C
+IoT security also depends on?|Screen quality|Physical device protection|Color code|Voice commands|B
+What is malware in IoT?|Safe update|Antivirus|Malicious software|Battery pack|C
+Which of the following is a risk of outdated firmware?|Better battery|High security|Vulnerability to attacks|Faster speed|C
+What is used to ensure only authorized devices connect to IoT network?|Manual control|Device fingerprinting|Unfiltered access|Open data|B
+In future, AI in IoT will help?|Slow down device|Enhance automation and decision-making|Cause heat|Reduce sensors|B
+Which layer is most vulnerable in IoT stack?|Presentation|Cloud|Perception|Application|C
+Which of these practices is good for IoT security?|Using default credentials|Exposing all ports|Strong password policies|No firewall|C
+Which future tech will drive IoT evolution?|Typewriters|5G networks|Floppy drives|Punch cards|B
+A firewall in IoT devices helps to?|Stream audio|Create graphics|Block unauthorized traffic|Measure temperature|C
+Which of these is a physical security threat for IoT?|Sensor misreading|Color fading|Device theft|Overcharging|C
+How can users prevent IoT hacking?|Ignore updates|Use public Wi-Fi always|Regular updates and strong credentials|Open ports|C
+In the future, IoT devices will become?|Less intelligent|Disconnected|More connected and autonomous|Wired only|C
+Which organization works on IoT security standards?|WWE|IEEE|IPL|UNICEF|B
+Which is a basic principle of IoT security?|Trust everything|Open access|Least privilege access|Disable password|C
+A common mistake in IoT setup is?|Firmware update|Secure cloud storage|Using default login|Firewall setup|C
+What is the purpose of security patch in IoT firmware?|Add games|Fix known vulnerabilities|Change sensor type|Increase heat|B
+What is edge computing in IoT future?|Centralized storage|Cloud-only processing|Processing near device|Sound transmission|C
+Which protocol helps securely manage IoT devices remotely?|POP3|SSH|HTTP|FTP|B
+In future, IoT devices will mostly rely on?|Mechanical input|Paper logs|Cloud and edge computing|Manual reset|C
+A denial-of-service (DoS) attack aims to?|Protect data|Block device access|Improve signal|Run updates|B
+Which feature helps future IoT devices make real-time decisions?|Manual code|AI integration|Human monitoring only|Offline access|B
+How does blockchain help IoT security?|Slows down system|Tracks sunlight|Provides tamper-proof transaction records|Replaces sensor|C
+What is a honeypot in IoT security?|A food item|Trap system to detect hackers|Wireless charger|Motion detector|B
+Which factor is key in secure future IoT ecosystems?|Open networks|Weak protocols|End-to-end security|Voice filters|C
+What is the function of intrusion detection in IoT?|Increase brightness|Detect unauthorized activity|Play alarm only|Scan colors|B
+Which tech will support future high-speed IoT?|4G|2G|5G and 6G|Wi-Fi only|C
+In future cities, IoT will help manage?|Email|Lights and traffic|Books|CD players|B
+Future IoT devices will require security at?|Only cloud|Only user level|Every level (device, network, cloud)|Only firmware|C
+AI in IoT enhances?|UI design|Color brightness|Smart decision making|Wiring|C
+Which is a preventive security measure?|Ignore alerts|Antivirus installation|Use same passwords|Block updates|B

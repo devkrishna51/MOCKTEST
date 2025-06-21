@@ -1,0 +1,48 @@
+Which database is most commonly used for time-series IoT data?|MongoDB|MySQL|InfluxDB|Redis|C  
+Which IoT design pattern helps in efficient event processing?|Request-Response|Batching|Publish-Subscribe|Polling|C  
+Which platform uses flows and nodes to create IoT logic visually?|AWS IoT|Node-RED|Azure|GCP|B  
+In IoT, which protocol works best for constrained devices over unreliable networks?|HTTP|MQTT|FTP|Telnet|B  
+Which tool is used for containerizing IoT application microservices?|Docker|Android Studio|Wireshark|Notepad++|A  
+In smart irrigation systems, which sensor type is critical for soil monitoring?|Ultrasonic Sensor|Moisture Sensor|Temperature Sensor|LDR|B  
+Which of the following technologies allows IoT devices to work offline and sync later?|WebSockets|MQTT|Edge Computing|TLS|C  
+What is the purpose of RESTful API in IoT apps?|To reduce latency|To enable hardware design|To allow communication between web and devices|To increase voltage|C  
+Which layer in IoT handles abstraction and processing logic?|Sensor Layer|Application Layer|Transport Layer|Network Layer|B  
+In firmware-over-the-air updates, what is the biggest security concern?|Data visualization|Battery life|Man-in-the-middle attacks|Device size|C  
+Which IoT board has built-in Bluetooth and Wi-Fi with dual-core processor?|ESP8266|ESP32|Arduino Nano|8051|B  
+Which cloud feature is essential for scaling an IoT application globally?|Firewall|Auto-scaling|Database indexing|Screen resolution|B  
+Which method ensures only authorized IoT devices connect to a network?|MAC Filtering|DHCP|Port Forwarding|DNS Spoofing|A  
+Which of the following is essential for fault tolerance in IoT apps?|Unit testing|Failover mechanism|JSON parsing|Overclocking|B  
+Which platform uses Firebase + NodeMCU for real-time IoT dashboards?|Google Sheets|Adafruit|MIT App Inventor|Blynk|D  
+Which compression format is used in IoT to reduce payload size?|PNG|Zip|Gzip|RAR|C  
+Which IoT gateway protocol works over serial lines like RS-232?|CoAP|Modbus|UDP|MQTT|B  
+In IoT, a **digital twin** refers to?|Cloud sensor|Physical replica|Virtual model of real-world device|Bluetooth tag|C  
+Which of the following can be used for Over-The-Air updates in IoT?|Arduino IDE|Blynk|ESPTool|PuTTY|C  
+Which system helps organize device fleets in large-scale IoT apps?|Firebase|Device Registry|Wireshark|HTML|B  
+Which format is most used for IoT data transmission?|XML|CSV|JSON|HTML|C  
+Which framework is used to build cross-platform mobile apps for IoT?|MS Paint|Flutter|Arduino IDE|Wireshark|B  
+Which concept ensures that IoT apps recover after crash automatically?|Self-healing|Polling|Edge caching|Compression|A  
+Which of the following is NOT a real-time OS used in IoT?|FreeRTOS|RIOT OS|TinyOS|Ubuntu|D  
+Which of the following is used to ensure reliable delivery in MQTT?|QoS|IP|TTL|TTL|A  
+What is the role of device shadow in IoT platforms?|Hardware cache|Cloud-based device state|Device MAC address|Power saving|B  
+Which interface supports real-time video streaming in IoT surveillance?|HTTP|RTSP|MQTT|DNS|B  
+In smart health monitoring, which protocol transmits health data securely?|Zigbee|CoAP|Bluetooth LE|SMTP|C  
+Which visualization tool can integrate with InfluxDB in IoT analytics?|Grafana|PowerPoint|Arduino IDE|Eclipse|A  
+What does edge analytics in IoT mean?|Analyzing data at cloud|Processing data close to device|Deleting old data|Encrypting data in DB|B  
+Which of these helps secure firmware code in IoT systems?|Obfuscation|VPN|Switches|Open Wi-Fi|A  
+Which encryption standard is lightweight and used in embedded IoT devices?|AES-256|RSA-1024|Elliptic Curve Cryptography|SHA-512|C  
+What is a primary drawback of cloud-only IoT architecture?|Low latency|Scalability|Offline dependency|Low cost|C  
+Which component schedules and manages tasks in embedded systems?|Power IC|Task Scheduler|BIOS|Compiler|B  
+In event-driven IoT apps, what triggers actions?|Fixed timers|Manual input|Sensor events|Wi-Fi speed|C  
+Which wireless technology is most suitable for long-range low-power IoT apps?|Wi-Fi|NFC|LoRa|Bluetooth|C  
+Which of these is a hardware simulator for Arduino-based IoT design?|Proteus|XAMPP|Android Studio|Code::Blocks|A  
+Which of the following can cause IoT app scalability issues?|Stateless design|Event queues|Monolithic architecture|Microservices|C  
+Which cloud service offers device identity and certificate management?|Firebase|AWS IoT Core|Blynk|Arduino Cloud|B  
+Which of these is critical for energy-constrained IoT nodes?|High clock speed|Low-power design|Overvoltage|GPU usage|B  
+What is a common approach to visualize multi-sensor IoT data?|Pie chart|Heatmap|Stack|Bar chart|B  
+What is the role of middleware in IoT architecture?|It manages device charging|Handles sensor connectivity and data routing|Powers the display|Creates Wi-Fi hotspot|B  
+Which file format is used for OTA firmware upload in ESP boards?|.pdf|.bin|.docx|.jpg|B  
+Which of these enhances interoperability in IoT platforms?|Data silos|Vendor lock-in|Standard protocols|Hardcoded APIs|C  
+Which architecture supports scalability and modularity in IoT apps?|Client-Server|2-tier|Microservices|Monolithic|C  
+Which of the following allows edge devices to filter data before sending?|Data scraping|Data validation|Pre-processing|Data tunneling|C  
+Which of these helps reduce data load in high-frequency IoT apps?|Sampling|Pipelining|Amplifying|Packet padding|A  
+Which of the following can impact latency in IoT systems the most?|Cable color|Humidity|Network congestion|Sensor size|C
