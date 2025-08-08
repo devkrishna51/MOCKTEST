@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>O-Level Subjects</title>
+      <link rel="icon" href="{{ url_for('static', filename='photos/logo.png') }}">
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <style>
@@ -103,18 +105,21 @@
                 <i class="subject-icon fas fa-desktop"></i>
                 <h3 class="subject-title">M1</h3>
                 <a href="{{ url_for('olevel_subject', subject='m1') }}" class="stretched-link"></a>
+                <h5>Unavialable at this moment </h5>
             </div>
 
             <div class="subject-card">
                 <i class="subject-icon fab fa-html5"></i>
                 <h3 class="subject-title">M2</h3>
                 <a href="{{ url_for('olevel_subject', subject='m2') }}" class="stretched-link"></a>
+                                <h5>Unavialable at this moment </h5>
             </div>
 
             <div class="subject-card">
                 <i class="subject-icon fab fa-python"></i>
                 <h3 class="subject-title">M3</h3>
                 <a href="{{ url_for('olevel_subject', subject='m3') }}" class="stretched-link"></a>
+                                <h5>Unavialable at this moment </h5>
             </div>
 
             <div class="subject-card">
@@ -128,7 +133,7 @@
         // Floating math symbols
         document.addEventListener('DOMContentLoaded', function() {
             const symbolsContainer = document.getElementById('floating-symbols');
-            const mathSymbols = ['∫', '∑', '∂', 'Δ', '∞', '√', '∏', '≈', '≠', '≤', '≥'];
+            const mathSymbols = ['∫', '∑', '∂', 'Δ', '∞', '√', '∝', '≈', '≠', '≤', '≥'];
             
             for(let i = 0; i < 15; i++) {
                 const symbol = document.createElement('div');
