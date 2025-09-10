@@ -2,42 +2,54 @@
 <html>
 <head>
     <title>Developer Panel</title>
-    
- <script>
-// Prompt Authentication
-const userId = prompt("Enter Developer ID:");
-const userPass = prompt("Enter Password:");
-if (userId !== "krishnaseth" || userPass !== "Seth@1234") {
-    alert("Access Denied!");
-    window.location.href = document.referrer || "/";
-}
+    <script>
+    // ----------------- Encoded Credentials -----------------
+    const encodedId = "a3Jpc2huYXNldGg=";    // "krishnaseth"
+    const encodedPass = "U2V0aEAxMjM0";       // "Seth@1234"
 
-// Disable Right Click
-document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-});
-
-// Disable F12, Ctrl+Shift+I, Ctrl+U, Ctrl+S, Ctrl+P, etc.
-document.addEventListener('keydown', function(e) {
-    if (
-        e.key === "F12" ||
-        (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) ||
-        (e.ctrlKey && (e.key === "U" || e.key === "S" || e.key === "P" || e.key === "C"))
-    ) {
-        e.preventDefault();
-        alert("This action is disabled!");
+    function decode(str) {
+        return atob(str);
     }
-});
 
-// Disable drag + select
-document.addEventListener('dragstart', e => e.preventDefault());
-document.addEventListener('selectstart', e => e.preventDefault());
+    // ----------------- Prompt Authentication -----------------
+    const userId = prompt("Enter Developer ID:");
+    const userPass = prompt("Enter Password:");
+    if (userId !== decode(encodedId) || userPass !== decode(encodedPass)) {
+        alert("Access Denied!");
+        window.location.href = document.referrer || "/";
+    }
 
-// Prevent PrintScreen (trick via clipboard overwrite)
-setInterval(() => {
-    navigator.clipboard.writeText("Copying is disabled by developer!");
-}, 1000);
-</script>
+    // ----------------- Disable Right Click -----------------
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        alert("Right-click is disabled!");
+    });
+
+    // ----------------- Disable F12, Ctrl+U, Ctrl+S, Ctrl+Shift+I -----------------
+    document.addEventListener('keydown', function(e) {
+        const key = e.key.toLowerCase();
+        if (
+            e.key === "F12" ||
+            (e.ctrlKey && ['u','s','c','v','p'].includes(key)) ||
+            (e.ctrlKey && e.shiftKey && (key === "i" || key === "j"))
+        ) {
+            e.preventDefault();
+            alert("This action is disabled!");
+        }
+    });
+
+    // ----------------- Disable drag + select + copy/paste -----------------
+    document.addEventListener('dragstart', e => e.preventDefault());
+    document.addEventListener('selectstart', e => e.preventDefault());
+    document.addEventListener('copy', e => e.preventDefault());
+    document.addEventListener('paste', e => e.preventDefault());
+    document.addEventListener('cut', e => e.preventDefault());
+
+    // ----------------- Clipboard overwrite trick -----------------
+    setInterval(() => {
+        navigator.clipboard.writeText("Copying is disabled by developer!");
+    }, 1000);
+    </script>
 
     <style>
         html, body {
@@ -75,16 +87,6 @@ setInterval(() => {
             color: white; 
         }
 
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: white; 
-        }
-
         input[type="text"],
         input[type="password"] {
             width: 80%;
@@ -97,6 +99,7 @@ setInterval(() => {
             font-weight: 500;
             box-shadow: inset 0 0 5px #00e751;
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 15px;
         }
 
         input[type="text"]:focus,
@@ -150,39 +153,11 @@ setInterval(() => {
     </style>
 </head>
 <body>
-    <script>
-    // Disable right-click
-    document.addEventListener('contextmenu', event => {
-        event.preventDefault();
-        alert("Right-click is disabled.");
-    });
-
-    // Block shortcut keys like Ctrl+U, F12, Ctrl+S, Ctrl+C, Ctrl+V
-    document.addEventListener('keydown', function(e) {
-        const key = e.key.toLowerCase();
-        if ((e.ctrlKey && ['u', 's', 'c', 'v'].includes(key)) || key === "f12") {
-            e.preventDefault();
-            alert("This action is disabled.");
-        }
-    });
-
-    // Disable copy, paste, cut via mouse
-    document.addEventListener('copy', e => { e.preventDefault(); });
-    document.addEventListener('paste', e => { e.preventDefault(); });
-    document.addEventListener('cut', e => { e.preventDefault(); });
-
-    // Prevent page source visibility when prompted
-    window.onkeydown = function(e) {
-        if (e.keyCode == 123) { // F12
-            return false;
-        }
-    };
-</script>
     <div class="container">
         <h2>Create Teacher Account</h2>
         <form method="POST">
-            Username: <input type="text" name="username" required><br><br>
-            Password: <input type="password" name="password" required><br><br>
+            Username: <input type="text" name="username" required><br>
+            Password: <input type="password" name="password" required><br>
             <input type="submit" value="Create Teacher Account">
         </form>
         <a href="/">Back to Home</a>
