@@ -229,8 +229,20 @@ def olevel_quiz(subject, topic, set_id):
 def projects():
     return render_template('main_2.html')
 
-@app.route('/developer', methods=['GET', 'POST'])
-def developer_panel():
+DEVELOPER_ID = "KRISHNADEV"
+DEVELOPER_PASS = "Seth@#$1709"
+
+@app.route('/dev_authen' , methods =['GET' , 'POST'])
+def dev_authen():
+    user = request.form.get('username')
+    passw = request.form.get('password')
+    if(user == DEVELOPER_ID and passw == DEVELOPER_PASS):
+         return render_template('dev_panel.html')
+    else :
+        return render_template('main_2.html')
+    
+@app.route('/dev_auth', methods=['POST'])
+def dev_auth():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
@@ -239,7 +251,13 @@ def developer_panel():
             return "Teacher username already exists! <a href='/'>Go Home</a>"
         add_account(TEACHERS_FILE, username, password)
         return "Teacher account created successfully! <a href='/'>Go Home</a>"
-    return render_template('dev_panel.html')
+    return render_template('main_2.html')
+
+
+@app.route('/developer', methods=['GET', 'POST'])
+def developer_panel():
+    return render_template('dev_authentication.html')
+    
 
 @app.route('/teacher/login', methods=['GET', 'POST'])
 def teacher_login():
@@ -347,7 +365,7 @@ def student_panel():
 
     # ✅ Blocked student check
     if student_answers == 'BLOCKED':
-        return "⚠️ You have been blocked from submitting the test. <a href='/student/logout'>Logout</a>"
+        return "⚠︝ You have been blocked from submitting the test. <a href='/student/logout'>Logout</a>"
 
     # ✅ Student trying to submit answers
     if request.method == 'POST':
