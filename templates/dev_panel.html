@@ -3,8 +3,6 @@
 <head>
     <title>Developer Panel</title>
     <script>
-    // ----------------- Encoded Credentials -----------------
- 
     // ----------------- Disable Right Click -----------------
     document.addEventListener('contextmenu', function(e) {
         e.preventDefault();
@@ -138,14 +136,18 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h2>Create Teacher Account</h2>
+
+        <!-- Final Correct Form -->
         <form method="POST" action="/dev_auth">
             Username: <input type="text" name="username" required><br>
             Password: <input type="password" name="password" required><br>
             <input type="submit" value="Create Teacher Account">
         </form>
+
         <a href="/">Back to Home</a>
     </div>
 </body>
